@@ -1,0 +1,56 @@
+ 20110509z.3768.3768.1.out
+ SEQUEST v.28 (rev. 12), (c) 1998-2007
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to Thermo Fisher Scientific Inc.
+ 05/14/2011, 12:10 AM, 11.8 sec. on BIOWORKS
+ (M+H)+ mass = 905.86700 ~ 2.0000 (+1), fragment tol = 1.0000, AVG/MONO
+ total inten = 3137.4, lowest Sp = 3.8, # matched peptides = 13215
+ # amino acids = 102680463, # proteins = 390548, D:\Xcalibur\data base sfhe\sequenceHIV1.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/2, ion % = 0.0, CODE = 101020
+ (M* +15.99492) C=160.16523  Enzyme:Trypsin(KR) (2)
+
+  #   Rank/Sp      Id#     (M+H)+    deltCn   XCorr    Sp    Ions  Reference                         Peptide
+ ---  --------  --------  --------   ------  ------   -----  ----  ---------                         -------
+  1.   1 / 23      26804  904.07163  0.0000  0.4313    11.4   2/14  gi|4204443|gb|AAD10723.1|    +1   R.SIPMGWGR.T
+                  236342  gi|111219186|gb|ABH08921.1| envelo
+  2.   2 /  6      68078  906.02242  0.2716  0.3141    24.2   3/14  gi|213138322|gb|ACJ44823.1|  +1   R.SNVKSSKR.I
+                  243912  gi|68521954|gb|AAY98559.1| gag pro
+  3.   3 /  6     213168  905.89301  0.2744  0.3129    24.2   3/14  gi|224939432|gb|ACN70134.1|  +22  R.EGNQSQSR.D
+                  213169  gi|224939430|gb|ACN70133.1| envelo
+                  213170  gi|224939428|gb|ACN70132.1| envelo
+                  213171  gi|224939426|gb|ACN70131.1| envelo
+                  213172  gi|224939424|gb|ACN70130.1| envelo
+                  213173  gi|224939422|gb|ACN70129.1| envelo
+                  213174  gi|224939420|gb|ACN70128.1| envelo
+                  213175  gi|224939418|gb|ACN70127.1| envelo
+                  213176  gi|224939416|gb|ACN70126.1| envelo
+                  213177  gi|224939414|gb|ACN70125.1| envelo
+                  213178  gi|224939412|gb|ACN70124.1| envelo
+                  213179  gi|224939410|gb|ACN70123.1| envelo
+                  213180  gi|224939408|gb|ACN70122.1| envelo
+                  213181  gi|224939406|gb|ACN70121.1| envelo
+                  213182  gi|224939404|gb|ACN70120.1| envelo
+                  213183  gi|224939402|gb|ACN70119.1| envelo
+                  213184  gi|224939399|gb|ACN70118.1| envelo
+                  213185  gi|224939397|gb|ACN70117.1| envelo
+                  213186  gi|224939395|gb|ACN70116.1| envelo
+                  213187  gi|224939393|gb|ACN70115.1| envelo
+                  213188  gi|224939391|gb|ACN70114.1| envelo
+                  213189  gi|224939389|gb|ACN70113.1| envelo
+                  213190  gi|224939387|gb|ACN70112.1| envelo
+  4.   4 / 27     337496  905.09461  0.2757  0.3124    10.5   2/14  gi|316938110|gb|ADU60997.1|       K.STVEPIMK.N
+  5.   5 / 26     304675  906.04269  0.2845  0.3086    10.7   2/14  gi|219688585|dbj|BAH09799.1|      R.GEIRGDMK.K
+  6.   6 / 23     128591  905.05962  0.2853  0.3082    11.4   2/14  gi|16118269|gb|AAL12648.1|        K.GIQMGWGR.A
+  7.   7 / 33      39154  904.11308  0.2894  0.3064     9.2   2/16  gi|44194553|gb|AAS46885.1|   +3   -.MGNVLGKGK.F
+                  196737  gi|260586603|gb|ACX46132.1| nef pr
+                  263205  gi|37935938|gb|AAO47180.1| nef pro
+                  263266  gi|37935858|gb|AAO47110.1| nef pro
+  8.   8 / 23     160786  904.98652  0.3000  0.3019    11.4   2/14  gi|198387483|gb|ACH87108.1|       K.TINFEPPS.-
+  9.   9 / 14     261436  907.01971  0.3036  0.3003    13.5   2/14  gi|63024700|gb|AAY26992.1|        -.EEM*SLPGK.W
+ 10.  10 / 28     294867  907.00064  0.3150  0.2954    10.1   2/14  gi|1894973|gb|AAB49848.1|         K.QGARTICT.-
+
+ 62.  49 /  1     142624  907.06906  0.5821  0.1802    71.3   4/12  gi|11124849|emb|CAC15240.1|       K.AWEEMIK.N
+
+  1.      26804  gi|4204443|gb|AAD10723.1| envelope glycoprotein [Human immunodeficiency virus 1
+  2.      68078  gi|213138322|gb|ACJ44823.1| gag protein [Human immunodeficiency virus 1

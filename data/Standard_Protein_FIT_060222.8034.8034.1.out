@@ -1,0 +1,16 @@
+ 
+ Standard_Protein_FIT_060222.8034.8034.1.out
+ TurboSEQUEST v.27 (rev. 12), (c) 1998-2005
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 04/12/2007, 09:03 PM, 0.5 sec. on INFO-FIREFOX
+ (M+H)+ mass = 934.92100 ~ 0.8000 (+1), fragment tol = 0.0000, MONO/MONO
+ total inten = 1180.9, lowest Sp = 3.0, # matched peptides = 2256
+ # amino acids = 10795210, # proteins = 25330, c:\database\Standard19_ipi.ARATH.v3.17.nr.0.7_Original.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.03068  Enzyme:Trypsin (1)
+
+  #   Rank/Sp      Id#     (M+H)+    deltCn   XCorr    Sp    Ions  Reference    Peptide
+ ---  --------  --------  --------   ------  ------   -----  ----  ---------    -------
+

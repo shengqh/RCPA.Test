@@ -1,0 +1,14 @@
+SAP	PTM	SITE
+T->E	Formyl	T
+S->D	Formyl	S
+S->E	Acetyl	S
+Q->E	Deamidated	Q
+N->D	Deamidated	N
+D->E	Methyl	D
+N->E	Methyl+Deamidated	N
+T->K	ethylamino	T
+N->Q	Methyl	N
+P->E	Dioxidation	P
+S->T	Methyl	S
+F->Y	Oxidation	F
+S->A	Deoxy	S

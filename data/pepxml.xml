@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/ISB/data/Haixu/Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed/data_pep.xsl"?>
+<msms_pipeline_analysis date="2006-12-14T15:48:03" xmlns="http://regis-web.systemsbiology.net/pepXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://regis-web.systemsbiology.net/pepXML /cygdrive/c/inetpub/wwwroot/pepXML_v18.xsd" summary_xml="/cygdrive/c/Inetpub/wwwroot/ISB/data/Haixu/Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed/data_pep.xml">
+<test_value>test</test_value>
+<analysis_summary analysis="peptideprophet" time="2006-12-14T15:48:38">
+<peptideprophet_summary version="PeptideProphet v3.0 April 1, 2004 (TPP v2.8 THAW rev.2, Build 200604051433)" author="AKeller@ISB" min_prob="0.00" options=" MINPROB=0.0 " est_tot_num_correct="2132.9">
+<inputfile name="/cygdrive/c/Inetpub/wwwroot/ISB/data/Haixu/Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed/Standard_Protein_FIT_060222"/>
+<roc_data_point min_prob="0.99" sensitivity="0.1203" error="0.0039" num_corr="249" num_incorr="1"/>
+<roc_data_point min_prob="0.98" sensitivity="0.2027" error="0.0082" num_corr="420" num_incorr="3"/>
+<roc_data_point min_prob="0.95" sensitivity="0.3131" error="0.0168" num_corr="648" num_incorr="11"/>
+<roc_data_point min_prob="0.90" sensitivity="0.3660" error="0.0253" num_corr="757" num_incorr="20"/>
+<roc_data_point min_prob="0.85" sensitivity="0.4016" error="0.0349" num_corr="831" num_incorr="30"/>
+<roc_data_point min_prob="0.80" sensitivity="0.4406" error="0.0493" num_corr="912" num_incorr="47"/>
+<roc_data_point min_prob="0.75" sensitivity="0.4731" error="0.0640" num_corr="979" num_incorr="67"/>
+<roc_data_point min_prob="0.70" sensitivity="0.5033" error="0.0799" num_corr="1042" num_incorr="90"/>
+<roc_data_point min_prob="0.65" sensitivity="0.5320" error="0.0977" num_corr="1101" num_incorr="119"/>
+<roc_data_point min_prob="0.60" sensitivity="0.5516" error="0.1117" num_corr="1141" num_incorr="144"/>
+<roc_data_point min_prob="0.55" sensitivity="0.5755" error="0.1314" num_corr="1191" num_incorr="180"/>
+<roc_data_point min_prob="0.50" sensitivity="0.6005" error="0.1546" num_corr="1243" num_incorr="227"/>
+<roc_data_point min_prob="0.45" sensitivity="0.6235" error="0.1782" num_corr="1290" num_incorr="280"/>
+<roc_data_point min_prob="0.40" sensitivity="0.6484" error="0.2065" num_corr="1342" num_incorr="349"/>
+<roc_data_point min_prob="0.35" sensitivity="0.6714" error="0.2358" num_corr="1389" num_incorr="429"/>
+<roc_data_point min_prob="0.30" sensitivity="0.6937" error="0.2680" num_corr="1435" num_incorr="526"/>
+<roc_data_point min_prob="0.25" sensitivity="0.7179" error="0.3071" num_corr="1486" num_incorr="658"/>
+<roc_data_point min_prob="0.20" sensitivity="0.7488" error="0.3620" num_corr="1550" num_incorr="879"/>
+<roc_data_point min_prob="0.15" sensitivity="0.7831" error="0.4294" num_corr="1621" num_incorr="1219"/>
+<roc_data_point min_prob="0.10" sensitivity="0.8218" error="0.5138" num_corr="1701" num_incorr="1797"/>
+<roc_data_point min_prob="0.05" sensitivity="0.8805" error="0.6513" num_corr="1822" num_incorr="3403"/>
+<roc_data_point min_prob="0.00" sensitivity="1.0000" error="0.9482" num_corr="2069" num_incorr="37859"/>
+</peptideprophet_summary>
+</analysis_summary>
+<msms_run_summary base_name="/cygdrive/c/Inetpub/wwwroot/ISB/data/Haixu/Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed/Standard_Protein_FIT_060222" raw_data_type="raw" raw_data=".mzXML">
+<sample_enzyme name="trypsin">
+<specificity cut="KR" no_cut="P" sense="C"/>
+</sample_enzyme>
+<search_summary base_name="/cygdrive/c/Inetpub/wwwroot/ISB/data/Haixu/Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed/Standard_Protein_FIT_060222" search_engine="SEQUEST" precursor_mass_type="monoisotopic" fragment_mass_type="monoisotopic" out_data_type="out" out_data=".tgz" search_id="1">
+<search_database local_path="D:\database\FDR\Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed.fasta" type="AA"/>
+<enzymatic_search_constraint enzyme="Trypsin" max_num_internal_cleavages="0" min_number_termini="2"/>
+<aminoacid_modification aminoacid="C" massdiff="57.0215" mass="160.0307" variable="N"/>
+<parameter name="peptide_mass_tol" value="3.000"/>
+<parameter name="fragment_ion_tol" value="0.000"/>
+<parameter name="ion_series" value=" 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0"/>
+<parameter name="max_num_differential_AA_per_mod" value="4"/>
+<parameter name="nucleotide_reading_frame" value="0"/>
+<parameter name="num_output_lines" value="10"/>
+<parameter name="remove_precursor_peak" value="0"/>
+<parameter name="ion_cutoff_percentage" value="0.0"/>
+<parameter name="match_peak_count" value="0"/>
+<parameter name="match_peak_allowed_error" value="1"/>
+<parameter name="match_peak_tolerance" value="1.0"/>
+<parameter name="protein_mass_filter" value="0 0"/>
+<parameter name="sequence_header_filter" value=""/>
+</search_summary>
+<analysis_timestamp analysis="peptideprophet" time="2006-12-14T15:48:38" id="1"/>
+<spectrum_query spectrum="Standard_Protein_FIT_060222.10.10.1" start_scan="10" end_scan="10" precursor_neutral_mass="1420.9920" assumed_charge="1" index="1">
+<search_result>
+<search_hit hit_rank="1" peptide="EEALVIQTEMEK" peptide_prev_aa="K" peptide_next_aa="K" protein="IPI00525696" num_tot_proteins="2" num_matched_ions="  8" tot_num_ions=" 22" calc_neutral_pep_mass="1418.6920" massdiff="+2.3" num_tol_term="2" num_missed_cleavages="0" is_rejected="0">
+<alternative_protein protein="sp|Q8CGP6|H2A1H_MOUSE" protein_descr="Histone H2A type 1-H OS=Mus musculus GN=Hist1h2ah PE=1 SV=3" num_tol_term="2" peptide_prev_aa="R" peptide_next_aa="V"/>
+<search_score name="xcorr" value="1.781"/>
+<search_score name="deltacn" value="0.248"/>
+<search_score name="deltacnstar" value="0"/>
+<search_score name="spscore" value="167.4"/>
+<search_score name="sprank" value="15"/>
+<analysis_result analysis="peptideprophet">
+<peptideprophet_result probability="0.0017" all_ntt_prob="(0.0001,0.0000,0.0017)">
+<search_score_summary>
+<parameter name="fval" value="0.7964"/>
+<parameter name="ntt" value="2"/>
+<parameter name="nmc" value="0"/>
+<parameter name="massd" value="2.300"/>
+</search_score_summary>
+</peptideprophet_result>
+</analysis_result>
+</search_hit>
+</search_result>
+</spectrum_query>
+<spectrum_query spectrum="Standard_Protein_FIT_060222.100.100.1" start_scan="100" end_scan="100" precursor_neutral_mass="740.1920" assumed_charge="1" index="2">
+<search_result>
+<search_hit hit_rank="1" peptide="NLAPLGR" peptide_prev_aa="K" peptide_next_aa="A" protein="REVERSED_0007020" num_tot_proteins="1" num_matched_ions="  5" tot_num_ions=" 12" calc_neutral_pep_mass="739.3920" massdiff="+0.8" num_tol_term="2" num_missed_cleavages="0" is_rejected="0">
+<search_score name="xcorr" value="0.855"/>
+<search_score name="deltacn" value="0.070"/>
+<search_score name="deltacnstar" value="0"/>
+<search_score name="spscore" value="114.2"/>
+<search_score name="sprank" value="65"/>
+<analysis_result analysis="peptideprophet">
+<peptideprophet_result probability="0.0000" all_ntt_prob="(0.0000,0.0000,0.0000)">
+<search_score_summary>
+<parameter name="fval" value="-2.6956"/>
+<parameter name="ntt" value="2"/>
+<parameter name="nmc" value="0"/>
+<parameter name="massd" value="0.800"/>
+</search_score_summary>
+</peptideprophet_result>
+</analysis_result>
+</search_hit>
+</search_result>
+</spectrum_query>
+</msms_run_summary>
+</msms_pipeline_analysis>

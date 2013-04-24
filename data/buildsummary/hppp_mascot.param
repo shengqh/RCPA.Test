@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildSummaryOption>
+  <Version></Version>
+  <MergeResult>true</MergeResult>
+  <ConflictType>DiscardAll</ConflictType>
+  <Database>
+    <Location>D:\Database\uniprot_sprot.20100420_HUMAN.REVERSED.fasta</Location>
+    <AccessNumberPattern>^&gt;{0,1}(\S+)</AccessNumberPattern>
+    <DecoyPattern>^REVERSED_</DecoyPattern>
+    <ContaminationPattern>CON_</ContaminationPattern>
+    <RemovePeptideFromDecoyDB>False</RemovePeptideFromDecoyDB>
+  </Database>
+  <FalseDiscoveryRate>
+    <Filtered>True</Filtered>
+    <Level>Protein</Level>
+    <MaxPeptideFdr>0.01</MaxPeptideFdr>
+    <FdrPeptideCount>0</FdrPeptideCount>
+    <Type>Total</Type>
+    <Value>0.01</Value>
+  </FalseDiscoveryRate>
+  <Classifications>
+    <ClassifyByCharge>True</ClassifyByCharge>
+    <ClassifyByMissCleavage>True</ClassifyByMissCleavage>
+    <ClassifyByModification>True</ClassifyByModification>
+    <ClassifyByNumProteaseTermini>True</ClassifyByNumProteaseTermini>
+    <ModifiedAminoacid>STY</ModifiedAminoacid>
+  </Classifications>
+  <PeptideFilter>
+    <Filter Name="MinSequenceLength" Active="False" Value="0" />
+  </PeptideFilter>
+  <Datasets>
+    <Dataset>
+      <SearchEngine>MASCOT</SearchEngine>
+      <Name>Trypsin</Name>
+      <PeptideFilter>
+        <Filter Name="PrecursorPPM" Active="True" Value="7" />
+        <Filter Name="Score" Active="True" Value="10" />
+        <Filter Name="ExpectValue" Active="False" Value="0" />
+      </PeptideFilter>
+      <PathNames>
+        <PathName>U:\sqh\hppp\orbitrap\mascot\maxquant\hppp_orbitrap_trypsin_7ppm.dat</PathName>
+      </PathNames>
+      <TitleFormat></TitleFormat>
+    </Dataset>
+  </Datasets>
+</BuildSummaryOption>

@@ -1,0 +1,935 @@
+[EXTRACT]
+extract_scan_limits =
+precursor_mass_range = 400.00-5000.00
+threshold = 100
+precursor_mass = 1.4
+group_scan = 1
+min_group_count = 1
+min_ion_count = 10
+charge_state = 0
+[SEQUEST]
+first_database_name = /database/ipi.HUMAN.v3.07.REVERSED.fasta
+second_database_name = 
+peptide_mass_tolerance = 3
+ion_series = 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+fragment_ion_tolerance = 0.0000          ; leave at 0.0 unless you have real poor data
+num_output_lines = 10                ; # peptide results to show
+num_results = 250                     ; # results to store
+num_description_lines = 5           ; # full protein descriptions to show for top N peptides
+show_fragment_ions = 0              ; 0=no, 1=yes
+print_duplicate_references = 100    ; 0=no, 1=yes
+enzyme_number = 1
+max_num_differential_AA_per_mod = 4           ; max # of modified AA per diff. mod in a peptide
+diff_search_options = 79.0000 STY 18.0000 M 0.0000 M 0.0000 X 0.0000 T 0.0000 Y
+term_diff_search_options = 0.0000 0.0000
+nucleotide_reading_frame = 0        ; 0=protein db, 1-6, 7 = forward three, 8-reverse three, 9=all six
+mass_type_parent = 1                ; 0=average masses, 1=monoisotopic masses
+mass_type_fragment = 1              ; 0=average masses, 1=monoisotopic masses
+normalize_xcorr = 0                 ; use normalized xcorr values in the out file
+remove_precursor_peak = 0           ; 0=no, 1=yes
+ion_cutoff_percentage = 0.0000           ; prelim. score cutoff % as a decimal number i.e. 0.30 for 30%
+max_num_internal_cleavage_sites = 2           ; maximum value is 5
+protein_mass_filter = 0 0           ; enter protein mass min & max value ( 0 for both = unused)
+match_peak_count = 0                ; number of auto-detected peaks to try matching (max 5)
+match_peak_allowed_error = 1        ;  number of allowed errors in matching auto-detected peaks
+match_peak_tolerance = 1.0000            ; mass tolerance for matching auto-detected peaks
+partial_sequence = 
+sequence_header_filter = 
+
+add_Cterm_peptide = 0.0000               ; added to each peptide C-terminus
+add_Cterm_protein = 0.0000               ; added to each protein C-terminus
+add_Nterm_peptide = 0.0000               ; added to each peptide N-terminus
+add_Nterm_protein = 0.0000               ; added to each protein N-terminus
+add_G_Glycine = 0.0000                   ; added to G
+add_A_Alanine = 0.0000                   ; added to A
+add_S_Serine = 0.0000                    ; added to S
+add_P_Proline = 0.0000                   ; added to P
+add_V_Valine = 0.0000                    ; added to V
+add_T_Threonine = 0.0000                 ; added to T
+add_C_Cysteine = 57.0215                  ; added to C
+add_L_Leucine = 0.0000                   ; added to L
+add_I_Isoleucine = 0.0000                ; added to I
+add_X_LorI = 0.0000                      ; added to X
+add_N_Asparagine = 0.0000                ; added to N
+add_O_Ornithine = 0.0000                 ; added to O
+add_B_avg_NandD = 0.0000                 ; added to B
+add_D_Aspartic_Acid = 0.0000             ; added to D
+add_Q_Glutamine = 0.0000                 ; added to Q
+add_K_Lysine = 0.0000                    ; added to K
+add_Z_avg_QandE = 0.0000                 ; added to Z
+add_E_Glutamic_Acid = 0.0000             ; added to E
+add_M_Methionine = 0.0000                ; added to M
+add_H_Histidine = 0.0000                 ; added to H
+add_F_Phenylalanine = 0.0000             ; added to F
+add_R_Arginine = 0.0000                  ; added to R
+add_Y_Tyrosine = 0.0000                  ; added to Y
+add_W_Tryptophan = 0.0000                ; added to W
+
+[SEQUEST_ENZYME_INFO]
+0.	No_Enzyme				0	-		-
+1.	Trypsin				1	KR		-
+2.	Trypsin(KRLNH)				1	KRLNH		-
+3.	Chymotrypsin				1	FWYL		-
+4.	Chymotrypsin(FWY)				1	FWY		P
+5.	Clostripain				1	R		-
+6.	Cyanogen_Bromide				1	M		-
+7.	IodosoBenzoate				1	W		-
+8.	Proline_Endopept				1	P		-
+9.	Staph_Protease				1	E		-
+10.	Trypsin_K				1	K		P
+11.	Trypsin_R				1	R		P
+12.	GluC				1	ED		-
+13.	LysC				1	K		-
+14.	AspN				0	D		-
+15.	Elastase				1	ALIV		P
+16.	Elastase/Tryp/Chymo				1	ALIVKRWFY		P
+[SEQUEST_OUT]
+OUTFILE_COUNT=2
+[SEQUEST_OUT_FILES]
+
+ FIT_HPPP_Bound_060622_01.2.2.1.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2004
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 07/06/2006, 09:00 PM, 1.47 sec. on v40
+ (M+H)+ mass = 519.1387 ~ 3.0000 (+1), fragment tol = 0.0000 , MONO/MONO
+ total inten = 2305.2, lowest Sp = 16.7, # matched peptides = 60891
+ # amino acids = 46021504, # proteins = 100414, /database/ipi.HUMAN.v3.07.REVERSED.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.0307 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference                                                                            Peptide
+ ---  --------  --------  --------  ------  ------   -----  -----  ---------                                                                            -------
+  1.   1 / 49          0  517.2729  0.0000  0.6319    23.1   3/ 8  IPI:IPI00010375.2|SWISS-PROT:Q9BXT8-1|TREMBL:Q5T2K0|REFSEQ_NP:NP_112567|ENSEMBL +10  K.TGPSR.S
+                       0  REVERSED_15394
+                       0  REVERSED_16231
+                       0  IPI:IPI00289651.2|SWISS-PROT:Q9BXT
+                       0  REVERSED_21087
+                       0  REVERSED_29014
+                       0  IPI:IPI00431795.2|TREMBL:Q9H7X9;Q5
+                       0  IPI:IPI00452405.1|TREMBL:Q6Q8P7 Ta
+                       0  REVERSED_40263
+                       0  IPI:IPI00479906.1|TREMBL:Q5T2J8|EN
+                       0  REVERSED_46493
+  2.   2 / 49          0  517.2729  0.0600  0.5940    23.1   3/ 8  IPI:IPI00304028.3|SWISS-PROT:Q08999|TREMBL:Q7Z3L2;Q8NE70|REFSEQ_NP:NP_005602|EN +3   R.TGSPR.R
+                       0  IPI:IPI00374044.2|TREMBL:Q5VUE5|RE
+                       0  IPI:IPI00376832.2|REFSEQ_XP:XP_378
+                       0  REVERSED_43644
+  3.   3 / 49          0  517.3093  0.0602  0.5938    23.1   3/ 8  IPI:IPI00032280.4|TREMBL:Q9Y2K9;Q6PIC3|REFSEQ_XP:XP_045911|ENSEMBL:ENSP00000273 +3   R.TGAIR.I
+                       0  REVERSED_21926
+                       0  REVERSED_25049
+                       0  REVERSED_33860
+  4.   3 / 49          0  517.3093  0.0602  0.5938    23.1   3/ 8  IPI:IPI00103884.2|TREMBL:Q8IW87;Q9UCX9;Q86XN3;Q8WZ82|REFSEQ_NP:NP_543012|ENSEMB +4   K.TGALR.K
+                       0  IPI:IPI00172614.1|SWISS-PROT:Q1280
+                       0  IPI:IPI00221191.3|SWISS-PROT:Q1280
+                       0  IPI:IPI00397716.2|REFSEQ_XP:XP_371
+                       0  IPI:IPI00455101.2|REFSEQ_XP:XP_499
+  5.   4 / 49          0  517.3093  0.0608  0.5934    23.1   3/ 8  IPI:IPI00065388.3|TREMBL:Q96LX7;Q5T628|REFSEQ_NP:NP_689713|ENSEMBL:ENSP00000341 +3   R.TGLAR.D
+                       0  REVERSED_21138
+                       0  REVERSED_29476
+                       0  IPI:IPI00514378.1|TREMBL:Q5T629 Ta
+  6.   4 / 49          0  517.3093  0.0608  0.5934    23.1   3/ 8  IPI:IPI00384152.2|SWISS-PROT:Q99706-1|TREMBL:Q5IHW6;Q5IH82;Q5IH87;Q8NHK1;Q6UV36 +1   K.TGIAR.H
+                       0  IPI:IPI00479113.1|TREMBL:Q5IHW9;Q8
+  7.   5 /  9          0  519.2708  0.0898  0.5751    60.3   4/ 8  REVERSED_10806                                                                       R.AARAM.-
+  8.   6 / 16          0  519.2959  0.1441  0.5408    44.3   3/ 8  REVERSED_11751                                                                       R.GKLAM.-
+  9.   7 / 16          0  519.2959  0.1516  0.5361    44.3   3/ 8  REVERSED_33470                                                                       R.GLKAM.-
+ 10.   7 / 16          0  519.2595  0.1516  0.5361    44.3   3/ 8  REVERSED_5537                                                                   +1   K.GLQAM.-
+                       0  REVERSED_44941
+
+ 36.  30 /  1          0  521.2177  0.3409  0.4165   129.6   5/ 6  REVERSED_40917                                                                       K.YHAM.-
+
+  1.          0  IPI:IPI00010375.2|SWISS-PROT:Q9BXT8-1|TREMBL:Q5T2K0|REFSEQ_NP:NP_112567|ENSEMB
+  2.          0  IPI:IPI00304028.3|SWISS-PROT:Q08999|TREMBL:Q7Z3L2;Q8NE70|REFSEQ_NP:NP_005602|E
+  3.          0  IPI:IPI00032280.4|TREMBL:Q9Y2K9;Q6PIC3|REFSEQ_XP:XP_045911|ENSEMBL:ENSP0000027
+  4.          0  IPI:IPI00103884.2|TREMBL:Q8IW87;Q9UCX9;Q86XN3;Q8WZ82|REFSEQ_NP:NP_543012|ENSEM
+  5.          0  IPI:IPI00065388.3|TREMBL:Q96LX7;Q5T628|REFSEQ_NP:NP_689713|ENSEMBL:ENSP0000034
+
+
+
+
+ FIT_HPPP_Bound_060622_01.3.3.1.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2004
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 07/06/2006, 09:01 PM, 1.73 sec. on sun05
+ (M+H)+ mass = 445.1310 ~ 3.0000 (+1), fragment tol = 0.0000 , MONO/MONO
+ total inten = 1227.7, lowest Sp = 2.0, # matched peptides = 44732
+ # amino acids = 46021504, # proteins = 100414, /database/ipi.HUMAN.v3.07.REVERSED.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.0307 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference                                                                             Peptide
+ ---  --------  --------  --------  ------  ------   -----  -----  ---------                                                                             -------
+  1.   1 /  8          0  446.2722  0.0000  0.4167    23.1   2/ 6  IPI:IPI00383021.1|TREMBL:Q14548                                                       R.SLRA.-
+  2.   2 / 36          0  446.2358  0.1112  0.3704     5.8   1/ 6  IPI:IPI00000598.1|TREMBL:Q9P0C5|H-INV:HIT000024811                              +101  -.SSPR.D
+                       0  IPI:IPI00001730.2|SWISS-PROT:Q9Y61
+                       0  REVERSED_505
+                       0  REVERSED_1062
+                       0  IPI:IPI00004344.1|TREMBL:Q6P592;Q8
+                       0  REVERSED_1237
+                       0  IPI:IPI00006108.3|TREMBL:Q92585;Q9
+                       0  IPI:IPI00006282.1|TREMBL:Q15170 Ta
+                       0  REVERSED_2004
+                       0  REVERSED_2082
+                       0  REVERSED_2653
+                       0  REVERSED_2791
+                       0  IPI:IPI00009811.1|TREMBL:Q9NZS9|RE
+                       0  REVERSED_3992
+                       0  REVERSED_4426
+                       0  IPI:IPI00015186.3|SWISS-PROT:Q9NQ3
+                       0  IPI:IPI00016544.3|TREMBL:Q9H9J3;Q7
+                       0  REVERSED_5123
+                       0  IPI:IPI00021719.1|SWISS-PROT:Q9H1K
+                       0  IPI:IPI00022145.5|SWISS-PROT:Q9H1E
+                       0  IPI:IPI00023189.1|SWISS-PROT:O1468
+                       0  IPI:IPI00027998.1|SWISS-PROT:P5773
+                       0  IPI:IPI00028196.4|TREMBL:Q9C098|RE
+                       0  REVERSED_8259
+                       0  IPI:IPI00030790.6|TREMBL:O60303|RE
+                       0  IPI:IPI00044569.1|TREMBL:Q96PM7|RE
+                       0  REVERSED_9894
+                       0  IPI:IPI00057035.2|TREMBL:Q9BVS5;Q9
+                       0  REVERSED_11147
+                       0  REVERSED_11331
+                       0  REVERSED_11367
+                       0  REVERSED_12173
+                       0  REVERSED_12273
+                       0  REVERSED_12417
+                       0  IPI:IPI00153019.1|TREMBL:Q9BQJ1|EN
+                       0  IPI:IPI00153036.1|TREMBL:Q96HH6;Q5
+                       0  REVERSED_13937
+                       0  REVERSED_14095
+                       0  REVERSED_14095
+                       0  REVERSED_14360
+                       0  REVERSED_14494
+                       0  REVERSED_14773
+                       0  REVERSED_15082
+                       0  REVERSED_15422
+                       0  REVERSED_16201
+                       0  REVERSED_16612
+                       0  REVERSED_17092
+                       0  REVERSED_17093
+                       0  REVERSED_17094
+                       0  REVERSED_17175
+                       0  REVERSED_17176
+                       0  REVERSED_17781
+                       0  IPI:IPI00217972.4|TREMBL:Q96JF7;Q8
+                       0  REVERSED_18490
+                       0  IPI:IPI00218524.6|SWISS-PROT:Q9Y6V
+                       0  REVERSED_18515
+                       0  REVERSED_18990
+                       0  REVERSED_19126
+                       0  IPI:IPI00220308.1|SWISS-PROT:P3524
+                       0  REVERSED_19703
+                       0  IPI:IPI00220621.1|SWISS-PROT:Q0734
+                       0  REVERSED_19890
+                       0  REVERSED_20488
+                       0  REVERSED_20489
+                       0  REVERSED_20814
+                       0  REVERSED_20957
+                       0  REVERSED_21133
+                       0  REVERSED_21208
+                       0  REVERSED_21388
+                       0  IPI:IPI00292026.3|SWISS-PROT:P4971
+                       0  REVERSED_21678
+                       0  REVERSED_22355
+                       0  REVERSED_22878
+                       0  REVERSED_23252
+                       0  IPI:IPI00307155.7|SWISS-PROT:O7511
+                       0  REVERSED_24001
+                       0  REVERSED_24735
+                       0  REVERSED_25303
+                       0  REVERSED_26333
+                       0  IPI:IPI00375746.2|TREMBL:Q6ZN66;Q7
+                       0  IPI:IPI00376481.1|TREMBL:Q7Z7K6;Q8
+                       0  IPI:IPI00376890.4|TREMBL:Q9NWB4|EN
+                       0  REVERSED_28007
+                       0  IPI:IPI00384440.2|SWISS-PROT:Q8WXQ
+                       0  REVERSED_28726
+                       0  IPI:IPI00385837.1|TREMBL:Q9NV41|H-
+                       0  IPI:IPI00386700.3|TREMBL:Q6IPJ9;Q9
+                       0  IPI:IPI00395679.4|TREMBL:Q96IT5|EN
+                       0  IPI:IPI00396130.4|SWISS-PROT:Q9C0H
+                       0  REVERSED_30910
+                       0  REVERSED_30937
+                       0  IPI:IPI00397820.1|TREMBL:Q8IUN3;Q6
+                       0  REVERSED_31467
+                       0  REVERSED_31507
+                       0  REVERSED_31521
+                       0  REVERSED_31879
+                       0  REVERSED_31881
+                       0  REVERSED_31883
+                       0  REVERSED_31884
+                       0  IPI:IPI00409597.1|REFSEQ_NP:NP_996
+                       0  IPI:IPI00411656.2|SWISS-PROT:Q9Y6V
+                       0  REVERSED_33476
+  3.   3 / 36          0  446.2358  0.1295  0.3628     5.8   1/ 6  IPI:IPI00000015.2|SWISS-PROT:Q08170|TREMBL:Q5VXP1;Q59EF5;Q53F45|REFSEQ_NP:NP_00 +101  R.SPSR.H
+                       0  IPI:IPI00000015.2|SWISS-PROT:Q0817
+                       0  IPI:IPI00000015.2|SWISS-PROT:Q0817
+                       0  REVERSED_6
+                       0  REVERSED_6
+                       0  REVERSED_6
+                       0  REVERSED_6
+                       0  IPI:IPI00001562.1|SWISS-PROT:Q9Y5K
+                       0  REVERSED_417
+                       0  IPI:IPI00001762.1|SWISS-PROT:O6089
+                       0  REVERSED_569
+                       0  REVERSED_630
+                       0  IPI:IPI00004450.1|TREMBL:O75526;Q9
+                       0  REVERSED_1223
+                       0  REVERSED_1556
+                       0  IPI:IPI00006464.1|TREMBL:Q9NRU3|RE
+                       0  REVERSED_1799
+                       0  IPI:IPI00006714.2|SWISS-PROT:Q1292
+                       0  IPI:IPI00007248.5|SWISS-PROT:Q9Y2H
+                       0  REVERSED_2066
+                       0  IPI:IPI00007695.1|SWISS-PROT:Q9Y56
+                       0  REVERSED_2195
+                       0  IPI:IPI00008500.3|TREMBL:Q9H2N7;Q8
+                       0  REVERSED_2448
+                       0  REVERSED_2607
+                       0  REVERSED_3359
+                       0  IPI:IPI00013721.2|SWISS-PROT:Q1352
+                       0  IPI:IPI00013721.2|SWISS-PROT:Q1352
+                       0  REVERSED_4084
+                       0  IPI:IPI00013891.1|SWISS-PROT:Q1359
+                       0  REVERSED_4135
+                       0  REVERSED_5115
+                       0  IPI:IPI00017659.3|TREMBL:Q6IN93;Q9
+                       0  REVERSED_5137
+                       0  REVERSED_5780
+                       0  IPI:IPI00022033.4|SWISS-PROT:Q9BXF
+                       0  REVERSED_6338
+                       0  IPI:IPI00023026.2|TREMBL:Q9NZY6|EN
+                       0  IPI:IPI00024024.3|SWISS-PROT:Q0204
+                       0  REVERSED_6969
+                       0  IPI:IPI00025342.2|TREMBL:Q9BUV0|H-
+                       0  REVERSED_7365
+                       0  IPI:IPI00026121.1|SWISS-PROT:Q0250
+                       0  IPI:IPI00027799.2|TREMBL:Q5T9K7;Q6
+                       0  IPI:IPI00030246.1|SWISS-PROT:Q1292
+                       0  IPI:IPI00030354.1|TREMBL:Q9NZ75;Q5
+                       0  REVERSED_8751
+                       0  IPI:IPI00031428.1|TREMBL:Q9GZP6|RE
+                       0  REVERSED_9024
+                       0  IPI:IPI00032280.4|TREMBL:Q9Y2K9;Q6
+                       0  IPI:IPI00043215.3|TREMBL:O15070;Q9
+                       0  REVERSED_9671
+                       0  IPI:IPI00055405.2|TREMBL:Q6NS38;Q5
+                       0  IPI:IPI00059925.1|TREMBL:Q6GMU1;Q9
+                       0  REVERSED_10311
+                       0  IPI:IPI00059940.2|TREMBL:Q96BG7;Q6
+                       0  REVERSED_10315
+                       0  IPI:IPI00063523.5|TREMBL:Q8N800|RE
+                       0  IPI:IPI00066458.1|TREMBL:Q6IQ12;Q7
+                       0  REVERSED_10983
+                       0  REVERSED_11324
+                       0  IPI:IPI00098988.1|TREMBL:Q9UF83|EN
+                       0  IPI:IPI00098988.1|TREMBL:Q9UF83|EN
+                       0  REVERSED_11406
+                       0  IPI:IPI00154567.3|TREMBL:Q8TB22|RE
+                       0  REVERSED_12825
+                       0  REVERSED_13396
+                       0  IPI:IPI00165995.2|TREMBL:Q8N2L1;Q6
+                       0  REVERSED_13504
+                       0  REVERSED_13737
+                       0  IPI:IPI00166823.3|TREMBL:Q8N4Z0|RE
+                       0  REVERSED_13863
+                       0  IPI:IPI00166985.3|TREMBL:Q8N6C5|RE
+                       0  REVERSED_13940
+                       0  IPI:IPI00168919.1|SWISS-PROT:Q8NG5
+                       0  REVERSED_14804
+                       0  IPI:IPI00171475.1|TREMBL:Q66K34;Q6
+                       0  REVERSED_15239
+                       0  REVERSED_15272
+                       0  IPI:IPI00175215.2|TREMBL:Q6TF48;Q8
+                       0  REVERSED_15523
+                       0  IPI:IPI00181359.3|TREMBL:Q99590;Q8
+                       0  REVERSED_16142
+                       0  IPI:IPI00216242.2|SWISS-PROT:Q1395
+                       0  REVERSED_17173
+                       0  IPI:IPI00216243.1|SWISS-PROT:Q1395
+                       0  REVERSED_17174
+                       0  IPI:IPI00217491.1|TREMBL:Q8IXB3|RE
+                       0  REVERSED_17896
+                       0  IPI:IPI00219990.1|SWISS-PROT:Q9NRR
+                       0  REVERSED_19403
+                       0  IPI:IPI00220165.1|SWISS-PROT:Q9Y56
+                       0  REVERSED_19506
+                       0  REVERSED_19920
+                       0  IPI:IPI00235708.3|REFSEQ_XP:XP_293
+                       0  REVERSED_20356
+                       0  IPI:IPI00242711.3|SWISS-PROT:Q1573
+                       0  REVERSED_20488
+                       0  REVERSED_20691
+                       0  IPI:IPI00292164.3|SWISS-PROT:Q1477
+                       0  REVERSED_21492
+                       0  REVERSED_21596
+  4.   4 / 36          0  446.2722  0.1295  0.3628     5.8   1/ 6  REVERSED_527                                                                    +101  R.SLAR.R
+                       0  IPI:IPI00002054.2|TREMBL:Q9P2A7|EN
+                       0  REVERSED_599
+                       0  IPI:IPI00004978.1|SWISS-PROT:P5273
+                       0  IPI:IPI00005529.1|SWISS-PROT:Q9HAY
+                       0  REVERSED_1484
+                       0  IPI:IPI00005776.1|SWISS-PROT:Q9Y23
+                       0  REVERSED_1849
+                       0  REVERSED_2019
+                       0  REVERSED_2259
+                       0  REVERSED_2260
+                       0  IPI:IPI00008475.1|SWISS-PROT:Q0158
+                       0  REVERSED_2453
+                       0  IPI:IPI00008934.1|SWISS-PROT:P5486
+                       0  IPI:IPI00011933.2|SWISS-PROT:O4330
+                       0  IPI:IPI00013409.1|SWISS-PROT:Q1348
+                       0  IPI:IPI00013418.1|SWISS-PROT:Q1349
+                       0  REVERSED_4927
+                       0  IPI:IPI00017030.10|SWISS-PROT:Q926
+                       0  REVERSED_5291
+                       0  IPI:IPI00018363.4|TREMBL:Q8IVF5|EN
+                       0  REVERSED_5523
+                       0  REVERSED_5981
+                       0  IPI:IPI00021836.1|SWISS-PROT:P0409
+                       0  IPI:IPI00023576.3|SWISS-PROT:O4330
+                       0  IPI:IPI00023643.3|SWISS-PROT:Q9H3T
+                       0  IPI:IPI00024933.3|SWISS-PROT:P3005
+                       0  IPI:IPI00025023.1|SWISS-PROT:P2207
+                       0  REVERSED_7419
+                       0  IPI:IPI00026645.1|TREMBL:O60886|EN
+                       0  IPI:IPI00026781.2|SWISS-PROT:P4932
+                       0  IPI:IPI00028311.2|REFSEQ_XP:XP_028
+                       0  REVERSED_8413
+                       0  REVERSED_9020
+                       0  REVERSED_9393
+                       0  IPI:IPI00047862.5|ENSEMBL:ENSP0000
+                       0  IPI:IPI00056369.1|TREMBL:Q969I3;Q7
+                       0  IPI:IPI00056880.5|TREMBL:O00455;Q6
+                       0  REVERSED_10281
+                       0  IPI:IPI00059796.2|TREMBL:Q8NG61;Q9
+                       0  REVERSED_10493
+                       0  REVERSED_12407
+                       0  IPI:IPI00154208.5|TREMBL:Q9UFB1;Q5
+                       0  REVERSED_12867
+                       0  IPI:IPI00167941.1|SWISS-PROT:Q9NU2
+                       0  IPI:IPI00170594.2|TREMBL:Q7Z4E3;Q9
+                       0  IPI:IPI00171422.1|TREMBL:Q8NCA4;Q6
+                       0  REVERSED_15378
+                       0  REVERSED_15697
+                       0  REVERSED_15697
+                       0  IPI:IPI00179801.6|TREMBL:Q86VH5;Q6
+                       0  REVERSED_16327
+                       0  REVERSED_16440
+                       0  IPI:IPI00186448.4|TREMBL:Q96JH1|RE
+                       0  REVERSED_17046
+                       0  REVERSED_17281
+                       0  REVERSED_17282
+                       0  IPI:IPI00217000.2|TREMBL:Q8IVF1;Q5
+                       0  IPI:IPI00217916.3|TREMBL:Q86Y26;Q9
+                       0  IPI:IPI00217957.3|TREMBL:Q8IZA4|EN
+                       0  IPI:IPI00218450.1|SWISS-PROT:Q9H3T
+                       0  IPI:IPI00218451.1|SWISS-PROT:Q9H3T
+                       0  REVERSED_18513
+                       0  REVERSED_18514
+                       0  IPI:IPI00219434.4|SWISS-PROT:O9588
+                       0  REVERSED_19340
+                       0  REVERSED_19812
+                       0  REVERSED_20486
+                       0  REVERSED_20497
+                       0  REVERSED_20638
+                       0  IPI:IPI00289301.3|TREMBL:Q8NEP0;Q9
+                       0  IPI:IPI00289833.5|TREMBL:Q8TCN2;Q6
+                       0  REVERSED_21277
+                       0  REVERSED_21521
+                       0  IPI:IPI00292748.6|SWISS-PROT:Q9P20
+                       0  REVERSED_21671
+                       0  REVERSED_22291
+                       0  REVERSED_22547
+                       0  REVERSED_22651
+                       0  REVERSED_23135
+                       0  REVERSED_23182
+                       0  IPI:IPI00303992.3|SWISS-PROT:Q9H8Y
+                       0  REVERSED_23650
+                       0  IPI:IPI00305046.3|TREMBL:Q96EZ6|EN
+                       0  IPI:IPI00328716.1|TREMBL:Q86UE6;Q9
+                       0  REVERSED_24764
+                       0  IPI:IPI00332940.2|TREMBL:Q8IW86|EN
+                       0  IPI:IPI00334410.1|SWISS-PROT:Q9261
+                       0  REVERSED_25551
+                       0  REVERSED_25552
+                       0  REVERSED_25573
+                       0  REVERSED_26888
+                       0  IPI:IPI00382416.4|SWISS-PROT:Q9P20
+                       0  IPI:IPI00383308.1|TREMBL:Q8WZ58 Ta
+                       0  REVERSED_28567
+                       0  IPI:IPI00385066.1|TREMBL:Q7Z4A1 Ta
+                       0  IPI:IPI00386424.2|TREMBL:Q9H937;Q5
+                       0  REVERSED_29832
+                       0  REVERSED_30451
+                       0  IPI:IPI00395813.1|TREMBL:Q8N1G0;Q6
+                       0  IPI:IPI00396475.1|ENSEMBL:ENSP0000
+                       0  REVERSED_30824
+  5.   4 / 36          0  446.2722  0.1295  0.3628     5.8   1/ 6  IPI:IPI00004860.2|SWISS-PROT:P54136|TREMBL:Q53GY4|REFSEQ_NP:NP_002878|ENSEMBL:E +49   R.SIAR.L
+                       0  IPI:IPI00005158.1|SWISS-PROT:P3677
+                       0  REVERSED_5272
+                       0  REVERSED_8003
+                       0  IPI:IPI00028078.1|SWISS-PROT:P5778
+                       0  REVERSED_9454
+                       0  REVERSED_9916
+                       0  REVERSED_11424
+                       0  REVERSED_12812
+                       0  REVERSED_15483
+                       0  IPI:IPI00217521.1|SWISS-PROT:P5778
+                       0  REVERSED_17969
+                       0  REVERSED_19471
+                       0  REVERSED_20342
+                       0  REVERSED_20854
+                       0  IPI:IPI00334291.5|TREMBL:Q9BSN5;Q8
+                       0  REVERSED_25182
+                       0  IPI:IPI00335865.2|ENSEMBL:ENSP0000
+                       0  IPI:IPI00375845.2|TREMBL:Q5H9Q8;Q9
+                       0  REVERSED_26721
+                       0  REVERSED_27955
+                       0  REVERSED_30357
+                       0  REVERSED_30778
+                       0  IPI:IPI00396980.2|REFSEQ_XP:XP_372
+                       0  IPI:IPI00398012.3|TREMBL:Q9NT48;Q9
+                       0  REVERSED_32277
+                       0  REVERSED_32395
+                       0  REVERSED_33038
+                       0  IPI:IPI00412607.5|SWISS-PROT:P4276
+                       0  REVERSED_35336
+                       0  REVERSED_36081
+                       0  REVERSED_37351
+                       0  REVERSED_37797
+                       0  REVERSED_38307
+                       0  REVERSED_39172
+                       0  REVERSED_39894
+                       0  REVERSED_40227
+                       0  IPI:IPI00465069.1|SWISS-PROT:P5778
+                       0  REVERSED_41632
+                       0  REVERSED_41860
+                       0  REVERSED_42386
+                       0  REVERSED_43826
+                       0  REVERSED_44023
+                       0  REVERSED_45102
+                       0  REVERSED_47116
+                       0  IPI:IPI00550247.2|TREMBL:Q5JTN3 Ta
+                       0  REVERSED_47747
+                       0  REVERSED_48326
+                       0  REVERSED_49050
+                       0  REVERSED_49986
+  6.   5 / 11  1163281746  446.2973  0.1365  0.3599    20.3   3/ 6  IPI:IPI00010807.1|SWISS-PROT:Q9H461|REFSEQ_NP:NP_114072|ENSEMBL:ENSP00000315042 +58   R.SVIK.Q
+               1145394002  REVERSED_3308
+               842412895  IPI:IPI00011276.1|SWISS-PROT:P2195
+               168636472  IPI:IPI00011593.1|SWISS-PROT:P1540
+                       0  REVERSED_4320
+                       0  REVERSED_5472
+                       0  REVERSED_7504
+                       0  REVERSED_8110
+                       0  IPI:IPI00031047.1|TREMBL:Q9BST2;Q9
+                       0  IPI:IPI00032055.1|SWISS-PROT:Q9Y2D
+                       0  REVERSED_9621
+                       0  REVERSED_11052
+                       0  REVERSED_11338
+                       0  REVERSED_13762
+                       0  REVERSED_13961
+                       0  REVERSED_14652
+                       0  REVERSED_15607
+                       0  REVERSED_15858
+                       0  IPI:IPI00215608.5|SWISS-PROT:Q9NR1
+                       0  REVERSED_18661
+               1163281746  REVERSED_18662
+               1145394002  IPI:IPI00220134.1|SWISS-PROT:Q1313
+               909521759  REVERSED_20339
+               168637497  IPI:IPI00243548.3|REFSEQ_XP:XP_290
+                       0  IPI:IPI00288891.5|SWISS-PROT:Q9NR1
+                       0  REVERSED_21475
+                       0  REVERSED_22248
+                       0  IPI:IPI00298743.3|SWISS-PROT:Q1346
+                       0  REVERSED_22864
+                       0  REVERSED_23067
+                       0  IPI:IPI00301894.1|SWISS-PROT:Q1313
+                       0  IPI:IPI00302383.3|SWISS-PROT:P1356
+                       0  IPI:IPI00303677.1|SWISS-PROT:Q8NH5
+                       0  REVERSED_23626
+                       0  REVERSED_24604
+                       0  REVERSED_28019
+                       0  IPI:IPI00386100.1|TREMBL:Q9H5C8|H-
+                       0  IPI:IPI00395595.1|TREMBL:Q6P158;Q8
+                       0  REVERSED_31288
+                       0  IPI:IPI00402053.1|TREMBL:Q6ZVF2;Q6
+                       0  REVERSED_33039
+                       0  REVERSED_33211
+                       0  REVERSED_34372
+                       0  REVERSED_36687
+                       0  REVERSED_36874
+                       0  REVERSED_37737
+                       0  REVERSED_38560
+                       0  REVERSED_41441
+                       0  IPI:IPI00477424.2|TREMBL:Q8N4U2;Q5
+                       0  REVERSED_43145
+                       0  REVERSED_43382
+                       0  REVERSED_43548
+                       0  IPI:IPI00480139.2|TREMBL:Q8NC84;Q6
+                       0  REVERSED_45471
+                       0  REVERSED_46309
+                       0  REVERSED_46373
+                       0  IPI:IPI00550805.1|H-INV:HIT0000121
+                       0  IPI:IPI00556270.1|TREMBL:Q59G60 Ta
+                       0  IPI:IPI00604772.1|TREMBL:Q53R22|RE
+  7.   5 / 11          0  446.2245  0.1365  0.3599    20.3   3/ 6  REVERSED_61                                                                     +76   K.SPDK.S
+                       0  REVERSED_416
+                       0  REVERSED_420
+                       0  REVERSED_839
+                       0  IPI:IPI00003035.1|TREMBL:Q9H079;Q9
+                       0  REVERSED_995
+                       0  REVERSED_1185
+                       0  IPI:IPI00006641.1|TREMBL:O15417|EN
+                       0  REVERSED_2255
+                       0  REVERSED_2386
+                       0  REVERSED_4037
+                       0  REVERSED_5750
+                       0  REVERSED_6608
+                       0  IPI:IPI00024387.1|SWISS-PROT:P5531
+                       0  IPI:IPI00024388.1|SWISS-PROT:P5531
+                       0  REVERSED_7199
+                       0  IPI:IPI00025468.3|SWISS-PROT:P1275
+                       0  IPI:IPI00026858.1|SWISS-PROT:P3990
+                       0  REVERSED_7757
+                       0  REVERSED_8078
+                       0  REVERSED_8413
+                       0  IPI:IPI00031773.1|SWISS-PROT:Q9Y26
+                       0  REVERSED_9564
+                       0  IPI:IPI00058192.1|SWISS-PROT:Q9H48
+                       0  REVERSED_11276
+                       0  REVERSED_13250
+                       0  IPI:IPI00164352.5|SWISS-PROT:O6028
+                       0  REVERSED_13386
+                       0  REVERSED_14618
+                       0  REVERSED_15930
+                       0  REVERSED_16699
+                       0  IPI:IPI00216658.1|SWISS-PROT:P1275
+                       0  IPI:IPI00216660.1|SWISS-PROT:P1275
+                       0  IPI:IPI00216661.1|SWISS-PROT:P1275
+                       0  IPI:IPI00217754.2|SWISS-PROT:O9584
+                       0  IPI:IPI00218176.3|SWISS-PROT:Q9H48
+                       0  REVERSED_18399
+                       0  REVERSED_18645
+                       0  REVERSED_18870
+                       0  REVERSED_18871
+                       0  REVERSED_18872
+                       0  REVERSED_20833
+                       0  REVERSED_21262
+                       0  REVERSED_21351
+                       0  REVERSED_23475
+                       0  REVERSED_23492
+                       0  REVERSED_23553
+                       0  IPI:IPI00307665.2|TREMBL:Q6AHZ1;O1
+                       0  REVERSED_24107
+                       0  REVERSED_25733
+                       0  IPI:IPI00375525.1|SWISS-PROT:P3990
+                       0  IPI:IPI00382662.1|TREMBL:Q96QK6 Ta
+                       0  REVERSED_27723
+                       0  REVERSED_28564
+                       0  REVERSED_30064
+                       0  REVERSED_30270
+                       0  REVERSED_30291
+                       0  REVERSED_30450
+                       0  IPI:IPI00401173.2|REFSEQ_XP:XP_499
+                       0  REVERSED_33091
+                       0  IPI:IPI00411886.4|SWISS-PROT:Q9Y3T
+                       0  REVERSED_34199
+                       0  IPI:IPI00419505.1|TREMBL:Q6NS87 Ta
+                       0  REVERSED_36008
+                       0  IPI:IPI00432907.1|TREMBL:Q6NVZ9 Ta
+                       0  REVERSED_36954
+                       0  REVERSED_37852
+                       0  REVERSED_39335
+                       0  IPI:IPI00456810.1|REFSEQ_XP:XP_291
+                       0  REVERSED_41046
+                       0  IPI:IPI00457359.1|REFSEQ_XP:XP_497
+                       0  REVERSED_43279
+                       0  REVERSED_44353
+                       0  REVERSED_44934
+                       0  REVERSED_46613
+                       0  REVERSED_46837
+                       0  REVERSED_48579
+  8.   5 / 11          0  446.2973  0.1365  0.3599    20.3   3/ 6  IPI:IPI00000192.2|SWISS-PROT:P18583-1                                           +101  K.SVLK.S
+                       0  REVERSED_516
+                       0  REVERSED_1144
+                       0  IPI:IPI00006096.1|SWISS-PROT:Q9BVV
+                       0  REVERSED_2790
+                       0  REVERSED_2886
+                       0  IPI:IPI00010120.3|SWISS-PROT:P5654
+                       0  REVERSED_2980
+                       0  REVERSED_3429
+                       0  REVERSED_3796
+                       0  IPI:IPI00020095.2|SWISS-PROT:Q1588
+                       0  IPI:IPI00020904.1|SWISS-PROT:P5181
+                       0  REVERSED_6255
+                       0  REVERSED_6447
+                       0  REVERSED_6529
+                       0  IPI:IPI00024157.1|SWISS-PROT:Q0068
+                       0  REVERSED_7772
+                       0  REVERSED_8118
+                       0  IPI:IPI00028099.2|SWISS-PROT:P2438
+                       0  REVERSED_8257
+                       0  REVERSED_8367
+                       0  REVERSED_8707
+                       0  REVERSED_9741
+                       0  IPI:IPI00045512.1|TREMBL:Q96RW7;Q9
+                       0  REVERSED_9989
+                       0  IPI:IPI00063404.4|TREMBL:Q96HY1;Q5
+                       0  REVERSED_11507
+                       0  IPI:IPI00152898.1|SWISS-PROT:P6196
+                       0  IPI:IPI00165026.2|TREMBL:Q86TU7;Q6
+                       0  REVERSED_13936
+                       0  REVERSED_15508
+                       0  IPI:IPI00180066.4|TREMBL:Q5U5X8;Q9
+                       0  REVERSED_16509
+                       0  IPI:IPI00215983.2|SWISS-PROT:P0091
+                       0  IPI:IPI00216430.2|SWISS-PROT:P3030
+                       0  IPI:IPI00217930.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218617.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218618.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218619.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218620.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218621.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218622.1|SWISS-PROT:P1858
+                       0  IPI:IPI00218624.1|SWISS-PROT:P1858
+                       0  REVERSED_19058
+                       0  IPI:IPI00220194.5|SWISS-PROT:P1116
+                       0  IPI:IPI00220981.1|SWISS-PROT:P3030
+                       0  REVERSED_20416
+                       0  REVERSED_20417
+                       0  REVERSED_20424
+                       0  IPI:IPI00241802.3|REFSEQ_XP:XP_370
+                       0  IPI:IPI00288889.3|SWISS-PROT:O4393
+                       0  REVERSED_21106
+                       0  IPI:IPI00290560.3|TREMBL:Q9H0R7;Q8
+                       0  IPI:IPI00290571.3|SWISS-PROT:Q8TB5
+                       0  REVERSED_21221
+                       0  REVERSED_21533
+                       0  IPI:IPI00292836.2|TREMBL:Q6AHY0;Q6
+                       0  IPI:IPI00293203.3|SWISS-PROT:Q8IWU
+                       0  REVERSED_21832
+                       0  IPI:IPI00296337.2|SWISS-PROT:P7852
+                       0  REVERSED_22955
+                       0  REVERSED_23039
+                       0  IPI:IPI00302351.1|TREMBL:Q9BYT3;Q8
+                       0  REVERSED_23198
+                       0  REVERSED_23631
+                       0  IPI:IPI00306882.3|TREMBL:Q7L3D7;Q9
+                       0  IPI:IPI00329070.1|TREMBL:Q9BSF8;Q6
+                       0  IPI:IPI00332058.4|TREMBL:Q5T6D1;Q9
+                       0  REVERSED_24803
+                       0  IPI:IPI00375453.4|REFSEQ_XP:XP_499
+                       0  IPI:IPI00376215.2|SWISS-PROT:P7852
+                       0  IPI:IPI00382737.1|REFSEQ_NP:NP_003
+                       0  REVERSED_27747
+                       0  REVERSED_27794
+                       0  IPI:IPI00384202.2|TREMBL:Q9P2G7;Q8
+                       0  REVERSED_28653
+                       0  IPI:IPI00386782.3|TREMBL:Q96HV7;Q5
+                       0  IPI:IPI00398020.4|TREMBL:Q9P273;Q9
+                       0  REVERSED_31333
+                       0  IPI:IPI00398725.1|SWISS-PROT:Q9H58
+                       0  REVERSED_31829
+                       0  REVERSED_31992
+                       0  IPI:IPI00401281.3|TREMBL:Q5JSR1;Q5
+                       0  IPI:IPI00401325.2|REFSEQ_XP:XP_378
+                       0  IPI:IPI00401580.1|REFSEQ_XP:XP_378
+                       0  REVERSED_32251
+                       0  IPI:IPI00401958.1|REFSEQ_NP:NP_620
+                       0  IPI:IPI00401959.1|REFSEQ_NP:NP_620
+                       0  IPI:IPI00402153.1|REFSEQ_NP:NP_115
+                       0  IPI:IPI00402222.1|SWISS-PROT:P1858
+                       0  IPI:IPI00410082.2|TREMBL:Q9H5C7|RE
+                       0  REVERSED_33740
+                       0  IPI:IPI00413612.1|TREMBL:Q6UV20|RE
+                       0  REVERSED_38656
+                       0  REVERSED_39556
+                       0  REVERSED_39923
+                       0  REVERSED_41301
+                       0  IPI:IPI00465387.1|TREMBL:Q8N7C1;Q6
+                       0  IPI:IPI00470391.1|TREMBL:Q658S6|H-
+                       0  REVERSED_41605
+                       0  IPI:IPI00472805.1|TREMBL:Q9C093|EN
+                       0  REVERSED_43549
+  9.   5 / 11          0  446.2245  0.1365  0.3599    20.3   3/ 6  IPI:IPI00001159.8|SWISS-PROT:Q92616|REFSEQ_NP:NP_006827|ENSEMBL:ENSP00000300648 +58   K.SDPK.V
+                       0  REVERSED_1201
+                       0  IPI:IPI00006499.5|TREMBL:O94853;Q9
+                       0  IPI:IPI00007270.2|SWISS-PROT:Q9UJY
+                       0  IPI:IPI00012687.3|TREMBL:Q5T702;Q9
+                       0  REVERSED_4611
+                       0  IPI:IPI00017966.1|SWISS-PROT:Q1550
+                       0  IPI:IPI00018963.3|SWISS-PROT:Q9NVD
+                       0  REVERSED_7097
+                       0  REVERSED_7713
+                       0  IPI:IPI00027040.4|ENSEMBL:ENSP0000
+                       0  IPI:IPI00027201.1|SWISS-PROT:Q0281
+                       0  REVERSED_9421
+                       0  IPI:IPI00102118.1|TREMBL:O94945;Q7
+                       0  REVERSED_12237
+                       0  REVERSED_13651
+                       0  REVERSED_14610
+                       0  REVERSED_14764
+                       0  REVERSED_15071
+                       0  IPI:IPI00216337.1|SWISS-PROT:Q9UJY
+                       0  IPI:IPI00217376.1|SWISS-PROT:Q8IWT
+                       0  REVERSED_18203
+                       0  REVERSED_20464
+                       0  REVERSED_20689
+                       0  REVERSED_21074
+                       0  REVERSED_21684
+                       0  REVERSED_21929
+                       0  REVERSED_22509
+                       0  IPI:IPI00298353.1|TREMBL:Q8N8V2|RE
+                       0  REVERSED_22777
+                       0  IPI:IPI00302313.4|TREMBL:Q8NEC5;Q9
+                       0  REVERSED_24693
+                       0  REVERSED_24694
+                       0  REVERSED_24695
+                       0  REVERSED_26373
+                       0  REVERSED_26929
+                       0  REVERSED_26930
+                       0  IPI:IPI00384670.1|TREMBL:Q86YA9;Q5
+                       0  REVERSED_28753
+                       0  IPI:IPI00385511.2|SWISS-PROT:Q9UPQ
+                       0  IPI:IPI00386908.3|SWISS-PROT:Q9NVD
+                       0  REVERSED_30464
+                       0  REVERSED_33075
+                       0  IPI:IPI00429358.2|TREMBL:Q5TCH3;Q6
+                       0  IPI:IPI00445401.1|SWISS-PROT:Q7Z6Z
+                       0  REVERSED_37927
+                       0  REVERSED_39198
+                       0  REVERSED_39237
+                       0  REVERSED_39786
+                       0  IPI:IPI00456919.2|SWISS-PROT:Q7Z6Z
+                       0  IPI:IPI00465089.1|SWISS-PROT:Q0292
+                       0  IPI:IPI00472835.3|ENSEMBL:ENSP0000
+                       0  REVERSED_42901
+                       0  IPI:IPI00478513.1|ENSEMBL:ENSP0000
+                       0  REVERSED_44433
+                       0  REVERSED_44742
+                       0  REVERSED_45674
+                       0  IPI:IPI00514763.1|TREMBL:Q5TCH5 Ta
+                       0  IPI:IPI00514804.1|SWISS-PROT:Q8IWT
+ 10.   6 / 11          0  446.2973  0.1365  0.3599    20.3   3/ 6  IPI:IPI00000111.3|SWISS-PROT:Q7L1S5-1|REFSEQ_NP:NP_113610|ENSEMBL:ENSP000002842 +101  K.SLVK.D
+                       0  IPI:IPI00001382.1|TREMBL:O95410;Q9
+                       0  REVERSED_1525
+                       0  REVERSED_1654
+                       0  IPI:IPI00007910.1|TREMBL:Q8WYA9;Q9
+                       0  IPI:IPI00010157.1|SWISS-PROT:P3115
+                       0  IPI:IPI00013409.1|SWISS-PROT:Q1348
+                       0  REVERSED_4200
+                       0  REVERSED_4569
+                       0  REVERSED_4972
+                       0  IPI:IPI00017940.3|TREMBL:Q68DH5;Q9
+                       0  REVERSED_5363
+                       0  IPI:IPI00018804.2|SWISS-PROT:Q1564
+                       0  IPI:IPI00019548.1|SWISS-PROT:Q1579
+                       0  IPI:IPI00021772.1|SWISS-PROT:Q0026
+                       0  IPI:IPI00024024.3|SWISS-PROT:Q0204
+                       0  IPI:IPI00024305.1|SWISS-PROT:P8402
+                       0  IPI:IPI00026697.2|SWISS-PROT:O9578
+                       0  IPI:IPI00027151.3|SWISS-PROT:O7582
+                       0  IPI:IPI00027969.1|SWISS-PROT:P4033
+                       0  IPI:IPI00028928.1|SWISS-PROT:Q1412
+                       0  REVERSED_8797
+                       0  IPI:IPI00031282.1|TREMBL:Q9H0B3|RE
+                       0  REVERSED_9012
+                       0  REVERSED_10062
+                       0  IPI:IPI00047552.3|REFSEQ_XP:XP_059
+                       0  IPI:IPI00059184.1|TREMBL:Q96A20|RE
+                       0  IPI:IPI00065515.3|TREMBL:Q6PHW1;Q9
+                       0  IPI:IPI00069084.1|SWISS-PROT:Q9Y4A
+                       0  REVERSED_11049
+                       0  REVERSED_11085
+                       0  REVERSED_11276
+                       0  REVERSED_12564
+                       0  REVERSED_13530
+                       0  REVERSED_13902
+                       0  REVERSED_14391
+                       0  IPI:IPI00168748.1|TREMBL:Q8NF40 Ta
+                       0  IPI:IPI00168849.1|TREMBL:Q8NFL1|EN
+                       0  REVERSED_14818
+                       0  REVERSED_15055
+                       0  REVERSED_15124
+                       0  REVERSED_15244
+                       0  REVERSED_15245
+                       0  REVERSED_15328
+                       0  REVERSED_15339
+                       0  REVERSED_15340
+                       0  IPI:IPI00176451.1|TREMBL:Q96BP1;Q7
+                       0  REVERSED_16303
+                       0  IPI:IPI00215657.1|SWISS-PROT:Q1412
+                       0  REVERSED_16985
+                       0  IPI:IPI00216088.2|SWISS-PROT:P2937
+                       0  REVERSED_17993
+                       0  IPI:IPI00217987.8|SWISS-PROT:P1121
+                       0  IPI:IPI00218052.3|TREMBL:Q96BS7;Q9
+                       0  IPI:IPI00220364.1|SWISS-PROT:Q1579
+                       0  REVERSED_19854
+                       0  REVERSED_19974
+                       0  IPI:IPI00221186.1|SWISS-PROT:P4033
+                       0  IPI:IPI00221217.2|SWISS-PROT:O7582
+                       0  IPI:IPI00221218.1|SWISS-PROT:O7582
+                       0  REVERSED_20386
+                       0  REVERSED_21075
+                       0  REVERSED_21149
+                       0  REVERSED_21491
+                       0  REVERSED_21664
+                       0  REVERSED_21778
+                       0  REVERSED_21907
+                       0  REVERSED_22380
+                       0  REVERSED_22643
+                       0  IPI:IPI00300852.1|SWISS-PROT:Q9H2B
+                       0  REVERSED_23044
+                       0  IPI:IPI00305477.5|SWISS-PROT:P0103
+                       0  REVERSED_23940
+                       0  IPI:IPI00328112.3|SWISS-PROT:Q0351
+                       0  IPI:IPI00329057.6|SWISS-PROT:Q96ME
+                       0  REVERSED_24477
+                       0  REVERSED_24591
+                       0  REVERSED_25028
+                       0  IPI:IPI00336024.1|SWISS-PROT:P4033
+                       0  IPI:IPI00336044.2|SWISS-PROT:O7582
+                       0  IPI:IPI00336170.5|SWISS-PROT:Q96ME
+                       0  REVERSED_25805
+                       0  IPI:IPI00376216.1|TREMBL:Q7Z5R3|RE
+                       0  REVERSED_27621
+                       0  REVERSED_28003
+                       0  IPI:IPI00386731.3|SWISS-PROT:Q96ME
+                       0  IPI:IPI00387043.1|TREMBL:Q96M14|H-
+                       0  IPI:IPI00394732.1|SWISS-PROT:Q9Y4A
+                       0  IPI:IPI00395401.1|TREMBL:Q96RJ1 Ta
+                       0  REVERSED_30724
+                       0  REVERSED_31183
+                       0  REVERSED_31248
+                       0  REVERSED_31260
+                       0  IPI:IPI00398765.1|TREMBL:Q8NB10|EN
+                       0  REVERSED_31654
+                       0  REVERSED_32934
+                       0  IPI:IPI00411504.1|ENSEMBL:ENSP0000
+                       0  REVERSED_34235
+                       0  IPI:IPI00419867.3|TREMBL:Q9P2J4;Q7
+                       0  REVERSED_35501
+                       0  IPI:IPI00442195.1|TREMBL:Q6ZMX9 Ta
+                       0  REVERSED_38193
+
+ 70.  56 /  1          0  445.1864  0.6313  0.1537    42.4   4/ 6  REVERSED_1776                                                                   +4    K.SHAM.-
+                       0  REVERSED_20449
+                       0  REVERSED_27729
+                       0  REVERSED_35220
+                       0  REVERSED_35874
+
+  1.          0  IPI:IPI00383021.1|TREMBL:Q14548 Tax_Id=9606 HOX2.8 protein 
+  2.          0  IPI:IPI00000598.1|TREMBL:Q9P0C5|H-INV:HIT000024811 Tax_Id=9606 HSPC256 
+  3.          0  IPI:IPI00000015.2|SWISS-PROT:Q08170|TREMBL:Q5VXP1;Q59EF5;Q53F45|REFSEQ_NP:NP_0
+  4.          0  REVERSED_527 
+  5.          0  IPI:IPI00004860.2|SWISS-PROT:P54136|TREMBL:Q53GY4|REFSEQ_NP:NP_002878|ENSEMBL:
+
+
+

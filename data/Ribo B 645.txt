@@ -1,0 +1,78 @@
+###	
+###	\\bl-chem-novcec1\Stuff\Glycopeptides ETD Tang\RIBOB000004.D\Analysis.yep(RIBOB000004.D)
+###	Instrument: HCTultra PTM Discovery System
+###	Manufacturer: Bruker
+###    Ribo B
+###    Ribo B
+###    
+###    PeakWidth 0.10, MiniumIntensity 100, S/N 1
+###    Retain Residuals no, Create neutrally no,
+###    FullScan Parameters: AdductIon (+)+H (-)-H, LowMass 250, HighMass 4000, MaxCharge charge decon 4, MinPeaks 3
+###    Perf. isotope decon yes, Max Charge Istopic decon 0, MW agreement 0.00, Abund. cutoff 10.00, Envelope cutoff 75.00
+###    MaxRes   Parameters: AdductIon (+)+H (-)-H, LowMass 100, HighMass 3000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 0, Abund. cutoff 2.00
+###    MSn      Parameters: AdductIon (+)+H (-)-H, LowMass 50, HighMass 2000 
+###    Perf. isotope decon yes, Max Charge Istopic decon 0, Abund. cutoff 2.00
+###    Global Charge Limit: no 3, Prefer FullScan Result: yes, Export what: 2 (0=non deconv/1=deconv only/2=mixed), NoMSMSSignals: 50, NoMSSignals (deconv): 2, NoMSSignals (non-deconv): 0, NormalizeData: no, SingleCharged: no
+###FS:    #m/z:    645.8 #charge-999
+###MaxRes:#m/z:      0.0 #charge-999
+###MS: 918/923/
+###MSMS: 920/925/
+BEGIN IONS
+TITLE= Cmpd 30, +MSn(646.1), 16.6 min
+PEPMASS=645.84	11892801
+CHARGE=3+
+
+233.11	40860	
+261.13	71650	
+345.37	40045	
+644.29	20818	
+880.03	15476	
+903.56	12837	
+904.06	15619	
+904.56	16614	
+947.33	12227	
+948.15	13703	
+968.92	96146	
+1245.00	17530	
+1245.90	12850	
+1270.87	33146	
+1271.96	26319	
+1286.97	33303	
+1287.86	21840	
+1288.90	13907	
+1591.96	66301	
+1592.95	49711	
+1594.03	20821	
+1676.95	16842	
+1705.07	23532	
+1716.93	11746	
+1758.15	27713	
+1759.09	33762	
+1760.13	20896	
+1791.13	11667	
+1806.17	82139	
+1807.11	59779	
+1808.08	36395	
+1809.04	21041	
+1833.14	14608	
+1834.23	19541	
+1835.17	11443	
+1878.13	17383	
+1893.28	27762	
+1894.20	37732	
+1895.20	20568	
+1902.25	43634	
+1903.19	41005	
+1904.25	20498	
+1919.28	27304	
+1920.29	43797	
+1921.23	35012	
+1922.12	22602	
+1935.33	38758	
+1937.17	218121	
+1938.03	146563	
+1939.96	33914	
+END IONS
+
+###CHECKSUM: 1be926fd30898bc69e02f5cbed067f65

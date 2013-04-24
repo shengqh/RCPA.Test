@@ -1,0 +1,40 @@
+
+ 12228_15N_1_01.6027.6027.2.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2002
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 01/12/2005, 04:20 PM, 1.0 sec. on sun04
+ (M+H)+ mass = 1201.6200 ~ 1.5000 (+2), fragment tol = 0.0000, AVG/AVG
+ total inten = 6358.6, lowest Sp = 0.0, # matched peptides = 409
+ # amino acids = 1442056, # proteins = 4910, /database/ser_sea_total.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.165 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference     Peptide
+ ---  --------  --------  --------  ------  ------   ----    ----  ---------     -------
+  1.   1 /  1          0 1201.3523  0.0000  2.9746  1031.0  15/18  SER0844       K.EINEVDLQLK.
+  2.   2 /  4          0 1200.3244  0.4368  1.6753   391.5  11/18  SE0430    +1  K.NKNDLPELEK.L
+                       0  SER0310	(637):ABC transporter perm
+  3.   3 / 16          0 1200.4107  0.4446  1.6521   239.1   8/18  SE0470        R.QNLILQELTK.K
+  4.   4 /  6          0 1200.3676  0.4621  1.5999   355.6  11/18  SE1627    +1  K.EIDQNINILK.E
+                       0  SER1458	(430):aspartate transamina
+  5.   5 /  7          0 1200.4107  0.4760  1.5588   355.1  10/18  SE0293    +1  R.LENLLETIVR.I
+                       0  SER0168	(133):conserved hypothetic
+  6.   6 / 15          0 1200.4139  0.5180  1.4337   241.3  11/20  SE1199    +1  K.NLEQAKKAGIK.A
+                       0  SER1067	(474):dihydrolipoamide deh
+  7.   7 / 13          0 1200.3261  0.5213  1.4240   248.7   9/18  SE0125    +1  K.ELLNHYGEPK.Y
+                       0  SER2384	(148):immunodominant antig
+  8.   8 /  8          0 1202.5364  0.5302  1.3975   342.7   9/18  SE2193        -.MLLEVKNVKK.V
+  9.   9 /  9          0 1200.4773  0.5452  1.3529   319.2  10/18  SER2396   +1  K.MENNKIIPIK.K
+                       0  SER2408	(260):conserved hypothetic
+ 10.  10 / 34          0 1201.3092  0.5876  1.2266   148.3   8/18  SE0930    +1  K.EEEKQEIAPK.N
+                       0  SER0811	(471):heat shock protein H
+
+  1.          0  SER0844 (72):conserved hypothetical protein 
+  2.          0  SE0430 (634):ABC transporter permease  
+  3.          0  SE0470 (253):transcription repressor of fructose operon  
+  4.          0  SE1627 (429):aspartate transaminase protein  
+  5.          0  SE0293 (133):conserved hypothetical protein  
+
+

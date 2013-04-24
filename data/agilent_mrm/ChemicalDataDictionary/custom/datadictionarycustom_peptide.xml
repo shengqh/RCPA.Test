@@ -1,0 +1,304 @@
+<?xml version="1.0" standalone="yes"?>
+<DataDictionary>
+  <xs:schema id="DataDictionary" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="DataDictionary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="IsotopeTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="IsotopeName" type="xs:string" />
+                <xs:element name="MoleFraction" type="xs:double" />
+                <xs:element name="ElementSymbol" type="xs:string" minOccurs="0" />
+                <xs:element name="AtomicMass" type="xs:double" minOccurs="0" />
+                <xs:element name="type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ElementTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ElementSymbol" type="xs:string" />
+                <xs:element name="ElementName" type="xs:string" minOccurs="0" />
+                <xs:element name="type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="AminoAcidTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SymbolSingleLetter" type="xs:string" />
+                <xs:element name="SymbolThreeLetter" type="xs:string" minOccurs="0" />
+                <xs:element name="AAName" type="xs:string" minOccurs="0" />
+                <xs:element name="ResFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ModAATable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="AASymbolSingleLetter" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ModificationTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="LossFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="GainFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="LinkTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LinkName" type="xs:string" />
+                <xs:element name="LossFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="GainFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="AASymbolSingleLetter1" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ReagentTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ReagentName" type="xs:string" />
+                <xs:element name="CleaveRule" type="xs:string" minOccurs="0" />
+                <xs:element name="NGainFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="CGainFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="NLossFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="CLossFormula" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="AdductTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AdductName" type="xs:string" />
+                <xs:element name="Formula" type="xs:string" minOccurs="0" />
+                <xs:element name="Polarity" type="xs:int" minOccurs="0" />
+                <xs:element name="Charge" type="xs:int" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="FmocProtectingGroupTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="tBocProtectingGroupTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DNAMutationTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FromAA" type="xs:string" />
+                <xs:element name="ToAA" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="SampleArtifactsTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="IntactProteinModificationTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ModName" type="xs:string" />
+                <xs:element name="MaxLimit" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NucleotideTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Symbol" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Formula" type="xs:string" minOccurs="0" />
+                <xs:element name="Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//IsotopeTable" />
+        <xs:field xpath="IsotopeName" />
+        <xs:field xpath="MoleFraction" />
+      </xs:unique>
+      <xs:unique name="ElementTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ElementTable" />
+        <xs:field xpath="ElementSymbol" />
+      </xs:unique>
+      <xs:unique name="AminoAcidTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//AminoAcidTable" />
+        <xs:field xpath="SymbolSingleLetter" />
+      </xs:unique>
+      <xs:unique name="ModAATable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ModAATable" />
+        <xs:field xpath="ModName" />
+        <xs:field xpath="AASymbolSingleLetter" />
+      </xs:unique>
+      <xs:unique name="ModificationTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ModificationTable" />
+        <xs:field xpath="ModName" />
+      </xs:unique>
+      <xs:unique name="LinkTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//LinkTable" />
+        <xs:field xpath="LinkName" />
+      </xs:unique>
+      <xs:unique name="ReagentTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//ReagentTable" />
+        <xs:field xpath="ReagentName" />
+      </xs:unique>
+      <xs:unique name="AdductTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//AdductTable" />
+        <xs:field xpath="AdductName" />
+      </xs:unique>
+      <xs:unique name="FmocProtectingGroupTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//FmocProtectingGroupTable" />
+        <xs:field xpath="ModName" />
+      </xs:unique>
+      <xs:unique name="tBocProtectingGroupTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//tBocProtectingGroupTable" />
+        <xs:field xpath="ModName" />
+      </xs:unique>
+      <xs:unique name="DNAMutationTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//DNAMutationTable" />
+        <xs:field xpath="FromAA" />
+      </xs:unique>
+      <xs:unique name="SampleArtifactsTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//SampleArtifactsTable" />
+        <xs:field xpath="ModName" />
+      </xs:unique>
+      <xs:unique name="IntactProteinModificationTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//IntactProteinModificationTable" />
+        <xs:field xpath="ModName" />
+      </xs:unique>
+      <xs:unique name="NucleotideTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//NucleotideTable" />
+        <xs:field xpath="Symbol" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <ModAATable>
+    <ModName>Test</ModName>
+    <AASymbolSingleLetter>K</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>K8</ModName>
+    <AASymbolSingleLetter>K</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>R10</ModName>
+    <AASymbolSingleLetter>R</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>A4</ModName>
+    <AASymbolSingleLetter>A</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>A3</ModName>
+    <AASymbolSingleLetter>A</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>Leu6</ModName>
+    <AASymbolSingleLetter>L</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>K6</ModName>
+    <AASymbolSingleLetter>K</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>V5</ModName>
+    <AASymbolSingleLetter>V</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>Leu7</ModName>
+    <AASymbolSingleLetter>L</AASymbolSingleLetter>
+  </ModAATable>
+  <ModAATable>
+    <ModName>V6</ModName>
+    <AASymbolSingleLetter>V</AASymbolSingleLetter>
+  </ModAATable>
+  <ModificationTable>
+    <ModName>Test</ModName>
+    <LossFormula>C6H</LossFormula>
+    <GainFormula>Cx6D</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>K8</ModName>
+    <LossFormula>C6N2</LossFormula>
+    <GainFormula>Cx6Nx2</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>R10</ModName>
+    <LossFormula>C6N4</LossFormula>
+    <GainFormula>Cx6Nx4</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>A4</ModName>
+    <LossFormula>C4</LossFormula>
+    <GainFormula>Cx4</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>A3</ModName>
+    <LossFormula>C3</LossFormula>
+    <GainFormula>Cx3</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>Leu6</ModName>
+    <LossFormula>C6</LossFormula>
+    <GainFormula>Cx6</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>K6</ModName>
+    <LossFormula>C6</LossFormula>
+    <GainFormula>Cx6</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>V5</ModName>
+    <LossFormula>C5</LossFormula>
+    <GainFormula>Cx5</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>Leu7</ModName>
+    <LossFormula>C6N1</LossFormula>
+    <GainFormula>Cx6Nx1</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+  <ModificationTable>
+    <ModName>V6</ModName>
+    <LossFormula>C5N1</LossFormula>
+    <GainFormula>Cx5Nx1</GainFormula>
+    <Type>1</Type>
+  </ModificationTable>
+</DataDictionary>

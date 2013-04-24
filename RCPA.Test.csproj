@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BFC5EE1-FA7B-485C-8D9D-DF5A1580228E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RCPA</RootNamespace>
+    <AssemblyName>RCPA.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Win32|AnyCPU'">
+    <OutputPath>bin\Win32\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Win32|x64'">
+    <OutputPath>bin\x64\Win32\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\packages\Accord.Statistics.2.8.1.0\lib\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=2.1.2.21, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MathNet.Numerics.2.4.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics.IO">
+      <HintPath>..\packages\MathNet.Numerics.2.4.0\lib\net40\MathNet.Numerics.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.6.417, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ZedGraph.5.1.6\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckExtension.cs" />
+    <Compile Include="Emass\TestEmass.cs" />
+    <Compile Include="Extension\TestFileExtension.cs" />
+    <Compile Include="Extension\TestXmlExtension.cs" />
+    <Compile Include="File\TestFileIndexFormat.cs" />
+    <Compile Include="Format\TestTextFileDefinition.cs" />
+    <Compile Include="Format\TestTextFileReader.cs" />
+    <Compile Include="Gui\TestRcpaOptionAttributeUtils.cs" />
+    <Compile Include="Numerics\TestMADOutlierDetector.cs" />
+    <Compile Include="Numerics\TestGrubbsTestOutlierDetector.cs" />
+    <Compile Include="Proteomics\Database\TestUniprotXmlFormatRandomReader.cs" />
+    <Compile Include="Proteomics\Detectability\TestDetectabilityEntry.cs" />
+    <Compile Include="Proteomics\Detectability\TestDetectabilityPredictor.cs" />
+    <Compile Include="Proteomics\Distribution\TestModifiedPeptideDistributionCalculator.cs" />
+    <Compile Include="Proteomics\Distribution\TestCalculationItem.cs" />
+    <Compile Include="Proteomics\Distribution\TestDistributionOption.cs" />
+    <Compile Include="Proteomics\Distribution\TestDistributionOptionXmlFormat.cs" />
+    <Compile Include="Proteomics\Fragmentation\TestCIDPeptideY2SeriesBuilder.cs" />
+    <Compile Include="Proteomics\Fragmentation\TestCIDPeptideYSeriesBuilder.cs" />
+    <Compile Include="Proteomics\Fragmentation\TestCIDPeptideB2SeriesBuilder.cs" />
+    <Compile Include="Proteomics\Fragmentation\TestCIDPeptideBSeriesBuilder.cs" />
+    <Compile Include="Proteomics\Fragmentation\TestETDPeptideFragmentationBuilder.cs" />
+    <Compile Include="Proteomics\Fragmentation\AbstractTestFragmentationBuilder.cs" />
+    <Compile Include="Proteomics\Image\AbstractTestMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestBYNeutralLossMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestBYPhosphoNeutralLossMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestGraphics.cs" />
+    <Compile Include="Proteomics\Image\TestMatchedPeak.cs" />
+    <Compile Include="Proteomics\Image\TestNeutralLossCandidates.cs" />
+    <Compile Include="Proteomics\Image\TestNeutralLossGenerator.cs" />
+    <Compile Include="Proteomics\Image\TestNeutralLossUtils.cs" />
+    <Compile Include="Proteomics\Image\TestPeakIonSeriesMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestPrecursorNeutralLossMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestPrecursorPhosphoNeutralLossMatcher.cs" />
+    <Compile Include="Proteomics\Image\TestRectangleTransform.cs" />
+    <Compile Include="Proteomics\Image\TestScaleTransform.cs" />
+    <Compile Include="Proteomics\Isotopic\TestCarbonProfileBuilder.cs" />
+    <Compile Include="Proteomics\Isotopic\TestCHONSIsotopicProfileBuilder.cs" />
+    <Compile Include="Proteomics\Isotopic\TestEmassProfileBuilder.cs" />
+    <Compile Include="Proteomics\Isotopic\TestSilacIsotopeFile.cs" />
+    <Compile Include="Proteomics\Mascot\TestExpectValueCalculator.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotDatParser.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatReader.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatSequestWriter.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatSqhWriter.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatWriter.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatYehiaWriter.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotModification.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotPeptide.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotPeptideHitTextWriter.cs.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotProtein.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotResultHtmlStandaloneParser.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotResultTextFormat.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotUtils.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotDatasetOptions.cs" />
+    <Compile Include="Proteomics\MaxQuant\TestMaxQuantConverter.cs" />
+    <Compile Include="Proteomics\MaxQuant\TestMaxQuantPeptideTextReader.cs" />
+    <Compile Include="Proteomics\MaxQuant\TextMaxQuantAplFormat.cs" />
+    <Compile Include="Proteomics\PeptideProphet\TestProteinProphetXmlReader.cs" />
+    <Compile Include="Proteomics\PeptideProphet\TestPeptideProphetXmlReader.cs" />
+    <Compile Include="Proteomics\PeptideProphet\TestPeptideProphetItem.cs" />
+    <Compile Include="Proteomics\PeptideProphet\TestPepXmlReader.cs" />
+    <Compile Include="Proteomics\PFind\TestPFindSpectrumParser.cs" />
+    <Compile Include="Proteomics\PFind\TestPNovoParser.cs" />
+    <Compile Include="Proteomics\PFind\TestSnpDataValidator.cs" />
+    <Compile Include="Proteomics\Processor\TestPeakListDeisotopicByChargeProcessor.cs" />
+    <Compile Include="Proteomics\Processor\TestPeakListMassRangeProcessor.cs" />
+    <Compile Include="Proteomics\Processor\TestPeakListMinIonCountProcessor.cs" />
+    <Compile Include="Proteomics\Processor\TestPeakListMinIonIntensityProcessor.cs" />
+    <Compile Include="Proteomics\Processor\TestPeakListMinTotalIonIntensityProcessor.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestAnnotationConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumChargeConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumDeltaScoreConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumExpectValueConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumFileScanConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumMissCleavageConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumModificationConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumRankConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumReferenceConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumScoreConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumSequenceConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMHConverter.cs" />
+    <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMinusExperimentalMassConverter.cs" />
+    <Compile Include="Proteomics\Quantification\ITraq\TestITraqItemConverter.cs" />
+    <Compile Include="Proteomics\Quantification\ITraq\TestIsobaricImpurityCorrectionCalculator.cs" />
+    <Compile Include="Proteomics\Quantification\ITraq\TestITraqQuantificationResultConverter.cs" />
+    <Compile Include="Proteomics\Quantification\ITraq\TestITraqResultXmlIndexBuilder.cs" />
+    <Compile Include="Proteomics\Quantification\ITraq\TestITraqResultXmlFormat.cs" />
+    <Compile Include="Proteomics\Quantification\Lipid\TestQueryItemListFormat.cs" />
+    <Compile Include="Proteomics\Quantification\SILAC\TestSilacProteinQuantificationResultConverter.cs" />
+    <Compile Include="Proteomics\Quantification\Srm\TestOutlierDetector.cs" />
+    <Compile Include="Proteomics\Quantification\Srm\TestSrmTransactionAtaqsReader.cs" />
+    <Compile Include="Proteomics\Quantification\Srm\TestMRMTransactionTextReader.cs" />
+    <Compile Include="Proteomics\Quantification\Reproducibility\TestPrecursorItemListExcelReader.cs" />
+    <Compile Include="Proteomics\Quantification\TestCensusStringResultFormat.cs" />
+    <Compile Include="Proteomics\Quantification\TestITraqPhosphoRatioCalculator.cs" />
+    <Compile Include="Proteomics\Quantification\TestLinearRegressionRatioCalculator.cs" />
+    <Compile Include="Proteomics\Quantification\TestQuantificationItemConverter.cs" />
+    <Compile Include="Proteomics\Quantification\TestSilacQuantificationSummaryItem.cs" />
+    <Compile Include="Proteomics\Raw\TestMzDataImpl.cs" />
+    <Compile Include="Proteomics\Raw\TestMzXmlImpl.cs" />
+    <Compile Include="Proteomics\Raw\TestRawFileImpl.cs" />
+    <Compile Include="Proteomics\Raw\TestRawScanFilter.cs" />
+    <Compile Include="Proteomics\Raw\TestT2DReader.cs" />
+    <Compile Include="Proteomics\Score\TestXCorrelationSpectrumScore.cs" />
+    <Compile Include="Proteomics\Sequest\TestBuildSummaryResultUtils.cs" />
+    <Compile Include="Proteomics\Sequest\TestDtaOutFilenameConverter.cs" />
+    <Compile Include="Proteomics\Sequest\TestDtasReader.cs" />
+    <Compile Include="Proteomics\Sequest\TestFollowCandidate.cs" />
+    <Compile Include="Proteomics\Sequest\TestMsfDatabaseToNoredundantProcessor.cs" />
+    <Compile Include="Proteomics\Sequest\TestOutParser.cs" />
+    <Compile Include="Proteomics\Sequest\TestOutsReader.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestLogReader.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestOutHeaderParser.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestOutZipParser.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestParam.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestPeptide.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestPeptideFormat.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestPeptideHit.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestResultTextFormat.cs" />
+    <Compile Include="Proteomics\Snp\TestSnpCode.cs" />
+    <Compile Include="Proteomics\Snp\TestMutationUtils.cs" />
+    <Compile Include="Proteomics\Snp\TestSapPtmTable.cs" />
+    <Compile Include="Proteomics\Summary\TestBuildSummaryOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestClassificationOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestDatabaseOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestDatasetListOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestFalseDiscoveryRateOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentificationSummary.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedProteinGroupContaminationFilter.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedSpectrum.cs" />
+    <Compile Include="Proteomics\Spectrum\TestPeakListDeductionByWindow.cs" />
+    <Compile Include="Proteomics\Summary\TestScoreDistribution.cs" />
+    <Compile Include="Proteomics\Summary\TestScoreDistributionXmlFormat.cs" />
+    <Compile Include="Proteomics\Sequest\TestSequestDatasetOptions.cs" />
+    <Compile Include="Proteomics\Summary\TestSpectrumOptions.cs" />
+    <Compile Include="Proteomics\Utils\TestPeptideUtils.cs" />
+    <Compile Include="Seq\TestPseudoSequenceBuilder.cs" />
+    <Compile Include="Converter\TestDoubleConverter.cs" />
+    <Compile Include="TestConvert.cs" />
+    <Compile Include="TestItemInfoListOldReader.cs" />
+    <Compile Include="Gui\TestOptionFileComboBoxAdaptor.cs" />
+    <Compile Include="Gui\TestOptionFileItemInfosAdaptor.cs" />
+    <Compile Include="Gui\TestRcpaDoubleField.cs" />
+    <Compile Include="Gui\TestOptionFileTextBoxAdaptor.cs" />
+    <Compile Include="Parser\TestParserFormat.cs" />
+    <Compile Include="Parser\TestParserFormatList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Proteomics\IO\TestDta2MgfProcessor.cs" />
+    <Compile Include="Proteomics\IO\TestDtaFormat.cs" />
+    <Compile Include="Proteomics\IO\TestOmicsMSFormatReader.cs" />
+    <Compile Include="Proteomics\Modification\TestLabelAllValidator.cs" />
+    <Compile Include="Proteomics\Modification\TestLabelNTermValidator.cs" />
+    <Compile Include="Proteomics\Modification\TestLabelCTermValidator.cs" />
+    <Compile Include="Proteomics\Modification\TestModificationCountCalculator.cs" />
+    <Compile Include="Proteomics\Modification\TestModificationFilter.cs" />
+    <Compile Include="Proteomics\Modification\TestModificationUtils.cs" />
+    <Compile Include="Proteomics\Quantification\TestCensusProteinItem.cs" />
+    <Compile Include="Proteomics\Quantification\TestCensusResultFormat.cs" />
+    <Compile Include="Proteomics\Quantification\TestITraqResult.cs" />
+    <Compile Include="Proteomics\Quantification\TestO18QuantificationSummaryItemTextFormat.cs" />
+    <Compile Include="Proteomics\Quantification\TestO18QuantificationSummaryItemXmlFormat.cs" />
+    <Compile Include="Proteomics\Summary\Processor\TestProteinLengthProcessor.cs" />
+    <Compile Include="Proteomics\Summary\Processor\TestProteinNameProcessor.cs" />
+    <Compile Include="Proteomics\Summary\TestDtaselectResultReader.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentificationBuilder.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedProtein.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedProteinPropertyConverterFactory.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedResult.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedSpectrumPropertyConverterFactory.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedSpectrumUtils.cs" />
+    <Compile Include="Proteomics\Summary\TestSrfXmlReader.cs" />
+    <Compile Include="Proteomics\Summary\TestTitleParser.cs" />
+    <Compile Include="Proteomics\TestAminoacid.cs" />
+    <Compile Include="Proteomics\TestAminoacidComposition.cs" />
+    <Compile Include="Proteomics\TestAminoacids.cs" />
+    <Compile Include="Proteomics\TestAtom.cs" />
+    <Compile Include="Proteomics\TestAtomCompositionCalculator.cs" />
+    <Compile Include="Proteomics\TestCarbonRange.cs" />
+    <Compile Include="Proteomics\TestChargeDeconvolution.cs" />
+    <Compile Include="Proteomics\TestDigest.cs" />
+    <Compile Include="Proteomics\Spectrum\TestPeakList.cs" />
+    <Compile Include="Proteomics\TestProtease.cs" />
+    <Compile Include="Proteomics\TestProteaseManager.cs" />
+    <Compile Include="Proteomics\TestRangeLocation.cs" />
+    <Compile Include="Proteomics\TestRangeLocationFilter.cs" />
+    <Compile Include="Proteomics\TestSequestFilename.cs" />
+    <Compile Include="Proteomics\TestSmoothing.cs" />
+    <Compile Include="Proteomics\XTandem\TestXTandemSpectrumXmlParser.cs" />
+    <Compile Include="Seq\TestAccessNumberParserFactory.cs" />
+    <Compile Include="Seq\TestDefaultAccessNumberParser.cs" />
+    <Compile Include="Seq\TestFastaFormat.cs" />
+    <Compile Include="Seq\TestSequence.cs" />
+    <Compile Include="Seq\TestSequenceUtils.cs" />
+    <Compile Include="TestItemInfoListNewReader.cs" />
+    <Compile Include="TestOptionFileItemInfosAdaptor.cs" />
+    <Compile Include="TestTemplate.cs" />
+    <Compile Include="Extension\TestXmlLinqExtension.cs" />
+    <Compile Include="Tools\Distiller\TestExtractDistinctResultProcessor.cs" />
+    <Compile Include="Tools\Distiller\TestUniquePeptideDistiller.cs" />
+    <Compile Include="Utils\AssertUtils.cs" />
+    <Compile Include="Utils\TestAnnotationUtils.cs" />
+    <Compile Include="Utils\TestBeanUtils.cs" />
+    <Compile Include="Utils\TestByteConvert.cs" />
+    <Compile Include="Utils\TestConvertBigEndian32.cs" />
+    <Compile Include="Utils\TestConvertBigEndian64.cs" />
+    <Compile Include="Utils\TestConvertLittleEndian32.cs" />
+    <Compile Include="Utils\TestConvertLittleEndian64.cs" />
+    <Compile Include="Utils\TestChinese.cs" />
+    <Compile Include="Utils\TestCollectionUtils.cs" />
+    <Compile Include="Utils\TestFileUtils.cs" />
+    <Compile Include="Utils\TestListFileReader.cs" />
+    <Compile Include="Utils\TestMathUtils.cs" />
+    <Compile Include="Utils\TestMiscUtils.cs" />
+    <Compile Include="Utils\TestNonNegativeLeastSquaresCalc.cs" />
+    <Compile Include="Utils\TestNumericalRecipes.cs" />
+    <Compile Include="Utils\TestStatisticsUtils.cs" />
+    <Compile Include="Utils\TestStreamUtils.cs" />
+    <Compile Include="Utils\TestStringUtils.cs" />
+    <Compile Include="Utils\TestXmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="data\12228_15N_1_01.6027.6027.2.out" />
+    <None Include="data\20030428_4_29L_15.dtas" />
+    <None Include="data\20030428_4_29L_15.outs" />
+    <None Include="data\20040922_HPPP_Flow_01.0007.0007.2.dta" />
+    <None Include="data\AGP_100ng_062306_1.RAW.fullms" />
+    <None Include="data\ataqs.csv" />
+    <None Include="data\bioworks31.params" />
+    <None Include="data\bioworks32.params" />
+    <None Include="data\build.noredundant" />
+    <None Include="data\CXJ_L02_SILAC_Orbi_12_060605.3.3.1.dta" />
+    <None Include="data\DH1_3a.RAW.DH1_3a.EMSDIIQR.4399.o18" />
+    <None Include="data\DHBS0001_4FR_R01.mgf" />
+    <None Include="data\F001264.dat" />
+    <None Include="data\Forward_above20.sampF1.AAAQVAFYEK.2.2547-2702.silac" />
+    <None Include="data\Full_scan_apiginin_ms2.RAW" />
+    <None Include="data\HLPP20050041811CLC-17.2074.2074.2.out" />
+    <None Include="data\IPI00206171.detectability" />
+    <None Include="data\ISOTOPE.DAT" />
+    <None Include="data\JWH_SAX_35_050906.19303.19303.2.out" />
+    <None Include="data\Leucine_isotope.ini" />
+    <None Include="data\mouseliver.4587.4587.2.out" />
+    <None Include="data\Nmix_27_C13.peptides" />
+    <None Include="data\pepxml.outs" />
+    <None Include="data\protease.list" />
+    <None Include="data\P_kit_elution.5407.5407.3.out" />
+    <None Include="data\QTof_itraq.mzData" />
+    <None Include="data\RP62A_15N_1_03.10801.10801.3.out" />
+    <None Include="data\Standard_Protein_FIT_060222.5079.5079.1.out" />
+    <None Include="data\Standard_Protein_FIT_060222.8034.8034.1.out" />
+    <None Include="data\Standard_Protein_FIT_060222.peptides" />
+    <None Include="data\Standard_Protein_FT2_Lock_Re5.6308.6310.2.dta" />
+    <None Include="data\Standard_Protein_FT2_Lock_Re5.RAW" />
+    <None Include="data\test.fasta" />
+    <None Include="data\test.scoreDistribution" />
+    <None Include="data\TestBuilder.peptides" />
+    <None Include="data\TestDistributionOption.noredundant" />
+    <None Include="data\TestIdentifiedProtein.noredundant" />
+    <None Include="data\TestMascotDatSummaryBuilder.peptides" />
+    <None Include="data\YAGmem1.mzXML" />
+    <None Include="data\ZhouH_ML_050720_Nano_pH_02.29478.29478.2.out" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="template\agilent_dynamic.srmformat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="template\agilent_static.srmformat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="template\ataqs.srmformat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\RCPA.Tools\MiscOptions.xml">
+      <Link>MiscOptions.xml</Link>
+    </Content>
+    <Content Include="App_Readme\MathNet.Numerics.authors.txt" />
+    <Content Include="App_Readme\MathNet.Numerics.copyright.txt" />
+    <Content Include="App_Readme\MathNet.Numerics.readme.txt" />
+    <Content Include="data\cluster_sequest.log" />
+    <Content Include="data\Distribution.statistic.xml" />
+    <Content Include="data\LipidProductIon.txt" />
+    <Content Include="data\ListFileFormatOld.lst" />
+    <Content Include="data\ListFileFormatNew.lst" />
+    <Content Include="data\TestListFileReader.lst" />
+    <Content Include="data\Anne_E2_master_results.pl.txt" />
+    <Content Include="data\census-g1-out.txt" />
+    <Content Include="data\census-g1-out.xml" />
+    <Content Include="data\dtaselect.txt" />
+    <Content Include="data\F001370.pep.xml" />
+    <Content Include="data\mascot_result_Caseins00001.htm" />
+    <Content Include="data\mascot_result_protein_newversion.html" />
+    <Content Include="data\mascot_result_protein_o18.html" />
+    <Content Include="data\mascot_result_protein_oldversion.html" />
+    <Content Include="data\mascot_summary.txt" />
+    <Content Include="data\MiscOptions.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\O18QuantificationInformation.xml" />
+    <Content Include="data\pepxml.outs.xml" />
+    <Content Include="data\pepxml.xml" />
+    <Content Include="data\pps_192 LC_1141485233.htm" />
+    <Content Include="data\pps_192 LC_1141485233.txt" />
+    <Content Include="data\Ribo B 645.txt" />
+    <Content Include="data\searchresult.xml" />
+    <Content Include="data\TextFile.txt" />
+    <Content Include="data\xtandem.xml" />
+    <Content Include="data\xtandem_linux.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Proteomics\Summary\Uniform\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RCPA.Core\RCPA.Core.csproj">
+      <Project>{594B9AF6-4E27-4230-A60A-1B61FA3171F9}</Project>
+      <Name>RCPA.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCPA.Proteomics\RCPA.Proteomics.csproj">
+      <Project>{7FF5DF9A-5C66-41A9-A462-65EC502E924F}</Project>
+      <Name>RCPA.Proteomics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCPA.Tools\RCPA.Tools.csproj">
+      <Project>{2EE033E9-729F-42C7-AC1C-68C473A01AC7}</Project>
+      <Name>RCPA.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

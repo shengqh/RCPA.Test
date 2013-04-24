@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BuildSummaryOption>
+  <Version>BuildSummary - Mascot Dat Summary Builder - 1.1.5 - Quanhu Sheng (shengqh@gmail.com) - RCPA/SIBS</Version>
+  <DateTime>2009-11-27T10:09:15</DateTime>
+  <MergeResult>True</MergeResult>
+  <Database>
+    <Location>X:\ipi.MOUSE.v3.66.REVERSED.fasta</Location>
+    <AccessNumberPattern>IPI:([^.|]*)</AccessNumberPattern>
+    <DecoyPattern>^REVERSED_</DecoyPattern>
+    <ContaminationPattern>CON_</ContaminationPattern>
+    <RemovePeptideFromDecoyDB>False</RemovePeptideFromDecoyDB>
+  </Database>
+  <FalseDiscoveryRate>
+    <Filtered>True</Filtered>
+    <!--Level : Protein / Peptide / UniquePeptide-->
+    <Level>Peptide</Level>
+    <MaxPeptideFdr>0.01</MaxPeptideFdr>
+    <FdrPeptideCount>10</FdrPeptideCount>
+    <!--Type : Target / Total-->
+    <Type>Target</Type>
+    <Value>0.01</Value>
+  </FalseDiscoveryRate>
+  <Classifications>
+    <ClassifyByCharge>True</ClassifyByCharge>
+    <ClassifyByMissCleavage>True</ClassifyByMissCleavage>
+    <ClassifyByModification>False</ClassifyByModification>
+    <ModifiedAminoacid>STY</ModifiedAminoacid>
+  </Classifications>
+  <PeptideFilter>
+     <Filter Name="MinSequenceLength" Active="True" Value="6" />
+  </PeptideFilter>
+  <Datasets>
+    <Dataset>
+      <SearchEngine>MASCOT</SearchEngine>
+      <PeptideFilter>
+        <Filter Name="PrecursorPPM" Active="True" Value="10" />
+        <Filter Name="Score" Active="True" Value="25" />
+        <Filter Name="ExpectValue" Active="False" Value="0" />
+      </PeptideFilter>
+      <TitleFormat>TurboRAW2MGF, DTA format</TitleFormat>
+      <PathNames>
+        <PathName Bin="">C:\Inetpub\wwwroot\ISB\data\silac\CXJ_L02_SILAC_Orbi_101_060605.RAW.Heavy.dat</PathName>
+        <PathName Bin="">C:\Inetpub\wwwroot\ISB\data\silac\CXJ_L02_SILAC_Orbi_101_060605.RAW.Light.dat</PathName>
+      </PathNames>
+    </Dataset>
+    <Dataset>
+      <SearchEngine>SEQUEST</SearchEngine>
+      <PeptideFilter>
+        <Filter Name="PrecursorPPM" Active="False" Value="10" />
+        <Filter Name="Xcorr1" Active="False" Value="1.9" />
+        <Filter Name="Xcorr2" Active="False" Value="2.2" />
+        <Filter Name="Xcorr3" Active="False" Value="3.75" />
+        <Filter Name="DeltaCn" Active="True" Value="0.1" />
+        <Filter Name="SpRank" Active="False" Value="1" />
+      </PeptideFilter>
+      <DeltaCnCalculation>
+        <SkipSamePeptideButDifferentModificationSite>True</SkipSamePeptideButDifferentModificationSite>
+        <MaxModificationDeltaCn>0.08</MaxModificationDeltaCn>
+      </DeltaCnCalculation>
+      <PathNames>
+        <PathName Bin="">Z:\NieSong\YEAST_SAX_ONLINE\YEAST_G1_SAX\YEAST_0610_G1_SAX_080811_01</PathName>
+        <PathName Bin="">Z:\NieSong\YEAST_SAX_ONLINE\YEAST_G1_SAX\YEAST_0610_G1_SAX_080811_02</PathName>
+      </PathNames>
+    </Dataset>
+  </Datasets>
+</BuildSummaryOption>

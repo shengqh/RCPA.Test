@@ -1,0 +1,1964 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://bl_chem_protdat/mascot/cgi/master_results.pl?file=../data/20060307/F107268.dat -->
+<!-- 0.156 seconds --><!-- 0.156 seconds --><!-- 0.156 seconds --><HTML><HEAD><TITLE>Mascot Search Results</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>.tooltip {
+	LEFT: 0px; VISIBILITY: hidden; POSITION: absolute; TOP: 0px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!-- Begin hiding Javascript from old browsers.
+ 
+  var arrayReady=0;
+	var EXCLUDE=true; 
+	var IE=false; 
+	var IE4=false; 
+	var IE5=false; 
+	var IE6=false;
+	var MZ7=false;
+	var NS4=false;
+	var NS6=false; 
+	var OP5=false; 
+	var OP6=false;
+	var OP7=false;
+
+	var agt=navigator.userAgent.toLowerCase();
+	if (typeof document.all!="undefined"&&(agt.indexOf("msie")!=-1)) {
+		IE=true; 
+		IE4=true; 
+		EXCLUDE=false;
+		if (agt.indexOf("msie 4")==-1) { 
+			IE5=true; 
+			IE4=false; 
+		}
+		if (agt.indexOf("opera")!=-1) { 
+			IE=false; 
+			IE4=false; 
+			IE5=false; 
+			OP5=true; 
+		}
+	}
+	if (typeof document.getElementById!="undefined"&&!IE) {
+		NS6=true; 
+		EXCLUDE=false;
+		if (agt.indexOf("netscape6")==-1) {
+			NS6=false; 
+			MZ7=true;
+		}
+		if (typeof window.opera!="undefined") { 
+			MZ7=false; 
+			OP5=true;
+		} else if (agt.indexOf("gecko")==-1) { 
+			MZ7=false; 
+			EXCLUDE=true; 
+		}
+	}
+	if (agt.indexOf("opera 4")!=-1 || agt.indexOf("opera/4")!=-1) { 
+		OP5=false; 
+		MZ7=false; 
+		EXCLUDE=true; 
+	}
+	if ((agt.indexOf("mozilla")!=-1)&&(parseInt(navigator.appVersion)>=4)&&!IE&&!OP5&&!NS6&&!MZ7) {
+		NS4=true; 
+		EXCLUDE=false;
+	}
+	if (agt.indexOf("webtv")!=-1) { 
+		IE=false; 
+		IE4=false; 
+		EXCLUDE=true; 
+	}
+	if(IE5&&agt.indexOf("msie 6")!=-1) { 
+		IE5=false; 
+		IE6=true;
+	}
+	if(OP5){
+		if((agt.indexOf("opera 6")!=-1)||(agt.indexOf("opera/6")!=-1)){
+			OP6=true;
+			OP5=false;
+		} else if ((agt.indexOf("opera 7")!=-1)||(agt.indexOf("opera/7")!=-1)){
+			OP7=true;
+			OP5=false;
+		}
+	}
+  
+  if (document.images){
+    redBall = new Image();
+    redBall.src = "../images/red_ball_white.gif";  
+    cyanBall = new Image();
+    cyanBall.src = "../images/cyan_ball_white.gif";  
+  }
+  
+  function cover(hit,query,protSeq){
+    document.Results.Title.value = queryTitle[query];
+    document.Results.Accession.value = protName[hit];
+    document.Results.Sequence.value = protSeq;
+    if (hit == 0) {
+      self.status = queryTitle[query];
+    } else {
+      self.status = protName[hit] + ": " + protSeq;
+    }
+    if (protSeq != "" && document.fred && arrayReady == 1){
+      var i = 0;
+      var element = 0;
+      element = eval(protSeq+"["+i+"]");
+      while(element) {
+        document.images[element].src = redBall.src;
+        i++;
+        element = eval(protSeq+"["+i+"]");
+      }
+    }
+  }
+
+  function uncover(hit,query,protSeq){
+    document.Results.Title.value = "-Query-";
+    document.Results.Accession.value="-Accession-";
+    document.Results.Sequence.value="-Sequence-";
+    self.status="";
+    if (protSeq != "" && document.fred && arrayReady == 1){
+      var i = 0;
+      var element = 0;
+      element = eval(protSeq+"["+i+"]");
+      while(element) {
+        document.images[element].src = cyanBall.src;
+        i++;
+        element = eval(protSeq+"["+i+"]");
+      }
+    }
+  }
+
+  function checkQuery(checkState,numChecks,form){
+    if (numChecks == 1){
+      form.QUE.checked = checkState;
+    } else {
+      for (var i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].name == "QUE"){
+          form.elements[i].checked = checkState;
+        }
+      }
+    }
+  }
+
+  function SaveClicks(checkBox,form){
+    if (form.ERRORTOLERANT.checked) {
+      return;
+    }
+    var checkState = checkBox.checked;
+    var thisHit = 0;
+    for (var i = 0; i < form.elements.length; i++) {
+      if (thisHit == 1){
+        if (form.elements[i].name == "QUE") {
+          form.elements[i].checked = !checkState;
+        } else {
+          break;
+        }
+      } else {
+        if (form.elements[i] == checkBox){
+          thisHit = 1;
+        }
+      }
+    }
+  }
+
+  function unMatched(form){
+    var numMisses = 0;
+    for (var i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].name == "MISSES"){
+        numMisses++;
+      } 
+    }
+    if (numMisses < 1) {
+      alert("No unmatched mass values to be searched");
+      return false;
+    }
+    for (var i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].name == "QUE"){
+        form.elements[i].name = "DUMMY";
+      } 
+    }
+    for (var i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].name == "MISSES"){
+        form.elements[i].name = "QUE";
+      } 
+    }
+    form.submit();
+    return true;
+  }
+
+  function makeAccessionString(form){
+    if (!form.ERRORTOLERANT.checked) {
+      form.ACCESSION.value = "";
+      return true;
+    }
+    var tempString = "";
+    var numAccessions = 1;
+    for (var i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].name == "INCLUDE" && form.elements[i].checked){
+        tempString = tempString + unescape(et_list[form.elements[i].value]) + ",";
+      }
+    }
+    if (tempString == "") {
+      alert("No hits selected for error tolerant search");
+      return false;
+    }
+    tempString = tempString.substring(0, tempString.length - 1);
+    form.ACCESSION.value = tempString;
+    return true;
+  }
+
+  function clearEl() {}
+
+  function makeArchive(form){
+    var tempUrl = "./master_results.pl?REPTYPE=archive&INTERMEDIATE=../data/20060307/F107268.dat";
+    for (var i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].name == "INCLUDE" && form.elements[i].checked){
+        tempUrl = tempUrl + "&INCLUDE=" + form.elements[i].value;
+      }
+    }
+    form.REPTYPE.value="archive";
+    form.action=tempUrl;
+    form.submit();
+  }
+
+  var h0_q8 = " ";
+  var h0_q9 = " ";
+  var h0_q30 = " ";
+  var h0_q31 = " ";
+  var h0_q32 = " ";
+  var h0_q70 = " ";
+  var h0_q34 = " ";
+  var h0_q71 = " ";
+  var h2_q33 = "2:CO4_HUMAN  ";
+  var h0_q35 = " ";
+  var h0_q72 = " ";
+  var h0_q36 = " ";
+  var h0_q73 = " ";
+  var h0_q37 = " ";
+  var h0_q74 = " ";
+  var h0_q38 = " ";
+  var h0_q75 = " ";
+  var h0_q39 = " ";
+  var h0_q76 = " ";
+  var h0_q77 = " ";
+  var h0_q78 = " ";
+  var h0_q79 = " ";
+  var h0_q40 = " ";
+  var h0_q41 = " ";
+  var h0_q42 = " ";
+  var h0_q43 = " ";
+  var h0_q80 = " ";
+  var h0_q44 = " ";
+  var h0_q81 = " ";
+  var h0_q45 = " ";
+  var h1_q46 = "1:FIBA_HUMAN  ";
+  var h1_q47 = "1:FIBA_HUMAN  ";
+  var h0_q48 = " ";
+  var h0_q49 = " ";
+  var h0_q10 = " ";
+  var h0_q11 = " ";
+  var h0_q12 = " ";
+  var h0_q13 = " ";
+  var h0_q14 = " ";
+  var h0_q50 = " ";
+  var h0_q51 = " ";
+  var h0_q15 = " ";
+  var h0_q16 = " ";
+  var h0_q52 = " ";
+  var h0_q17 = " ";
+  var h0_q53 = " ";
+  var h0_q18 = " ";
+  var h0_q54 = " ";
+  var h0_q55 = " ";
+  var h0_q19 = " ";
+  var h0_q56 = " ";
+  var h0_q57 = " ";
+  var h0_q58 = " ";
+  var h0_q59 = " ";
+  var h0_q20 = " ";
+  var h0_q21 = " ";
+  var h0_q22 = " ";
+  var h0_q23 = " ";
+  var h0_q24 = " ";
+  var h0_q60 = " ";
+  var h0_q25 = " ";
+  var h0_q61 = " ";
+  var h0_q26 = " ";
+  var h0_q62 = " ";
+  var h0_q27 = " ";
+  var h0_q63 = " ";
+  var h0_q28 = " ";
+  var h0_q64 = " ";
+  var h0_q29 = " ";
+  var h0_q65 = " ";
+  var h0_q66 = " ";
+  var h0_q67 = " ";
+  var h0_q68 = " ";
+  var h0_q69 = " ";
+  var h0_q1 = " ";
+  var h0_q2 = " ";
+  var h0_q3 = " ";
+  var h0_q4 = " ";
+  var h0_q5 = " ";
+  var h0_q6 = " ";
+  var h0_q7 = " ";
+
+  et_list = new Array(1);
+  et_list[0] = "";
+  et_list[1] = "%22FIBA_HUMAN%22";
+  et_list[2] = "%22CO4_HUMAN%22";
+
+// End hiding Javascript from old browsers. -->
+</SCRIPT>
+
+<META content="MSHTML 6.00.5296.0" name=GENERATOR></HEAD>
+<BODY vLink=#0000ff aLink=#0000ff bgColor=#ffffff>
+<H1><IMG height=31 src="master_results_files/88x31_logo_white.gif" width=88 
+align=top border=0 name=fred NATURALSIZEFLAG="3"> Mascot Search 
+Results</H1><FONT face="Courier New,Courier,monospace"><PRE><B>User            : </B>
+<B>Email           : </B>
+<B>Search title    : Project: Bill, Spot Set: Bill\192 LC</B>
+<B>MS data file    : pps_192 LC_1141485233.txt</B>
+<B>Database        : Sprot 20050315 (176469 sequences; 63878124 residues)</B>
+<B>Taxonomy        : Homo sapiens (human) (12042 sequences)</B>
+<B>Timestamp       : 7 Mar 2006 at 20:04:19 GMT</B>
+<B>Significant hits: <A href="http://bl_chem_protdat/mascot/cgi/master_results.pl?file=../data/20060307/F107268.dat#Hit1">FIBA_HUMAN</A>                      (P02671) Fibrinogen alpha/alpha-E chain precursor [Contains: Fibrinopeptide A]</B>
+<B>                  <A href="http://bl_chem_protdat/mascot/cgi/master_results.pl?file=../data/20060307/F107268.dat#Hit2">CO4_HUMAN</A>                       (P01028) Complement C4 precursor [Contains: C4a anaphylatoxin; C4b]</B>
+</PRE></FONT>
+<H3>Probability Based Mowse Score</H3>Score is -10*Log(P), where P is the 
+probability that the observed match is a random event.<BR>Individual ions scores 
+&gt; 27 indicate identity or extensive homology (p&lt;0.05).
+<P><IMG height=200 alt="Score Distribution" 
+src="master_results_files/score_gif.png" width=400> 
+<H3>Peptide Summary Report</H3><A 
+href="http://bl_chem_protdat/mascot/cgi/master_results.pl?file=../data/20060307/F107268.dat&amp;REPTYPE=protein">Switch 
+to Protein Summary Report</A>
+<P>To create a bookmark for this report, right click this link: <A 
+href="http://bl_chem_protdat/mascot/cgi/master_results.pl?REPTYPE=Peptide&amp;file=../data/20060307/F107268.dat">Peptide 
+Summary Report (Project: Bill, Spot Set: Bill\192 LC)</A>
+<FORM name=Results onsubmit="return makeAccessionString(this)" 
+action=./search_form.pl?SEARCH=MIS method=post><INPUT type=hidden value=1.01 
+name=FORMVER> <INPUT type=hidden value=MIS name=SEARCH> <INPUT type=hidden 
+name=USERNAME> <INPUT type=hidden name=USEREMAIL> <INPUT type=hidden 
+value="Project: Bill, Spot Set: Bill\192 LC" name=COM> <INPUT type=hidden 
+value="Carbamidomethyl (C)" name=MODS> <INPUT type=hidden name=IT_MODS> <INPUT 
+type=hidden value=Trypsin/P name=CLE> <INPUT type=hidden value=Monoisotopic 
+name=MASS> <INPUT type=hidden name=SEG> <INPUT type=hidden name=TWO> <INPUT 
+type=hidden value=0.25 name=TOL> <INPUT type=hidden value=Da name=TOLU> <INPUT 
+type=hidden value=0.25 name=ITOL> <INPUT type=hidden value=Da name=ITOLU> <INPUT 
+type=hidden name=LTOL> <INPUT type=hidden name=MP> <INPUT type=hidden 
+value=Sprot name=DB> <INPUT type=hidden value=1+ name=CHARGE> <INPUT type=hidden 
+value=3 name=PFA> <INPUT type=hidden value=0 name=IATOL> <INPUT type=hidden 
+value=0 name=IASTOL> <INPUT type=hidden value=0 name=IA2TOL> <INPUT type=hidden 
+value=1 name=IBTOL> <INPUT type=hidden value=0 name=IBSTOL> <INPUT type=hidden 
+value=1 name=IB2TOL> <INPUT type=hidden value=1 name=IYTOL> <INPUT type=hidden 
+value=0 name=IYSTOL> <INPUT type=hidden value=1 name=IY2TOL> <INPUT type=hidden 
+name=FRAG> <INPUT type=hidden value="pps_192 LC_1141485233.txt" name=FILE> 
+<INPUT type=hidden value="Mascot generic" name=FORMAT> <INPUT type=hidden 
+value=../data/20060307/F107268.dat name=INTERMEDIATE> <INPUT type=hidden 
+value=AUTO name=REPORT> <INPUT type=hidden value=OFF name=OVERVIEW> <INPUT 
+type=hidden value=AUTO name=PEAK> <INPUT type=hidden name=PRECURSOR> <INPUT 
+type=hidden value=". . . . . . . . . . . . . . . . Homo sapiens (human)" 
+name=TAXONOMY> <INPUT type=hidden value=Peptide name=REPTYPE> <INPUT type=hidden 
+value="not again" name=repeatSearch> <INPUT type=hidden value=OFF name=ICAT> 
+<INPUT type=hidden value=MALDI-TOF-TOF name=INSTRUMENT> <INPUT type=hidden 
+name=ACCESSION> 
+<P><INPUT onclick="checkQuery(1,81, this.form)" type=button value="Select All"> 
+&nbsp;&nbsp;<INPUT onclick="checkQuery(0,81, this.form)" type=button value="Select None"> 
+&nbsp;&nbsp;<INPUT type=submit value="Search Selected"> &nbsp;&nbsp;<INPUT 
+onclick="checkQuery(1,81, this.form)" type=checkbox value=1 
+name=ERRORTOLERANT><B>Error tolerant</B>&nbsp;&nbsp;&nbsp; <INPUT onclick="makeArchive(this.form); return true" type=button value="Archive Report"> 
+<FONT face="Courier New,Courier,monospace"><PRE><A name=Hit1><B>1.</B></A> <A href="http://bl_chem_protdat/mascot/cgi/protein_view.pl?file=../data/20060307/F107268.dat&amp;hit=FIBA_HUMAN&amp;px=1&amp;protscore=47.03">FIBA_HUMAN</A>                       <B>Mass:</B> 95656   <B>Total score:</B> 47  <B>Peptides matched:</B> 2  
+   (P02671) Fibrinogen alpha/alpha-E chain precursor [Contains: Fibrinopeptide A]
+<INPUT onclick=SaveClicks(this,this.form) type=checkbox value=1 name=INCLUDE>Check to include this hit in error tolerant search or archive report
+</PRE>
+<TABLE cellSpacing=0 border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD 
+      noWrap><TT><B>Query&nbsp;&nbsp;&nbsp;Observed&nbsp;&nbsp;&nbsp;Mr(expt)&nbsp;&nbsp;&nbsp;Mr(calc)&nbsp;&nbsp;&nbsp;Delta&nbsp;&nbsp;Miss&nbsp;Score&nbsp;&nbsp;Rank&nbsp;&nbsp;&nbsp;Peptide</B></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1189.473524 from(1190.480800,1+) title(Label%3a%20B4%2c%20Spot_Id%3a%20426504%2c%20Peak_List_Id%3a%20588901%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(46)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h1_q46; if (!EXCLUDE) activateEl('Q46', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=46&amp;hit=1&amp;index=FIBA_HUMAN&amp;px=1" 
+      target=_blank>46</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1190.48&nbsp;&nbsp;&nbsp;&nbsp;1189.47&nbsp;&nbsp;&nbsp;&nbsp;1189.54&nbsp;&nbsp;&nbsp;&nbsp;-0.06&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;QFTSSTSYNR</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1189.477324 from(1190.484600,1+) title(Label%3a%20B3%2c%20Spot_Id%3a%20426483%2c%20Peak_List_Id%3a%20588883%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(47)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h1_q47; if (!EXCLUDE) activateEl('Q47', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=47&amp;hit=1&amp;index=FIBA_HUMAN&amp;px=1" 
+      target=_blank>47</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1190.48&nbsp;&nbsp;&nbsp;&nbsp;1189.48&nbsp;&nbsp;&nbsp;&nbsp;1189.54&nbsp;&nbsp;&nbsp;&nbsp;-0.06&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;(34)&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;QFTSSTSYNR</B></FONT></TT></TD></TR></TBODY></TABLE><PRE><HR>
+<A name=Hit2><B>2.</B></A> <A href="http://bl_chem_protdat/mascot/cgi/protein_view.pl?file=../data/20060307/F107268.dat&amp;hit=CO4_HUMAN&amp;px=1&amp;protscore=33.5656982436272">CO4_HUMAN</A>                        <B>Mass:</B> 194247   <B>Total score:</B> 34  <B>Peptides matched:</B> 1  
+   (P01028) Complement C4 precursor [Contains: C4a anaphylatoxin; C4b]
+<INPUT onclick=SaveClicks(this,this.form) type=checkbox value=2 name=INCLUDE>Check to include this hit in error tolerant search or archive report
+</PRE>
+<TABLE cellSpacing=0 border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD 
+      noWrap><TT><B>Query&nbsp;&nbsp;&nbsp;Observed&nbsp;&nbsp;&nbsp;Mr(expt)&nbsp;&nbsp;&nbsp;Mr(calc)&nbsp;&nbsp;&nbsp;Delta&nbsp;&nbsp;Miss&nbsp;Score&nbsp;&nbsp;Rank&nbsp;&nbsp;&nbsp;Peptide</B></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1051.501724 from(1052.509000,1+) title(Label%3a%20B10%2c%20Spot_Id%3a%20426501%2c%20Peak_List_Id%3a%20588897%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(33)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h2_q33; if (!EXCLUDE) activateEl('Q33', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=33&amp;hit=1&amp;index=CO4_HUMAN&amp;px=1" 
+      target=_blank>33</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1052.51&nbsp;&nbsp;&nbsp;&nbsp;1051.50&nbsp;&nbsp;&nbsp;&nbsp;1051.55&nbsp;&nbsp;&nbsp;&nbsp;-0.05&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;SHALQLNNR</B></FONT></TT></TD></TR></TBODY></TABLE><PRE><HR>
+<B>Unassigned queries:</B> (no details means no match) <INPUT type=hidden value=ToggleHere name=StopCheckBox>
+</PRE>
+<TABLE cellSpacing=0 border=0>
+  <TBODY>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD 
+      noWrap><TT><B>Query&nbsp;&nbsp;&nbsp;Observed&nbsp;&nbsp;&nbsp;Mr(expt)&nbsp;&nbsp;&nbsp;Mr(calc)&nbsp;&nbsp;&nbsp;Delta&nbsp;&nbsp;Miss&nbsp;Score&nbsp;&nbsp;Rank&nbsp;&nbsp;&nbsp;Peptide</B></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1044.504724 from(1045.512000,1+) title(Label%3a%20B14%2c%20Spot_Id%3a%20426499%2c%20Peak_List_Id%3a%20588893%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(31)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q31; if (!EXCLUDE) activateEl('Q31', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=31&amp;hit=1&amp;index=IL17E_HUMAN&amp;px=1" 
+      target=_blank>31</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1045.51&nbsp;&nbsp;&nbsp;&nbsp;1044.50&nbsp;&nbsp;&nbsp;&nbsp;1044.48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;ASEDGPLNSR</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1225.495124 from(1226.502400,1+) title(Label%3a%20C6%2c%20Spot_Id%3a%20426527%2c%20Peak_List_Id%3a%20588923%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(51)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q51; if (!EXCLUDE) activateEl('Q51', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=51&amp;hit=1&amp;index=GPR97_HUMAN&amp;px=1" 
+      target=_blank>51</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1226.50&nbsp;&nbsp;&nbsp;&nbsp;1225.50&nbsp;&nbsp;&nbsp;&nbsp;1225.61&nbsp;&nbsp;&nbsp;&nbsp;-0.11&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;DEDKPPDRVR</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="941.410204 from(942.417480,1+) title(Label%3a%20D11%2c%20Spot_Id%3a%20426536%2c%20Peak_List_Id%3a%20588933%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(6)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q6; if (!EXCLUDE) activateEl('Q6', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=6&amp;hit=1&amp;index=OR7G2_HUMAN&amp;px=1" 
+      target=_blank>6</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>942.42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;941.41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;941.48&nbsp;&nbsp;&nbsp;&nbsp;-0.07&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;MPSASGKHK</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1059.545824 from(1060.553100,1+) title(Label%3a%20C24%2c%20Spot_Id%3a%20426518%2c%20Peak_List_Id%3a%20588910%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(35)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q35; if (!EXCLUDE) activateEl('Q35', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=35&amp;hit=1&amp;index=KNG_HUMAN&amp;px=1" 
+      target=_blank>35</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1060.55&nbsp;&nbsp;&nbsp;&nbsp;1059.55&nbsp;&nbsp;&nbsp;&nbsp;1059.56&nbsp;&nbsp;&nbsp;&nbsp;-0.02&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;RPPGFSPFR</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1251.396124 from(1252.403400,1+) title(Label%3a%20B4%2c%20Spot_Id%3a%20426504%2c%20Peak_List_Id%3a%20588902%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(55)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q55; if (!EXCLUDE) activateEl('Q55', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=55&amp;hit=1&amp;index=PHS1_HUMAN&amp;px=1" 
+      target=_blank>55</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1252.40&nbsp;&nbsp;&nbsp;&nbsp;1251.40&nbsp;&nbsp;&nbsp;&nbsp;1251.62&nbsp;&nbsp;&nbsp;&nbsp;-0.22&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;NIAASGKFSSDR</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1251.450024 from(1252.457300,1+) title(Label%3a%20C8%2c%20Spot_Id%3a%20426526%2c%20Peak_List_Id%3a%20588921%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(56)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q56; if (!EXCLUDE) activateEl('Q56', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=56&amp;hit=1&amp;index=CAC1I_HUMAN&amp;px=1" 
+      target=_blank>56</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1252.46&nbsp;&nbsp;&nbsp;&nbsp;1251.45&nbsp;&nbsp;&nbsp;&nbsp;1251.65&nbsp;&nbsp;&nbsp;&nbsp;-0.20&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;EPRHYHGKTK</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1106.431324 from(1107.438600,1+) title(Label%3a%20B12%2c%20Spot_Id%3a%20426500%2c%20Peak_List_Id%3a%20588895%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(39)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q39; if (!EXCLUDE) activateEl('Q39', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=39&amp;hit=1&amp;index=LTBP2_HUMAN&amp;px=1" 
+      target=_blank>39</A>&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+      color=#ff0000><B>1107.44&nbsp;&nbsp;&nbsp;&nbsp;1106.43&nbsp;&nbsp;&nbsp;&nbsp;1106.68&nbsp;&nbsp;&nbsp;&nbsp;-0.25&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;PRALLEAPLK</B></FONT></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="919.480884 from(920.488160,1+) title(Label%3a%20A2%2c%20Spot_Id%3a%20426481%2c%20Peak_List_Id%3a%20588881%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(1)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q1; if (!EXCLUDE) activateEl('Q1', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=1&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>1</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>920.49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;919.48</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="921.568774 from(922.576050,1+) title(Label%3a%20E22%2c%20Spot_Id%3a%20426576%2c%20Peak_List_Id%3a%20588946%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(2)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q2; if (!EXCLUDE) activateEl('Q2', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=2&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>2</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>922.58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;921.57</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="928.495834 from(929.503110,1+) title(Label%3a%20C1%2c%20Spot_Id%3a%20426506%2c%20Peak_List_Id%3a%20588904%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(3)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q3; if (!EXCLUDE) activateEl('Q3', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=3&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>3</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>929.50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;928.50</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="928.499434 from(929.506710,1+) title(Label%3a%20C2%2c%20Spot_Id%3a%20426529%2c%20Peak_List_Id%3a%20588927%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(4)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q4; if (!EXCLUDE) activateEl('Q4', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=4&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>4</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>929.51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;928.50</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="928.526114 from(929.533390,1+) title(Label%3a%20B24%2c%20Spot_Id%3a%20426494%2c%20Peak_List_Id%3a%20588886%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(5)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q5; if (!EXCLUDE) activateEl('Q5', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=5&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>5</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>929.53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;928.53</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="941.427114 from(942.434390,1+) title(Label%3a%20D16%2c%20Spot_Id%3a%20426549%2c%20Peak_List_Id%3a%20588940%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(7)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q7; if (!EXCLUDE) activateEl('Q7', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=7&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>7</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>942.43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;941.43</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="956.208114 from(957.215390,1+) title(Label%3a%20H20%2c%20Spot_Id%3a%20426647%2c%20Peak_List_Id%3a%20588956%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(8)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q8; if (!EXCLUDE) activateEl('Q8', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=8&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>8</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>957.22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;956.21</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="957.151114 from(958.158390,1+) title(Label%3a%20F5%2c%20Spot_Id%3a%20426587%2c%20Peak_List_Id%3a%20588948%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(9)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q9; if (!EXCLUDE) activateEl('Q9', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=9&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>9</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>958.16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;957.15</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="957.187064 from(958.194340,1+) title(Label%3a%20E18%2c%20Spot_Id%3a%20426574%2c%20Peak_List_Id%3a%20588945%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(10)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q10; if (!EXCLUDE) activateEl('Q10', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=10&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>10</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>958.19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;957.19</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="958.195424 from(959.202700,1+) title(Label%3a%20G23%2c%20Spot_Id%3a%20426602%2c%20Peak_List_Id%3a%20588952%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(11)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q11; if (!EXCLUDE) activateEl('Q11', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=11&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>11</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>959.20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;958.20</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="959.819814 from(960.827090,1+) title(Label%3a%20A24%2c%20Spot_Id%3a%20426470%2c%20Peak_List_Id%3a%20588876%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(12)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q12; if (!EXCLUDE) activateEl('Q12', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=12&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>12</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>960.83&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;959.82</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="959.875654 from(960.882930,1+) title(Label%3a%20H12%2c%20Spot_Id%3a%20426643%2c%20Peak_List_Id%3a%20588955%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(13)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q13; if (!EXCLUDE) activateEl('Q13', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=13&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>13</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>960.88&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;959.88</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="961.866564 from(962.873840,1+) title(Label%3a%20F20%2c%20Spot_Id%3a%20426599%2c%20Peak_List_Id%3a%20588950%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(14)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q14; if (!EXCLUDE) activateEl('Q14', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=14&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>14</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>962.87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;961.87</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="962.851614 from(963.858890,1+) title(Label%3a%20G12%2c%20Spot_Id%3a%20426619%2c%20Peak_List_Id%3a%20588953%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(15)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q15; if (!EXCLUDE) activateEl('Q15', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=15&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>15</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>963.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;962.85</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="963.797714 from(964.804990,1+) title(Label%3a%20A18%2c%20Spot_Id%3a%20426473%2c%20Peak_List_Id%3a%20588879%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(16)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q16; if (!EXCLUDE) activateEl('Q16', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=16&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>16</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>964.80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;963.80</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="963.829334 from(964.836610,1+) title(Label%3a%20C24%2c%20Spot_Id%3a%20426518%2c%20Peak_List_Id%3a%20588912%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(17)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q17; if (!EXCLUDE) activateEl('Q17', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=17&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>17</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>964.84&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;963.83</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="963.864424 from(964.871700,1+) title(Label%3a%20F14%2c%20Spot_Id%3a%20426596%2c%20Peak_List_Id%3a%20588949%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(18)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q18; if (!EXCLUDE) activateEl('Q18', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=18&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>18</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>964.87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;963.86</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="971.540084 from(972.547360,1+) title(Label%3a%20C14%2c%20Spot_Id%3a%20426523%2c%20Peak_List_Id%3a%20588918%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(19)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q19; if (!EXCLUDE) activateEl('Q19', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=19&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>19</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>972.55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;971.54</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="973.389204 from(974.396480,1+) title(Label%3a%20E2%2c%20Spot_Id%3a%20426566%2c%20Peak_List_Id%3a%20588944%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(20)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q20; if (!EXCLUDE) activateEl('Q20', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=20&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>20</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>974.40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;973.39</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="973.393784 from(974.401060,1+) title(Label%3a%20D13%2c%20Spot_Id%3a%20426535%2c%20Peak_List_Id%3a%20588931%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(21)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q21; if (!EXCLUDE) activateEl('Q21', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=21&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>21</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>974.40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;973.39</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="973.421374 from(974.428650,1+) title(Label%3a%20D16%2c%20Spot_Id%3a%20426549%2c%20Peak_List_Id%3a%20588938%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(22)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q22; if (!EXCLUDE) activateEl('Q22', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=22&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>22</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>974.43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;973.42</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="995.824204 from(996.831480,1+) title(Label%3a%20D22%2c%20Spot_Id%3a%20426552%2c%20Peak_List_Id%3a%20588943%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(23)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q23; if (!EXCLUDE) activateEl('Q23', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=23&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>23</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>996.83&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;995.82</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="997.812364 from(998.819640,1+) title(Label%3a%20C14%2c%20Spot_Id%3a%20426523%2c%20Peak_List_Id%3a%20588917%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(24)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q24; if (!EXCLUDE) activateEl('Q24', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=24&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>24</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>998.82&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;997.81</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="997.858384 from(998.865660,1+) title(Label%3a%20G20%2c%20Spot_Id%3a%20426623%2c%20Peak_List_Id%3a%20588954%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(25)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q25; if (!EXCLUDE) activateEl('Q25', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=25&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>25</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>998.87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;997.86</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="997.863334 from(998.870610,1+) title(Label%3a%20F20%2c%20Spot_Id%3a%20426599%2c%20Peak_List_Id%3a%20588951%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(26)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q26; if (!EXCLUDE) activateEl('Q26', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=26&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>26</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>998.87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;997.86</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1021.490624 from(1022.497900,1+) title(Label%3a%20B10%2c%20Spot_Id%3a%20426501%2c%20Peak_List_Id%3a%20588899%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(27)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q27; if (!EXCLUDE) activateEl('Q27', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=27&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>27</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1022.50&nbsp;&nbsp;&nbsp;&nbsp;1021.49</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1023.724924 from(1024.732200,1+) title(Label%3a%20A2%2c%20Spot_Id%3a%20426481%2c%20Peak_List_Id%3a%20588880%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(28)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q28; if (!EXCLUDE) activateEl('Q28', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=28&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>28</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1024.73&nbsp;&nbsp;&nbsp;&nbsp;1023.72</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1023.801024 from(1024.808300,1+) title(Label%3a%20E24%2c%20Spot_Id%3a%20426577%2c%20Peak_List_Id%3a%20588947%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(29)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q29; if (!EXCLUDE) activateEl('Q29', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=29&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>29</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1024.81&nbsp;&nbsp;&nbsp;&nbsp;1023.80</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1025.773024 from(1026.780300,1+) title(Label%3a%20C24%2c%20Spot_Id%3a%20426518%2c%20Peak_List_Id%3a%20588913%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(30)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q30; if (!EXCLUDE) activateEl('Q30', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=30&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>30</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1026.78&nbsp;&nbsp;&nbsp;&nbsp;1025.77</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1044.526324 from(1045.533600,1+) title(Label%3a%20C16%2c%20Spot_Id%3a%20426522%2c%20Peak_List_Id%3a%20588916%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(32)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q32; if (!EXCLUDE) activateEl('Q32', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=32&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>32</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1045.53&nbsp;&nbsp;&nbsp;&nbsp;1044.53</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1059.510024 from(1060.517300,1+) title(Label%3a%20D2%2c%20Spot_Id%3a%20426542%2c%20Peak_List_Id%3a%20588934%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(34)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q34; if (!EXCLUDE) activateEl('Q34', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=34&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>34</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1060.52&nbsp;&nbsp;&nbsp;&nbsp;1059.51</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1069.691624 from(1070.698900,1+) title(Label%3a%20A2%2c%20Spot_Id%3a%20426481%2c%20Peak_List_Id%3a%20588882%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(36)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q36; if (!EXCLUDE) activateEl('Q36', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=36&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>36</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1070.70&nbsp;&nbsp;&nbsp;&nbsp;1069.69</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1075.528624 from(1076.535900,1+) title(Label%3a%20C18%2c%20Spot_Id%3a%20426521%2c%20Peak_List_Id%3a%20588915%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(37)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q37; if (!EXCLUDE) activateEl('Q37', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=37&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>37</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1076.54&nbsp;&nbsp;&nbsp;&nbsp;1075.53</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1079.548724 from(1080.556000,1+) title(Label%3a%20C10%2c%20Spot_Id%3a%20426525%2c%20Peak_List_Id%3a%20588920%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(38)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q38; if (!EXCLUDE) activateEl('Q38', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=38&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>38</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1080.56&nbsp;&nbsp;&nbsp;&nbsp;1079.55</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1113.425924 from(1114.433200,1+) title(Label%3a%20B11%2c%20Spot_Id%3a%20426487%2c%20Peak_List_Id%3a%20588884%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(40)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q40; if (!EXCLUDE) activateEl('Q40', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=40&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>40</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1114.43&nbsp;&nbsp;&nbsp;&nbsp;1113.43</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1113.426524 from(1114.433800,1+) title(Label%3a%20B10%2c%20Spot_Id%3a%20426501%2c%20Peak_List_Id%3a%20588898%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(41)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q41; if (!EXCLUDE) activateEl('Q41', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=41&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>41</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1114.43&nbsp;&nbsp;&nbsp;&nbsp;1113.43</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1121.477124 from(1122.484400,1+) title(Label%3a%20C24%2c%20Spot_Id%3a%20426518%2c%20Peak_List_Id%3a%20588911%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(42)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q42; if (!EXCLUDE) activateEl('Q42', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=42&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>42</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1122.48&nbsp;&nbsp;&nbsp;&nbsp;1121.48</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1139.498624 from(1140.505900,1+) title(Label%3a%20B24%2c%20Spot_Id%3a%20426494%2c%20Peak_List_Id%3a%20588887%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(43)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q43; if (!EXCLUDE) activateEl('Q43', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=43&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>43</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1140.51&nbsp;&nbsp;&nbsp;&nbsp;1139.50</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1172.453524 from(1173.460800,1+) title(Label%3a%20C2%2c%20Spot_Id%3a%20426529%2c%20Peak_List_Id%3a%20588926%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(44)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q44; if (!EXCLUDE) activateEl('Q44', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=44&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>44</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1173.46&nbsp;&nbsp;&nbsp;&nbsp;1172.45</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1172.485624 from(1173.492900,1+) title(Label%3a%20B22%2c%20Spot_Id%3a%20426495%2c%20Peak_List_Id%3a%20588889%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(45)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q45; if (!EXCLUDE) activateEl('Q45', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=45&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>45</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1173.49&nbsp;&nbsp;&nbsp;&nbsp;1172.49</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1189.519624 from(1190.526900,1+) title(Label%3a%20C8%2c%20Spot_Id%3a%20426526%2c%20Peak_List_Id%3a%20588922%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(48)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q48; if (!EXCLUDE) activateEl('Q48', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=48&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>48</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1190.53&nbsp;&nbsp;&nbsp;&nbsp;1189.52</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1189.524324 from(1190.531600,1+) title(Label%3a%20C7%2c%20Spot_Id%3a%20426509%2c%20Peak_List_Id%3a%20588907%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(49)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q49; if (!EXCLUDE) activateEl('Q49', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=49&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>49</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1190.53&nbsp;&nbsp;&nbsp;&nbsp;1189.52</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1190.481324 from(1191.488600,1+) title(Label%3a%20B12%2c%20Spot_Id%3a%20426500%2c%20Peak_List_Id%3a%20588896%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(50)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q50; if (!EXCLUDE) activateEl('Q50', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=50&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>50</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1191.49&nbsp;&nbsp;&nbsp;&nbsp;1190.48</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1225.496124 from(1226.503400,1+) title(Label%3a%20C7%2c%20Spot_Id%3a%20426509%2c%20Peak_List_Id%3a%20588906%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(52)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q52; if (!EXCLUDE) activateEl('Q52', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=52&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>52</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1226.50&nbsp;&nbsp;&nbsp;&nbsp;1225.50</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1234.367224 from(1235.374500,1+) title(Label%3a%20C2%2c%20Spot_Id%3a%20426529%2c%20Peak_List_Id%3a%20588929%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(53)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q53; if (!EXCLUDE) activateEl('Q53', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=53&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>53</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1235.37&nbsp;&nbsp;&nbsp;&nbsp;1234.37</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1234.395524 from(1235.402800,1+) title(Label%3a%20B22%2c%20Spot_Id%3a%20426495%2c%20Peak_List_Id%3a%20588891%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(54)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q54; if (!EXCLUDE) activateEl('Q54', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=54&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>54</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1235.40&nbsp;&nbsp;&nbsp;&nbsp;1234.40</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1251.472924 from(1252.480200,1+) title(Label%3a%20C7%2c%20Spot_Id%3a%20426509%2c%20Peak_List_Id%3a%20588905%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(57)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q57; if (!EXCLUDE) activateEl('Q57', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=57&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>57</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1252.48&nbsp;&nbsp;&nbsp;&nbsp;1251.47</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1253.397124 from(1254.404400,1+) title(Label%3a%20B6%2c%20Spot_Id%3a%20426503%2c%20Peak_List_Id%3a%20588900%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(58)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q58; if (!EXCLUDE) activateEl('Q58', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=58&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>58</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1254.40&nbsp;&nbsp;&nbsp;&nbsp;1253.40</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1299.363824 from(1300.371100,1+) title(Label%3a%20D15%2c%20Spot_Id%3a%20426534%2c%20Peak_List_Id%3a%20588930%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(59)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q59; if (!EXCLUDE) activateEl('Q59', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=59&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>59</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1300.37&nbsp;&nbsp;&nbsp;&nbsp;1299.36</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1299.367024 from(1300.374300,1+) title(Label%3a%20D14%2c%20Spot_Id%3a%20426548%2c%20Peak_List_Id%3a%20588936%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(60)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q60; if (!EXCLUDE) activateEl('Q60', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=60&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>60</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1300.37&nbsp;&nbsp;&nbsp;&nbsp;1299.37</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1300.361224 from(1301.368500,1+) title(Label%3a%20D18%2c%20Spot_Id%3a%20426550%2c%20Peak_List_Id%3a%20588942%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(61)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q61; if (!EXCLUDE) activateEl('Q61', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=61&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>61</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1301.37&nbsp;&nbsp;&nbsp;&nbsp;1300.36</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1301.374424 from(1302.381700,1+) title(Label%3a%20D16%2c%20Spot_Id%3a%20426549%2c%20Peak_List_Id%3a%20588939%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(62)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q62; if (!EXCLUDE) activateEl('Q62', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=62&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>62</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1302.38&nbsp;&nbsp;&nbsp;&nbsp;1301.37</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1317.599924 from(1318.607200,1+) title(Label%3a%20A24%2c%20Spot_Id%3a%20426470%2c%20Peak_List_Id%3a%20588877%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(63)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q63; if (!EXCLUDE) activateEl('Q63', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=63&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>63</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1318.61&nbsp;&nbsp;&nbsp;&nbsp;1317.60</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1363.290224 from(1364.297500,1+) title(Label%3a%20D14%2c%20Spot_Id%3a%20426548%2c%20Peak_List_Id%3a%20588937%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(64)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q64; if (!EXCLUDE) activateEl('Q64', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=64&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>64</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1364.30&nbsp;&nbsp;&nbsp;&nbsp;1363.29</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1364.295324 from(1365.302600,1+) title(Label%3a%20D16%2c%20Spot_Id%3a%20426549%2c%20Peak_List_Id%3a%20588941%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(65)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q65; if (!EXCLUDE) activateEl('Q65', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=65&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>65</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1365.30&nbsp;&nbsp;&nbsp;&nbsp;1364.30</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1386.367524 from(1387.374800,1+) title(Label%3a%20D6%2c%20Spot_Id%3a%20426544%2c%20Peak_List_Id%3a%20588935%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(66)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q66; if (!EXCLUDE) activateEl('Q66', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=66&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>66</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1387.37&nbsp;&nbsp;&nbsp;&nbsp;1386.37</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1674.741524 from(1675.748800,1+) title(Label%3a%20B14%2c%20Spot_Id%3a%20426499%2c%20Peak_List_Id%3a%20588894%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(67)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q67; if (!EXCLUDE) activateEl('Q67', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=67&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>67</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1675.75&nbsp;&nbsp;&nbsp;&nbsp;1674.74</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1693.720524 from(1694.727800,1+) title(Label%3a%20C4%2c%20Spot_Id%3a%20426528%2c%20Peak_List_Id%3a%20588924%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(68)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q68; if (!EXCLUDE) activateEl('Q68', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=68&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>68</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1694.73&nbsp;&nbsp;&nbsp;&nbsp;1693.72</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1755.630824 from(1756.638100,1+) title(Label%3a%20C4%2c%20Spot_Id%3a%20426528%2c%20Peak_List_Id%3a%20588925%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(69)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q69; if (!EXCLUDE) activateEl('Q69', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=69&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>69</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1756.64&nbsp;&nbsp;&nbsp;&nbsp;1755.63</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1793.868824 from(1794.876100,1+) title(Label%3a%20C20%2c%20Spot_Id%3a%20426520%2c%20Peak_List_Id%3a%20588914%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(70)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q70; if (!EXCLUDE) activateEl('Q70', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=70&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>70</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1794.88&nbsp;&nbsp;&nbsp;&nbsp;1793.87</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="1939.868824 from(1940.876100,1+) title(Label%3a%20D13%2c%20Spot_Id%3a%20426535%2c%20Peak_List_Id%3a%20588932%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(71)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q71; if (!EXCLUDE) activateEl('Q71', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=71&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>71</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>1940.88&nbsp;&nbsp;&nbsp;&nbsp;1939.87</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2023.812424 from(2024.819700,1+) title(Label%3a%20C10%2c%20Spot_Id%3a%20426525%2c%20Peak_List_Id%3a%20588919%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(72)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q72; if (!EXCLUDE) activateEl('Q72', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=72&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>72</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2024.82&nbsp;&nbsp;&nbsp;&nbsp;2023.81</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2023.826124 from(2024.833400,1+) title(Label%3a%20C11%2c%20Spot_Id%3a%20426511%2c%20Peak_List_Id%3a%20588908%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(73)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q73; if (!EXCLUDE) activateEl('Q73', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=73&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>73</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2024.83&nbsp;&nbsp;&nbsp;&nbsp;2023.83</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2040.833224 from(2041.840500,1+) title(Label%3a%20C2%2c%20Spot_Id%3a%20426529%2c%20Peak_List_Id%3a%20588928%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(74)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q74; if (!EXCLUDE) activateEl('Q74', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=74&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>74</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2041.84&nbsp;&nbsp;&nbsp;&nbsp;2040.83</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2040.857624 from(2041.864900,1+) title(Label%3a%20B22%2c%20Spot_Id%3a%20426495%2c%20Peak_List_Id%3a%20588890%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(75)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q75; if (!EXCLUDE) activateEl('Q75', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=75&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>75</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2041.86&nbsp;&nbsp;&nbsp;&nbsp;2040.86</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2041.868124 from(2042.875400,1+) title(Label%3a%20B24%2c%20Spot_Id%3a%20426494%2c%20Peak_List_Id%3a%20588888%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(76)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q76; if (!EXCLUDE) activateEl('Q76', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=76&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>76</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2042.88&nbsp;&nbsp;&nbsp;&nbsp;2041.87</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2043.840124 from(2044.847400,1+) title(Label%3a%20B23%2c%20Spot_Id%3a%20426493%2c%20Peak_List_Id%3a%20588885%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(77)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q77; if (!EXCLUDE) activateEl('Q77', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=77&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>77</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2044.85&nbsp;&nbsp;&nbsp;&nbsp;2043.84</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2102.796924 from(2103.804200,1+) title(Label%3a%20B22%2c%20Spot_Id%3a%20426495%2c%20Peak_List_Id%3a%20588892%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(78)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q78; if (!EXCLUDE) activateEl('Q78', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=78&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>78</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2103.80&nbsp;&nbsp;&nbsp;&nbsp;2102.80</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2382.861124 from(2383.868400,1+) title(Label%3a%20B2%2c%20Spot_Id%3a%20426505%2c%20Peak_List_Id%3a%20588903%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(79)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q79; if (!EXCLUDE) activateEl('Q79', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=79&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>79</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2383.87&nbsp;&nbsp;&nbsp;&nbsp;2382.86</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2382.874324 from(2383.881600,1+) title(Label%3a%20A24%2c%20Spot_Id%3a%20426470%2c%20Peak_List_Id%3a%20588878%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(80)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q80; if (!EXCLUDE) activateEl('Q80', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=80&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>80</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2383.88&nbsp;&nbsp;&nbsp;&nbsp;2382.87</I></TT></TD></TR>
+  <TR>
+    <TD><INPUT type=checkbox CHECKED 
+      value="2868.971524 from(2869.978800,1+) title(Label%3a%20C19%2c%20Spot_Id%3a%20426515%2c%20Peak_List_Id%3a%20588909%2c%20MSMS%20Job_Run_Id%3a%2025491%2c%20Comment%3a%20) query(81)" 
+      name=QUE></TD>
+    <TD noWrap><TT>&nbsp;&nbsp;<A 
+      onmouseover="statusString = h0_q81; if (!EXCLUDE) activateEl('Q81', event)" 
+      onmouseout=clearEl() 
+      href="http://bl_chem_protdat/mascot/cgi/peptide_view.pl?file=../data/20060307/F107268.dat&amp;query=81&amp;hit=1&amp;index=zilch&amp;px=1" 
+      target=_blank>81</A>&nbsp;&nbsp;&nbsp;&nbsp;<I>2869.98&nbsp;&nbsp;&nbsp;&nbsp;2868.97</I></TT></TD></TR></TBODY></TABLE><PRE><HR>
+</PRE></FONT></FORM>
+<H3>Search Parameters</H3><FONT face="Courier New,Courier,monospace"><PRE><B>Type of search         : MS/MS Ion Search</B>
+<B>Enzyme                 : Trypsin/P</B>
+<B>Fixed modifications    : Carbamidomethyl (C)</B>
+<B>Mass values            : Monoisotopic</B>
+<B>Protein Mass           : Unrestricted</B>
+<B>Peptide Mass Tolerance : ± 0.25 Da</B>
+<B>Fragment Mass Tolerance: ± 0.25 Da</B>
+<B>Max Missed Cleavages   : 3</B>
+<B>Instrument type        : MALDI-TOF-TOF</B>
+<B>Data File Name         : pps_192 LC_1141485233.txt</B>
+<B>Number of queries      : 81</B>
+</PRE></FONT>
+<P>
+<TABLE cellSpacing=2 cellPadding=1 width="100%" border=2>
+  <TBODY>
+  <TR>
+    <TD noWrap align=middle><B>Mascot:</B>&nbsp; <A 
+      href="http://www.matrixscience.com/index.html">http://www.matrixscience.com/index.html</A> 
+    </TD></TR></TBODY></TABLE>
+<SCRIPT language=JavaScript1.2>
+<!--
+var timerID = null;
+var active = null;
+var statusString = "";
+
+function redo() {
+  window.location.reload();
+}
+
+function init() {
+  setTimeout("window.onresize = redo", 1000);
+}
+
+function displayEl(left, top) {
+  if (NS4||NS6||MZ7) document.releaseEvents(Event.MOUSEMOVE);
+  document.onmousemove = null;
+  if (NS4) {
+    var whichEl = document[active];
+  } else if (NS6||MZ7) {
+    var whichEl = document.getElementById(active).style;
+  } else {
+    var whichEl = document.all[active].style;
+  }
+  whichEl.left = left;
+  whichEl.top = top;
+  whichEl.visibility = (NS4) ? "show" : "visible";
+  self.status = statusString;
+}
+
+function clearEl() {
+  self.status = "";
+  if (EXCLUDE) return;
+  if (NS4) {
+    var whichEl = document[active];
+  } else if (NS6||MZ7) {
+    var whichEl = document.getElementById(active).style;
+  } else {
+    var whichEl = document.all[active].style;
+  }
+  whichEl.visibility = (NS4) ? "hide" : "hidden";
+  active = null;
+  if (timerID) clearTimeout(timerID);
+  if (NS4||NS6||MZ7) document.releaseEvents(Event.MOUSEMOVE);
+  document.onmousemove = null;
+}
+
+function activateEl(id, e) {
+  self.status = statusString;
+  if (EXCLUDE) return;
+  active = id;
+  if (NS4||NS6||MZ7) document.captureEvents(Event.MOUSEMOVE);
+  document.onmousemove = checkEl;
+  checkEl(e);
+}
+
+function checkEl(e) {
+  if (timerID) clearTimeout(timerID);
+  if (OP5||OP6) {
+    var left = event.clientX;
+  } else if (NS4||NS6||MZ7) {
+    var left = e.pageX;
+  } else {
+    var left = event.clientX + document.body.scrollLeft;
+  }
+  if (OP5||OP6) {
+    var top = event.clientY + 20;
+  } else if (NS4||NS6||MZ7) {
+    var top = e.pageY + 20;
+  } else {
+    var top = event.clientY + document.body.scrollTop + 20;
+  }
+  timerID = setTimeout("displayEl(" + left + ", " + top + ")", 300);
+  self.status = statusString;
+}
+
+// -->
+</SCRIPT>
+</P>
+<DIV class=tooltip id=Q1>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 1<BR>  (Label: A2, Spot_Id: 426481, Peak_List_Id: 588881, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q2>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 2<BR>  (Label: E22, Spot_Id: 426576, Peak_List_Id: 588946, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q3>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 3<BR>  (Label: C1, Spot_Id: 426506, Peak_List_Id: 588904, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q4>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 4<BR>  (Label: C2, Spot_Id: 426529, Peak_List_Id: 588927, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q5>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 5<BR>  (Label: B24, Spot_Id: 426494, Peak_List_Id: 588886, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q6>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 6<BR>  (Label: D11, Spot_Id: 426536, Peak_List_Id: 588933, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 13 indicates homology<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 15.8   -0.07                                        MPSASGKHK</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q7>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 7<BR>  (Label: D16, Spot_Id: 426549, Peak_List_Id: 588940, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q8>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 8<BR>  (Label: H20, Spot_Id: 426647, Peak_List_Id: 588956, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 20 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q9>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 9<BR>  (Label: F5, Spot_Id: 426587, Peak_List_Id: 588948, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 10 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q10>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 10<BR>  (Label: E18, Spot_Id: 426574, Peak_List_Id: 588945, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 17 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q11>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 11<BR>  (Label: G23, Spot_Id: 426602, Peak_List_Id: 588952, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 17 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q12>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 12<BR>  (Label: A24, Spot_Id: 426470, Peak_List_Id: 588876, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 20 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q13>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 13<BR>  (Label: H12, Spot_Id: 426643, Peak_List_Id: 588955, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 10 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q14>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 14<BR>  (Label: F20, Spot_Id: 426599, Peak_List_Id: 588950, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 8 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q15>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 15<BR>  (Label: G12, Spot_Id: 426619, Peak_List_Id: 588953, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 16 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q16>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 16<BR>  (Label: A18, Spot_Id: 426473, Peak_List_Id: 588879, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 21 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q17>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 17<BR>  (Label: C24, Spot_Id: 426518, Peak_List_Id: 588912, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 16 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q18>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 18<BR>  (Label: F14, Spot_Id: 426596, Peak_List_Id: 588949, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 10 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q19>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 19<BR>  (Label: C14, Spot_Id: 426523, Peak_List_Id: 588918, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q20>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 20<BR>  (Label: E2, Spot_Id: 426566, Peak_List_Id: 588944, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q21>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 21<BR>  (Label: D13, Spot_Id: 426535, Peak_List_Id: 588931, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q22>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 22<BR>  (Label: D16, Spot_Id: 426549, Peak_List_Id: 588938, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q23>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 23<BR>  (Label: D22, Spot_Id: 426552, Peak_List_Id: 588943, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 21 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q24>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 24<BR>  (Label: C14, Spot_Id: 426523, Peak_List_Id: 588917, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 24 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q25>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 25<BR>  (Label: G20, Spot_Id: 426623, Peak_List_Id: 588954, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 20 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q26>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 26<BR>  (Label: F20, Spot_Id: 426599, Peak_List_Id: 588951, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 19 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q27>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 27<BR>  (Label: B10, Spot_Id: 426501, Peak_List_Id: 588899, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q28>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 28<BR>  (Label: A2, Spot_Id: 426481, Peak_List_Id: 588880, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q29>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 29<BR>  (Label: E24, Spot_Id: 426577, Peak_List_Id: 588947, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 24 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q30>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 30<BR>  (Label: C24, Spot_Id: 426518, Peak_List_Id: 588913, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 26 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q31>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 31<BR>  (Label: B14, Spot_Id: 426499, Peak_List_Id: 588893, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 21.6    0.02                                        ASEDGPLNSR<BR> 15.3   -0.11                                        ILAINSSSLK<BR> 15.2   -0.05                                        RCISVAPSR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q32>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 32<BR>  (Label: C16, Spot_Id: 426522, Peak_List_Id: 588916, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q33>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 33<BR>  (Label: B10, Spot_Id: 426501, Peak_List_Id: 588897, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 34.6   -0.05   2                         CO4_HUMAN  SHALQLNNR<BR> 14.6   -0.07                                        IWHKQGQR<BR> 14.1   -0.11                                        AAQLVLAGGPR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q34>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 34<BR>  (Label: D2, Spot_Id: 426542, Peak_List_Id: 588934, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q35>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 35<BR>  (Label: C24, Spot_Id: 426518, Peak_List_Id: 588910, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 13 indicates homology<BR>Score greater than 30 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 15.6   -0.02                                        RPPGFSPFR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q36>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 36<BR>  (Label: A2, Spot_Id: 426481, Peak_List_Id: 588882, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q37>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 37<BR>  (Label: C18, Spot_Id: 426521, Peak_List_Id: 588915, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q38>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 38<BR>  (Label: C10, Spot_Id: 426525, Peak_List_Id: 588920, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q39>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 39<BR>  (Label: B12, Spot_Id: 426500, Peak_List_Id: 588895, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 13 indicates homology<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 12.9   -0.25                                        PRALLEAPLK</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q40>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 40<BR>  (Label: B11, Spot_Id: 426487, Peak_List_Id: 588884, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q41>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 41<BR>  (Label: B10, Spot_Id: 426501, Peak_List_Id: 588898, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q42>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 42<BR>  (Label: C24, Spot_Id: 426518, Peak_List_Id: 588911, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q43>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 43<BR>  (Label: B24, Spot_Id: 426494, Peak_List_Id: 588887, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q44>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 44<BR>  (Label: C2, Spot_Id: 426529, Peak_List_Id: 588926, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q45>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 45<BR>  (Label: B22, Spot_Id: 426495, Peak_List_Id: 588889, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q46>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 46<BR>  (Label: B4, Spot_Id: 426504, Peak_List_Id: 588901, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 15 indicates homology<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 47.0   -0.06   1                        FIBA_HUMAN  QFTSSTSYNR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q47>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 47<BR>  (Label: B3, Spot_Id: 426483, Peak_List_Id: 588883, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 15 indicates homology<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 34.1   -0.06   1                        FIBA_HUMAN  QFTSSTSYNR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q48>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 48<BR>  (Label: C8, Spot_Id: 426526, Peak_List_Id: 588922, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q49>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 49<BR>  (Label: C7, Spot_Id: 426509, Peak_List_Id: 588907, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 29 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q50>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 50<BR>  (Label: B12, Spot_Id: 426500, Peak_List_Id: 588896, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q51>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 51<BR>  (Label: C6, Spot_Id: 426527, Peak_List_Id: 588923, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates homology<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 17.1   -0.11                                        DEDKPPDRVR<BR> 13.1   -0.12                                        SSSPGPTGQPRR<BR> 13.0   -0.14                                        DLPAIQESPTR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q52>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 52<BR>  (Label: C7, Spot_Id: 426509, Peak_List_Id: 588906, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q53>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 53<BR>  (Label: C2, Spot_Id: 426529, Peak_List_Id: 588929, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 23 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q54>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 54<BR>  (Label: B22, Spot_Id: 426495, Peak_List_Id: 588891, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 25 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q55>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 55<BR>  (Label: B4, Spot_Id: 426504, Peak_List_Id: 588902, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 13 indicates homology<BR>Score greater than 24 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 14.7   -0.22                                        NIAASGKFSSDR</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q56>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 56<BR>  (Label: C8, Spot_Id: 426526, Peak_List_Id: 588921, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 13 indicates homology<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B><BR> 13.0   -0.20                                        EPRHYHGKTK</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q57>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 57<BR>  (Label: C7, Spot_Id: 426509, Peak_List_Id: 588905, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q58>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 58<BR>  (Label: B6, Spot_Id: 426503, Peak_List_Id: 588900, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 24 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q59>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 59<BR>  (Label: D15, Spot_Id: 426534, Peak_List_Id: 588930, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 19 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q60>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 60<BR>  (Label: D14, Spot_Id: 426548, Peak_List_Id: 588936, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 19 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q61>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 61<BR>  (Label: D18, Spot_Id: 426550, Peak_List_Id: 588942, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 18 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q62>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 62<BR>  (Label: D16, Spot_Id: 426549, Peak_List_Id: 588939, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 20 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q63>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 63<BR>  (Label: A24, Spot_Id: 426470, Peak_List_Id: 588877, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q64>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 64<BR>  (Label: D14, Spot_Id: 426548, Peak_List_Id: 588937, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 7 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q65>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 65<BR>  (Label: D16, Spot_Id: 426549, Peak_List_Id: 588941, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 7 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q66>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 66<BR>  (Label: D6, Spot_Id: 426544, Peak_List_Id: 588935, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 16 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q67>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 67<BR>  (Label: B14, Spot_Id: 426499, Peak_List_Id: 588894, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q68>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 68<BR>  (Label: C4, Spot_Id: 426528, Peak_List_Id: 588924, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q69>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 69<BR>  (Label: C4, Spot_Id: 426528, Peak_List_Id: 588925, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 23 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q70>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 70<BR>  (Label: C20, Spot_Id: 426520, Peak_List_Id: 588914, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 28 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q71>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 71<BR>  (Label: D13, Spot_Id: 426535, Peak_List_Id: 588932, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q72>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 72<BR>  (Label: C10, Spot_Id: 426525, Peak_List_Id: 588919, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 25 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q73>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 73<BR>  (Label: C11, Spot_Id: 426511, Peak_List_Id: 588908, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 26 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q74>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 74<BR>  (Label: C2, Spot_Id: 426529, Peak_List_Id: 588928, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 26 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q75>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 75<BR>  (Label: B22, Spot_Id: 426495, Peak_List_Id: 588890, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q76>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 76<BR>  (Label: B24, Spot_Id: 426494, Peak_List_Id: 588888, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 27 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q77>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 77<BR>  (Label: B23, Spot_Id: 426493, Peak_List_Id: 588885, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 26 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q78>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 78<BR>  (Label: B22, Spot_Id: 426495, Peak_List_Id: 588892, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 22 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q79>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 79<BR>  (Label: B2, Spot_Id: 426505, Peak_List_Id: 588903, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 18 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q80>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 80<BR>  (Label: A24, Spot_Id: 426470, Peak_List_Id: 588878, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 19 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV class=tooltip id=Q81>
+<TABLE cellSpacing=0 cellPadding=2 bgColor=#0000ff border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=5 bgColor=#ffffcc border=0>
+        <TBODY>
+        <TR>
+          <TD><PRE>Top scoring peptide matches to query 81<BR>  (Label: C19, Spot_Id: 426515, Peak_List_Id: 588909, MSMS Job_Run_Id: 25491, Comment: )<BR>Score greater than 9 indicates identity<BR><I>Status bar shows all hits for this peptide</I><BR> <BR><B>Score   Delta  Hit                         Protein   Peptide</B></PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></BODY></HTML>

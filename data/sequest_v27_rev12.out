@@ -1,0 +1,61 @@
+ Standard_Protein_FIT_060222.5079.5079.1.out
+ TurboSEQUEST v.27 (rev. 12), (c) 1998-2005
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 04/14/2007, 11:24 AM, 1.3 sec. on INFO-FIREFOX
+ (M+H)+ mass = 627.38200 ~ 0.8000 (+1), fragment tol = 0.0000, MONO/MONO
+ total inten = 3031.0, lowest Sp = 49.4, # matched peptides = 1873
+ # amino acids = 32364212, # proteins = 75936, c:\database\Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed_Shufflet1.02.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.03068  Enzyme:Trypsin (1)
+  #   Rank/Sp      Id#     (M+H)+    deltCn   XCorr    Sp    Ions  Reference             Peptide
+ ---  --------  --------  --------   ------  ------   -----  ----  ---------             -------
+  1.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00529841       +9  K.LLLIR.S
+                       0  REVERSED_00005138
+                       0  REVERSED_00014707
+                       0  REVERSED_00016207
+                       0  REVERSED_00021601
+                       0  REVERSED_00022799
+                       0  SHUFFLET_00006038
+                       0  SHUFFLET_00021355
+                       0  SHUFFLET_00022087
+                       0  SHUFFLET_00022740
+  2.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  REVERSED_00018113 +1  R.LLIIR.A
+                       0  SHUFFLET_00022617
+  3.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  REVERSED_00002634 +1  R.LILIR.R
+                       0  SHUFFLET_00008250
+  4.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  SHUFFLET_00003689     K.ILLIR.D
+  5.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00523747       +2  K.ILIIR.K
+                       0  IPI00541452  Tax_Id=3702 BZIP tran
+                       0  SHUFFLET_00024273
+  6.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00523226       +4  R.LILLR.H
+                       0  IPI00544480  Tax_Id=3702 Leucine-r
+                       0  REVERSED_00002485
+                       0  SHUFFLET_00017400
+                       0  SHUFFLET_00017939
+  7.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00519671       +2  R.ILILR.R
+                       0  SHUFFLET_00002143
+                       0  SHUFFLET_00009879
+  8.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00534992       +3  K.IILLR.Y
+                       0  IPI00540537  Tax_Id=3702 UDP-gluco
+                       0  IPI00540642  Tax_Id=3702 F23H11.16
+                       0  REVERSED_00011151
+  9.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  IPI00518803       +9  K.ILLLR.S
+                       0  IPI00523020  Tax_Id=3702 F2J6.11 p
+                       0  IPI00535984  Tax_Id=3702 Similar t
+                       0  IPI00547112  Tax_Id=3702 Leucine-r
+                       0  REVERSED_00008955
+                       0  REVERSED_00011846
+                       0  REVERSED_00024811
+                       0  SHUFFLET_00003285
+                       0  SHUFFLET_00011182
+                       0  SHUFFLET_00019642
+ 10.   1 /  1          0  627.45521  0.0000  1.4857   210.0   6/ 8  REVERSED_00018687 +2  R.IILIR.R
+                       0  SHUFFLET_00000523
+                       0  SHUFFLET_00003343
+  1.          0  IPI00529841  Tax_Id=3702 Arabidopsis thaliana genomic DNA, chromosome 3, P1 cl
+  2.          0  REVERSED_00018113 
+  3.          0  REVERSED_00002634 
+  4.          0  SHUFFLET_00003689 
+  5.          0  IPI00523747  Tax_Id=3702 F16N3.16 

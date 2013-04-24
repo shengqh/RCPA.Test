@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<O18QuantificationInformation>
+  <RawFilename>D:\sqh\Science\Project/4NLFOR.raw</RawFilename>
+  <SoftwareVersion />
+  <PeptideSequence>AFATDITDAEEDK</PeptideSequence>
+  <AdditionalFormula></AdditionalFormula>
+  <PeptideAtomComposition>C60H92N14O26</PeptideAtomComposition>
+  <PurityOfO18Water>0.95</PurityOfO18Water>
+  <IsPostDigestionLabelling>false</IsPostDigestionLabelling>
+  <TheoreticalO16Mz>713.32090</TheoreticalO16Mz>
+  <Charge>2</Charge>
+  <PeptideProfile>
+    <Percentage>0.4611</Percentage>
+    <Percentage>0.3340</Percentage>
+    <Percentage>0.1439</Percentage>
+    <Percentage>0.0459</Percentage>
+    <Percentage>0.0119</Percentage>
+    <Percentage>0.0026</Percentage>
+    <Percentage>0.0005</Percentage>
+    <Percentage>0.0001</Percentage>
+  </PeptideProfile>
+  <ObservedEnvelopes>
+    <Envelope Scan="6741" Retentiontime="12.34" Enabled="true" Identified="true">
+      <Peak Mz="713.3209" Intensity="424345.9" />
+      <Peak Mz="713.8254" Intensity="198378.3" />
+      <Peak Mz="714.3221" Intensity="246866.8" />
+      <Peak Mz="714.8242" Intensity="221648.0" />
+      <Peak Mz="715.3243" Intensity="107701.3" />
+      <Peak Mz="715.8316" Intensity="0.0" />
+    </Envelope>
+    <Envelope Scan="6746" Retentiontime="13.34" Enabled="false" Identified="false">
+      <Peak Mz="713.3209" Intensity="796597.7" />
+      <Peak Mz="713.8254" Intensity="530778.4" />
+      <Peak Mz="714.3221" Intensity="456099.6" />
+      <Peak Mz="714.8242" Intensity="339509.8" />
+      <Peak Mz="715.3243" Intensity="182812.3" />
+      <Peak Mz="715.8316" Intensity="0.0" />
+    </Envelope>
+  </ObservedEnvelopes>
+  <SpeciesAbundance>
+    <O16>79184307.0</O16>
+    <O181>39464386.0</O181>
+    <O182>440969.4</O182>
+    <Regression Correlation="0.9999">
+      <Peak Mz="713.3209" Observed="36513020.6" Regression="36512100.5" />
+      <Peak Mz="713.8254" Observed="26438219.2" Regression="26447909.0" />
+      <Peak Mz="714.3221" Observed="29639265.4" Regression="29595148.6" />
+      <Peak Mz="714.8242" Observed="16687280.4" Regression="16812006.0" />
+      <Peak Mz="715.3243" Observed="7087781.0" Regression="6823450.3" />
+      <Peak Mz="715.8316" Observed="1799203.9" Regression="2164120.0" />
+    </Regression>
+  </SpeciesAbundance>
+  <SampleAbundance LabellingEfficiency="0.0219" Ratio="50.00">
+    <O16>0.0</O16>
+    <O18>922867772.7</O18>
+  </SampleAbundance>
+</O18QuantificationInformation>

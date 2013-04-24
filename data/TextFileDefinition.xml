@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileDefinition>
+  <Delimiter>tab</Delimiter>
+  <Description>Test File ...</Description>
+  <Item>
+    <Header>AnnoKey1</Header>
+    <PropertyName>PropName1</PropertyName>
+    <Required>False</Required>
+    <ValueType>double</ValueType>
+    <Format>{0:0.0000}</Format>
+  </Item>
+  <Item>
+    <Header>AnnoKey2</Header>
+    <PropertyName>PropName2</PropertyName>
+    <Required>False</Required>
+    <ValueType>int</ValueType>
+    <Format />
+  </Item>
+  <Item>
+    <Header>AnnoKey3</Header>
+    <PropertyName>PropName3</PropertyName>
+    <Required>False</Required>
+    <ValueType>string</ValueType>
+    <Format />
+  </Item>
+</FileDefinition>

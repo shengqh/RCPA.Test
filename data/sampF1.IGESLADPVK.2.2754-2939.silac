@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<SilacQuantificationInformation>
+  <RawFilename>E:\sqh\Science\Project\Yuan_SILAC\silac\sampF1.RAW</RawFilename>
+  <PeptideSequence>K.IGESLADPVK*.Y</PeptideSequence>
+  <SampleAtomComposition>C45H77N11O16</SampleAtomComposition>
+  <ReferenceAtomComposition>(C13)6(N15)2C39H77N9O16</ReferenceAtomComposition>
+  <SampleIsLight>True</SampleIsLight>
+  <Ratio>1.3871</Ratio>
+  <Correlation>0.9622</Correlation>
+  <SampleAbundance>1713174.8</SampleAbundance>
+  <ReferenceAbundance>1235108.9</ReferenceAbundance>
+  <SampleProfile>
+    <Percentage>0.5626</Percentage>
+    <Percentage>0.3066</Percentage>
+    <Percentage>0.1005</Percentage>
+    <Percentage>0.0244</Percentage>
+    <Percentage>0.0048</Percentage>
+    <Percentage>0.0008</Percentage>
+    <Percentage>0.0001</Percentage>
+    <Percentage>0.0000</Percentage>
+    <Percentage>0.0000</Percentage>
+  </SampleProfile>
+  <ReferenceProfile>
+    <Percentage>0.6046</Percentage>
+    <Percentage>0.2858</Percentage>
+    <Percentage>0.0860</Percentage>
+    <Percentage>0.0194</Percentage>
+    <Percentage>0.0036</Percentage>
+    <Percentage>0.0006</Percentage>
+    <Percentage>0.0001</Percentage>
+    <Percentage>0.0000</Percentage>
+    <Percentage>0.0000</Percentage>
+  </ReferenceProfile>
+  <ObservedEnvelopes>
+    <Envelope Scan="2754" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="182081.4" HeavyIntensity="184014.2">
+      <LightPeakList>
+        <Peak Mz="514.7704" Intensity="15642.0" />
+        <Peak Mz="515.2740" Intensity="55324.7" />
+        <Peak Mz="515.7759" Intensity="81138.9" />
+        <Peak Mz="516.2777" Intensity="28921.5" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7924" Intensity="0.0" />
+        <Peak Mz="519.3071" Intensity="31366.2" />
+        <Peak Mz="519.7953" Intensity="20010.5" />
+        <Peak Mz="520.2845" Intensity="20604.1" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2760" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="206652.7" HeavyIntensity="183102.0">
+      <LightPeakList>
+        <Peak Mz="514.7721" Intensity="36034.8" />
+        <Peak Mz="515.3007" Intensity="64488.9" />
+        <Peak Mz="515.7761" Intensity="99882.5" />
+        <Peak Mz="516.2903" Intensity="0.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7924" Intensity="0.0" />
+        <Peak Mz="519.3074" Intensity="24572.6" />
+        <Peak Mz="519.7956" Intensity="33054.7" />
+        <Peak Mz="520.2875" Intensity="13996.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2766" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="221410.3" HeavyIntensity="183855.6">
+      <LightPeakList>
+        <Peak Mz="514.7731" Intensity="51120.5" />
+        <Peak Mz="515.3003" Intensity="55288.8" />
+        <Peak Mz="515.7759" Intensity="91226.0" />
+        <Peak Mz="516.2781" Intensity="22493.2" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7873" Intensity="57728.1" />
+        <Peak Mz="519.3080" Intensity="43722.7" />
+        <Peak Mz="519.7953" Intensity="40326.5" />
+        <Peak Mz="520.2958" Intensity="41297.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2772" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="316965.1" HeavyIntensity="268985.7">
+      <LightPeakList>
+        <Peak Mz="514.7719" Intensity="65869.7" />
+        <Peak Mz="515.3004" Intensity="65220.3" />
+        <Peak Mz="515.7759" Intensity="140627.8" />
+        <Peak Mz="516.2782" Intensity="43412.1" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7860" Intensity="68915.3" />
+        <Peak Mz="519.3071" Intensity="34755.5" />
+        <Peak Mz="519.7948" Intensity="96867.6" />
+        <Peak Mz="520.2969" Intensity="67305.3" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2778" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="369269.0" HeavyIntensity="316705.6">
+      <LightPeakList>
+        <Peak Mz="514.7723" Intensity="108857.4" />
+        <Peak Mz="515.3001" Intensity="71653.5" />
+        <Peak Mz="515.7761" Intensity="146112.3" />
+        <Peak Mz="516.2777" Intensity="40507.9" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7858" Intensity="56957.0" />
+        <Peak Mz="519.3069" Intensity="24933.7" />
+        <Peak Mz="519.7950" Intensity="143736.5" />
+        <Peak Mz="520.2973" Intensity="89733.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2784" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="490537.0" HeavyIntensity="439802.0">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="199213.3" />
+        <Peak Mz="515.2861" Intensity="112625.4" />
+        <Peak Mz="515.7758" Intensity="126884.6" />
+        <Peak Mz="516.2770" Intensity="48973.7" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7931" Intensity="81557.6" />
+        <Peak Mz="519.2895" Intensity="52553.6" />
+        <Peak Mz="519.7948" Intensity="210586.2" />
+        <Peak Mz="520.2969" Intensity="93237.4" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2789" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="790530.4" HeavyIntensity="713923.6">
+      <LightPeakList>
+        <Peak Mz="514.7842" Intensity="395892.9" />
+        <Peak Mz="515.2858" Intensity="199486.5" />
+        <Peak Mz="515.7758" Intensity="130746.6" />
+        <Peak Mz="516.2779" Intensity="59827.5" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7926" Intensity="179335.9" />
+        <Peak Mz="519.2933" Intensity="99002.0" />
+        <Peak Mz="519.7949" Intensity="255897.8" />
+        <Peak Mz="520.2963" Intensity="176656.7" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2795" Retentiontime="0.00" Enabled="True" Identified="False" LightIntensity="1084940.7" HeavyIntensity="781250.7">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="532191.8" />
+        <Peak Mz="515.2864" Intensity="263272.7" />
+        <Peak Mz="515.7756" Intensity="206988.2" />
+        <Peak Mz="516.2775" Intensity="76206.6" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7920" Intensity="265950.9" />
+        <Peak Mz="519.2938" Intensity="131631.5" />
+        <Peak Mz="519.7952" Intensity="242182.7" />
+        <Peak Mz="520.2966" Intensity="138168.7" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2801" Retentiontime="0.00" Enabled="True" Identified="True" LightIntensity="1370882.4" HeavyIntensity="1115418.0">
+      <LightPeakList>
+        <Peak Mz="514.7845" Intensity="730385.9" />
+        <Peak Mz="515.2863" Intensity="381980.1" />
+        <Peak Mz="515.7760" Intensity="169061.0" />
+        <Peak Mz="516.2778" Intensity="81518.4" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7922" Intensity="380610.3" />
+        <Peak Mz="519.2941" Intensity="200785.9" />
+        <Peak Mz="519.7953" Intensity="326845.2" />
+        <Peak Mz="520.2966" Intensity="202440.9" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2807" Retentiontime="0.00" Enabled="True" Identified="True" LightIntensity="1713174.8" HeavyIntensity="1107811.5">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="1033260.5" />
+        <Peak Mz="515.2863" Intensity="369129.5" />
+        <Peak Mz="515.7758" Intensity="217898.4" />
+        <Peak Mz="516.2776" Intensity="82967.6" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7920" Intensity="401987.3" />
+        <Peak Mz="519.2932" Intensity="213105.6" />
+        <Peak Mz="519.7952" Intensity="335187.1" />
+        <Peak Mz="520.2966" Intensity="152828.1" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2813" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="1851497.8" HeavyIntensity="1211874.0">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="1064876.5" />
+        <Peak Mz="515.2862" Intensity="504353.9" />
+        <Peak Mz="515.7758" Intensity="184034.7" />
+        <Peak Mz="516.2780" Intensity="87513.1" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7917" Intensity="444833.9" />
+        <Peak Mz="519.2930" Intensity="258567.4" />
+        <Peak Mz="519.7949" Intensity="372752.6" />
+        <Peak Mz="520.2971" Intensity="130574.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2819" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="1547025.0" HeavyIntensity="1024808.3">
+      <LightPeakList>
+        <Peak Mz="514.7846" Intensity="887110.8" />
+        <Peak Mz="515.2864" Intensity="422058.8" />
+        <Peak Mz="515.7759" Intensity="188226.5" />
+        <Peak Mz="516.2889" Intensity="40672.1" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7921" Intensity="421055.1" />
+        <Peak Mz="519.2938" Intensity="204871.4" />
+        <Peak Mz="519.7953" Intensity="280734.2" />
+        <Peak Mz="520.2969" Intensity="113796.6" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2825" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="1360251.1" HeavyIntensity="837276.2">
+      <LightPeakList>
+        <Peak Mz="514.7845" Intensity="757374.5" />
+        <Peak Mz="515.2863" Intensity="385842.9" />
+        <Peak Mz="515.7758" Intensity="145596.8" />
+        <Peak Mz="516.2780" Intensity="63561.4" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7917" Intensity="388112.2" />
+        <Peak Mz="519.2928" Intensity="138083.8" />
+        <Peak Mz="519.7948" Intensity="242952.8" />
+        <Peak Mz="520.2970" Intensity="64572.6" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2831" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="1218515.6" HeavyIntensity="768266.2">
+      <LightPeakList>
+        <Peak Mz="514.7845" Intensity="703823.1" />
+        <Peak Mz="515.2862" Intensity="326127.4" />
+        <Peak Mz="515.7759" Intensity="115374.8" />
+        <Peak Mz="516.2775" Intensity="66135.5" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7918" Intensity="355172.2" />
+        <Peak Mz="519.2935" Intensity="191778.5" />
+        <Peak Mz="519.7949" Intensity="142347.1" />
+        <Peak Mz="520.2966" Intensity="75706.6" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2837" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="930752.6" HeavyIntensity="553425.5">
+      <LightPeakList>
+        <Peak Mz="514.7847" Intensity="555251.6" />
+        <Peak Mz="515.2866" Intensity="198548.8" />
+        <Peak Mz="515.7761" Intensity="119527.6" />
+        <Peak Mz="516.2788" Intensity="52035.8" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7922" Intensity="246681.5" />
+        <Peak Mz="519.2941" Intensity="116407.4" />
+        <Peak Mz="519.7954" Intensity="121092.1" />
+        <Peak Mz="520.2970" Intensity="66894.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2843" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="735394.3" HeavyIntensity="351828.0">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="410325.1" />
+        <Peak Mz="515.2863" Intensity="190230.3" />
+        <Peak Mz="515.7756" Intensity="93250.8" />
+        <Peak Mz="516.2779" Intensity="37330.4" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7919" Intensity="184692.6" />
+        <Peak Mz="519.2934" Intensity="45046.4" />
+        <Peak Mz="519.7952" Intensity="66446.0" />
+        <Peak Mz="520.2962" Intensity="54149.3" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2849" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="602724.8" HeavyIntensity="286294.0">
+      <LightPeakList>
+        <Peak Mz="514.7844" Intensity="336341.7" />
+        <Peak Mz="515.2861" Intensity="145875.2" />
+        <Peak Mz="515.7756" Intensity="79565.0" />
+        <Peak Mz="516.2761" Intensity="37453.3" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7920" Intensity="133231.3" />
+        <Peak Mz="519.2930" Intensity="60101.1" />
+        <Peak Mz="519.7957" Intensity="69982.3" />
+        <Peak Mz="520.2971" Intensity="21763.8" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2855" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="407457.1" HeavyIntensity="253018.4">
+      <LightPeakList>
+        <Peak Mz="514.7845" Intensity="216276.4" />
+        <Peak Mz="515.2861" Intensity="88512.1" />
+        <Peak Mz="515.7758" Intensity="76156.3" />
+        <Peak Mz="516.3071" Intensity="24153.2" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7915" Intensity="121305.4" />
+        <Peak Mz="519.2935" Intensity="48216.8" />
+        <Peak Mz="519.7955" Intensity="46850.9" />
+        <Peak Mz="520.2969" Intensity="35571.1" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2861" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="327720.9" HeavyIntensity="169956.1">
+      <LightPeakList>
+        <Peak Mz="514.7848" Intensity="190044.6" />
+        <Peak Mz="515.2868" Intensity="71459.0" />
+        <Peak Mz="515.7755" Intensity="50389.9" />
+        <Peak Mz="516.2782" Intensity="13930.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7922" Intensity="57385.5" />
+        <Peak Mz="519.2928" Intensity="34173.0" />
+        <Peak Mz="519.7953" Intensity="48469.6" />
+        <Peak Mz="520.2972" Intensity="29206.4" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2867" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="267485.4" HeavyIntensity="122658.9">
+      <LightPeakList>
+        <Peak Mz="514.7850" Intensity="152137.2" />
+        <Peak Mz="515.2863" Intensity="56416.5" />
+        <Peak Mz="515.7764" Intensity="40555.1" />
+        <Peak Mz="516.2771" Intensity="16827.9" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7924" Intensity="66840.7" />
+        <Peak Mz="519.2946" Intensity="24869.8" />
+        <Peak Mz="519.7951" Intensity="28051.0" />
+        <Peak Mz="520.2974" Intensity="0.0" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2873" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="201941.6" HeavyIntensity="109943.8">
+      <LightPeakList>
+        <Peak Mz="514.7849" Intensity="124311.0" />
+        <Peak Mz="515.2881" Intensity="21251.5" />
+        <Peak Mz="515.7767" Intensity="35568.5" />
+        <Peak Mz="516.2804" Intensity="19641.5" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7924" Intensity="39136.3" />
+        <Peak Mz="519.2942" Intensity="35193.6" />
+        <Peak Mz="519.7947" Intensity="33017.0" />
+        <Peak Mz="520.2974" Intensity="0.0" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2879" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="150230.0" HeavyIntensity="68659.4">
+      <LightPeakList>
+        <Peak Mz="514.7850" Intensity="83488.2" />
+        <Peak Mz="515.2780" Intensity="34193.0" />
+        <Peak Mz="515.7727" Intensity="14273.3" />
+        <Peak Mz="516.2700" Intensity="17405.7" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7927" Intensity="37372.8" />
+        <Peak Mz="519.2728" Intensity="10972.8" />
+        <Peak Mz="519.7958" Intensity="18692.0" />
+        <Peak Mz="520.2974" Intensity="0.0" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2885" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="143095.3" HeavyIntensity="59846.5">
+      <LightPeakList>
+        <Peak Mz="514.7852" Intensity="65443.2" />
+        <Peak Mz="515.2798" Intensity="43532.8" />
+        <Peak Mz="515.7758" Intensity="21332.1" />
+        <Peak Mz="516.2924" Intensity="11958.7" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7925" Intensity="21303.3" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7958" Intensity="20026.1" />
+        <Peak Mz="520.2974" Intensity="0.0" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2891" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="118468.9" HeavyIntensity="51436.5">
+      <LightPeakList>
+        <Peak Mz="514.7849" Intensity="73349.2" />
+        <Peak Mz="515.2807" Intensity="29629.5" />
+        <Peak Mz="515.7887" Intensity="0.0" />
+        <Peak Mz="516.2903" Intensity="0.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7928" Intensity="32861.4" />
+        <Peak Mz="519.2853" Intensity="12936.3" />
+        <Peak Mz="519.7958" Intensity="0.0" />
+        <Peak Mz="520.2974" Intensity="0.0" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2897" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="76749.6" HeavyIntensity="76678.2">
+      <LightPeakList>
+        <Peak Mz="514.7848" Intensity="31645.5" />
+        <Peak Mz="515.2783" Intensity="22210.6" />
+        <Peak Mz="515.7887" Intensity="0.0" />
+        <Peak Mz="516.2661" Intensity="14733.8" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7695" Intensity="31284.6" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7957" Intensity="12645.0" />
+        <Peak Mz="520.2960" Intensity="10509.4" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2903" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="105339.2" HeavyIntensity="118605.1">
+      <LightPeakList>
+        <Peak Mz="514.7852" Intensity="35108.6" />
+        <Peak Mz="515.2802" Intensity="39369.5" />
+        <Peak Mz="515.7758" Intensity="17177.9" />
+        <Peak Mz="516.2687" Intensity="13073.2" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7929" Intensity="27092.9" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7958" Intensity="0.0" />
+        <Peak Mz="520.2768" Intensity="46911.7" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2909" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="77581.7" HeavyIntensity="136773.7">
+      <LightPeakList>
+        <Peak Mz="514.7858" Intensity="38245.3" />
+        <Peak Mz="515.2800" Intensity="12761.7" />
+        <Peak Mz="515.7853" Intensity="15353.3" />
+        <Peak Mz="516.2814" Intensity="10772.2" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7929" Intensity="16389.8" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7963" Intensity="12458.3" />
+        <Peak Mz="520.2761" Intensity="68256.6" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2915" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="87973.6" HeavyIntensity="135277.3">
+      <LightPeakList>
+        <Peak Mz="514.7853" Intensity="44610.8" />
+        <Peak Mz="515.2813" Intensity="30340.3" />
+        <Peak Mz="515.7753" Intensity="10363.3" />
+        <Peak Mz="516.2903" Intensity="0.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7929" Intensity="31776.7" />
+        <Peak Mz="519.2935" Intensity="10327.3" />
+        <Peak Mz="519.7946" Intensity="21388.9" />
+        <Peak Mz="520.2768" Intensity="71209.9" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2921" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="50147.0" HeavyIntensity="174118.8">
+      <LightPeakList>
+        <Peak Mz="514.7856" Intensity="23652.2" />
+        <Peak Mz="515.2870" Intensity="0.0" />
+        <Peak Mz="515.7734" Intensity="9602.8" />
+        <Peak Mz="516.2903" Intensity="0.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7703" Intensity="14005.9" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7958" Intensity="0.0" />
+        <Peak Mz="520.2766" Intensity="94637.1" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2927" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="80789.7" HeavyIntensity="883907.0">
+      <LightPeakList>
+        <Peak Mz="514.7858" Intensity="18607.7" />
+        <Peak Mz="515.2871" Intensity="21190.7" />
+        <Peak Mz="515.7673" Intensity="38549.2" />
+        <Peak Mz="516.2903" Intensity="0.0" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7924" Intensity="0.0" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7938" Intensity="11630.5" />
+        <Peak Mz="520.2762" Intensity="81517.6" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2933" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="115269.3" HeavyIntensity="75054.8">
+      <LightPeakList>
+        <Peak Mz="514.7849" Intensity="24181.9" />
+        <Peak Mz="515.2870" Intensity="0.0" />
+        <Peak Mz="515.7679" Intensity="34453.1" />
+        <Peak Mz="516.2661" Intensity="20622.9" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7939" Intensity="11421.2" />
+        <Peak Mz="519.2766" Intensity="12195.2" />
+        <Peak Mz="519.7958" Intensity="0.0" />
+        <Peak Mz="520.2764" Intensity="44664.4" />
+      </HeavyPeakList>
+    </Envelope>
+    <Envelope Scan="2939" Retentiontime="0.00" Enabled="False" Identified="False" LightIntensity="108055.8" HeavyIntensity="98401.3">
+      <LightPeakList>
+        <Peak Mz="514.7851" Intensity="18661.0" />
+        <Peak Mz="515.2842" Intensity="14870.7" />
+        <Peak Mz="515.7676" Intensity="49967.8" />
+        <Peak Mz="516.2687" Intensity="23930.7" />
+      </LightPeakList>
+      <HeavyPeakList>
+        <Peak Mz="518.7706" Intensity="11739.3" />
+        <Peak Mz="519.2941" Intensity="0.0" />
+        <Peak Mz="519.7958" Intensity="0.0" />
+        <Peak Mz="520.2762" Intensity="49659.0" />
+      </HeavyPeakList>
+    </Envelope>
+  </ObservedEnvelopes>
+</SilacQuantificationInformation>

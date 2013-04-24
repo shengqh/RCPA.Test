@@ -1,0 +1,30 @@
+ FIT_HPPP_Bound_060622_04.87.87.2.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2004
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 07/06/2006, 09:58 PM, 4.41 sec. on dell04
+ (M+H)+ mass = 1013.5999 ~ 3.0000 (+2), fragment tol = 0.0000 , MONO/MONO
+ total inten = 7095.0, lowest Sp = 192.8, # matched peptides = 33904
+ # amino acids = 46021504, # proteins = 100414, /database/ipi.HUMAN.v3.07.REVERSED.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.0307 Enzyme:Trypsin (2)
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference                                                                           Peptide
+ ---  --------  --------  --------  ------  ------   -----  -----  ---------                                                                           -------
+  1.   1 /  1          0 1013.5990  0.0000  3.3696  1315.8  17/20  IPI:IPI00216773.4|TREMBL:Q8IUK7|ENSEMBL:ENSP00000331666                         +1  K.LVAASQAALGL.-
+                       0  IPI:IPI00384697.1|TREMBL:Q86YG0|EN
+  2.   2 /159          0 1013.5738  0.5692  1.4516   217.9   8/16  REVERSED_36375                                                                  +1  K.TSKQLTAHK.D
+                       0  REVERSED_36376
+  3.   3 / 95          0 1013.4647  0.5891  1.3846   242.6   8/18  REVERSED_42043                                                                      K.GDKDGEGAHK.F
+  4.   4 / 22          0 1013.4431  0.6010  1.3445   304.6   8/14  IPI:IPI00171871.4|SWISS-PROT:Q08334|TREMBL:Q6ZVU9|REFSEQ_NP:NP_000619|ENSEMBL:E     -.MGICFEEK.S
+  5.   5 / 31          0 1011.5370  0.6228  1.2709   296.0   8/14  REVERSED_9193                                                                       K.WLASLHER.A
+  6.   6 / 45          0 1014.6055  0.6246  1.2650   276.2   9/16  IPI:IPI00061078.3|TREMBL:Q96DQ3|ENSEMBL:ENSP00000353010|H-INV:HIT000011814          K.IGLANKDRK.N
+  7.   7 / 18          0 1012.4881  0.6354  1.2285   326.6   9/16  IPI:IPI00291007.6|SWISS-PROT:Q8WTV0-1                                               R.STLASFACR.V
+  8.   8 /124          0 1011.5582  0.6378  1.2203   229.1   9/20  IPI:IPI00011093.1|SWISS-PROT:Q9BXJ5|REFSEQ_NP:NP_114114|ENSEMBL:ENSP00000274543     R.GPKGVNGTPGK.H
+  9.   9 /133          0 1014.4938  0.6478  1.1869   226.3   8/16  REVERSED_867                                                                        R.AHFGPMAQR.V
+ 10.  10 / 81          0 1014.6055  0.6495  1.1809   250.7   9/18  REVERSED_20357                                                                      K.KIGGTPSARK.R
+  1.          0  IPI:IPI00216773.4|TREMBL:Q8IUK7|ENSEMBL:ENSP00000331666 Tax_Id=9606 ALB protei
+  2.          0  REVERSED_36375 
+  3.          0  REVERSED_42043 
+  4.          0  IPI:IPI00171871.4|SWISS-PROT:Q08334|TREMBL:Q6ZVU9|REFSEQ_NP:NP_000619|ENSEMBL:
+  5.          0  REVERSED_9193 

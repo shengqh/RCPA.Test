@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/ISB/data/wyb_phospho/wyb_phospho_0.05.decoy.prot.xsl"?>
+<protein_summary xmlns="http://regis-web.systemsbiology.net/protXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sashimi.sourceforge.net/schema_revision/protXML/protXML_v6.xsd" summary_xml="c:/Inetpub/wwwroot/ISB/data/wyb_phospho/wyb_phospho_0.05.decoy.prot.xml">
+<protein_summary_header reference_database="c:/Inetpub/wwwroot/ISB/data/wyb_phospho/uniprot_sprot.20100420_MOUSE.REVERSED.fasta" residue_substitution_list="I -> L" source_files="c:/Inetpub/wwwroot/ISB/data/wyb_phospho/wyb_phospho_0.05.decoy.pep.xml" source_files_alt="c:/Inetpub/wwwroot/ISB/data/wyb_phospho/wyb_phospho_0.05.decoy.pep.xml" min_peptide_probability="0.20" min_peptide_weight="0.50" num_predicted_correct_prots="4019.0" num_input_1_spectra="19026" num_input_2_spectra="126768" num_input_3_spectra="24335" num_input_4_spectra="1059" num_input_5_spectra="71" initial_min_peptide_prob="0.05" total_no_spectrum_ids="149693.8" sample_enzyme="trypsin">
+<program_details analysis="proteinprophet" time="2011-02-14T10:47:48" version=" Insilicos_LabKey_C++ (TPP v4.4 VUVUZELA rev 1, Build 201010121551 (MinGW))">
+<proteinprophet_details  occam_flag="Y" groups_flag="Y" degen_flag="Y" nsp_flag="Y" initial_peptide_wt_iters="2" nsp_distribution_iters="2" final_peptide_wt_iters="3" run_options="EXCLUDE_ZEROS">
+      <nsp_information neighboring_bin_smoothing="Y">
+         <nsp_distribution bin_no="0" nsp_lower_bound_excl="0.00" nsp_upper_bound_incl="0.14" pos_freq="0.011" neg_freq="0.191" pos_to_neg_ratio="0.06"/>
+         <nsp_distribution bin_no="1" nsp_lower_bound_excl="0.14" nsp_upper_bound_incl="1.00" pos_freq="0.019" neg_freq="0.192" pos_to_neg_ratio="0.10"/>
+         <nsp_distribution bin_no="2" nsp_lower_bound_excl="1.00" nsp_upper_bound_incl="2.64" pos_freq="0.038" neg_freq="0.137" pos_to_neg_ratio="0.28"/>
+         <nsp_distribution bin_no="3" nsp_lower_bound_excl="2.64" nsp_upper_bound_incl="5.14" pos_freq="0.061" neg_freq="0.084" pos_to_neg_ratio="0.73"/>
+         <nsp_distribution bin_no="4" nsp_lower_bound_excl="5.14" nsp_upper_bound_incl="9.40" pos_freq="0.074" neg_freq="0.062" pos_to_neg_ratio="1.19"/>
+         <nsp_distribution bin_no="5" nsp_lower_bound_excl="9.40" nsp_upper_bound_incl="15.50" pos_freq="0.090" neg_freq="0.061" pos_to_neg_ratio="1.48"/>
+         <nsp_distribution bin_no="6" nsp_lower_bound_excl="15.50" nsp_upper_bound_incl="23.24" pos_freq="0.113" neg_freq="0.063" pos_to_neg_ratio="1.81"/>
+         <nsp_distribution bin_no="7" nsp_lower_bound_excl="23.24" nsp_upper_bound_incl="37.36" pos_freq="0.155" neg_freq="0.068" pos_to_neg_ratio="2.28"/>
+         <nsp_distribution bin_no="8" nsp_lower_bound_excl="37.36" nsp_upper_bound_incl="78.82" pos_freq="0.209" neg_freq="0.075" pos_to_neg_ratio="2.81"/>
+         <nsp_distribution bin_no="9" nsp_lower_bound_excl="78.82" nsp_upper_bound_excl="inf" pos_freq="0.230" neg_freq="0.068" pos_to_neg_ratio="3.35"/>
+      </nsp_information>
+      <ni_information>
+      </ni_information>
+      <protein_summary_data_filter min_probability="0.00" sensitivity="1.000" false_positive_error_rate="0.552" predicted_num_correct="4019" predicted_num_incorrect="4943" />
+      <protein_summary_data_filter min_probability="0.10" sensitivity="1.000" false_positive_error_rate="0.144" predicted_num_correct="4019" predicted_num_incorrect="677" />
+      <protein_summary_data_filter min_probability="0.20" sensitivity="1.000" false_positive_error_rate="0.144" predicted_num_correct="4019" predicted_num_incorrect="677" />
+      <protein_summary_data_filter min_probability="0.30" sensitivity="0.980" false_positive_error_rate="0.098" predicted_num_correct="3939" predicted_num_incorrect="429" />
+      <protein_summary_data_filter min_probability="0.40" sensitivity="0.962" false_positive_error_rate="0.071" predicted_num_correct="3868" predicted_num_incorrect="297" />
+      <protein_summary_data_filter min_probability="0.50" sensitivity="0.945" false_positive_error_rate="0.052" predicted_num_correct="3796" predicted_num_incorrect="208" />
+      <protein_summary_data_filter min_probability="0.60" sensitivity="0.925" false_positive_error_rate="0.037" predicted_num_correct="3716" predicted_num_incorrect="142" />
+      <protein_summary_data_filter min_probability="0.70" sensitivity="0.902" false_positive_error_rate="0.025" predicted_num_correct="3623" predicted_num_incorrect="93" />
+      <protein_summary_data_filter min_probability="0.80" sensitivity="0.870" false_positive_error_rate="0.014" predicted_num_correct="3497" predicted_num_incorrect="51" />
+      <protein_summary_data_filter min_probability="0.90" sensitivity="0.828" false_positive_error_rate="0.007" predicted_num_correct="3329" predicted_num_incorrect="22" />
+      <protein_summary_data_filter min_probability="0.95" sensitivity="0.797" false_positive_error_rate="0.004" predicted_num_correct="3202" predicted_num_incorrect="12" />
+      <protein_summary_data_filter min_probability="0.96" sensitivity="0.785" false_positive_error_rate="0.003" predicted_num_correct="3153" predicted_num_incorrect="10" />
+      <protein_summary_data_filter min_probability="0.97" sensitivity="0.769" false_positive_error_rate="0.002" predicted_num_correct="3089" predicted_num_incorrect="8" />
+      <protein_summary_data_filter min_probability="0.98" sensitivity="0.748" false_positive_error_rate="0.002" predicted_num_correct="3004" predicted_num_incorrect="6" />
+      <protein_summary_data_filter min_probability="0.99" sensitivity="0.678" false_positive_error_rate="0.000" predicted_num_correct="2726" predicted_num_incorrect="1" />
+      <protein_summary_data_filter min_probability="1.00" sensitivity="0.493" false_positive_error_rate="0.000" predicted_num_correct="1982" predicted_num_incorrect="0" />
+</proteinprophet_details>
+</program_details>
+</protein_summary_header>
+<dataset_derivation generation_no="0">
+</dataset_derivation>
+<protein_group group_number="1" probability="1.0000">
+      <protein protein_name="sp|A2A791|ZMYM4_MOUSE" n_indistinguishable_proteins="1" probability="1.0000" percent_coverage="6.3" unique_stripped_peptides="ATEGIEDIK+GETEQDLEADFPSESFDPLNK+HEVNYQNVVHK+KKPIVTINTNSISTK+MLPSVPATAVRV+NEDDEAPVGVEMAENTDNPLR+TLDTMLTR" group_sibling_id="a" total_number_peptides="15" pct_spectrum_ids="0.009" confidence="0.994">
+         <parameter name="prot_length" value="1550"/>
+         <annotation protein_description="Zinc finger MYM-type protein 4 OS=Mus musculus GN=Zmym4 PE=1 SV=1"/>
+         <peptide peptide_sequence="GETEQDLEADFPSESFDPLNK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.92" n_sibling_peptides_bin="4" n_instances="2" exp_tot_instances="2.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2367.0468">
+         </peptide>
+         <peptide peptide_sequence="GETEQDLEADFPSESFDPLNK" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.92" n_sibling_peptides_bin="4" n_instances="2" exp_tot_instances="2.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2375.0610">
+<modification_info modified_peptide="GETEQDLEADFPSESFDPLNK[136]">
+<mod_aminoacid_mass position="21" mass="136.109169"/>
+</modification_info>
+         </peptide>
+         <peptide peptide_sequence="NEDDEAPVGVEMAENTDNPLR" charge="2" initial_probability="0.9990" nsp_adjusted_probability="0.9992" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.92" n_sibling_peptides_bin="4" n_instances="2" exp_tot_instances="2.00" is_contributing_evidence="Y" calc_neutral_pep_mass="2314.0097">
+         </peptide>
+         <peptide peptide_sequence="KKPIVTINTNSISTK" charge="3" initial_probability="0.9953" nsp_adjusted_probability="0.9961" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.92" n_sibling_peptides_bin="4" n_instances="3" exp_tot_instances="2.88" is_contributing_evidence="Y" calc_neutral_pep_mass="1658.9980">
+<modification_info modified_peptide="K[136]K[136]PIVTINTNSISTK">
+<mod_aminoacid_mass position="1" mass="136.109169"/>
+<mod_aminoacid_mass position="2" mass="136.109169"/>
+</modification_info>
+         </peptide>
+         <peptide peptide_sequence="ATEGIEDIK" charge="1" initial_probability="0.9516" nsp_adjusted_probability="0.9591" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.97" n_sibling_peptides_bin="4" n_instances="2" exp_tot_instances="1.90" is_contributing_evidence="Y" calc_neutral_pep_mass="982.5141">
+<modification_info modified_peptide="ATEGIEDIK[136]">
+<mod_aminoacid_mass position="9" mass="136.109169"/>
+</modification_info>
+         </peptide>
+         <peptide peptide_sequence="HEVNYQNVVHK" charge="2" initial_probability="0.9438" nsp_adjusted_probability="0.9523" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="2" n_sibling_peptides="5.97" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.94" is_contributing_evidence="Y" calc_neutral_pep_mass="1373.7010">
+<modification_info modified_peptide="HEVNYQNVVHK[136]">
+<mod_aminoacid_mass position="11" mass="136.109169"/>
+</modification_info>
+         </peptide>
+         <peptide peptide_sequence="TLDTMLTR" charge="2" initial_probability="0.7172" nsp_adjusted_probability="0.7512" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="1" n_sibling_peptides="6.20" n_sibling_peptides_bin="4" n_instances="1" exp_tot_instances="0.72" is_contributing_evidence="Y" calc_neutral_pep_mass="949.4981">
+         </peptide>
+         <peptide peptide_sequence="MLPSVPATAVRV" charge="2" initial_probability="0.3128" nsp_adjusted_probability="0.3128" weight="1.00" is_nondegenerate_evidence="Y" n_enzymatic_termini="1" n_sibling_peptides="6.60" n_sibling_peptides_bin="4" n_instances="2" exp_tot_instances="0.55" is_contributing_evidence="Y" calc_neutral_pep_mass="1255.7037">
+<modification_info modified_peptide="M[147]LPSVPATAVRV">
+<mod_aminoacid_mass position="1" mass="147.035404"/>
+</modification_info>
+         </peptide>
+      </protein>
+</protein_group>
+</protein_summary>

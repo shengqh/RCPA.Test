@@ -1,0 +1,62 @@
+DTASelect v1.9
+X:\NieSong\YEAST_SAX_ONLINE\YEAST_G1_SAX\
+W:\Yeast_orf_trans.REVERSED.fasta
+TurboSEQUEST - in OUT format.
+ -1 1.9 -2 2.2 -3 3.75 -d 0.1 -r 1 -p 1 -o
+
+true	Use criteria
+1.9	Minimum +1 XCorr
+2.2	Minimum +2 XCorr
+3.75	Minimum +3 XCorr
+0.1	Minimum DeltCN
+1	Minimum charge state
+3	Maximum charge state
+0.0	Minimum ion proportion
+1000	Maximum Sp rank
+-1.0	Minimum Sp score
+Include	Modified peptide inclusion
+Any	Tryptic status requirement
+true	Multiple, ambiguous IDs allowed
+Ignore	Peptide validation handling
+null	Purge duplicate peptides by protein
+false	Include only loci with unique peptide
+true	Remove subset proteins
+Ignore	Locus validation handling
+0	Minimum modified peptides per locus
+1	Minimum redundancy for low coverage loci
+1	Minimum peptides per locus
+
+Locus	Sequence Count	Spectrum Count	Sequence Coverage	Length	MolWt	pI	Validation Status	Descriptive Name
+Unique	FileName	XCorr	DeltCN	M+H+	CalcM+H+	TotalIntensity	SpRank	SpScore	IonProportion	Redundancy	Sequence
+YDR457W	2	2	0.7%	3269	374185.60	5.06	U	YDR457W TOM1 SGDID:S000002865, Chr IV from 1369782-1379588, Verified ORF, "E3 ubiquitin ligase of the hect-domain class; has a role in mRNA export from the nucleus and may regulate transcriptional coactivators"
+	YEAST_0610_G1_SAX_080811_03.17137.17137.3	3.3329	0.2322	2972.18	2972.19	0.0	5	295.0	28.3	1	K.IEDHDEVEDEVDES*DKEEIPDMFK.N
+	YEAST_0612_S_SAX_080723_03.17611.17611.3	3.2141	0.3126	2874.23	2874.21	0.0	1	915.6	30.4	1	K.IEDHDEVEDEVDES@DKEEIPDMFK.N
+YBR275C	2	2	0.7%	1917	217960.62	6.13	U	YBR275C RIF1 SGDID:S000000479, Chr II from 757101-751351, reverse complement, Verified ORF, "Protein that binds to the Rap1p C-terminus and acts synergistically with Rif2p to help control telomere length and establish telomeric silencing; deletion results in telomere elongation"
+	YEAST_0612_G1_SAX_080804_03.6847.6847.2	1.8431	0.1588	1675.58	1675.59	0.0	43	153.9	30.8	1	R.M#DS@TPIQGTEEES*R.E
+	YEAST_0612_G1_SAX_080804_04.7112.7112.2	1.9675	0.1449	1675.58	1675.59	0.0	174	168.5	28.2	1	R.M#DS@TPIQGTEEES*R.E
+YPL137C	1	1	0.7%	1277	140890.91	7.09	U	YPL137C GIP3 SGDID:S000006058, Chr XVI from 296646-292816, reverse complement, Verified ORF, "Glc7-interacting protein whose overexpression relocalizes Glc7p from the nucleus and prevents chromosome segregation; may interact with ribosomes, based on co-purification experiments"
+	YEAST_080611_G2_M_SAX_080709_07.12774.12774.2	1.9453	0.1924	983.53	983.52	0.0	2	324.1	68.8	1	R.LLT@SFAT@QK.N
+YBR115C	1	1	0.6%	1393	155345.60	5.63	U	YBR115C LYS2 SGDID:S000000319, Chr II from 473920-469742, reverse complement, Verified ORF, "Alpha aminoadipate reductase, catalyzes the reduction of alpha-aminoadipate to alpha-aminoadipate 6-semialdehyde, which is the fifth step in biosynthesis of lysine; activation requires posttranslational phosphopantetheinylation by Lys5p"
+	YEAST_0612_G1_SAX_080801_07.8260.8260.2	1.9567	0.3443	1162.50	1162.49	0.0	10	145.5	56.2	1	K.IQSCQDLER.T
+YDL171C	5	5	0.6%	2146	238101.75	6.15	U	YDL171C GLT1 SGDID:S000002330, Chr IV from 155641-149204, reverse complement, Verified ORF, "NAD(+)-dependent glutamate synthase (GOGAT), synthesizes glutamate from glutamine and alpha-ketoglutarate; with Gln1p, forms the secondary pathway for glutamate biosynthesis from ammonia; expression regulated by nitrogen source"
+	YEAST_0612_S_SAX_080723_03.16111.16111.2	2.7199	0.4064	1278.82	1278.81	0.0	3	1008.3	62.5	1	K.GLSGGIIVIKPPK.D
+	YEAST_0611_G2_M_SAX_080711_02.16531.16531.2	3.1214	0.4605	1278.82	1278.81	0.0	3	1096.9	70.8	1	K.GLSGGIIVIKPPK.D
+	YEAST_0611_G2_M_SAX_080711_02.16535.16536.2	2.5482	0.4144	1278.82	1278.81	0.0	1	929.2	75.0	1	K.GLSGGIIVIKPPK.D
+	YEAST_0611_G2_M_SAX_080714_03.16431.16432.2	2.8595	0.4042	1278.82	1278.81	0.0	1	923.9	66.7	1	K.GLSGGIIVIKPPK.D
+	YEAST_0611_G2_M_SAX_080714_05.16381.16381.2	2.6393	0.4462	1278.82	1278.81	0.0	1	733.9	66.7	1	K.GLSGGIIVIKPPK.D
+YER172C	2	2	0.6%	2164	246185.64	5.34	U	YER172C BRR2 SGDID:S000000974, Chr V from 536016-529525, reverse complement, Verified ORF, "RNA-dependent ATPase RNA helicase (DEIH box); required for disruption of U4/U6 base-pairing in native snRNPs to activate the spliceosome for catalysis; homologous to human U5-200kD"
+	YEAST_0612_G1_SAX_080801_02.7672.7673.2	2.1054	0.4055	1576.64	1576.64	0.0	1	305.7	45.8	1	K.ENEENEDGNIEER.K
+	YEAST_0612_G1_SAX_080804_02.7859.7860.2	1.7568	0.2519	1595.58	1595.58	0.0	1	260.2	41.7	1	K.ENEENEDGNIEER.K
+YNL257C	1	1	0.6%	1230	142819.99	8.79	U	YNL257C SIP3 SGDID:S000005201, Chr XIV from 164321-160632, reverse complement, Verified ORF, "Protein that activates transcription through interaction with DNA-bound Snf1p, C-terminal region has a putative leucine zipper motif; potential Cdc28p substrate"
+	YEAST_0612_S_SAX_080730_08.15077.15078.2	1.7167	0.1280	845.43	845.42	0.0	1	213.6	66.7	1	R.LIDSFNK.D
+YBL004W	1	1	0.5%	2494	287560.66	6.59	U	YBL004W UTP20 SGDID:S000000100, Chr II from 227639-235120, Verified ORF, "Component of the small-subunit (SSU) processome, which is involved in the biogenesis of the 18S rRNA"
+	YEAST_0611_G2_M_SAX_080711_06.17296.17296.2	2.2234	0.1749	1515.81	1515.80	0.0	6	534.6	50.0	1	R.QSVM#ELINLIIT@K.A
+YLR087C	1	1	0.5%	2959	338257.94	5.63	U	YLR087C CSF1 SGDID:S000004077, Chr XII from 315732-306856, reverse complement, Verified ORF, "Protein required for fermentation at low temperature; the authentic, non-tagged protein is detected in highly purified mitochondria in high-throughput studies"
+	YEAST_0611_S_SAX_080721_01.18649.18650.3	2.9583	0.1716	1783.93	1783.94	0.0	15	547.6	32.1	1	K.VT*GQFS@IENILFLIK.E
+	Proteins	Peptide IDs	Copies
+Unfiltered	1	1
+Redundant	1	1
+Nonredundant	1	1
+
+Classification	Nonredundant	Proteins	Redundant Proteins
+Unclassified	0	0

@@ -1,0 +1,35 @@
+ HLPP2004112411CLC-412414.0743.0745.2.out
+ TurboSEQUEST v.27 (rev. 11), (c) 1999-2000
+ Molecular Biotechnology, Univ. of Washington, J.Eng/J.Yates
+ Licensed to ThermoQuest Corp.
+ 12/22/2004, 03:57 PM, 2 sec. on TT
+ (M+H)+ mass = 1701.0000 ~ 1.4000 (+2), fragment tol = 1.4, MONO/MONO
+ total inten = 6483.5, lowest Sp = 117.6, # matched peptides = 5857
+ # amino acids = 86484, # proteins = 0, E:\Xcalibur\database/ipi.human2.33.fasta, E:\Xcalibur\database\ipi.human2.33.fasta.bin
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/3, ion % = 0.0, CODE = 10103
+ C=160.009 Enzyme:Trypsin (2)
+
+  #   Rank/Sp    (M+H)+   deltCn   XCorr    Sp     Ions  Reference                  Peptide
+ ---  -------  ---------  ------  ------   ----    ----  ---------                  -------
+  1.   1 /226  1702.0120  0.0000  1.4213   152.7  10/26  IPI:IPI00329593.1|RE +1  -.IVLNPNKPVVEWHR.-
+      IPI:IPI00396457.1|TR
+  2.   2 /259  1701.9500  0.0609  1.3347   148.0   9/28  IPI:IPI00022033.2|SW     -.NNLSASMFDLSMKDK.-
+  3.   3 /139  1700.8490  0.1011  1.2776   176.8  10/28  IPI:IPI00003896.1|SW +1  -.IQVTDANDNPPVFNR.-
+      IPI:IPI00028624.1|SW
+  4.   4 / 12  1701.8090  0.1474  1.2118   289.9  13/26  IPI:IPI00382641.2|EN     -.SLLCLPCSNSQEHR.-
+  5.   5 /  5  1699.1169  0.1651  1.1867   356.7  15/28  IPI:IPI00150349.3|RE +1  -.MRPLLCALTGLALLR.-
+      IPI:IPI00412753.1|EN
+  6.   6 /  1  1702.0040  0.1790  1.1669   467.9  15/30  IPI:IPI00376976.1|SW +1  -.PTELAPKPQIGDLPPK.-
+      IPI:IPI00410303.1|SW
+  7.   7 /278  1701.0439  0.1884  1.1535   144.7  10/28  IPI:IPI00032905.2|SW     -.LLSLHIGACESIMKK.-
+  8.   8 / 43  1699.8820  0.2145  1.1164   222.1  11/32  IPI:IPI00065051.2|RE     -.GATDAGAKPPRAQMGDR.-
+  9.   9 /154  1701.9790  0.2177  1.1119   171.7  11/28  IPI:IPI00219497.1|SW     -.VNKRMLSESSLDPPK.-
+ 10.  10 /143  1700.8730  0.2413  1.0783   176.0  11/28  IPI:IPI00000996.1|TR +1  -.EPVLDPTDCGPMGRR.-
+      IPI:IPI00412018.1|RE
+
+  1.  IPI:IPI00329593.1|RE
+  2.  IPI:IPI00022033.2|SW
+  3.  IPI:IPI00003896.1|SW
+
+

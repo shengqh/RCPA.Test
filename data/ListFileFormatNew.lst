@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <Items>
+    <Item Selected="True">
+      <SubItem>Z:\GK_PPN\GKPPN_iTRAQ_SAX_114115_AP_treat\GKPPN_114_115AP+_500ug_SAX_1</SubItem>
+      <SubItem>SEQUEST</SubItem>
+    </Item>
+    <Item Selected="False">
+      <SubItem>Z:\GK_PPN\GKPPN_iTRAQ_SAX_114115_AP_treat\GKPPN_114_115AP+_500ug_SAX_2</SubItem>
+    </Item>
+  </Items>
+</configuration>

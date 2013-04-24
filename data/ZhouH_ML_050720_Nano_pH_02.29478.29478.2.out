@@ -1,0 +1,46 @@
+ZhouH_ML_050720_Nano_pH_02.29478.29478.2.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2004
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 07/29/2005, 12:56 AM, 1.84 sec. on dell07
+ (M+H)+ mass = 2332.7300 ~ 3.0000 (+2), fragment tol = 0.0000 , AVG/AVG
+ total inten = 7875.4, lowest Sp = 48.6, # matched peptides = 4899
+ # amino acids = 13113500, # proteins = 28950, /database/20040816_Mouse.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ C=160.1652 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference       Peptide
+ ---  --------  --------  --------  ------  ------   -----  -----  ---------       -------
+  1.   1 /  1        295 2330.6146  0.0000  3.0640   363.0  15/42  ALC_MOUSE  +12  R.PALEDLLLGSDASITCTLNGLR.N
+                    9520  Q6PDB8 (Q6PDB8) Hypothetical prote
+                   10603  Q7TMK4 (Q7TMK4) Hypothetical prote
+                   20302  Q8K0F2 (Q8K0F2) Igh-VJ558 protein
+                   20387  Q8K0Z4 (Q8K0Z4) Hypothetical prote
+                   22121  Q99LA6 (Q99LA6) Hypothetical prote
+                   22211  Q99M22 (Q99M22) Hypothetical prote
+                   26288  Q91WP5 (Q91WP5) Igh-VJ558 protein
+                   26292  Q91WR1 (Q91WR1) Igh-VJ558 protein
+                   26298  Q91WT1 (Q91WT1) Igh-VJ558 protein
+                   26369  Q91XE1 (Q91XE1) Igh-VJ558 protein 
+                   27820  Q8VCV5 (Q8VCV5) Hypothetical prote
+                   28020  Q8VEA0 (Q8VEA0) Igh-VJ558 protein
+  2.   1 /  1      22017 2330.6146  0.0000  3.0640   363.0  15/42  Q99KA4     +1   R.PALEDLLLGSDASLTCTLNGLR.N
+                   26551  Q91Z07 (Q91Z07) LOC380791 protein
+  3.   2 /  2       2222 2331.7322  0.2048  2.4366   268.5  14/44  EPOR_MOUSE      R.VGPLCLLLAGAAWAPSPSLPDPK.F
+  4.   3 /  4      16901 2330.4323  0.4110  1.8046   162.7  11/38  Q8C196          K.TVVVNCNPETVSTDFDECDK.L
+  5.   4 /108      25633 2332.7670  0.4678  1.6305    65.4   8/44  Q9DC67     +1   K.GMAVLTPVMCGVGGNLVAIQTSR.I
+                   26721  Q921R8 (Q921R8) Slc41a3 protein
+  6.   5 /102      13393 2332.6420  0.4758  1.6061    67.2   7/42  Q8BH61          K.QDGTHVVEAVDATHIGKLIVTK.Q
+  7.   6 /  7       4646 2330.5681  0.4979  1.5384   135.0  10/38  MYH6_MOUSE +1   R.NHLRMVDSLQTSLDAETRSR.N
+                   26574  Q91Z83 (Q91Z83) Beta myosin heavy 
+  8.   7 / 19      19697 2331.5131  0.5074  1.5093   114.2   9/36  Q8CFT2          K.CGNFARFINHSCNPNCYAK.V
+  9.   8 /157      16425 2332.5945  0.5172  1.4794    58.7   7/38  Q8BYM9          R.EKMVYMAVKDSSQEQDDISK.I
+ 10.   9 / 18        437 2334.7409  0.5398  1.4100   115.7  10/46  AR3A_MOUSE      K.LPVTPLGLAASTNGSSITPAPKIK.K
+
+  1.        295  ALC_MOUSE (P01878) Ig alpha chain C region
+íº  €tG 
+  2.      22017  Q99KA4 (Q99KA4) LOC380791 protei
+  3.       2222  EPOR_MOUSE (P14753) Erythropoietin receptor precursor (EPO-R) 
+  4.      16901  Q8C196 (Q8C196) Mus musculus 10 days neonate skin cDNA, RIKEN full-length enr
+  5.      25633  Q9DC67 (Q9DC67) Mus musculus adult male heart cDNA, RIKEN full-length enriche

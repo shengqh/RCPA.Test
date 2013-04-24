@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="Directories_count" value="5" />
+        <add key="Directories_0" value="Z:\Orbitrap\060222\Standard_Protein_FIT_060222" />
+        <add key="Directories_0_count" value="1" />
+        <add key="Directories_0_1" value="" />
+        <add key="Directories_1" value="Z:\Orbitrap\060222\Standard_Protein_FIT_Lock" />
+        <add key="Directories_1_count" value="1" />
+        <add key="Directories_1_1" value="" />
+        <add key="Directories_2" value="Z:\Orbitrap\060222\Standard_Protein_FIT_Lock_Re5" />
+        <add key="Directories_2_count" value="1" />
+        <add key="Directories_2_1" value="" />
+        <add key="Directories_3" value="Z:\Orbitrap\060222\Standard_Protein_FT2_060222" />
+        <add key="Directories_3_count" value="1" />
+        <add key="Directories_3_1" value="" />
+        <add key="Directories_4" value="Z:\Orbitrap\060222\Standard_Protein_FT2_Lock_Re5" />
+        <add key="Directories_4_count" value="1" />
+        <add key="Directories_4_1" value="" />
+        <add key="Directories_1_selected" value="True" />
+        <add key="DatFiles_count" value="3" />
+        <add key="DatFiles_0" value="D:\inetpub\mascot\data\20081223\F001237.dat" />
+        <add key="DatFiles_0_count" value="2" />
+        <add key="DatFiles_0_1" value="20081204_F17_NoModif.mgf" />
+        <add key="DatFiles_0_2" value="1" />
+        <add key="DatFiles_1" value="Z:\wuyi\20090429_itraqtest\F002001.dat" />
+        <add key="DatFiles_1_count" value="2" />
+        <add key="DatFiles_1_1" value="20090429WYitraqtest1.mzdata.xml" />
+        <add key="DatFiles_1_2" value="1" />
+        <add key="DatFiles_2" value="Z:\wuyi\20090429_itraqtest\F002002.dat" />
+        <add key="DatFiles_2_count" value="2" />
+        <add key="DatFiles_2_1" value="20090429WYitraqtest2.mzdata.xml" />
+        <add key="DatFiles_2_2" value="1" />
+        <add key="DatFiles_0_selected" value="True" />
+        <add key="DatFiles_1_selected" value="True" />
+        <add key="DatFiles_2_selected" value="True" />
+    </appSettings>
+</configuration>

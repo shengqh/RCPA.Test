@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ITraqResult>
+  <ITraqScan>
+    <PlexType>PLEX4</PlexType>
+    <Experimental>S1</Experimental>
+    <ScanMode>HCD</ScanMode>
+    <Scan>255</Scan>
+    <RetentionTime>3.4</RetentionTime>
+    <IonInjectionTime>1.000</IonInjectionTime>
+    <PrecursorPercentage>0.850</PrecursorPercentage>
+    <Ions>
+      <I114>4.5</I114>
+      <I115>5.5</I115>
+      <I116>6.5</I116>
+      <I117>7.5</I117>
+    </Ions>
+    <RawPeaks>
+      <Peak mz="114.1" intensity="114.1" charge="0" />
+      <Peak mz="115.1" intensity="115.1" charge="0" />
+      <Peak mz="116.1" intensity="116.1" charge="0" />
+      <Peak mz="117.1" intensity="117.1" charge="0" />
+    </RawPeaks>
+    <PeakInIsolationWindow>
+      <Peak mz="214.1" intensity="114.1" charge="0" tag="0" />
+      <Peak mz="215.1" intensity="115.1" charge="0" tag="0" />
+      <Peak mz="216.1" intensity="116.1" charge="0" tag="0" />
+      <Peak mz="217.1" intensity="117.1" charge="0" tag="0" />
+      <Precursor>
+        <MasterScan>1</MasterScan>
+        <MonoIsotopicMass>1879.10000</MonoIsotopicMass>
+        <IsolationMass>1800.10000</IsolationMass>
+        <IsolationWidth>2.00</IsolationWidth>
+        <Charge>2</Charge>
+        <Intensity>3.0</Intensity>
+      </Precursor>
+    </PeakInIsolationWindow>
+  </ITraqScan>
+  <ITraqScan>
+    <PlexType>PLEX8</PlexType>
+    <Experimental>S2</Experimental>
+    <ScanMode>ETD</ScanMode>
+    <Scan>355</Scan>
+    <RetentionTime>4.4</RetentionTime>
+    <IonInjectionTime>1.000</IonInjectionTime>
+    <PrecursorPercentage>0.330</PrecursorPercentage>
+    <Ions>
+      <I113>3.5</I113>
+      <I114>4.5</I114>
+      <I115>5.5</I115>
+      <I116>6.5</I116>
+      <I117>7.5</I117>
+      <I118>8.5</I118>
+      <I119>9.5</I119>
+      <I121>11.5</I121>
+    </Ions>
+    <RawPeaks>
+      <Peak mz="114.1" intensity="1114.1" charge="0" />
+      <Peak mz="115.1" intensity="1115.1" charge="0" />
+      <Peak mz="116.1" intensity="1116.1" charge="0" />
+      <Peak mz="117.1" intensity="1117.1" charge="0" />
+    </RawPeaks>
+    <PeakInIsolationWindow>
+      <Peak mz="1214.1" intensity="114.1" charge="0" tag="0" />
+      <Peak mz="1215.1" intensity="115.1" charge="0" tag="0" />
+      <Peak mz="1216.1" intensity="116.1" charge="0" tag="0" />
+      <Peak mz="1217.1" intensity="117.1" charge="0" tag="0" />
+      <Precursor>
+        <MasterScan>3</MasterScan>
+        <MonoIsotopicMass>2879.10000</MonoIsotopicMass>
+        <IsolationMass>2800.10000</IsolationMass>
+        <IsolationWidth>3.00</IsolationWidth>
+        <Charge>3</Charge>
+        <Intensity>4.0</Intensity>
+      </Precursor>
+    </PeakInIsolationWindow>
+  </ITraqScan>
+</ITraqResult>

@@ -1,0 +1,28 @@
+
+ 20030714_MouseLiver_2.4587.4587.2.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2002
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 08/08/2003, 09:29 PM, 1.0 sec. on P2651
+ (M+H)+ mass = 1695.9512 ~ 3.0000 (+2), fragment tol = 0.0, AVG/AVG
+ total inten = 9456.5, lowest Sp = 112.7, # matched peptides = 25330
+ # amino acids = 146184, # proteins = 21042, D:\database\Mouse_20030712_SPTR.FASTA, D:\database\Mouse_20030712_SPTR.FASTA.hdr
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 001040
+ (S* +79.980) (T# +79.980) (Y@ +79.980) C=160.165 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference      Peptide
+ ---  --------  --------  --------  ------  ------   ----    ----  ---------      -------
+  1.   1 / 22       7959 1696.6531  0.0000  1.6101   234.2   9/26  Q8VI59     +1  -.S*AILS*NTPS*LLALR.-
+  2.   2 / 13      18906 1695.4958  0.0342  1.5551   263.4  10/24  Q8BKS9     +1  -.NSES*SS*S*KTFPRK.-
+  3.   3 / 13      18906 1695.4958  0.0373  1.5500   263.4  10/24  Q8BKS9     +1  -.NSESS*S*S*KTFPRK.-
+  4.   4 / 29      14912 1695.8453  0.1228  1.4124   221.4   9/26  P82198     +1  -.AAQRS*VRLAPVYQR.-
+  5.   5 /  1      17178 1698.8476  0.1255  1.4079   389.8  11/24  Q8C1C6     +1  -.RFSYPSLLVS*HRR.-
+  6.   6 / 70       8286 1698.7549  0.1585  1.3549   187.1   8/24  Q8VE82     +1  -.WTS*EHQKAFENIK.-
+  7.   7 / 32      17228 1697.6810  0.1599  1.3527   218.5   9/26  Q8C0Y1     +1  -.ALVT#PASTLT#LLT#R.-
+  8.   8 /225        608 1697.0389  0.1681  1.3393   137.1   8/26  CA1C_MOUSE     -.AMTYVREKIFVPNK.-
+  9.   9 / 54      18906 1695.4958  0.1793  1.3215   197.8   9/24  Q8BKS9     +1  -.NSES*S*SS*KTFPRK.-
+ 10.  10 /  8      12642 1695.7476  0.1913  1.3020   269.5  10/26  Q8R5C4     +1  -.KEVPS*EVSEEPTKR.-
+
+
+

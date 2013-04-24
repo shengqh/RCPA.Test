@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScoreDistribution>
+  <Condition>
+    <PrecursorCharge>2</PrecursorCharge>
+    <MissCleavageSiteCount>0</MissCleavageSiteCount>
+    <ModificationCount>0</ModificationCount>
+    <Classification>DEFAULT</Classification>
+    <Distribution>
+      <Item>
+        <Score>25</Score>
+        <Target>2</Target>
+        <Decoy>1</Decoy>
+      </Item>
+      <Item>
+        <Score>26</Score>
+        <Target>8</Target>
+        <Decoy>1</Decoy>
+      </Item>
+    </Distribution>
+  </Condition>
+  <Condition>
+    <PrecursorCharge>2</PrecursorCharge>
+    <MissCleavageSiteCount>1</MissCleavageSiteCount>
+    <ModificationCount>0</ModificationCount>
+    <Classification>DEFAULT</Classification>
+    <Distribution>
+      <Item>
+        <Score>25</Score>
+        <Target>0</Target>
+        <Decoy>5</Decoy>
+      </Item>
+      <Item>
+        <Score>26</Score>
+        <Target>1</Target>
+        <Decoy>0</Decoy>
+      </Item>
+    </Distribution>
+  </Condition>
+</ScoreDistribution>

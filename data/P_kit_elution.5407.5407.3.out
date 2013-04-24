@@ -1,0 +1,28 @@
+
+ P_kit_elution.5407.5407.3.out
+ TurboSEQUEST - PVM Slave v.27 (rev. 12), (c) 1999-2004
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to ThermoFinnigan Corp.
+ 10/24/2006, 04:54 PM, 7.81 sec. on sun48
+ (M+H)+ mass = 1878.8490 ~ 3.0000 (+3), fragment tol = 0.0000 , AVG/MONO
+ total inten = 5551.0, lowest Sp = 204.3, # matched peptides = 285937
+ # amino acids = 55731204, # proteins = 137254, /database/ipi.MOUSE.v3.14.REVERSED.fasta
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 10/5, ion % = 0.0, CODE = 101010
+ (M* +15.9994) (STY# +79.9800) C=160.1652 Enzyme:Trypsin (2)
+
+  #   Rank/Sp      Id#     (M+H)+   deltCn   XCorr    Sp     Ions  Reference                                                                           Peptide
+ ---  --------  --------  --------  ------  ------   -----  -----  ---------                                                                           -------
+  1.   1 / 97          0 1881.2335  0.0000  1.7593   230.8  17/60  IPI:IPI00331322.2|SWISS-PROT:Q91VS7|TREMBL:Q53ZD4|REFSEQ_NP:NP_064330|ENSEMBL:E     K.M*MFMSSATAFQRITNK.V
+  2.   2 / 97          0 1881.2335  0.0102  1.7414   230.8  17/60  IPI:IPI00331322.2|SWISS-PROT:Q91VS7|TREMBL:Q53ZD4|REFSEQ_NP:NP_064330|ENSEMBL:E     K.MM*FMSSATAFQRITNK.V
+  3.   3 / 43          0 1881.2335  0.0469  1.6768   249.9  18/60  IPI:IPI00331322.2|SWISS-PROT:Q91VS7|TREMBL:Q53ZD4|REFSEQ_NP:NP_064330|ENSEMBL:E     K.MMFM*SSATAFQRITNK.V
+  4.   4 / 88          0 1881.8066  0.0760  1.6256   232.4  18/64  IPI:IPI00229865.1|SWISS-PROT:Q8BGQ1-2|REFSEQ_NP:NP_598805|ENSEMBL:ENSMUSP000000 +1  R.PGS#FQS#LSDALSDTPAK.S
+                       0  IPI:IPI00400395.1|SWISS-PROT:Q8BGQ
+  5.   5 / 96          0 1881.8066  0.0867  1.6068   231.2  18/64  IPI:IPI00229865.1|SWISS-PROT:Q8BGQ1-2|REFSEQ_NP:NP_598805|ENSEMBL:ENSMUSP000000 +1  R.PGS#FQSLS#DALSDTPAK.S
+                       0  IPI:IPI00400395.1|SWISS-PROT:Q8BGQ
+  6.   6 / 12          0 1879.5291  0.0958  1.5906   290.4  19/56  REVERSED_40074                                                                      K.QS#S#S#TASSS#KTECAK.S
+  7.   7 /  1          0 1881.1028  0.0968  1.5889   345.7  19/60  REVERSED_40599                                                                      R.PT#DHILHALALEKTLK.C
+  8.   8 /224          0 1879.9706  0.1165  1.5544   206.5  14/48  REVERSED_2323                                                                       K.DM*VHRTEDFRWY#K.D
+  9.   9 / 19          0 1880.7608  0.1768  1.4482   275.8  16/52  IPI:IPI00187209.1|TREMBL:Q9D5U1;Q8BXH8;Q3TE59;Q8BYC2|REFSEQ_NP:NP_081866|ENSEMB +1  R.YMNSFDS#EAHNNY#K.N
+                       0  IPI:IPI00227556.1|TREMBL:Q8BZI9;Q8
+ 10.  10 / 35          0 1879.0224  0.1832  1.4369   256.2  17/56  REVERSED_2859                                                                       K.QTM*KGVLDVQEYRS#K.M

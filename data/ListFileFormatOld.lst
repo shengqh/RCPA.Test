@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="Directories_count" value="2" />
+        <add key="Directories_0" value="Z:\Orbitrap\060222\Standard_Protein_FIT_060222" />
+        <add key="Directories_0_count" value="1" />
+        <add key="Directories_0_1" value="SEQUEST" />
+        <add key="Directories_1" value="Z:\Orbitrap\060222\Standard_Protein_FIT_Lock" />
+        <add key="Directories_1_count" value="1" />
+        <add key="Directories_1_1" value="" />
+        <add key="Directories_1_selected" value="True" />
+        <add key="DatFiles_count" value="1" />
+        <add key="DatFiles_0" value="D:\inetpub\mascot\data\20081223\F001237.dat" />
+        <add key="DatFiles_0_count" value="2" />
+        <add key="DatFiles_0_1" value="20081204_F17_NoModif.mgf" />
+        <add key="DatFiles_0_2" value="1" />
+    </appSettings>
+</configuration>

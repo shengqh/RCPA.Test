@@ -1,0 +1,71 @@
+
+ TUCJ_022009_1D_RKO_1.3052.3052.2.out
+ SEQUEST v.28 (rev. 13), (c) 1998-2007
+ Molecular Biotechnology, Univ. of Washington, J.Eng/S.Morgan/J.Yates
+ Licensed to Thermo Fisher Scientific Inc.
+ 06/10/2010, 07:13 PM, 0.1 sec. on sequest6.ccr.buffalo.edu
+ (M+H)+ mass = 1345.07800 ~ 2.5000 (+2), fragment tol = 0.5000 , MONO/MONO
+ total inten = 6338.3, lowest Sp = 51.7, # matched peptides = 16496
+ # amino acids = 1114331, # proteins = 172784, /scratch/database/ipi_HUMAN_v372_REVERSED.fasta, /scratch/database/ipi_HUMAN_v372_REVERSED.fasta.hdr
+ ion series nABY ABCDVWXYZ: 0 1 1 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+ display top 20/5, ion % = 0.0, CODE = 101040
+ (M* +15.99490) (Q# -17.02655) C=160.03068  Enzyme:Trypsin(KR) (2)
+
+  #   Rank/Sp      Id#     (M+H)+    deltCn   XCorr    Sp     Sf   Ions  Reference                                                                                                                                                                              Peptide
+ ---  --------  --------  --------   ------  ------   -----  ----  ----  ---------                                                                                                                                                                              -------
+  1.   1 /  1      15563 1344.73694  0.0000  2.6095   215.7  0.33  11/24  IPI:IPI00029778.3|SWISS-PROT:Q12888-1|ENSEMBL:ENSP00000263801;ENSP00000384078|REFSEQ:NP_005648|H-INV:HIT000066277|VEGA:OTTHUMP00000066116;OTTHUMP00000176233                       +3  R.VPETVSAATQTIK.N
+                   79831  IPI:IPI00657704.3|TREMBL:C9JXV0|EN
+                   79839  IPI:IPI00657708.2|TREMBL:A6NNK5;A8
+                   82033  IPI:IPI00742743.1|SWISS-PROT:Q1288
+  2.   2 /166      14395 1344.57446  0.1193  2.2981    55.3  0.01   5/22  IPI:IPI00027658.2|SWISS-PROT:P49619-1|ENSEMBL:ENSP00000265022|REFSEQ:NP_001337|H-INV:HIT000101142|VEGA:OTTHUMP00000173959;OTTHUMP00000210178                                       +2  K.NQAPM*MM*GPPQ#K.S
+                   30003  IPI:IPI00216968.2|SWISS-PROT:P4961
+                   68599  IPI:IPI00555984.3|TREMBL:B7Z951;Q2
+  3.   3 / 63      50796 1344.72705  0.1477  2.2240    76.4  0.04   7/20  REVERSED_0025398                                                                                                                                                                       R.IDSRSFLEHIK.E
+  4.   4 / 24      10583 1344.58020  0.1640  2.1816    94.4  0.06   8/22  IPI:IPI00020039.5|SWISS-PROT:P35663|TREMBL:Q3ZCV3;Q6NS94;Q6PEK4|ENSEMBL:ENSP00000331556|REFSEQ:NP_066941|H-INV:HIT000389053|VEGA:OTTHUMP00000023617                                    K.GSDTESEESLYK.P
+  5.   5 / 16      63668 1345.64172  0.2034  2.0786   107.8  0.04   7/22  REVERSED_0031834                                                                                                                                                                   +3  K.DPGKIQDGCVEK.E
+                  115728  REVERSED_0057864
+                  115952  REVERSED_0057976
+                  117866  REVERSED_0058933
+  6.   6 / 98       8997 1346.72876  0.2158  2.0464    66.7  0.01   6/26  IPI:IPI00016932.4|SWISS-PROT:O15357-1|ENSEMBL:ENSP00000298229|REFSEQ:NP_001558|H-INV:HIT000325818                                                                                  +1  R.GRGGAEARGPPPPK.A
+                   99597  IPI:IPI00795687.3|SWISS-PROT:O1535
+  7.   7 /177       7853 1344.70190  0.2223  2.0294    54.0  0.01   7/22  IPI:IPI00014575.1|SWISS-PROT:Q99741|TREMBL:B2R935|ENSEMBL:ENSP00000209728|REFSEQ:NP_001245|H-INV:HIT000221398|VEGA:OTTHUMP00000164449;OTTHUMP00000181177                               K.KENGPPHSHTLK.G
+  8.   8 /  2      42274 1344.63648  0.2262  2.0191   169.2  0.16  10/20  REVERSED_0021137                                                                                                                                                                   +2  K.LGQ#HM*DRFVDK.P
+                   97320  REVERSED_0048660
+                  158724  REVERSED_0079362
+  9.   9 / 23       9119 1345.69580  0.2299  2.0095    94.5  0.04   8/24  IPI:IPI00017327.5|SWISS-PROT:Q9NWN3|TREMBL:Q4VBP5|ENSEMBL:ENSP00000313159;ENSP00000394117|REFSEQ:NP_060413;NP_689417|H-INV:HIT000267019|VEGA:OTTHUMP00000027989                        R.VLLANSTQADEGK.T
+ 10.  10 / 37      33082 1344.70056  0.2354  1.9952    87.7  0.03   7/22  REVERSED_0016541                                                                                                                                                                   +1  R.LVEQEGSLQDVK.A
+                   50848  REVERSED_0025424
+ 11.  11 / 93      39216 1344.73694  0.2544  1.9456    67.3  0.02   7/22  REVERSED_0019608                                                                                                                                                                   +2  K.LVQVQGETTIEK.L
+                  134132  REVERSED_0067066
+                  138008  REVERSED_0069004
+ 12.  12 / 59      19554 1345.66025  0.2591  1.9333    78.3  0.01   6/22  REVERSED_0009777                                                                                                                                                                   +3  R.NIAQ#TM*PGQKMK.L
+                   42012  REVERSED_0021006
+                  106158  REVERSED_0053079
+                  113458  REVERSED_0056729
+ 13.  13 / 35      28801 1344.62862  0.2668  1.9133    88.6  0.02   6/20  IPI:IPI00215848.1|SWISS-PROT:P53804-2                                                                                                                                                  -.MKM*KGNEEFSK.E
+ 14.  14 / 96       3313 1344.76685  0.2786  1.8825    67.0  0.01   6/22  IPI:IPI00006524.5|SWISS-PROT:Q5VV43-1|ENSEMBL:ENSP00000367459|REFSEQ:NP_001161847;NP_055624|H-INV:HIT000000025|VEGA:OTTHUMP00000016089                                             +3  K.VLRVDTAGCLLK.C
+                  139675  IPI:IPI00921389.1|SWISS-PROT:Q5VV4
+                  139771  IPI:IPI00921442.1|SWISS-PROT:Q5VV4
+                  141871  IPI:IPI00922852.2|TREMBL:B7ZML3|RE
+ 15.  15 /  6      38792 1344.70459  0.2795  1.8801   129.3  0.06   8/20  REVERSED_0019396                                                                                                                                                                   +2  R.WLPEEEISTLK.Q
+                  134192  REVERSED_0067096
+                  159648  REVERSED_0079824
+ 16.  16 / 14      63273 1344.77332  0.2801  1.8785   108.2  0.05   9/24  IPI:IPI00478737.3|SWISS-PROT:Q6PCD5|TREMBL:A8K585;B2RE35;D3DUJ8|ENSEMBL:ENSP00000354361|REFSEQ:NP_060594|H-INV:HIT000259971|VEGA:OTTHUMP00000080511                                    R.GLLLSASLDNTIK.L
+ 17.  17 /144      13473 1343.71790  0.2827  1.8717    58.6  0.00   5/24  IPI:IPI00025718.2|SWISS-PROT:P57081-1|TREMBL:D3DSK3|ENSEMBL:ENSP00000328671;ENSP00000381266|REFSEQ:NP_061139;NP_387510|H-INV:HIT000032771|VEGA:OTTHUMP00000109401;OTTHUMP000001094 +2  R.RSPPPGPDGHAKK.M
+                  150107  IPI:IPI00929688.1|SWISS-PROT:P5708
+                  150171  IPI:IPI00929723.1|SWISS-PROT:P5708
+ 18.  18 / 66      50136 1345.72571  0.2877  1.8586    74.9  0.02   7/20  REVERSED_0025068                                                                                                                                                                   +2  K.NVKERAIDCIK.L
+                   65742  REVERSED_0032871
+                   66030  REVERSED_0033015
+ 19.  19 /186      39397 1346.74609  0.2921  1.8474    53.1  0.00   6/22  IPI:IPI00301743.5|SWISS-PROT:Q8NCX0-2|ENSEMBL:ENSP00000272832;ENSP00000413957|VEGA:OTTHUMP00000205764                                                                              +2  K.TLLNAIKTMEGR.L
+                  137403  IPI:IPI00917184.1|TREMBL:B8ZZI4|EN
+                  138677  IPI:IPI00917884.1|ENSEMBL:ENSP0000
+ 20.  20 /  7      71171 1345.82019  0.2973  1.8338   119.8  0.06   8/20  IPI:IPI00640747.3|SWISS-PROT:Q5SRD1|ENSEMBL:ENSP00000414899                                                                                                                            K.NLDFTILLRLK.T
+
+  1.      15563  IPI:IPI00029778.3|SWISS-PROT:Q12888-1|ENSEMBL:ENSP00000263801;ENSP00000384078|REFSEQ:NP_005648|H-INV:HIT000066277|VEGA:OTTHUMP00000066116;OTTHUMP00000176233 Tax_Id=9606 Gene_Symb
+  2.      14395  IPI:IPI00027658.2|SWISS-PROT:P49619-1|ENSEMBL:ENSP00000265022|REFSEQ:NP_001337|H-INV:HIT000101142|VEGA:OTTHUMP00000173959;OTTHUMP00000210178 Tax_Id=9606 Gene_Symbol=DGKG Isoform
+  3.      50796  REVERSED_0025398
+  4.      10583  IPI:IPI00020039.5|SWISS-PROT:P35663|TREMBL:Q3ZCV3;Q6NS94;Q6PEK4|ENSEMBL:ENSP00000331556|REFSEQ:NP_066941|H-INV:HIT000389053|VEGA:OTTHUMP00000023617 Tax_Id=9606 Gene_Symbol=CYLC1
+  5.      63668  REVERSED_0031834
+
+
