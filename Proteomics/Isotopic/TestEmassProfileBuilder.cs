@@ -37,6 +37,25 @@ namespace RCPA.Proteomics.Isotopic
     }
 
     [Test]
+    public void CalculateO18_charge1()
+    {
+      EmassCalculator.InitializeData(@"..\..\data\ISOTOPE.DAT");
+
+      EmassProfileBuilder builder = new EmassProfileBuilder();
+
+      AtomComposition light = new AtomComposition("C45H73N13O13");
+      var res = builder.GetProfile(light, 1, 5);
+
+      var max = res.Max(m => m.Intensity);
+
+      Console.WriteLine("nature");
+      foreach (var r in res)
+      {
+        Console.WriteLine("{0:0.0000}\t{1:0.000000}", r.Mz - Atom.H.MonoMass, r.Intensity * 100 / max);
+      }
+    }
+
+    [Test]
     public void CalculateO18()
     {
       EmassCalculator.InitializeData(@"..\..\data\ISOTOPE.DAT");

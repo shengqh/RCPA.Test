@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
+using System.Security.Cryptography;
 
 namespace RCPA.Utils
 {
@@ -20,8 +21,8 @@ namespace RCPA.Utils
     {
       string oldFilename = @"d:\dd\dddddd.cccc.eeee";
       string newFilename;
-      
-      newFilename= FileUtils.ChangeExtension(oldFilename, "ffff");
+
+      newFilename = FileUtils.ChangeExtension(oldFilename, "ffff");
       Assert.AreEqual(@"d:\dd\dddddd.cccc.ffff", newFilename);
 
       newFilename = FileUtils.ChangeExtension(oldFilename, ".ffff");
@@ -49,6 +50,13 @@ namespace RCPA.Utils
       Assert.AreEqual("dddddd.cccc.eeee", FileUtils.GetFileName(@"d:\dd.aaa\dddddd.cccc.eeee"));
       Assert.AreEqual("dddddd.cccc.eeee", FileUtils.GetFileName("/dd.aaa/dddddd.cccc.eeee"));
       Assert.AreEqual("dddddd.cccc.eeee", FileUtils.GetFileName("dddddd.cccc.eeee"));
+    }
+
+    [Test]
+    public void TestMd5()
+    {
+      var md5 = FileUtils.GetMd5HashForFile("../../data/SAP_PTM.txt");
+      Assert.AreEqual("ad634e7cd3a988a3ffd8d1db8d195363", md5);
     }
   }
 }

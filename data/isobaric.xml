@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <isobaric>
+    <name>iTRAQ4</name>
+    <tag_mass>145.1076</tag_mass>
+    <channel name="I114" mz="114.11068" percentage="92.9">
+      <isotopic name="I115" percentage="5.9" />
+      <isotopic name="I116" percentage="0.2" />
+    </channel>
+    <channel name="I115" mz="115.114034" percentage="92.3">
+      <isotopic name="I114" percentage="2" />
+      <isotopic name="I116" percentage="5.6" />
+      <isotopic name="I117" percentage="0.1" />
+    </channel>
+    <channel name="I116" mz="116.111069" percentage="92.4">
+      <isotopic name="I115" percentage="3" />
+      <isotopic name="I117" percentage="4.5" />
+    </channel>
+    <channel name="I117" mz="117.114424" percentage="92.3">
+      <isotopic name="I115" percentage="0.1" />
+      <isotopic name="I116" percentage="4" />
+    </channel>
+  </isobaric>
+  <isobaric>
+    <name>iTRAQ8</name>
+    <tag_mass>305.2092</tag_mass>
+    <channel name="I113" mz="113.107325" percentage="92.87">
+      <isotopic name="I114" percentage="6.89" />
+      <isotopic name="I115" percentage="0.24" />
+    </channel>
+    <channel name="I114" mz="114.11068" percentage="93">
+      <isotopic name="I113" percentage="0.94" />
+      <isotopic name="I115" percentage="5.9" />
+      <isotopic name="I116" percentage="0.16" />
+    </channel>
+    <channel name="I115" mz="115.107715" percentage="93.12">
+      <isotopic name="I114" percentage="1.88" />
+      <isotopic name="I116" percentage="4.9" />
+      <isotopic name="I117" percentage="0.1" />
+    </channel>
+    <channel name="I116" mz="116.111069" percentage="93.21">
+      <isotopic name="I115" percentage="2.82" />
+      <isotopic name="I117" percentage="3.9" />
+      <isotopic name="I118" percentage="0.07" />
+    </channel>
+    <channel name="I117" mz="117.114424" percentage="93.29">
+      <isotopic name="I115" percentage="0.06" />
+      <isotopic name="I116" percentage="3.77" />
+      <isotopic name="I118" percentage="2.88" />
+    </channel>
+    <channel name="I118" mz="118.111459" percentage="93.29">
+      <isotopic name="I116" percentage="0.09" />
+      <isotopic name="I117" percentage="4.71" />
+      <isotopic name="I119" percentage="1.91" />
+    </channel>
+    <channel name="I119" mz="119.114814" percentage="93.33">
+      <isotopic name="I117" percentage="0.14" />
+      <isotopic name="I118" percentage="5.66" />
+      <isotopic name="I121" percentage="0.87" />
+    </channel>
+    <channel name="I121" mz="121.121524" percentage="92.11">
+      <isotopic name="I118" percentage="0.27" />
+      <isotopic name="I119" percentage="7.44" />
+    </channel>
+  </isobaric>
+  <isobaric>
+    <name>TMT6</name>
+    <tag_mass>230.1699</tag_mass>
+    <channel name="I126" mz="126.127726" percentage="92.32">
+      <isotopic name="I127" percentage="7.68" />
+    </channel>
+    <channel name="I127" mz="127.131081" percentage="93.42">
+      <isotopic name="I128" percentage="6.58" />
+    </channel>
+    <channel name="I128" mz="128.134436" percentage="94.62">
+      <isotopic name="I129" percentage="5.38" />
+    </channel>
+    <channel name="I129" mz="129.13779" percentage="94.06">
+      <isotopic name="I128" percentage="1.4" />
+      <isotopic name="I130" percentage="4.54" />
+    </channel>
+    <channel name="I130" mz="130.141145" percentage="96.56">
+      <isotopic name="I131" percentage="3.44" />
+    </channel>
+    <channel name="I131" mz="131.13818" percentage="94.54">
+      <isotopic name="I130" percentage="1.67" />
+    </channel>
+  </isobaric>
+  <isobaric>
+    <name>TMT8</name>
+    <tag_mass>230.1699</tag_mass>
+    <channel name="I126" mz="126.127726" percentage="94.25">
+      <isotopic name="I127C" percentage="5.75" />
+    </channel>
+    <channel name="I127C" mz="127.131081" percentage="93.72">
+      <isotopic name="I126" percentage="0.37" />
+      <isotopic name="I128C" percentage="5.9" />
+    </channel>
+    <channel name="I128N" mz="128.128116" percentage="94.97">
+    </channel>
+    <channel name="I128C" mz="128.134436" percentage="94.16">
+      <isotopic name="I127C" percentage="1.04" />
+      <isotopic name="I129C" percentage="4.8" />
+    </channel>
+    <channel name="I129C" mz="129.13779" percentage="94.06">
+      <isotopic name="I128C" percentage="1.4" />
+      <isotopic name="I130C" percentage="4.54" />
+    </channel>
+    <channel name="I130N" mz="130.134825" percentage="93.55">
+      <isotopic name="I131" percentage="2.25" />
+    </channel>
+    <channel name="I130C" mz="130.141145" percentage="94.43">
+      <isotopic name="I128C" percentage="0.09" />
+      <isotopic name="I129C" percentage="2.74" />
+    </channel>
+    <channel name="I131" mz="131.13818" percentage="94.16">
+      <isotopic name="I130N" percentage="3.01" />
+    </channel>
+  </isobaric>
+  <isobaric>
+    <name>TMT10</name>
+    <tag_mass>230.1699</tag_mass>
+    <channel name="I126" mz="126.127726" percentage="94.25">
+      <isotopic name="I127C" percentage="5.75" />
+    </channel>
+    <channel name="I127N" mz="127.124761" percentage="92.08">
+      <isotopic name="I128N" percentage="5.99" />
+    </channel>
+    <channel name="I127C" mz="127.131081" percentage="93.72">
+      <isotopic name="I126" percentage="0.37" />
+      <isotopic name="I128C" percentage="5.9" />
+    </channel>
+    <channel name="I128N" mz="128.128116" percentage="94.97">
+      <isotopic name="I127N" percentage="0.57" />
+      <isotopic name="I129N" percentage="4.46" />
+    </channel>
+    <channel name="I128C" mz="128.134436" percentage="94.16">
+      <isotopic name="I127C" percentage="1.04" />
+      <isotopic name="I129C" percentage="4.8" />
+    </channel>
+    <channel name="I129N" mz="129.131471" percentage="94.52">
+      <isotopic name="I128N" percentage="1.61" />
+      <isotopic name="I130N" percentage="3.88" />
+    </channel>
+    <channel name="I129C" mz="129.13779" percentage="94.06">
+      <isotopic name="I128C" percentage="1.4" />
+      <isotopic name="I130C" percentage="4.54" />
+    </channel>
+    <channel name="I130N" mz="130.134825" percentage="93.55">
+      <isotopic name="I129N" percentage="1.22" />
+      <isotopic name="I131" percentage="2.25" />
+    </channel>
+    <channel name="I130C" mz="130.141145" percentage="94.43">
+      <isotopic name="I128C" percentage="0.09" />
+      <isotopic name="I129C" percentage="2.74" />
+    </channel>
+    <channel name="I131" mz="131.13818" percentage="94.16">
+      <isotopic name="I129N" percentage="0.19" />
+      <isotopic name="I130N" percentage="3.01" />
+    </channel>
+  </isobaric>
+</root>

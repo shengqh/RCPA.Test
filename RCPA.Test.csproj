@@ -44,22 +44,6 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Win32|AnyCPU'">
     <OutputPath>bin\Win32\</OutputPath>
     <DefineConstants>
@@ -70,33 +54,25 @@
     <ErrorReport>prompt</ErrorReport>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Win32|x64'">
-    <OutputPath>bin\x64\Win32\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accord.Statistics">
-      <HintPath>..\packages\Accord.Statistics.2.8.1.0\lib\Accord.Statistics.dll</HintPath>
-    </Reference>
-    <Reference Include="MathNet.Numerics, Version=2.1.2.21, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+    <Reference Include="MathNet.Numerics, Version=2.6.1.30, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MathNet.Numerics.2.4.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <HintPath>..\packages\MathNet.Numerics.2.6.2\lib\net40\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics.IO">
-      <HintPath>..\packages\MathNet.Numerics.2.4.0\lib\net40\MathNet.Numerics.IO.dll</HintPath>
+      <HintPath>..\packages\MathNet.Numerics.2.6.2\lib\net40\MathNet.Numerics.IO.dll</HintPath>
     </Reference>
     <Reference Include="Moq, Version=3.1.416.3, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="MwtWinDll, Version=3.4.4958.23915, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\SQH.Lib\MwtWinDll.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -111,10 +87,6 @@
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="ZedGraph, Version=5.1.6.417, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ZedGraph.5.1.6\lib\net35-Client\ZedGraph.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +173,7 @@
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumSequenceConverter.cs" />
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMHConverter.cs" />
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMinusExperimentalMassConverter.cs" />
+    <Compile Include="Proteomics\Quantification\IsobaricLabelling\TestIsobaricTypeXmlFileReader.cs" />
     <Compile Include="Proteomics\Quantification\ITraq\TestITraqItemConverter.cs" />
     <Compile Include="Proteomics\Quantification\ITraq\TestIsobaricImpurityCorrectionCalculator.cs" />
     <Compile Include="Proteomics\Quantification\ITraq\TestITraqQuantificationResultConverter.cs" />
@@ -283,8 +256,7 @@
     <Compile Include="Proteomics\Quantification\TestCensusProteinItem.cs" />
     <Compile Include="Proteomics\Quantification\TestCensusResultFormat.cs" />
     <Compile Include="Proteomics\Quantification\TestITraqResult.cs" />
-    <Compile Include="Proteomics\Quantification\TestO18QuantificationSummaryItemTextFormat.cs" />
-    <Compile Include="Proteomics\Quantification\TestO18QuantificationSummaryItemXmlFormat.cs" />
+    <Compile Include="Proteomics\Quantification\O18\TestO18QuantificationSummaryItemXmlFormat.cs" />
     <Compile Include="Proteomics\Summary\Processor\TestProteinLengthProcessor.cs" />
     <Compile Include="Proteomics\Summary\Processor\TestProteinNameProcessor.cs" />
     <Compile Include="Proteomics\Summary\TestDtaselectResultReader.cs" />
@@ -346,36 +318,65 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="data\041410-SILAC-RPLC-fraction6-Ti.xls" />
     <None Include="data\12228_15N_1_01.6027.6027.2.out" />
     <None Include="data\20030428_4_29L_15.dtas" />
     <None Include="data\20030428_4_29L_15.outs" />
+    <None Include="data\20030428_4_29L_15.zip" />
     <None Include="data\20040922_HPPP_Flow_01.0007.0007.2.dta" />
+    <None Include="data\85choicedSTYsite.txt.peptides" />
+    <None Include="data\AgilentDynamicSrmFormat.csv" />
+    <None Include="data\AgilentStaticSrmFormat.csv" />
     <None Include="data\AGP_100ng_062306_1.RAW.fullms" />
     <None Include="data\ataqs.csv" />
     <None Include="data\bioworks31.params" />
     <None Include="data\bioworks32.params" />
     <None Include="data\build.noredundant" />
+    <None Include="data\buildsummary.param" />
+    <None Include="data\tmt-10plex.csv" />
     <None Include="data\CXJ_L02_SILAC_Orbi_12_060605.3.3.1.dta" />
+    <None Include="data\D2_TransitionList.csv" />
+    <None Include="data\deisotopic-top10.peptides" />
+    <None Include="data\deisotopic.peptides" />
     <None Include="data\DH1_3a.RAW.DH1_3a.EMSDIIQR.4399.o18" />
     <None Include="data\DHBS0001_4FR_R01.mgf" />
+    <None Include="data\E01_MSMS_1329.8326_5.t2d" />
     <None Include="data\F001264.dat" />
+    <None Include="data\FIT_HPPP_Bound_060622_04.zip" />
     <None Include="data\Forward_above20.sampF1.AAAQVAFYEK.2.2547-2702.silac" />
     <None Include="data\Full_scan_apiginin_ms2.RAW" />
     <None Include="data\HLPP20050041811CLC-17.2074.2074.2.out" />
     <None Include="data\IPI00206171.detectability" />
     <None Include="data\ISOTOPE.DAT" />
+    <None Include="data\itraq-4plex.csv" />
+    <None Include="data\itraq-8plex.csv" />
+    <None Include="data\ITraqResult.xml.expect.index" />
+    <None Include="data\ITraqResult.xml.index" />
     <None Include="data\JWH_SAX_35_050906.19303.19303.2.out" />
     <None Include="data\Leucine_isotope.ini" />
+    <None Include="data\massprofiler.xls" />
+    <None Include="data\maxquant.peak.apl" />
     <None Include="data\mouseliver.4587.4587.2.out" />
     <None Include="data\Nmix_27_C13.peptides" />
+    <None Include="data\P04114.xml.index" />
     <None Include="data\pepxml.outs" />
+    <None Include="data\pnovo.result" />
     <None Include="data\protease.list" />
     <None Include="data\P_kit_elution.5407.5407.3.out" />
     <None Include="data\QTof_itraq.mzData" />
     <None Include="data\RP62A_15N_1_03.10801.10801.3.out" />
+    <None Include="data\sampF1.IGESLADPVK.2.2754-2939.silac" />
+    <None Include="data\sequest_v27_rev11.out" />
+    <None Include="data\sequest_v27_rev12.out" />
+    <None Include="data\sequest_v28_rev12.out" />
+    <None Include="data\sequest_v28_rev13.out" />
+    <None Include="data\SK158d.msf" />
     <None Include="data\Standard_Protein_FIT_060222.5079.5079.1.out" />
     <None Include="data\Standard_Protein_FIT_060222.8034.8034.1.out" />
+    <None Include="data\Standard_Protein_FIT_060222.noredundant" />
+    <None Include="data\Standard_Protein_FIT_060222.noredundant.fasta" />
     <None Include="data\Standard_Protein_FIT_060222.peptides" />
+    <None Include="data\Standard_Protein_FIT_060222.peptides.enzyme" />
     <None Include="data\Standard_Protein_FT2_Lock_Re5.6308.6310.2.dta" />
     <None Include="data\Standard_Protein_FT2_Lock_Re5.RAW" />
     <None Include="data\test.fasta" />
@@ -384,6 +385,8 @@
     <None Include="data\TestDistributionOption.noredundant" />
     <None Include="data\TestIdentifiedProtein.noredundant" />
     <None Include="data\TestMascotDatSummaryBuilder.peptides" />
+    <None Include="data\TestPeakListDeductionByWindow.mgf" />
+    <None Include="data\tmt-6plex.csv" />
     <None Include="data\YAGmem1.mzXML" />
     <None Include="data\ZhouH_ML_050720_Nano_pH_02.29478.29478.2.out" />
     <None Include="packages.config" />
@@ -405,14 +408,24 @@
     <Content Include="..\RCPA.Tools\MiscOptions.xml">
       <Link>MiscOptions.xml</Link>
     </Content>
-    <Content Include="App_Readme\MathNet.Numerics.authors.txt" />
-    <Content Include="App_Readme\MathNet.Numerics.copyright.txt" />
-    <Content Include="App_Readme\MathNet.Numerics.readme.txt" />
+    <Content Include="data\All_Phospho %28STY%29Sites.txt" />
     <Content Include="data\cluster_sequest.log" />
     <Content Include="data\Distribution.statistic.xml" />
+    <Content Include="data\isobaric.xml" />
+    <Content Include="data\isotopic.htm" />
+    <Content Include="data\ITraqResult.xml" />
     <Content Include="data\LipidProductIon.txt" />
     <Content Include="data\ListFileFormatOld.lst" />
     <Content Include="data\ListFileFormatNew.lst" />
+    <Content Include="data\maxquant.peptides.txt" />
+    <Content Include="data\maxquant_sites.txt" />
+    <Content Include="data\maxquant_sites_2.txt" />
+    <Content Include="data\MRMDefinition.txt" />
+    <Content Include="data\P04114.xml" />
+    <Content Include="data\pFind_qry.proteins.txt" />
+    <Content Include="data\proteinprophet.xml" />
+    <Content Include="data\QuantificationItem.txt" />
+    <Content Include="data\SAP_PTM.txt" />
     <Content Include="data\TestListFileReader.lst" />
     <Content Include="data\Anne_E2_master_results.pl.txt" />
     <Content Include="data\census-g1-out.txt" />
@@ -434,7 +447,9 @@
     <Content Include="data\pps_192 LC_1141485233.txt" />
     <Content Include="data\Ribo B 645.txt" />
     <Content Include="data\searchresult.xml" />
+    <Content Include="data\TestReadLine.txt" />
     <Content Include="data\TextFile.txt" />
+    <Content Include="data\TextFileDefinition.xml" />
     <Content Include="data\xtandem.xml" />
     <Content Include="data\xtandem_linux.xml" />
   </ItemGroup>

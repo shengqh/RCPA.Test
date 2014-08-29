@@ -3,9 +3,9 @@ using System.IO;
 using NUnit.Framework;
 using RCPA.Utils;
 using RCPA.Proteomics.Spectrum;
-using RCPA.Proteomics.Quantification.O18;
+using RCPA.Proteomics.Isotopic;
 
-namespace RCPA.Proteomics.Quantification
+namespace RCPA.Proteomics.Quantification.O18
 {
   [TestFixture]
   public class TestO18QuantificationSummaryItemXmlFormat
@@ -96,7 +96,7 @@ namespace RCPA.Proteomics.Quantification
       item.PeptideSequence = "AFATDITDAEEDK";
       item.PeptideAtomComposition = "C60H92N14O26";
       item.PurityOfO18Water = 0.95;
-      item.PeptideProfile = new List<double>(new[] {0.4611, 0.3340, 0.1439, 0.0459, 0.0119, 0.0026, 0.0005, 0.0001});
+      item.PeptideProfile = IsotopicBuilderFactory.GetBuilder().GetProfile(new AtomComposition(item.PeptideAtomComposition), 1, 10);
 
       item.ObservedEnvelopes = new List<O18QuanEnvelope> ();
 
