@@ -10,7 +10,10 @@ namespace RCPA.Proteomics.PeptideProphet
     [Test]
     public void TestRead()
     {
-      List<IIdentifiedSpectrum> items = new PeptideProphetXmlReader(new DefaultTitleParser()).ReadFromFile(@"..\..\data\pepxml.xml");
+      List<IIdentifiedSpectrum> items = new PeptideProphetXmlParser()
+      {
+        TitleParser = new DefaultTitleParser()
+      }.ReadFromFile(@"..\..\data\pepxml.xml");
       Assert.AreEqual(2, items.Count);
 
       Assert.AreEqual(0.0017, items[0].PValue);

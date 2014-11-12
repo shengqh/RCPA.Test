@@ -38,7 +38,7 @@ namespace RCPA.Proteomics.PFind
     {
       PFindSpectrumParser parser = new PFindSpectrumParser();
 
-      var peptides = parser.ParsePeptides(fileName);
+      var peptides = parser.ReadFromFile(fileName);
 
       Assert.AreEqual(2970, peptides.Count);
 

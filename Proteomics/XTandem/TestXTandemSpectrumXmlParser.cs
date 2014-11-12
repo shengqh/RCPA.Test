@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.XTandem
     [Test]
     public void TestParsePeptides()
     {
-      List<IIdentifiedSpectrum> spectra = new XTandemSpectrumXmlParser(AccessNumberParserFactory.FindOrCreateParser(@"^>{0,1}(\S+)", "SwissProt")).ParsePeptides(@"..\..\data\xtandem.xml");
+      List<IIdentifiedSpectrum> spectra = new XTandemSpectrumXmlParser().ReadFromFile(@"..\..\data\xtandem.xml");
       Assert.AreEqual(2, spectra.Count);
       Assert.AreEqual("K.DLGEEHFK.G", spectra[0].Sequence);
       Assert.AreEqual(32.2, spectra[0].Score, 0.1);

@@ -89,8 +89,8 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestParsePeptide()
     {
-      parser = new TempTitleParser();
-      List<IIdentifiedSpectrum> peptides = base.ParsePeptides(@"..\..\data\F001264.dat");
+      base.TitleParser = new TempTitleParser();
+      List<IIdentifiedSpectrum> peptides = base.ReadFromFile(@"..\..\data\F001264.dat");
       Assert.AreEqual(4, peptides.Count);
 
       Assert.AreEqual(1, peptides[0].Query.QueryId);

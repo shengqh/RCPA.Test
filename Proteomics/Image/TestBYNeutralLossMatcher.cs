@@ -31,7 +31,7 @@ namespace RCPA.Proteomics.Image
     [Test]
     public void TestGetNeutralLossPeaks()
     {
-      MockFactory factory = new MockFactory(MockBehavior.Strict);
+      var factory = new MockRepository(MockBehavior.Strict);
 
       var nlc = factory.Create<INeutralLossCandidates>();
       nlc.Setup(x => x.BLossWater).Returns(new[] { true, true });
@@ -60,7 +60,7 @@ namespace RCPA.Proteomics.Image
     [Test]
     public void TestMatch()
     {
-      MockFactory factory = new MockFactory(MockBehavior.Strict);
+      var factory = new MockRepository(MockBehavior.Strict);
 
       PeakList<MatchedPeak> expPeaks = new PeakList<MatchedPeak>()
       {

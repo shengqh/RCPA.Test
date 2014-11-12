@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.Sequest
     {
       var file = @"..\..\data\FIT_HPPP_Bound_060622_04.zip";
       SequestOutZipParser parser = new SequestOutZipParser();
-      var spectra = parser.ParsePeptides(file);
+      var spectra = parser.ReadFromFile(file);
       Assert.AreEqual(2, spectra.Count);
     }
   }

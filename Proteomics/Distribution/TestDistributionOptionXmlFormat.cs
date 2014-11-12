@@ -43,6 +43,8 @@ namespace RCPA.Proteomics.Distribution
 
       Assert.AreEqual(36, actual.ClassificationSet["G1"].Count);
       Assert.AreEqual("YEAST_0610_G1_SAX_080811_01", actual.ClassificationSet["G1"][0]);
+
+      Assert.IsTrue(actual.ClassifiedByTag);
     }
 
     [Test]
@@ -52,11 +54,13 @@ namespace RCPA.Proteomics.Distribution
 
       var actual = format.ReadFromFile(filePath);
 
-      string tmpFile = System.IO.Path.GetTempFileName();
+      string tmpFile = filePath + ".tmp";
 
       format.WriteToFile(tmpFile, actual);
 
       AssertUtils.AssertFileEqual(tmpFile, filePath);
+
+      File.Delete(tmpFile);
     }
   }
 }

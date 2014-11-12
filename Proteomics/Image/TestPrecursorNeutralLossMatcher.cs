@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using Moq;
 using RCPA.Proteomics.Spectrum;
+using Moq;
 
 namespace RCPA.Proteomics.Image
 {
@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.Image
     public void TestMatch()
     {
       PrecursorNeutralLossMatcher matcher = new PrecursorNeutralLossMatcher(0.5, 0.0);
-      MockFactory factory = new MockFactory(MockBehavior.Strict);
+      var factory = new MockRepository(MockBehavior.Strict);
 
       var sr = factory.Create<IIdentifiedPeptideResult>();
       sr.Setup(x => x.Peptide).Returns("K.S*R.A");

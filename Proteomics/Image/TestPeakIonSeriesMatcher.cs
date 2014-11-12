@@ -16,7 +16,7 @@ namespace RCPA.Proteomics.Image
     {
       PeakIonSeriesMatcher matcher = new PeakIonSeriesMatcher(IonType.B, 0.5);
 
-      MockFactory factory = new MockFactory(MockBehavior.Strict);
+      var factory = new MockRepository(MockBehavior.Strict);
 
       var dic = new Dictionary<IonType, List<MatchedPeak>>();
       dic[IonType.B] = new List<MatchedPeak>();

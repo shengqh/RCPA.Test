@@ -88,7 +88,7 @@ namespace RCPA.Proteomics.Image
     [Test]
     public void TestMatch()
     {
-      MockFactory factory = new MockFactory(MockBehavior.Strict);
+      var factory = new MockRepository(MockBehavior.Strict);
 
       PeakList<MatchedPeak> expPeaks = new PeakList<MatchedPeak>()
       {

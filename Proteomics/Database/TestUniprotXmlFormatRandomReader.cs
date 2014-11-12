@@ -21,8 +21,8 @@ namespace RCPA.Proteomics.Database
       Assert.AreEqual("In dbSNP:rs1367117.", entry.SequenceVariants[0].Description);
       Assert.AreEqual("VAR_016184", entry.SequenceVariants[0].ID);
       Assert.AreEqual("3 13 14 15", entry.SequenceVariants[0].Evidence);
-      Assert.AreEqual('T', entry.SequenceVariants[0].Original);
-      Assert.AreEqual('I', entry.SequenceVariants[0].Variation);
+      Assert.AreEqual("T", entry.SequenceVariants[0].Original);
+      Assert.AreEqual("I", entry.SequenceVariants[0].Variation);
       Assert.AreEqual(98, entry.SequenceVariants[0].Position);
 
       Assert.AreEqual(48, entry.SequenceConflicts.Count);
