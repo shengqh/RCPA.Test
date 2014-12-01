@@ -9,12 +9,6 @@ namespace RCPA.Utils
   public class TestStringUtils
   {
     [Test]
-    public void TestLeftFill()
-    {
-      Assert.AreEqual("00001", StringUtils.LeftFill(1, 5, '0'));
-    }
-
-    [Test]
     public void TestMerge()
     {
       Assert.AreEqual("00001 ! 00002 ! 00003", StringUtils.Merge(new string[] { "00001", "00002", "00003" }, " ! "));
@@ -34,5 +28,16 @@ namespace RCPA.Utils
     {
       Assert.AreEqual("AAA", StringUtils.RepeatChar('A', 3));
     }
+
+    [Test]
+    public void TestTake()
+    {
+      string oldHeader = "A\tB\tC";
+
+      AssertUtils.AssertArrayEqual(new[] { "A", "B" }, oldHeader.Take('\t', 2));
+
+      AssertUtils.AssertArrayEqual(new[] { "A", "B", "C" }, oldHeader.Take('\t', 4));
+    }
+
   }
 }

@@ -24,5 +24,14 @@ namespace RCPA.Utils
         }
       }
     }
+  
+    public static void AssertArrayEqual(string[] expect, string[] actual)
+    {
+      Assert.AreEqual(expect.Length, actual.Length, "Lengths are not equal.");
+      for (int i = 0; i < expect.Length; i++)
+      {
+        Assert.AreEqual(expect[i], actual[i], "The {0} element is not equal : expect {1} but {2}", i, expect[i], actual[i]);
+      }
+    }
   }
 }
