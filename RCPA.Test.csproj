@@ -184,10 +184,10 @@
     <Compile Include="Proteomics\Mascot\TestExpectValueCalculator.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotDatParser.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotGenericFormatReader.cs" />
-    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatSequestWriter.cs" />
-    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatSqhWriter.cs" />
-    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatWriter.cs" />
-    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatYehiaWriter.cs" />
+    <Compile Include="Proteomics\Mascot\TestTitleFormatSequest - Copy.cs" />
+    <Compile Include="Proteomics\Mascot\TestTitleFormatSequest.cs" />
+    <Compile Include="Proteomics\Mascot\TestTitleFormatRawCmpd.cs" />
+    <Compile Include="Proteomics\Mascot\TestTitleFormatCmpd.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotModification.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotPeptide.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotPeptideHitTextWriter.cs.cs" />
@@ -199,6 +199,7 @@
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantConverter.cs" />
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantPeptideTextReader.cs" />
     <Compile Include="Proteomics\MaxQuant\TextMaxQuantAplFormat.cs" />
+    <Compile Include="Proteomics\MSAmanda\TestMSAmandaParser.cs" />
     <Compile Include="Proteomics\Omssa\TestOmssaConsts.cs" />
     <Compile Include="Proteomics\PeptideProphet\TestProteinProphetXmlReader.cs" />
     <Compile Include="Proteomics\PeptideProphet\TestPeptideProphetXmlReader.cs" />

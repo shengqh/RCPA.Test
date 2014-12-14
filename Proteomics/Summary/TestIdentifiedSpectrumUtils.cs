@@ -155,5 +155,15 @@ namespace RCPA.Proteomics.Summary
       Assert.IsTrue(spectra.Contains(s4));
       Assert.IsTrue(spectra.Contains(s5));
     }
+
+    [Test]
+    public void TestFillProteinInformation()
+    {
+      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../data/Test.output.xml.FDR0.01.peptides");
+      Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count == 0));
+
+      IdentifiedSpectrumUtils.FillProteinInformation(peptides, "../../data/Test.output.xml.FDR0.01.peptides.proteins");
+      Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count > 0));
+    }
   }
 }

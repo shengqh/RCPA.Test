@@ -4,7 +4,7 @@ using RCPA.Proteomics.Spectrum;
 namespace RCPA.Proteomics.Mascot
 {
   [TestFixture]
-  public class TestMascotGenericFormatYehiaWriter
+  public class TestTitleFormatCmpd
   {
     [Test]
     public void TestGetTitle()
@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Mascot
       pkl.PrecursorMZ = 717.87;
       pkl.PrecursorIntensity = 10000;
 
-      string actual = new MascotGenericFormatYehiaWriter<Peak>().GetTitle(pkl);
+      string actual = new TitleFormatCmpd().Build(pkl);
       Assert.AreEqual("Cmpd 4135, +MSn(717.87), 58.89 min", actual);
     }
   }
