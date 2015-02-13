@@ -2,7 +2,7 @@
 <root>
   <isobaric>
     <name>iTRAQ4</name>
-    <tag_mass>145.1076</tag_mass>
+    <tag_mz>145.1076</tag_mz>
     <channel name="I114" mz="114.11068" percentage="92.9">
       <isotopic name="I115" percentage="5.9" />
       <isotopic name="I116" percentage="0.2" />
@@ -23,7 +23,7 @@
   </isobaric>
   <isobaric>
     <name>iTRAQ8</name>
-    <tag_mass>305.2092</tag_mass>
+    <tag_mz>305.2092</tag_mz>
     <channel name="I113" mz="113.107325" percentage="92.87">
       <isotopic name="I114" percentage="6.89" />
       <isotopic name="I115" percentage="0.24" />
@@ -65,7 +65,7 @@
   </isobaric>
   <isobaric>
     <name>TMT6</name>
-    <tag_mass>230.1699</tag_mass>
+    <tag_mz>230.1699</tag_mz>
     <channel name="I126" mz="126.127726" percentage="92.32">
       <isotopic name="I127" percentage="7.68" />
     </channel>
@@ -88,7 +88,7 @@
   </isobaric>
   <isobaric>
     <name>TMT8</name>
-    <tag_mass>230.1699</tag_mass>
+    <tag_mz>230.1699</tag_mz>
     <channel name="I126" mz="126.127726" percentage="94.25">
       <isotopic name="I127C" percentage="5.75" />
     </channel>
@@ -119,7 +119,7 @@
   </isobaric>
   <isobaric>
     <name>TMT10</name>
-    <tag_mass>230.1699</tag_mass>
+    <tag_mz>230.1699</tag_mz>
     <channel name="I126" mz="126.127726" percentage="94.25">
       <isotopic name="I127C" percentage="5.75" />
     </channel>

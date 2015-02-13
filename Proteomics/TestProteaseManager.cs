@@ -12,7 +12,7 @@ namespace RCPA.Proteomics
     [Test]
     public void TestLoadFromFile()
     {
-      ProteaseManager.LoadFromFile(new FileInfo(@"..\..\data\protease.list"));
+      ProteaseManager.LoadFromFile(@"..\..\data\protease.list");
       Assert.IsTrue(ProteaseManager.Registered("Arg-C"));
       Assert.IsTrue(ProteaseManager.Registered("Glu-C-bicarbonate"));
       Assert.IsTrue(ProteaseManager.Registered("Chymotrypsin"));
