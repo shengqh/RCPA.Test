@@ -42,7 +42,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
@@ -185,6 +185,7 @@
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumSequenceConverter.cs" />
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMHConverter.cs" />
     <Compile Include="Proteomics\PropertyConverter\TestIdentifiedSpectrumTheoreticalMinusExperimentalMassConverter.cs" />
+    <Compile Include="Proteomics\Quantification\IsobaricLabelling\TestIsobaricPeptideStatisticBuilder.cs" />
     <Compile Include="Proteomics\Quantification\IsobaricLabelling\TestIsobaricTypeXmlFileReader.cs" />
     <Compile Include="Proteomics\Quantification\ITraq\TestITraqItemConverter.cs" />
     <Compile Include="Proteomics\Quantification\ITraq\TestIsobaricImpurityCorrectionCalculator.cs" />
