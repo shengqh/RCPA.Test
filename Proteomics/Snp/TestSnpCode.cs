@@ -9,6 +9,7 @@ namespace RCPA.Proteomics.Snp
   [TestFixture]
   public class TestSnpCode
   {
+    [Test]
     public void TestIsRnaEditing()
     {
       var aas = new Aminoacids();
@@ -29,6 +30,25 @@ namespace RCPA.Proteomics.Snp
           }
         }
       }
+    }
+
+    [Test]
+    public void TestTransferTo()
+    {
+      var aas = new Aminoacids();
+
+      int count;
+      var actual = SnpCode.TransferTo(aas['I'], aas['L'], out count);
+      Assert.AreEqual(1, count);
+      Assert.AreEqual("AUU->CUU ! AUC->CUC ! AUA->UUA ! AUA->CUA", actual);
+
+      actual = SnpCode.TransferTo(aas['I'], aas['.'], out count);
+      Assert.AreEqual(int.MaxValue, count);
+      Assert.AreEqual(string.Empty, actual);
+
+      actual = SnpCode.TransferTo(aas['.'], aas['I'], out count);
+      Assert.AreEqual(int.MaxValue, count);
+      Assert.AreEqual(string.Empty, actual);
     }
   }
 }
