@@ -233,6 +233,8 @@
     <Compile Include="Proteomics\Summary\TestDatasetListOptions.cs" />
     <Compile Include="Proteomics\Summary\TestFalseDiscoveryRateOptions.cs" />
     <Compile Include="Proteomics\Summary\TestIdentificationSummary.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedPeptideUtils.cs" />
+    <Compile Include="Proteomics\Summary\TestIdentifiedProteinGroupBuilder.cs" />
     <Compile Include="Proteomics\Summary\TestIdentifiedProteinGroupContaminationFilter.cs" />
     <Compile Include="Proteomics\Summary\TestIdentifiedSpectrum.cs" />
     <Compile Include="Proteomics\Spectrum\TestPeakListDeductionByWindow.cs" />
