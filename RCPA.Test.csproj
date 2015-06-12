@@ -215,6 +215,7 @@
     <Compile Include="Proteomics\Sequest\TestFollowCandidate.cs" />
     <Compile Include="Proteomics\Sequest\TestMsfDatabaseToNoredundantProcessor.cs" />
     <Compile Include="Proteomics\Sequest\TestOutParser.cs" />
+    <Compile Include="Proteomics\Sequest\TestProLuCIDSqtParser.cs" />
     <Compile Include="Proteomics\Sequest\TestOutsReader.cs" />
     <Compile Include="Proteomics\Sequest\TestSequestLogReader.cs" />
     <Compile Include="Proteomics\Sequest\TestSequestOutHeaderParser.cs" />

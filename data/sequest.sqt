@@ -1,0 +1,51 @@
+H	SQTGenerator	ProLuCID
+H	SQTGeneratorVersion	1.3.0
+H	Comment ProLuCID is developed in the Yates laboratory at The Scripps Research Institute, La Jolla, CA
+H	Comment ProLuCID ref. Xu T, Venable JD, Park SK, Cociorva D, Lu B, Liao L, Wohlschlegel J, Hewel J, Yates JR 3rd
+H	Comment ProLuCID ref. ProLuCID, a fast and sensitive tandem mass spectra-based protein identification program.
+H	Comment ProLuCID ref. MOL CELL PROTEOMICS vol. 5(10): S174-S174 671 Suppl. S OCT 2006
+H	Comment Paralellization Program using PBS is submit_prolucid
+H	Comment Please send bug report or comments to Tao Xu by email taoxu@scripps.edu
+H	Database	/nibs/home/Pdatabase/Sanger_C-elegans_WS233_2012-09-29_pzhang_con_reversed.fasta
+H	DBLocusCount	52176
+H	NumOutput	5
+H	PrecursorMasses	mono
+H	FragmentMasses	mono
+H	NumPrecursorIsotopicPeaks	3
+H	PrecursorMassTolerance	50.0
+H	FragmentMassTolerance	20.0
+H	StaticMod	C=160.03064579101562
+H	MaxNumInternalDiffModsPerPeptide	3
+H	EnzymeSpecificity	No_Enzyme
+S	5	5	2	1465	n186_Thread-1	815.35468	2808986.10	0.0058	100090
+M	1	13	815.37812	0.0000	1.0231	2.200094233763424	4	12	M.EVPNEDI.R	U
+L	ZK337.5	CE24721	WBGene00003471	locus:mtd-1	status:Confirmed	UniProt:G5ECI1	protein_id:CAB51468.1	106	NSM.EVPNEDI.RQF
+M	2	5	814.35772	0.0090	1.0139	2.160562555504861	5	12	S.EATHDEL.V	U
+L	Reverse_T26C11.6	404	MTS.EATHDEL.VVS
+M	3	13	815.35701	0.0179	1.0048	2.1212263321238845	4	12	F.FNDYGSL.K	U
+L	Reverse_F22D3.4	51	NGF.FNDYGSL.KSK
+M	4	2	815.37812	0.0633	0.9583	1.9216188836428587	6	12	A.NDPLDEI.N	U
+L	Reverse_ZK673.4	219	HFA.NDPLDEI.NEM
+M	5	14	814.33259	0.1000	0.9208	1.760128493808902	4	13	A.EATHDGNA.L	U
+L	Reverse_C34C6.6b	90	SIA.EATHDGNA.LTA
+L	Reverse_C34C6.6a	90	SIA.EATHDGNA.LTA
+M	14	1	815.36037	0.1728	0.8463	1.4400015223476637	6	11	P.PMNPDEL.P	U
+L	Reverse_R12E2.9	296	REP.PMNPDEL.PVY
+
+S	4	4	2	1897	n186_Thread-0	743.34338	5859918.80	0.0089	63624
+M	1	12	742.36175	0.0000	1.0159	3.147006566181267	4	12	P.APEPTVE.P	U
+L	Reverse_C16B8.2	130	QFP.APEPTVE.PPD
+M	2	12	741.36382	0.0203	0.9953	3.0487475965201916	4	12	Q.EVGSHGR.D	U
+L	C47E12.1	CE05445	WBGene00005663	locus:sars-1	seryl-tRNA	303	FRQ.EVGSHGR.DTR
+M	3	12	742.30761	0.1276	0.8863	2.5293665243063215	4	12	L.AGATYME.V	U
+L	T12A2.1	CE44585	WBGene00020436	status:Partially_confirmed	UniProt:Q22419	protein_id:CCD65224.1	110	MKL.AGATYME.VQQ
+M	4	4	742.33660	0.1362	0.8775	2.487350138471351	5	12	K.AGHEDTL.E	U
+L	Reverse_T19B10.9	170	VEK.AGHEDTL.ESI
+M	5	12	742.33661	0.1631	0.8502	2.357387190953835	4	12	P.AAHDSIE.D	U
+L	PAR2.4b	CE32699	WBGene00003253	locus:mig-22	status:Confirmed	UniProt:P45895	protein_id:CCD72536.1	94	DSP.AAHDSIE.DWK
+L	PAR2.4a	CE00848	WBGene00003253	locus:mig-22	status:Confirmed	UniProt:P45895	protein_id:CCD72535.1	292	DSP.AAHDSIE.DWK
+M	286	1	743.33185	0.8547	0.1476	-0.9916092453507733	6	12	T.KDHDAGT.V	U
+L	Reverse_ZC308.1d	657	DIT.KDHDAGT.VED
+L	Reverse_ZC308.1c	657	DIT.KDHDAGT.VED
+L	Reverse_ZC308.1a	657	DIT.KDHDAGT.VED
+

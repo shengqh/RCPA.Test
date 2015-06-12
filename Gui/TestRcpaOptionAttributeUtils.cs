@@ -34,7 +34,7 @@ namespace RCPA.Gui
 
       XElement a = new XElement("Root");
 
-      RcpaOptionAttributeUtils.SaveToXml(this, a);
+      RcpaOptionUtils.SaveToXml(this, a);
       //Console.WriteLine(a.ToString());
 
       this.StrValue = "";
@@ -42,7 +42,7 @@ namespace RCPA.Gui
       this.DoubleValue = 5.5;
       this.StringValues = null;
 
-      RcpaOptionAttributeUtils.LoadFromXml(this, a);
+      RcpaOptionUtils.LoadFromXml(this, a);
       Assert.AreEqual("TestValue", this.StrValue);
       Assert.AreEqual(5, this.IntValue);
       Assert.AreEqual(10.4, this.DoubleValue);

@@ -165,5 +165,17 @@ namespace RCPA.Proteomics.Summary
       IdentifiedSpectrumUtils.FillProteinInformation(peptides, "../../data/Test.output.xml.FDR0.01.peptides.proteins");
       Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count > 0));
     }
+
+    [Test]
+    public void TestCalculateQValue()
+    {
+      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../../data/QTOF_Ecoli.LowRes.t.xml.peptides");
+      peptides.RemoveAll(m => m.ExpectValue > 0.05 || m.Peptide.PureSequence.Length < 6);
+      peptides.ForEach(m => m.FromDecoy = m.Proteins.Any(l => l.Contains("REVERSE_")));
+
+      IdentifiedSpectrumUtils.CalculateQValue(peptides, new ExpectValueFunction(), new TargetFalseDiscoveryRateCalculator());
+
+      Assert.AreEqual(0.0267, peptides[0].QValue, 0.0001);
+    }
   }
 }
