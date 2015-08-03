@@ -110,6 +110,7 @@
     <Compile Include="Gui\TestRcpaOptionAttributeUtils.cs" />
     <Compile Include="Numerics\TestMADOutlierDetector.cs" />
     <Compile Include="Numerics\TestGrubbsTestOutlierDetector.cs" />
+    <Compile Include="Proteomics\Comet\TestCometXmlRank2Parser.cs" />
     <Compile Include="Proteomics\Database\TestUniprotXmlFormatRandomReader.cs" />
     <Compile Include="Proteomics\Detectability\TestDetectabilityEntry.cs" />
     <Compile Include="Proteomics\Detectability\TestDetectabilityPredictor.cs" />
@@ -158,6 +159,7 @@
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantConverter.cs" />
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantPeptideTextReader.cs" />
     <Compile Include="Proteomics\MaxQuant\TextMaxQuantAplFormat.cs" />
+    <Compile Include="Proteomics\MSAmanda\TestMSAmandaRank2Parser.cs" />
     <Compile Include="Proteomics\MSAmanda\TestMSAmandaParser.cs" />
     <Compile Include="Proteomics\Omssa\TestOmssaConsts.cs" />
     <Compile Include="Proteomics\PeptideProphet\TestProteinProphetXmlReader.cs" />

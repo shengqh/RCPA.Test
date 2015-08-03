@@ -9,26 +9,27 @@ using RCPA.Proteomics.Summary;
 namespace RCPA.Proteomics.MSAmanda
 {
   [TestFixture]
-  public class TestMSAmandaParser
+  public class TestMSAmandaRank2Parser
   {
     [Test]
     public void Test()
     {
-      var peptides = new MSAmandaParser()
+      var peptides = new MSAmandaRank2Parser()
       {
         TitleParser = new DefaultTitleParser()
       }.ReadFromFile(@"../../../data/msamanda.tsv");
 
       Assert.AreEqual(4, peptides.Count);
-      Assert.AreEqual(2, peptides[0].Peptides.Count);
-      Assert.AreEqual("ASFIYR", peptides[0].Peptides[0].Sequence);
-      Assert.AreEqual("FSAIYR", peptides[0].Peptides[1].Sequence);
-      Assert.AreEqual("REVERSED_00007090/REVERSED_00026998 | tr|D3ZKM2/tr|F1M966/tr|F1LNY2/tr|F1LSM8/tr|F1LSC1", peptides[0].GetProteins(" | "));
+      Assert.AreEqual(1, peptides[0].Peptides.Count);
+      Assert.AreEqual("HGHIHR", peptides[0].Peptides[0].Sequence);
+      Assert.AreEqual("tr|D3ZBX7", peptides[0].GetProteins(" | "));
       Assert.AreEqual("20110915_iTRAQ_4plex_GK_6ug_Exp_2.1962.1962.3.dta", peptides[0].Query.FileScan.LongFileName);
       Assert.AreEqual(1119.8, peptides[0].Query.FileScan.RetentionTime);
       Assert.AreEqual("N-Term(itraq114 on nterm|144.105918|fixed)", peptides[0].Modifications);
+
+      //The peptide rank 2 had identical sequence to rank 1, so rank 3 will be picked.
       Assert.AreEqual(1, peptides[3].Peptides.Count);
-      Assert.AreEqual("M*SEEMLK", peptides[3].Peptide.Sequence);
+      Assert.AreEqual("ASTMIYK", peptides[3].Peptides[0].Sequence);
     }
   }
 }

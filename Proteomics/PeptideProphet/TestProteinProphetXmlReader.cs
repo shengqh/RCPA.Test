@@ -30,11 +30,11 @@ namespace RCPA.Proteomics.PeptideProphet
       Assert.AreEqual(8, items.Count);
 
       Assert.AreEqual("GETEQDLEADFPSESFDPLNK", items[0].Sequence);
-      Assert.AreEqual(0.9990, items[0].Spectrum.PValue);
+      Assert.AreEqual(0.9990, items[0].Spectrum.Probability);
       Assert.AreEqual(2, items[0].Spectrum.Charge);
 
       Assert.AreEqual("GETEQDLEADFPSESFDPLNK*", items[1].Sequence);
-      Assert.AreEqual(0.9990, items[1].Spectrum.PValue);
+      Assert.AreEqual(0.9990, items[1].Spectrum.Probability);
       Assert.AreEqual(2, items[1].Spectrum.Charge);
     }
   }
