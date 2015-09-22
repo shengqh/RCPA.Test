@@ -58,7 +58,7 @@ namespace RCPA.Proteomics.Summary
     public void KeepTopPeptideFromSameEngineDifferentParameters()
     {
       List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s3, s4, s5 });
-      IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(spectra);
+      IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(spectra, new ScoreFunction());
       Assert.AreEqual(3, spectra.Count);
       Assert.IsTrue(spectra.Contains(s1));
       Assert.IsTrue(spectra.Contains(s3));
@@ -69,7 +69,7 @@ namespace RCPA.Proteomics.Summary
     public void KeepUnconflictPeptidesFromSameEngineDifferentParameters()
     {
       List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s3, s4, s5 });
-      IdentifiedSpectrumUtils.KeepUnconflictPeptidesFromSameEngineDifferentParameters(spectra);
+      IdentifiedSpectrumUtils.KeepUnconflictPeptidesFromSameEngineDifferentParameters(spectra, new ScoreFunction());
       Assert.AreEqual(4, spectra.Count);
       Assert.IsTrue(spectra.Contains(s1));
       Assert.IsTrue(spectra.Contains(s2));
@@ -98,19 +98,19 @@ namespace RCPA.Proteomics.Summary
       var all = s1.Union(s2).ToList();
 
       var p1 = new List<IIdentifiedSpectrum>(all);
-      IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(p1);
+      IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(p1, new ScoreFunction());
 
       p1.ForEach(m => m.ClassificationTag = "deisotopic/deisotopic-top");
       var bin1 = co.BuildSpectrumBin(p1);
 
       var p2 = new List<IIdentifiedSpectrum>(all);
-      IdentifiedSpectrumUtils.KeepUnconflictPeptidesFromSameEngineDifferentParameters(p2);
+      IdentifiedSpectrumUtils.KeepUnconflictPeptidesFromSameEngineDifferentParameters(p2, new ScoreFunction());
 
       p2.ForEach(m => m.ClassificationTag = "deisotopic/deisotopic-top");
       var bin2 = co.BuildSpectrumBin(p2);
       bin2.ForEach(m =>
       {
-        IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(m.Spectra);
+        IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(m.Spectra, new ScoreFunction());
 
         var n = bin1.Find(a => a.Condition.ToString().Equals(m.Condition.ToString()));
         Assert.AreEqual(m.Spectra.Count, n.Spectra.Count);

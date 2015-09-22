@@ -229,6 +229,7 @@
     <Compile Include="Proteomics\Sequest\TestSequestPeptideFormat.cs" />
     <Compile Include="Proteomics\Sequest\TestSequestPeptideHit.cs" />
     <Compile Include="Proteomics\Sequest\TestSequestResultTextFormat.cs" />
+    <Compile Include="Proteomics\Snp\TestMS2Item.cs" />
     <Compile Include="Proteomics\Snp\TestSnpCode.cs" />
     <Compile Include="Proteomics\Snp\TestMutationUtils.cs" />
     <Compile Include="Proteomics\Snp\TestSapPtmTable.cs" />
