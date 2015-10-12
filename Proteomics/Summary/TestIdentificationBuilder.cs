@@ -22,7 +22,7 @@ namespace RCPA.Proteomics.Summary
       List<IIdentifiedProtein> proteins = new IdentifiedProteinBuilder().Build(spectra);
       Assert.AreEqual(4, proteins.Count);
 
-      List<IIdentifiedProteinGroup> groups = new IdentifiedProteinGroupBuilder().Build(proteins);
+      List<IIdentifiedProteinGroup> groups = new IdentifiedProteinGroupBuilder2().Build(proteins);
       Assert.AreEqual(2, groups.Count);
 
       Assert.AreEqual(1, groups[0].Count);

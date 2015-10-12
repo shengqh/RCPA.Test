@@ -42,7 +42,7 @@ namespace RCPA.Proteomics.Summary
         Peptides = new IIdentifiedPeptide[] { pep1, pep5 }.ToList()
       };
 
-      var actual = new IdentifiedProteinGroupBuilder().Build(new IIdentifiedProtein[] { protein1, protein2, protein3 }.ToList());
+      var actual = new IdentifiedProteinGroupBuilder2().Build(new IIdentifiedProtein[] { protein1, protein2, protein3 }.ToList());
       Assert.AreEqual(2, actual.Count);
       Assert.AreSame(protein1, actual[0][0]);
       Assert.AreSame(protein2, actual[1][0]);

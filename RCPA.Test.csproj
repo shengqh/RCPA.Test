@@ -146,6 +146,7 @@
     <Compile Include="Proteomics\Mascot\TestExpectValueCalculator.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotDatParser.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotGenericFormatReader.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotGenericFormatShiftPrecursorProcessor.cs" />
     <Compile Include="Proteomics\Mascot\TestTitleFormatSequest - Copy.cs" />
     <Compile Include="Proteomics\Mascot\TestTitleFormatSequest.cs" />
     <Compile Include="Proteomics\Mascot\TestTitleFormatRawCmpd.cs" />
