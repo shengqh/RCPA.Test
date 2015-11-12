@@ -112,7 +112,9 @@
     <Compile Include="Gui\TestRcpaOptionAttributeUtils.cs" />
     <Compile Include="Numerics\TestMADOutlierDetector.cs" />
     <Compile Include="Numerics\TestGrubbsTestOutlierDetector.cs" />
+    <Compile Include="Proteomics\Comet\TestCometXmlParser.cs" />
     <Compile Include="Proteomics\Comet\TestCometXmlRank2Parser.cs" />
+    <Compile Include="Proteomics\Database\TestReversedDatabaseBuilder.cs" />
     <Compile Include="Proteomics\Database\TestUniprotXmlFormatRandomReader.cs" />
     <Compile Include="Proteomics\Detectability\TestDetectabilityEntry.cs" />
     <Compile Include="Proteomics\Detectability\TestDetectabilityPredictor.cs" />
