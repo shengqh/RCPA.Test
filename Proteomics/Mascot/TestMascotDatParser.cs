@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestGetSourceFile()
     {
-      Assert.AreEqual("dyckall.asc", MascotDatSpectrumParser.GetSourceFile(@"..\..\data\F001264.dat"));
+      Assert.AreEqual("dyckall.asc", MascotDatSpectrumParser.GetSourceFile(@"../../../data/F001264.dat"));
     }
 
     [Test]
@@ -25,7 +25,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestModification()
     {
-      using (var sr = new StreamReader(@"..\..\data\F001264.dat"))
+      using (var sr = new StreamReader(@"../../../data/F001264.dat"))
       {
         Dictionary<string, string> parameters = base.ParseSection(sr, "masses");
         MascotModification mm = base.ParseModification(parameters);
@@ -90,7 +90,7 @@ namespace RCPA.Proteomics.Mascot
     public void TestParsePeptide()
     {
       base.TitleParser = new TempTitleParser();
-      List<IIdentifiedSpectrum> peptides = base.ReadFromFile(@"..\..\data\F001264.dat");
+      List<IIdentifiedSpectrum> peptides = base.ReadFromFile(@"../../../data/F001264.dat");
       Assert.AreEqual(4, peptides.Count);
 
       Assert.AreEqual(1, peptides[0].Query.QueryId);
@@ -125,7 +125,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestParseQuery()
     {
-      using (var sr = new StreamReader(@"..\..\data\F001264.dat"))
+      using (var sr = new StreamReader(@"../../../data/F001264.dat"))
       {
         //parse header
         Dictionary<string, string> headers = base.ParseSection(sr, "header");
@@ -145,7 +145,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestParseSection()
     {
-      using (var sr = new StreamReader(@"..\..\data\F001264.dat"))
+      using (var sr = new StreamReader(@"../../../data/F001264.dat"))
       {
         //parse header
         Dictionary<string, string> headers = base.ParseSection(sr, "header");
@@ -166,7 +166,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestParseSectionWithRegex()
     {
-      using (var sr = new StreamReader(@"..\..\data\F001264.dat"))
+      using (var sr = new StreamReader(@"../../../data/F001264.dat"))
       {
         //parse header
         Dictionary<string, string> headers = base.ParseSection(sr, "header", "sequences");
@@ -183,7 +183,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void TestParseProtease()
     {
-      using (var sr = new StreamReader(@"..\..\data\F001264.dat"))
+      using (var sr = new StreamReader(@"../../../data/F001264.dat"))
       {
         Protease p = ParseEnzyme(sr);
         Assert.AreEqual("semiTrypsin", p.Name);

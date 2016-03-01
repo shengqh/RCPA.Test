@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
@@ -19,8 +19,8 @@ namespace RCPA.Utils
     public void TestGetSpells()
     {
       Assert.AreEqual("", Chinese.GetSpells(""));
-      Assert.AreEqual("ZHRMGHAG123ABC", Chinese.GetSpells("ÖĞ»ªÈËÃñ¹²ºÍA¹ú123ABC"));
-      Assert.AreEqual("ZHRMGHG", Chinese.GetSpells("ÖĞ»ªÈËÃñ£¨¹²ºÍ¹ú£©"));
+      Assert.AreEqual("ZHRMGHAG123ABC", Chinese.GetSpells("ä¸­åäººæ°‘å…±å’ŒAå›½123ABC"));
+      Assert.AreEqual("ZHRMGHG", Chinese.GetSpells("ä¸­åäººæ°‘ï¼ˆå…±å’Œå›½ï¼‰"));
     }
   }
 }

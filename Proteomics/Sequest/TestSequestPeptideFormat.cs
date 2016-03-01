@@ -12,10 +12,10 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestReadPeptideFromFile()
     {
-      List<IIdentifiedSpectrum> spl = format.ReadFromFile(@"..\..\data\Standard_Protein_FIT_060222.peptides");
+      List<IIdentifiedSpectrum> spl = format.ReadFromFile(@"../../../data/Standard_Protein_FIT_060222.peptides");
       Assert.AreEqual(287, spl.Count);
 
-      List<IIdentifiedSpectrum> spl2 = format.ReadFromFile(@"..\..\data\Nmix_27_C13.peptides");
+      List<IIdentifiedSpectrum> spl2 = format.ReadFromFile(@"../../../data/Nmix_27_C13.peptides");
       Assert.AreEqual(1093, spl2.Count);
     }
 

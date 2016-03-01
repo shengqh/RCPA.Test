@@ -16,7 +16,7 @@ namespace RCPA.Utils
     public void SetUp()
     {
       doc = new XmlDocument();
-      doc.Load(@"..\..\data\pepxml.xml");
+      doc.Load(@"../../../data/pepxml.xml");
 
       helper = new XmlHelper(doc);
     }

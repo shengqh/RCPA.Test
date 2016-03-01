@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void Test()
     {
-      Dictionary<string, int> counts = new SequestLogReader().ReadFromFile("../../data/cluster_sequest.log");
+      Dictionary<string, int> counts = new SequestLogReader().ReadFromFile("../../../data/cluster_sequest.log");
 
       Dictionary<string, int> expectCounts = new Dictionary<string, int>();
       expectCounts["dell01"] = 582;

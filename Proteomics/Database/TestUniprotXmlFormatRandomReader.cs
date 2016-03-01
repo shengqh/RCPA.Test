@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Database
     public void TestRead()
     {
       var reader = new UniprotXmlFormatRandomReader();
-      reader.Open(@"../../data/P04114.xml");
+      reader.Open(@"../../../data/P04114.xml");
       var entry = reader.Read("APOB_HUMAN");
       Assert.IsNotNull(entry);
 
@@ -28,8 +28,8 @@ namespace RCPA.Proteomics.Database
       Assert.AreEqual(48, entry.SequenceConflicts.Count);
       Assert.AreEqual("In Ref. 5; AAB60718/CAA28420.", entry.SequenceConflicts[0].Description);
       Assert.AreEqual("5", entry.SequenceConflicts[0].Evidence);
-      Assert.AreEqual("", entry.SequenceConflicts[0].Original);
-      Assert.AreEqual("", entry.SequenceConflicts[0].Variation);
+      Assert.AreEqual(" ", entry.SequenceConflicts[0].Original);
+      Assert.AreEqual(" ", entry.SequenceConflicts[0].Variation);
       Assert.AreEqual(11, entry.SequenceConflicts[0].BeginPosition);
       Assert.AreEqual(13, entry.SequenceConflicts[0].EndPosition);
       Assert.AreEqual("L", entry.SequenceConflicts[1].Original);

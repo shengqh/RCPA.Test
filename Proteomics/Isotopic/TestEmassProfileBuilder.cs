@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void Calculate()
     {
-      EmassCalculator.InitializeData(@"..\..\data\ISOTOPE.DAT");
+      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
 
       EmassProfileBuilder builder = new EmassProfileBuilder();
 
@@ -39,7 +39,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void CalculateO18_charge1()
     {
-      EmassCalculator.InitializeData(@"..\..\data\ISOTOPE.DAT");
+      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
 
       EmassProfileBuilder builder = new EmassProfileBuilder();
 
@@ -58,7 +58,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void CalculateO18()
     {
-      EmassCalculator.InitializeData(@"..\..\data\ISOTOPE.DAT");
+      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
 
       EmassProfileBuilder builder = new EmassProfileBuilder();
 

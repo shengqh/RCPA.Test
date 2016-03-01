@@ -14,12 +14,14 @@ namespace RCPA.Numerics
     double[] values2 = new double[] { 3.2, 3.3, 3.2, 2.9, 3.7, 3.1, 3.5, 3.3, 9.2 };
     GrubbsTestOutlierDetector detector = new GrubbsTestOutlierDetector(0.05);
 
+    [Test]
     public void TestGetProbability()
     {
       var ps = GrubbsTestOutlierDetector.GetProbability(values1);
       Assert.AreEqual(6.26, ps[0], 0.01);
     }
 
+    [Test]
     public void TestDetect()
     {
       var detector = new GrubbsTestOutlierDetector(0.05);

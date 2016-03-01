@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Spectrum
   {
     public void TestDeduct()
     {
-      var pkls = new MascotGenericFormatReader<Peak>().ReadFromFile(@"../../data/TestPeakListDeductionByWindow.mgf");
+      var pkls = new MascotGenericFormatReader<Peak>().ReadFromFile(@"../../../data/TestPeakListDeductionByWindow.mgf");
       var pkl = pkls[0];
 
       Assert.AreEqual(296, pkl.Count);

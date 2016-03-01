@@ -45,7 +45,7 @@ namespace RCPA.Proteomics.Distribution
     [Test]
     public void TestClassifyPeptideHit2()
     {
-      var ir = new SequestResultTextFormat().ReadFromFile(@"..\..\data\TestDistributionOption.noredundant");
+      var ir = new SequestResultTextFormat().ReadFromFile(@"../../../data/TestDistributionOption.noredundant");
 
       CalculationItem item = new CalculationItem()
       {

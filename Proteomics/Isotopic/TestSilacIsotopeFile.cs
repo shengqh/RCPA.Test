@@ -8,7 +8,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void TestReadFromFile()
     {
-      ISilacIsotopeFile file = new MonoisotopicSilacIsotopeFile(@"..\..\data\Leucine_isotope.ini");
+      ISilacIsotopeFile file = new MonoisotopicSilacIsotopeFile(@"../../../data/Leucine_isotope.ini");
       double sampleL = file.SampleCalculator.GetMass("L");
       double refL = file.ReferenceCalculator.GetMass("L");
       Assert.AreEqual(new Aminoacids().MonoPeptideMass("L"), sampleL, 0.001);

@@ -9,6 +9,7 @@ namespace RCPA.Numerics
   [TestFixture]
   public class TestMADOutlierDetector
   {
+    [Test]
     public void TestDetect()
     {
       var values = new double[] { 3.2, 3.3, 8.1, 3.2, 2.9, 3.7, 3.1, 3.5, 3.3, 9.2 };

@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     [Test]
     public void TestParsePlex8()
     {
-      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.PLEX8, @"..\..\data\itraq-8plex.csv");
+      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.PLEX8, @"../../../data/itraq-8plex.csv");
 
       // OutputArray(a);
 
@@ -41,7 +41,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     [Test]
     public void TestParseTMT6()
     {
-      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.TMT6, @"..\..\data\TMT-6plex.csv");
+      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.TMT6, @"../../../data/TMT-6plex.csv");
 
       //OutputArray(a);
 
@@ -66,7 +66,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     [Test]
     public void TestParsePlex4()
     {
-      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.PLEX4, @"..\..\data\itraq-4plex.csv");
+      double[][] a = IsobaricImpurityCorrectionCalculator.ParseTable(IsobaricType.PLEX4, @"../../../data/itraq-4plex.csv");
 
       //OutputArray(a);
 
@@ -89,7 +89,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
 
     public void InitializePlex4()
     {
-      var lines = File.ReadAllLines(@"..\..\data\ITraqIsotope.txt");
+      var lines = File.ReadAllLines(@"../../../data/ITraqIsotope.txt");
       List<double[]> vs = new List<double[]>();
       for (int i = 1; i < lines.Length; i++)
       {
@@ -133,7 +133,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     [Test]
     public void TestCorrectPlex4()
     {
-      var calc = new IsobaricImpurityCorrectionCalculator(IsobaricType.PLEX4, @"..\..\data\itraq-4plex.csv");
+      var calc = new IsobaricImpurityCorrectionCalculator(IsobaricType.PLEX4, @"../../../data/itraq-4plex.csv");
       double[] b = new double[] { 0.949, 1.013, 1.022, 0.969 };
       double[] x = calc.Correct(b);
       foreach (var v in x)
@@ -153,7 +153,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     [Test]
     public void TestCorrectPlex8()
     {
-      var calc = new IsobaricImpurityCorrectionCalculator(IsobaricType.PLEX8, @"..\..\data\itraq-8plex.csv");
+      var calc = new IsobaricImpurityCorrectionCalculator(IsobaricType.PLEX8, @"../../../data/itraq-8plex.csv");
       var b = new List<double>();
       var m = calc.CloneTable();
       for (int i = 0; i < m[0].Length; i++)

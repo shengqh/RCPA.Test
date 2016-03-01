@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Mascot
     [Test]
     public void testConstruction()
     {
-      var testFile = new FileInfo(@"..\..\data\mascot_result_protein_newversion.html");
+      var testFile = new FileInfo(@"../../../data/mascot_result_protein_newversion.html");
       // filter by rank 1 only
       MascotResult mr = new MascotResultHtmlStandaloneParser(false)
         .ParseFile(testFile);
@@ -46,7 +46,7 @@ namespace RCPA.Proteomics.Mascot
     public void testO18Result()
     {
       MascotResult mr = new MascotResultHtmlStandaloneParser(true)
-        .ParseFile(new FileInfo(@"..\..\data\mascot_result_protein_o18.html"));
+        .ParseFile(new FileInfo(@"../../../data/mascot_result_protein_o18.html"));
       Assert.AreEqual(1, mr.Count);
       Assert.AreEqual(6, mr[0].Count);
       Assert.AreEqual(10, mr[0][0].Peptides.Count);
@@ -61,7 +61,7 @@ namespace RCPA.Proteomics.Mascot
     public void testParseFile1()
     {
       MascotResult mr = new MascotResultHtmlStandaloneParser(true)
-        .ParseFile(new FileInfo(@"..\..\data\mascot_result_protein_newversion.html"));
+        .ParseFile(new FileInfo(@"../../../data/mascot_result_protein_newversion.html"));
 
       Assert.AreEqual(33, mr.PValueScore);
       Assert.AreEqual(0.05, mr.PValue);
@@ -146,7 +146,7 @@ namespace RCPA.Proteomics.Mascot
     public void testParseFile2()
     {
       MascotResult mr = new MascotResultHtmlStandaloneParser(true)
-        .ParseFile(new FileInfo(@"..\..\data\mascot_result_Caseins00001.htm"));
+        .ParseFile(new FileInfo(@"../../../data/mascot_result_Caseins00001.htm"));
 
       Assert.AreEqual(44, mr.PValueScore);
       Assert.AreEqual(0.05, mr.PValue);
@@ -194,7 +194,7 @@ namespace RCPA.Proteomics.Mascot
     public void testParseFileWithSameMatchProteins()
     {
       MascotResult mr = new MascotResultHtmlStandaloneParser(false)
-        .ParseFile(new FileInfo(@"..\..\data\mascot_result_Caseins00001.htm"));
+        .ParseFile(new FileInfo(@"../../../data/mascot_result_Caseins00001.htm"));
 
       Assert.AreEqual(44, mr.PValueScore);
       Assert.AreEqual(0.05, mr.PValue);

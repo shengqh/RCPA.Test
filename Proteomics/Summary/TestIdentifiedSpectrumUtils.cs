@@ -87,11 +87,11 @@ namespace RCPA.Proteomics.Summary
       co.ModifiedAminoacids = "STY";
       co.ClassifyByNumProteaseTermini = true;
 
-      var s1 = new MascotPeptideTextFormat().ReadFromFile(@"../../data/deisotopic.peptides");
+      var s1 = new MascotPeptideTextFormat().ReadFromFile(@"../../../data/deisotopic.peptides");
       IdentifiedSpectrumUtils.RemoveSpectrumWithAmbigiousAssignment(s1);
 
       s1.ForEach(m => m.Tag = "deisotopic");
-      var s2 = new MascotPeptideTextFormat().ReadFromFile(@"../../data/deisotopic-top10.peptides");
+      var s2 = new MascotPeptideTextFormat().ReadFromFile(@"../../../data/deisotopic-top10.peptides");
       IdentifiedSpectrumUtils.RemoveSpectrumWithAmbigiousAssignment(s2);
       s2.ForEach(m => m.Tag = "deisotopic-top");
 
@@ -159,10 +159,10 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestFillProteinInformation()
     {
-      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../data/Test.output.xml.FDR0.01.peptides");
+      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../../data/Test.output.xml.FDR0.01.peptides");
       Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count == 0));
 
-      IdentifiedSpectrumUtils.FillProteinInformation(peptides, "../../data/Test.output.xml.FDR0.01.peptides.proteins");
+      IdentifiedSpectrumUtils.FillProteinInformation(peptides, "../../../data/Test.output.xml.FDR0.01.peptides.proteins");
       Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count > 0));
     }
 

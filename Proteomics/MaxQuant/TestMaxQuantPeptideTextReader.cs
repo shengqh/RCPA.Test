@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.MaxQuant
     public void TestRead()
     {
       MaxQuantPeptideTextReader reader = new MaxQuantPeptideTextReader();
-      var spectra = reader.ReadFromFile(@"..\..\data\maxquant_sites.txt");
+      var spectra = reader.ReadFromFile(@"../../../data/maxquant_sites.txt");
       Assert.AreEqual(162, spectra.Count);
       Assert.AreEqual("LQR_SCS_Nu_CA_SAX_Online_071226_06", spectra[0].Query.FileScan.Experimental);
       Assert.AreEqual(12044, spectra[0].Query.FileScan.FirstScan);
@@ -33,7 +33,7 @@ namespace RCPA.Proteomics.MaxQuant
     {
       MaxQuantPeptideTextFormat reader = new MaxQuantPeptideTextFormat();
 
-      var spectra = reader.ReadFromFile(@"..\..\data\maxquant.peptides.txt");
+      var spectra = reader.ReadFromFile(@"../../../data/maxquant.peptides.txt");
 
       for (int i = 0; i < spectra.Count; i++)
       {
@@ -53,7 +53,7 @@ namespace RCPA.Proteomics.MaxQuant
     //{
     //  MaxQuantPeptideTextReader reader = new MaxQuantPeptideTextReader();
 
-    //  //      var spectra = reader.ReadFromFile(@"..\..\data\maxquant_sites_2.txt");
+    //  //      var spectra = reader.ReadFromFile(@"../../../data/maxquant_sites_2.txt");
     //  var spectra = reader.ReadFromFile(@"Z:\cli_1\20091212_Orbi_WntExp1234_275mgTA\combined\Phospho (STY)Sites_1771.txt");
 
     //  for (int i = 0; i < spectra.Count; i++)

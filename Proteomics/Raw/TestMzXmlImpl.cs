@@ -35,7 +35,7 @@ namespace RCPA.Proteomics.Raw
     [TestFixtureSetUp]
     public void LoadFile()
     {
-      reader.Open("../../data/YAGmem1.mzXML");
+      reader.Open("../../../data/YAGmem1.mzXML");
     }
 
     [TestFixtureTearDown]

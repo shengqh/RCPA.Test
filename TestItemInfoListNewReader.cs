@@ -13,7 +13,7 @@ namespace RCPA
     public void TestReadFromFile()
     {
       ItemInfoListNewReader reader = new ItemInfoListNewReader("Items");
-      ItemInfoList lst = reader.ReadFromFile(@"..\..\data\ListFileFormatNew.lst");
+      ItemInfoList lst = reader.ReadFromFile(@"../../../data/ListFileFormatNew.lst");
       Assert.AreEqual(2, lst.Count);
       
       Assert.AreEqual(@"Z:\GK_PPN\GKPPN_iTRAQ_SAX_114115_AP_treat\GKPPN_114_115AP+_500ug_SAX_1", lst[0].SubItems[0]);

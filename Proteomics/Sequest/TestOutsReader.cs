@@ -8,7 +8,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestAll()
     {
-      using (var reader = new OutsReader(@"..\..\data\20030428_4_29L_15.outs"))
+      using (var reader = new OutsReader(@"../../../data/20030428_4_29L_15.outs"))
       {
         Assert.AreEqual(731, reader.FileCount);
         for (int i = 0; i < 731; i++)
@@ -25,7 +25,7 @@ namespace RCPA.Proteomics.Sequest
     [ExpectedException("System.Exception")]
     public void TestException()
     {
-      using (var reader = new OutsReader(@"..\..\data\20030428_4_29L_15.outs"))
+      using (var reader = new OutsReader(@"../../../data/20030428_4_29L_15.outs"))
       {
         for (int i = 0; i < 731; i++)
         {

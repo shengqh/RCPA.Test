@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Quantification
     [Test]
     public void Test()
     {
-      string file = @"..\..\data\sampF1.IGESLADPVK.2.2754-2939.silac";
+      string file = @"../../../data/sampF1.IGESLADPVK.2.2754-2939.silac";
       SilacQuantificationSummaryItem item = new SilacQuantificationSummaryItemXmlFormat().ReadFromFile(file);
 
       Console.WriteLine("Before validation");

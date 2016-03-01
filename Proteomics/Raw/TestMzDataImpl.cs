@@ -16,7 +16,7 @@ namespace RCPA.Proteomics.Raw
     [TestFixtureSetUp]
     public void LoadFile()
     {
-      reader.Open("../../data/QTof_itraq.mzData");
+      reader.Open("../../../data/QTof_itraq.mzData");
     }
 
     [TestFixtureTearDown]

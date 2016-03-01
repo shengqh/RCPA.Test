@@ -12,6 +12,7 @@ namespace RCPA
   [TestFixture]
   public class TestXmlExtension
   {
+    [Test]
     public void TestWrite()
     {
       var  ms = new MemoryStream();

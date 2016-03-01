@@ -11,7 +11,7 @@ namespace RCPA.Format
   [TestFixture]
   public class TestTextFileDefinition
   {
-    public static string DefinitionFile = @"..\..\data\TextFileDefinition.xml";
+    public static string DefinitionFile = @"../../../data/TextFileDefinition.xml";
 
     [Test]
     public void TestWrite()
@@ -39,7 +39,7 @@ namespace RCPA.Format
         ValueType = "string"
       });
 
-      var newfile = @"..\..\data\TextFileDefinition2.xml";
+      var newfile = @"../../../data/TextFileDefinition2.xml";
       def.WriteToFile(newfile);
 
       AssertUtils.AssertFileEqual(DefinitionFile, newfile);

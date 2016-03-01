@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.PeptideProphet
       List<IIdentifiedSpectrum> items = new PeptideProphetXmlParser()
       {
         TitleParser = new DefaultTitleParser()
-      }.ReadFromFile(@"..\..\data\pepxml.xml");
+      }.ReadFromFile(@"../../../data/pepxml.xml");
       Assert.AreEqual(2, items.Count);
 
       Assert.AreEqual(0.0017, items[0].Probability);

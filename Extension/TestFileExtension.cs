@@ -10,9 +10,10 @@ namespace RCPA.Extension
   [TestFixture]
  public class TestFileExtension
   {
+    [Test]
     public void TestReadLine()
     {
-      var datafile = "../../data/TestReadLine.txt";
+      var datafile = "../../../data/TestReadLine.txt";
 
       using (FileStream fs = new FileStream(datafile, FileMode.Open))
       {

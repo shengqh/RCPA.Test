@@ -11,7 +11,7 @@ namespace RCPA.Seq
     [Test]
     public void TestRead()
     {
-      List<Sequence> seqs = SequenceUtils.Read(new FastaFormat(), "../../data/test.fasta");
+      List<Sequence> seqs = SequenceUtils.Read(new FastaFormat(), "../../../data/test.fasta");
       Assert.AreEqual(2, seqs.Count);
       Assert.AreEqual("test1 description of test1", seqs[0].Reference);
       Assert.AreEqual("AAAAA", seqs[0].SeqString);
@@ -52,7 +52,7 @@ namespace RCPA.Seq
     [Test]
     public void TestGetDatabaseComposition()
     {
-      Dictionary<char, double> actual = SequenceUtils.GetDatabaseComposition("../../data/test.fasta");
+      Dictionary<char, double> actual = SequenceUtils.GetDatabaseComposition("../../../data/test.fasta");
       Assert.AreEqual(0.5, actual['A']);
       Assert.AreEqual(0.5, actual['B']);
     }

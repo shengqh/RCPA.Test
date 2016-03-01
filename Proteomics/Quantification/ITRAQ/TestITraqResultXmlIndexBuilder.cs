@@ -11,8 +11,8 @@ namespace RCPA.Proteomics.Quantification.ITraq
   [TestFixture]
   public class TestITraqResultXmlIndexBuilder
   {
-    const string dataFile = "../../data/ITraqResult.xml";
-    const string expectFile = "../../data/ITraqResult.xml.expect.index";
+    const string dataFile = "../../../data/ITraqResult.xml";
+    const string expectFile = "../../../data/ITraqResult.xml.expect.index";
 
     public void TestBuild()
     {

@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestParse()
     {
-      var result = IdentificationSummary.Parse(@"..\..\data\buildsummary\hppp_mascot.noredundant", "^REV", new TotalFalseDiscoveryRateCalculator());
+      var result = IdentificationSummary.Parse(@"../../../data/buildsummary\hppp_mascot.noredundant", "^REV", new TotalFalseDiscoveryRateCalculator());
       Assert.AreEqual(381, result.FullSpectrumCount);
       Assert.AreEqual(62, result.FullPeptideCount);
       Assert.AreEqual(31, result.ProteinGroupCount);

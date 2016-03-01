@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestBuild()
     {
-      List<IIdentifiedSpectrum> spectra = new SequestPeptideTextFormat().ReadFromFile(@"..\..\data\TestBuilder.peptides");
+      List<IIdentifiedSpectrum> spectra = new SequestPeptideTextFormat().ReadFromFile(@"../../../data/TestBuilder.peptides");
       Assert.AreEqual(4, spectra.Count);
 
       IAccessNumberParser parser = AccessNumberParserFactory.FindOrCreateParser(@"(IPI\d+)", "IPI");

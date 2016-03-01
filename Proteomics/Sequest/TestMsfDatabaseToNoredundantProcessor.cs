@@ -10,7 +10,7 @@ namespace RCPA.Proteomics.Sequest
   [TestFixture]
   public class TestMsfDatabaseToNoredundantProcessor
   {
-    private string msfFile = "../../data/SK158d.msf";
+    private string msfFile = "../../../data/SK158d.msf";
     private MsfDatabaseToNoredundantProcessor processor = new MsfDatabaseToNoredundantProcessor();
 
     [Test]

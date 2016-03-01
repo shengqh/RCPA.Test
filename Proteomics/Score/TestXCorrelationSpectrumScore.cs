@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Score
     [Test]
     public void Test()
     {
-      using (var sr = new StreamReader("../../data/Ribo B 645.txt"))
+      using (var sr = new StreamReader("../../../data/Ribo B 645.txt"))
       {
         var iter = new MascotGenericFormatIterator<Peak>(sr);
         PeakList<Peak> expPkl = iter.Next();

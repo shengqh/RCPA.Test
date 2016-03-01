@@ -16,9 +16,6 @@ namespace RCPA.Proteomics.Mascot
       pkl.PrecursorCharge = 2;
 
       Assert.AreEqual("TEST.4135.4135.2.dta", format.Build(pkl));
-
-      pkl.Annotations.Add("TITLE", "TEST_TITLE");
-      Assert.AreEqual("TEST_TITLE", format.Build(pkl));
     }
   }
 }

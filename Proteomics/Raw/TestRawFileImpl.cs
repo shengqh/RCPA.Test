@@ -16,9 +16,9 @@ namespace RCPA.Proteomics.Raw
     public void TestSetup()
     {
       this.fullRawFile = new RawFileImpl();
-      this.fullRawFile.Open(@"..\..\data\Standard_Protein_FT2_Lock_Re5.RAW");
+      this.fullRawFile.Open(@"../../../data/Standard_Protein_FT2_Lock_Re5.RAW");
       this.ms2OnlyRawFile = new RawFileImpl();
-      this.ms2OnlyRawFile.Open(@"..\..\data\Full_scan_apiginin_ms2.RAW");
+      this.ms2OnlyRawFile.Open(@"../../../data/Full_scan_apiginin_ms2.RAW");
     }
 
     [TestFixtureTearDown]

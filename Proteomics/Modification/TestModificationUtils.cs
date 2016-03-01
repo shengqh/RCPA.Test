@@ -33,8 +33,8 @@ namespace RCPA.Proteomics.Modification
     {
       var actual = ModificationUtils.GetModifiedAminiacids("^SEETAY*FVWLGK@");
       Assert.AreEqual(2, actual.Count);
-      Assert.AreEqual('Y', actual[6]);
-      Assert.AreEqual('K', actual[12]);
+      Assert.AreEqual('Y', actual[5]);
+      Assert.AreEqual('K', actual[11]);
     }
 
     [Test]

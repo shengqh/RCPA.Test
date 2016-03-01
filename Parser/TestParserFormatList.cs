@@ -11,7 +11,7 @@ namespace RCPA.Parser
   [TestFixture]
   public class TestParserFormatList
   {
-    string optionFile = @"..\..\data\MiscOptions.xml";
+    string optionFile = @"../../../data/MiscOptions.xml";
 
     [Test]
     [ExpectedException("System.IO.FileNotFoundException")]

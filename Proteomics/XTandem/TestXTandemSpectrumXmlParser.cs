@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.XTandem
     [Test]
     public void TestParsePeptides()
     {
-      List<IIdentifiedSpectrum> spectra = new XTandemSpectrumXmlParser().ReadFromFile(@"..\..\data\xtandem.xml");
+      List<IIdentifiedSpectrum> spectra = new XTandemSpectrumXmlParser().ReadFromFile(@"../../../data/xtandem.xml");
       Assert.AreEqual(2, spectra.Count);
       Assert.AreEqual("K.DLGEEHFK.G", spectra[0].Sequence);
       Assert.AreEqual(32.2, spectra[0].Score, 0.1);
@@ -29,8 +29,8 @@ namespace RCPA.Proteomics.XTandem
     [Test]
     public void TestGetSourceFile()
     {
-      Assert.AreEqual(@"D:\ws\ws_2\WS_2.RAW.mgf", XTandemSpectrumXmlParser.GetSourceFile(@"..\..\data\xtandem.xml"));
-      Assert.AreEqual(@"/people/xiaobinxin/AS_II/raw_data/raw.3T3L1.SCX/mzXML.3T3L1/3T3L1_MDI_0min_SAX_Online_081215_01.RAW.mzXml", XTandemSpectrumXmlParser.GetSourceFile(@"..\..\data\xtandem_linux.xml"));
+      Assert.AreEqual(@"D:\ws\ws_2\WS_2.RAW.mgf", XTandemSpectrumXmlParser.GetSourceFile(@"../../../data/xtandem.xml"));
+      Assert.AreEqual(@"/people/xiaobinxin/AS_II/raw_data/raw.3T3L1.SCX/mzXML.3T3L1/3T3L1_MDI_0min_SAX_Online_081215_01.RAW.mzXml", XTandemSpectrumXmlParser.GetSourceFile(@"../../../data/xtandem_linux.xml"));
     }
   }
 }

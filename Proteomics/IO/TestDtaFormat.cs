@@ -7,7 +7,7 @@ namespace RCPA.Proteomics.IO
   [TestFixture]
   public class TestDtaFormat
   {
-    private string testDtaFile = @"..\..\data\20040922_HPPP_Flow_01.0007.0007.2.dta";
+    private string testDtaFile = @"../../../data/20040922_HPPP_Flow_01.0007.0007.2.dta";
 
     private readonly DtaFormat<Peak> dtaFormat = new DtaFormat<Peak>();
 
