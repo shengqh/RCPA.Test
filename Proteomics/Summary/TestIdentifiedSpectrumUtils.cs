@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Summary
   [TestFixture]
   public class TestIdentifiedSpectrumUtils
   {
-    private IIdentifiedSpectrum s1, s2, s3, s4, s5, s6;
+    private IIdentifiedSpectrum s1, s2, s3, s4, s5, s6, s7;
 
     [TestFixtureSetUp]
     public void SetUp()
@@ -52,29 +52,33 @@ namespace RCPA.Proteomics.Summary
       s6.Query.Charge = 2;
       s6.Score = 3.0;
       s6.AddPeptide(new IdentifiedPeptide(s6) { Sequence = "R.#VK*PEESEFER.T" });
+
+      s7 = new IdentifiedSpectrum();
+      s7.Query.FileScan.ShortFileName = "YEAST_0610_G1_SAX_080811_01,11111";
+      s7.Query.Charge = 2;
+      s7.Score = 3.0;
+      s7.AddPeptide(new IdentifiedPeptide(s7) { Sequence = "R.#VKPEESEFER*.T" });
     }
 
     [Test]
     public void KeepTopPeptideFromSameEngineDifferentParameters()
     {
-      List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s3, s4, s5 });
+      List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s4, s5 });
       IdentifiedSpectrumUtils.KeepTopPeptideFromSameEngineDifferentParameters(spectra, new ScoreFunction());
-      Assert.AreEqual(3, spectra.Count);
+      Assert.AreEqual(2, spectra.Count);
       Assert.IsTrue(spectra.Contains(s1));
-      Assert.IsTrue(spectra.Contains(s3));
       Assert.IsTrue(spectra.Contains(s4));
     }
 
     [Test]
     public void KeepUnconflictPeptidesFromSameEngineDifferentParameters()
     {
-      List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s3, s4, s5 });
+      List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>(new IIdentifiedSpectrum[] { s1, s2, s6, s7 });
       IdentifiedSpectrumUtils.KeepUnconflictPeptidesFromSameEngineDifferentParameters(spectra, new ScoreFunction());
-      Assert.AreEqual(4, spectra.Count);
+      Assert.AreEqual(3, spectra.Count);
       Assert.IsTrue(spectra.Contains(s1));
-      Assert.IsTrue(spectra.Contains(s2));
-      Assert.IsTrue(spectra.Contains(s3));
-      Assert.IsTrue(spectra.Contains(s4));
+      Assert.IsTrue(spectra.Contains(s6));
+      Assert.IsTrue(spectra.Contains(s7));
     }
 
     [Test]

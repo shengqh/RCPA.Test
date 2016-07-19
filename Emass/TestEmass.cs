@@ -13,11 +13,11 @@ namespace RCPA.Emass
     [Test]
     public void TestInitializeData()
     {
-      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
+      var calc = new EmassCalculator(@"../../../data/ISOTOPE.DAT");
 
       var fm = "C6H10";
 
-      var result = EmassCalculator.Calculate(fm, 0, 0);
+      var result = calc.Calculate(fm, 0, 0);
 
       //result.ForEach(m => Console.WriteLine("{0:0.000000}\t{1:0.000000}", m.Mz, m.Intensity));
 

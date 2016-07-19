@@ -55,7 +55,7 @@ namespace RCPA.Proteomics.Spectrum
       PeakList<Peak> envolopCharge1 = pl.FindEnvelope(pl[2], 0.02, false);
       Assert.AreEqual(3, envolopCharge1.Count);
       Assert.AreSame(pl[1], envolopCharge1[0]);
-      Assert.AreSame(pl[2], envolopCharge1[1]);
+      Assert.AreSame(pl[3], envolopCharge1[1]);
       Assert.AreSame(pl[4], envolopCharge1[2]);
 
       PeakList<Peak> envolopCharge3 = pl.FindEnvelope(pl[8], 0.02, false);

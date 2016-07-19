@@ -52,6 +52,7 @@ namespace RCPA.Proteomics.Summary
     public void TestFilter2()
     {
       var spectrum = new IdentifiedSpectrum();
+      spectrum.Query.FileScan.LongFileName = "ABDCDD.12.123.2.dat";
 
       var pro1 = new IdentifiedProtein("P1");
       pro1.Peptides.Add(new IdentifiedPeptide(spectrum) { Sequence = "AAAAAAA" });

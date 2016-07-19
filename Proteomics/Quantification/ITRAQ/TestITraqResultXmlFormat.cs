@@ -74,6 +74,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
       t2[121] = 11.5;
 
       tr = new IsobaricResult();
+      tr.Mode = "PQD";
       tr.Add(t1);
       tr.Add(t2);
     }
@@ -118,11 +119,6 @@ namespace RCPA.Proteomics.Quantification.ITraq
       }
     }
 
-    //public void TestFormat1()
-    //{
-    //  RunFormat(new ITraqResultXmlFormatLinq());
-    //}
-
     [Test]
     public void TestFormatFast()
     {
@@ -130,7 +126,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
     }
 
     [Test]
-    public void TestForamtRandom()
+    public void TestFormatRandom()
     {
       Setup();
 

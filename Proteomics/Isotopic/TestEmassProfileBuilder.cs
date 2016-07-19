@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void Calculate()
     {
-      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
+      var calc = new EmassCalculator(@"../../../data/ISOTOPE.DAT");
 
       EmassProfileBuilder builder = new EmassProfileBuilder();
 
@@ -39,9 +39,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void CalculateO18_charge1()
     {
-      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
-
-      EmassProfileBuilder builder = new EmassProfileBuilder();
+      EmassProfileBuilder builder = new EmassProfileBuilder(@"../../../data/ISOTOPE.DAT");
 
       AtomComposition light = new AtomComposition("C45H73N13O13");
       var res = builder.GetProfile(light, 1, 5);
@@ -58,9 +56,7 @@ namespace RCPA.Proteomics.Isotopic
     [Test]
     public void CalculateO18()
     {
-      EmassCalculator.InitializeData(@"../../../data/ISOTOPE.DAT");
-
-      EmassProfileBuilder builder = new EmassProfileBuilder();
+      EmassProfileBuilder builder = new EmassProfileBuilder(@"../../../data/ISOTOPE.DAT");
 
       AtomComposition light = new AtomComposition("C45H73N13O13");
       var res = builder.GetProfile(light, 2, 5);

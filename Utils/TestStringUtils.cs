@@ -39,5 +39,16 @@ namespace RCPA.Utils
       AssertUtils.AssertArrayEqual(new[] { "A", "B", "C" }, oldHeader.Take('\t', 4));
     }
 
+    [Test]
+    public void TestConcatOverlap()
+    {
+      Assert.IsNull(StringUtils.ConcatOverlap("ABCDE", "HIJKL", 0.5));
+      Assert.IsNull(StringUtils.ConcatOverlap("ABCDE", "ABCDF", 0.5));
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlap("ABCDE", "CDEFG", 0.5));
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlap("CDEFG", "ABCDE", 0.5));
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlap("ABCDE", "BCD", 0.5));
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlap("BCD", "ABCDE", 0.5));
+
+    }
   }
 }
