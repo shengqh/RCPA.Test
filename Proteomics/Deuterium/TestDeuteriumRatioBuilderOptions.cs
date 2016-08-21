@@ -17,12 +17,10 @@ namespace RCPA.Proteomics.Deuterium
       var options = new DeuteriumCalculatorOptions()
       {
         InputFile = "aaa",
-        RawDirectory = "bbb"
       };
 
       Assert.IsFalse(options.PrepareOptions());
       Assert.IsTrue(options.ParsingErrors.Any(l => l.Contains("aaa")));
-      Assert.IsTrue(options.ParsingErrors.Any(l => l.Contains("bbb")));
     }
   }
 }

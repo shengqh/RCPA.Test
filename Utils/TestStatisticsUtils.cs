@@ -64,6 +64,13 @@ namespace RCPA.Utils
     }
 
     [Test]
+    public void TestKullbackLeibleDistance()
+    {
+      double[] a = { 1.5, 2.0, 2.5 };
+      double[] b = { 1, 2, 3 };
+      Assert.AreEqual(0.0353, StatisticsUtils.KullbackLeiblerDistance(a, b, 3), 0.0001);
+    }
+    [Test]
     [ExpectedException("System.ArgumentException")]
     public void TestCorrelException1()
     {
