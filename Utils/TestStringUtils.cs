@@ -40,14 +40,32 @@ namespace RCPA.Utils
     }
 
     [Test]
-    public void TestConcatOverlap()
+    public void TestConcatOverlapByPercentage()
     {
-      Assert.IsNull(StringUtils.ConcatOverlap("ABCDE", "HIJKL", 0.5));
-      Assert.IsNull(StringUtils.ConcatOverlap("ABCDE", "ABCDF", 0.5));
-      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlap("ABCDE", "CDEFG", 0.5));
-      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlap("CDEFG", "ABCDE", 0.5));
-      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlap("ABCDE", "BCD", 0.5));
-      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlap("BCD", "ABCDE", 0.5));
+      Assert.IsNull(StringUtils.ConcatOverlapByPercentage("ABCDE", "HIJKL", 0.5));
+      Assert.IsNull(StringUtils.ConcatOverlapByPercentage("ABCDE", "ABCDF", 0.5));
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlapByPercentage("ABCDE", "CDEFG", 0.5));
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlapByPercentage("CDEFG", "ABCDE", 0.5));
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlapByPercentage("ABCDE", "BCD", 0.5));
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlapByPercentage("BCD", "ABCDE", 0.5));
+    }
+
+    [Test]
+    public void TestConcatOverlapByExtensionNumber()
+    {
+      //no overlap
+      Assert.IsNull(StringUtils.ConcatOverlapByExtensionNumber("ABCDE", "HIJKL", 1));
+      //cannot mismatch
+      Assert.IsNull(StringUtils.ConcatOverlapByExtensionNumber("ABCDE", "ABCDF", 1));
+      //overlap 3 out of 5 characters
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlapByExtensionNumber("ABCDE", "CDEFG", 2));
+      Assert.AreEqual("ABCDEFG", StringUtils.ConcatOverlapByExtensionNumber("CDEFG", "ABCDE", 2));
+      //failed to extend if only 1 base allowed
+      Assert.IsNull(StringUtils.ConcatOverlapByExtensionNumber("ABCDE", "CDEFG", 1));
+      Assert.IsNull(StringUtils.ConcatOverlapByExtensionNumber("CDEFG", "ABCDE", 1));
+      //contain
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlapByExtensionNumber("ABCDE", "BCD", 1));
+      Assert.AreEqual("ABCDE", StringUtils.ConcatOverlapByExtensionNumber("BCD", "ABCDE", 1));
 
     }
   }

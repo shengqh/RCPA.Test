@@ -15,6 +15,7 @@ namespace RCPA.Proteomics.MSGF
     {
       var parser = new MSGFMzIdentParser();
       var peptides = parser.ReadFromFile("../../../data/msgf.mzid");
+      //var peptides = parser.ReadFromFile(@"H:\shengquanhu\projects\20161013_shifted_precursor_10ppm\Fusion_HCDIT_Yeast_MSGF\result\10sep2013_yeast_control_1.msgf.mzid");
       Assert.AreEqual(4, peptides.Count);
       Assert.AreEqual(-9.0, peptides[0].Score);
       Assert.AreEqual(19.0, peptides[0].SpScore);
