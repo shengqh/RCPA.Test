@@ -193,6 +193,7 @@
     <Compile Include="Proteomics\Mascot\TestMascotResultHtmlStandaloneParser.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotUtils.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotDatasetOptions.cs" />
+    <Compile Include="Proteomics\MaxQuant\TestMaxQuantModification.cs" />
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantConverter.cs" />
     <Compile Include="Proteomics\MaxQuant\TestMaxQuantPeptideTextReader.cs" />
     <Compile Include="Proteomics\MaxQuant\TextMaxQuantAplFormat.cs" />
