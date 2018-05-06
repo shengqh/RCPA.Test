@@ -10,6 +10,15 @@ namespace RCPA.Proteomics.MaxQuant
   public class TestMaxQuantPeptideTextReader
   {
     [Test]
+    public void TestGetModifiedSequence()
+    {
+      var seq = "NIDVLEGNEQFINAAKIITHPNFNGNTLDND";
+      var modifications = "X;X;X;X;X;X;X;X;X;X;X;X;X;X;X;Dimethyl (K);X;X;X;X;X;X;X;X;X;X;X;X;X;X;X";
+      var actual = MaxQuantPeptideTextReader.GetModifiedSequence(seq, modifications);
+      Assert.AreEqual("NIDVLEGNEQFINAAK(Dimethyl)IITHPNFNGNTLDND", actual);
+    }
+
+    [Test]
     public void TestRead()
     {
       MaxQuantPeptideTextReader reader = new MaxQuantPeptideTextReader();

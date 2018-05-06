@@ -180,6 +180,7 @@
     <Compile Include="Proteomics\Isotopic\TestInterfernceOptimization.cs" />
     <Compile Include="Proteomics\Isotopic\TestSilacIsotopeFile.cs" />
     <Compile Include="Proteomics\Mascot\TestExpectValueCalculator.cs" />
+    <Compile Include="Proteomics\Mascot\TestMascotDatToMzIdentConverter.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotDatParser.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotGenericFormatReader.cs" />
     <Compile Include="Proteomics\Mascot\TestMascotGenericFormatShiftPrecursorProcessor.cs" />
