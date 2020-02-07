@@ -35,7 +35,7 @@ namespace RCPA.Proteomics.Sequest
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestAminoacidToModificationException()
     {
       SequestParam.AminoacidToModification(' ');
@@ -111,7 +111,7 @@ namespace RCPA.Proteomics.Sequest
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestNameToModificationException()
     {
       SequestParam.NameToModification("");

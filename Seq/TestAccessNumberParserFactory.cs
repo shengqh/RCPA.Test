@@ -14,7 +14,7 @@ namespace RCPA.Seq
     public void Test()
     {
       ParserFormatList lstFormat = new ParserFormatList();
-      lstFormat.ReadFromFile(@"../../../data/MiscOptions.xml", AccessNumberParserFactory.SECTION_NAME);
+      lstFormat.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/MiscOptions.xml", AccessNumberParserFactory.SECTION_NAME);
       List<IAccessNumberParser> acParser = AccessNumberParserFactory.GetParsers(lstFormat);
       Assert.AreEqual(5, acParser.Count);
     }

@@ -17,7 +17,7 @@ namespace RCPA.Proteomics.Comet
       var spectra = new CometXmlRank2Parser()
       {
         TitleParser = TitleParserUtils.FindByName("DTA")
-      }.ReadFromFile(@"../../../data/comet.pep.xml");
+      }.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/comet.pep.xml");
 
       Assert.AreEqual(2, spectra.Count);
       Assert.AreEqual("K.M*REGPAK.N", spectra[0].Sequence);

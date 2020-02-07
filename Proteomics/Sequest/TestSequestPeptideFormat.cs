@@ -12,10 +12,10 @@ namespace RCPA.Proteomics.Sequest
     {
       var format = new SequestPeptideTextFormat();
 
-      List<IIdentifiedSpectrum> spl = format.ReadFromFile(@"../../../data/Standard_Protein_FIT_060222.peptides");
+      List<IIdentifiedSpectrum> spl = format.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/Standard_Protein_FIT_060222.peptides");
       Assert.AreEqual(287, spl.Count);
 
-      List<IIdentifiedSpectrum> spl2 = format.ReadFromFile(@"../../../data/Nmix_27_C13.peptides");
+      List<IIdentifiedSpectrum> spl2 = format.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/Nmix_27_C13.peptides");
       Assert.AreEqual(1093, spl2.Count);
     }
 

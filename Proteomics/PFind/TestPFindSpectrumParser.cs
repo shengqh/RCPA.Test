@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.PFind
   //[TestFixture]
   public class TestPFindSpectrumParser
   {
-    string fileName = @"../../../data/pFind_qry.proteins.txt";
+    string fileName = @TestContext.CurrentContext.TestDirectory + "/../../../data//pFind_qry.proteins.txt";
 
     //[Test]
     public void TestParseModification()

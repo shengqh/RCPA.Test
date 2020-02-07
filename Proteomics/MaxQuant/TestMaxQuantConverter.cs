@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.MaxQuant
     public void TestRead()
     {
       MaxQuantPeptideTextFormat reader = new MaxQuantPeptideTextFormat();
-      var spectra = reader.ReadFromFile(@"../../../data/All_Phospho (STY)Sites.txt");
+      var spectra = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/All_Phospho (STY)Sites.txt");
       Assert.AreEqual(1, spectra.Count);
       var m = spectra[0].GetMaxQuantItemList();
       Assert.IsNotNull(m);
@@ -29,7 +29,7 @@ namespace RCPA.Proteomics.MaxQuant
       Assert.IsTrue(dsNames.Contains("120min"));
 
       reader.ResetBySpectra(spectra);
-      reader.WriteToFile(@"../../../data/All_Phospho (STY)Sites.txt.copy", spectra);
+      reader.WriteToFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//All_Phospho (STY)Sites.txt.copy", spectra);
     }
   }
 }

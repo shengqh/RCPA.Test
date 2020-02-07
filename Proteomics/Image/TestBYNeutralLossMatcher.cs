@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Image
     private BYNeutralLossMatcher matcher;
     private Dictionary<IonType, List<MatchedPeak>> dic;
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void TestFixtureSetUp()
     {
       matcher = new BYNeutralLossMatcher(0.5, 0.0);

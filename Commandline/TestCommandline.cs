@@ -51,17 +51,5 @@ namespace RCPA.Commandline
       Assert.IsFalse(result);
       Console.Out.WriteLine((from er in options.LastParserState.Errors select er.ToString()).Merge("\n"));
     }
-
-    [Test]
-    public void TestValidateOptionFail()
-    {
-      var options = new TestOptions();
-
-      var args = new string[] { "-i", "aa" };
-      var result = CommandLine.Parser.Default.ParseArguments(args, options);
-      Assert.IsTrue(result);
-      Assert.IsFalse(options.PrepareOptions());
-      Console.Out.WriteLine(options.ParsingErrors.Merge("\n"));
-    }
   }
 }

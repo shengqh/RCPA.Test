@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.PFind
     public void Parse()
     {
       var parser = new PNovoParser(new DefaultTitleParser());
-      var spectra = parser.ParsePeptides(@"../../../data/pnovo.result");
+      var spectra = parser.ParsePeptides(@TestContext.CurrentContext.TestDirectory + "/../../../data//pnovo.result");
       Assert.AreEqual(20, spectra.Count);
       Assert.AreEqual("K*TESHHK", spectra[0].Peptide.Sequence);
 

@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Distribution
   [TestFixture]
   public class TestDistributionOptionXmlFormat
   {
-    private string filePath = @"../../../data/Distribution.statistic.xml";
+    private string filePath = @TestContext.CurrentContext.TestDirectory + "/../../../data//Distribution.statistic.xml";
     [Test]
     public void TestLoad()
     {

@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Quantification.Srm
     [Test]
     public void Test()
     {
-      var data = @"../../../data/MRMDefinition.txt";
+      var data = @TestContext.CurrentContext.TestDirectory + "/../../../data//MRMDefinition.txt";
 
       var mrms = new SrmTransitionAgilentFormat().ReadFromFile(data);
       Assert.AreEqual(437, mrms.Count);

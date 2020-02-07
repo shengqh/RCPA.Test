@@ -74,14 +74,14 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentNullException")]
+    [ExpectedException(typeof(System.ArgumentNullException))]
     public void TestFindMaxIndexException1()
     {
       CollectionUtils.FindMaxIndex(null);
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestFindMaxIndexException()
     {
       CollectionUtils.FindMaxIndex(new List<double>());

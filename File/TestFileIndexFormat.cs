@@ -19,7 +19,7 @@ namespace RCPA.Format
       items.Add(new FileIndexItem(121111111111111, 38948392309484, "TEST4"));
 
       var format = new FileIndexFormat();
-      var tmpFilename = "../../../data/fif.txt";
+      var tmpFilename = TestContext.CurrentContext.TestDirectory + "/../../../data//fif.txt";
       format.WriteToFile(tmpFilename, items);
 
       var newitems = format.ReadFromFile(tmpFilename);

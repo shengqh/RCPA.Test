@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Quantification.IsobaricLabelling
     [Test]
     public void TestLoadFromFile()
     {
-      var types = IsobaricTypeXmlFileReader.ReadFromFile(@"../../../data/isobaric.xml");
+      var types = IsobaricTypeXmlFileReader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/isobaric.xml");
       Assert.AreEqual(5, types.Count);
 
       var tmt10 = types.First(m => m.Name.Equals("TMT10"));

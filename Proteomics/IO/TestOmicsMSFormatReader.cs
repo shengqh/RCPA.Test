@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.IO
     public void TestRead()
     {
       var reader = new OmicsMSFormatReader<Peak>();
-      List<PeakList<Peak>> pls = reader.ReadFromFile(@"../../../data/AGP_100ng_062306_1.RAW.fullms");
+      List<PeakList<Peak>> pls = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/AGP_100ng_062306_1.RAW.fullms");
       Assert.AreEqual(1511, pls.Count);
 
       Assert.AreEqual(1, pls[0].ScanTimes[0].Scan);

@@ -28,7 +28,7 @@ namespace RCPA.Gui
     }
 
     [Test]
-    [ExpectedException("System.InvalidOperationException")]
+    [ExpectedException(typeof(System.InvalidOperationException))]
     public void TestValidateComponent()
     {
       txtValue.Text = "AAA";

@@ -32,13 +32,13 @@ namespace RCPA.Proteomics.Raw
 
     private MzXMLImpl2 reader = new MzXMLImpl2();
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void LoadFile()
     {
-      reader.Open("../../../data/YAGmem1.mzXML");
+      reader.Open(TestContext.CurrentContext.TestDirectory + "/../../../data//YAGmem1.mzXML");
     }
 
-    [TestFixtureTearDown]
+    [OneTimeTearDown]
     public void CloseFile()
     {
       reader.Close();

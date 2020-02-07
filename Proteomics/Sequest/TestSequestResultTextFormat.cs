@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestReadFromFile()
     {
-      IIdentifiedResult ir = new SequestResultTextFormat().ReadFromFile(@"../../../data/Standard_Protein_FIT_060222.noredundant");
+      IIdentifiedResult ir = new SequestResultTextFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/Standard_Protein_FIT_060222.noredundant");
 
       Assert.AreEqual(19, ir.Count);
 

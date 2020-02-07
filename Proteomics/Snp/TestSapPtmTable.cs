@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Snp
   {
     public void TestConstruction()
     {
-      var table = new SapPtmTable(@"../../../data/SAP_PTM.txt");
+      var table = new SapPtmTable(@TestContext.CurrentContext.TestDirectory + "/../../../data//SAP_PTM.txt");
       Assert.AreEqual(13, table.SapPtmMap.Count);
       Assert.AreEqual("Formyl", table.GetModification('T', 'E'));
       Assert.AreEqual("Formyl", table.GetModification('S', 'D'));

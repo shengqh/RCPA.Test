@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Quantification.Srm
   [TestFixture]
   public class TestSrmTransactionAtaqsReader
   {
-    string data = @"../../../data/ataqs.csv";
+    string data = @TestContext.CurrentContext.TestDirectory + "/../../../data//ataqs.csv";
 
     [Test]
     public void Test()

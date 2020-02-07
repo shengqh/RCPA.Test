@@ -171,7 +171,7 @@ namespace RCPA.Proteomics.Mascot
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestParseTitleException()
     {
       MascotUtils.ParseTitle("dfajdskfjalsdjfa", 1);

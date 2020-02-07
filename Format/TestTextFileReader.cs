@@ -20,7 +20,7 @@ namespace RCPA.Format
     public void TestRead()
     {
       var reader = new TextFileReader<TextItem>(TestTextFileDefinition.DefinitionFile);
-      var items = reader.ReadFromFile(@"../../../data/TextFile.txt");
+      var items = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/TextFile.txt");
       Assert.AreEqual(2, items.Count);
       Assert.AreEqual(2.1, items[0].PropName1);
       Assert.AreEqual(1, items[0].PropName2);

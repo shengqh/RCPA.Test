@@ -11,6 +11,7 @@ namespace RCPA.Proteomics.Deuterium
   public class TestDeuteriumRatioBuilderOptions
   {
     [Test]
+    [ExpectedException(typeof(ArgumentException))]
     public void TestPrepareOptions()
     {
 

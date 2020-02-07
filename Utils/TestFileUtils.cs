@@ -10,7 +10,7 @@ namespace RCPA.Utils
   public class TestFileUtils
   {
     [Test]
-    [ExpectedException("System.ArgumentNullException")]
+    [ExpectedException(typeof(System.ArgumentNullException))]
     public void TestChangeExtensionException()
     {
       FileUtils.ChangeExtension("", null);

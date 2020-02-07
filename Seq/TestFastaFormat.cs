@@ -13,7 +13,7 @@ namespace RCPA.Seq
     public void TestReadSequence()
     {
       FastaFormat ff = new FastaFormat();
-      StreamReader sr = new StreamReader("../../../data/test.fasta");
+      StreamReader sr = new StreamReader(TestContext.CurrentContext.TestDirectory + "/../../../data//test.fasta");
       Sequence test1 = ff.ReadSequence(sr);
       Assert.AreEqual("test1", test1.Name);
       Assert.AreEqual("AAAAA", test1.SeqString);
@@ -28,7 +28,7 @@ namespace RCPA.Seq
     public void TestReadFromFasta()
     {
       FastaFormat ff = new FastaFormat();
-      List<Sequence> seqs = SequenceUtils.Read(ff, @"../../../data/Standard_Protein_FIT_060222.noredundant.fasta");
+      List<Sequence> seqs = SequenceUtils.Read(ff, @TestContext.CurrentContext.TestDirectory + "/../../../data//Standard_Protein_FIT_060222.noredundant.fasta");
       Assert.AreEqual(43, seqs.Count);
     }
   }

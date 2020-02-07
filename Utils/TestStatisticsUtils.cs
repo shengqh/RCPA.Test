@@ -10,7 +10,7 @@ namespace RCPA.Utils
   public class TestStatisticsUtils
   {
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestGetCombinationProbabilityException()
     {
       StatisticsUtils.GetCombinationProbability(4, 1, 0.5, 0.5);
@@ -71,7 +71,7 @@ namespace RCPA.Utils
       Assert.AreEqual(0.0353, StatisticsUtils.KullbackLeiblerDistance(a, b, 3), 0.0001);
     }
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestCorrelException1()
     {
       double[] b = { 1.04};
@@ -79,7 +79,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestCorrelException2()
     {
       double[] b = { 1.04 };
@@ -87,7 +87,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestCorrelException3()
     {
       double[] a = { 1.19, 1.34 };

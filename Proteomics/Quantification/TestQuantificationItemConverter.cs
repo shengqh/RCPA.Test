@@ -10,7 +10,7 @@ namespace RCPA.Proteomics.Quantification
   [TestFixture]
   public class TestQuantificationItemConverter
   {
-    string datafile = @"../../../data/QuantificationItem.txt";
+    string datafile = @TestContext.CurrentContext.TestDirectory + "/../../../data//QuantificationItem.txt";
 
     [Test]
     public void TestRead()
@@ -29,11 +29,11 @@ namespace RCPA.Proteomics.Quantification
       var oldFormat = new MascotResultTextFormat();
       var ir = oldFormat.ReadFromFile(datafile);
 
-      oldFormat.WriteToFile(@"../../../data/QuantificationItem.txt", ir);
+      oldFormat.WriteToFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//QuantificationItem.txt", ir);
 
       var format = new MascotResultTextFormat("\tReference\tPepCount\tUniquePepCount\tCoverPercent\tMW\tPI", oldFormat.PeptideFormat.GetHeader());
       format.InitializeByResult(ir);
-      //format.WriteToFile(@"../../../data/QuantificationItem2.txt", ir);
+      //format.WriteToFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//QuantificationItem2.txt", ir);
 
 
       Assert.AreEqual(oldFormat.ProteinFormat.GetHeader(), format.ProteinFormat.GetHeader());

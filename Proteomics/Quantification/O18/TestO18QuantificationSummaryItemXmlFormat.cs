@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Quantification.O18
     public void TestLoadFromFile()
     {
       O18QuantificationSummaryItem item =
-        new O18QuantificationSummaryItemXmlFormat().ReadFromFile(@"../../../data/O18QuantificationInformation.xml");
+        new O18QuantificationSummaryItemXmlFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/O18QuantificationInformation.xml");
       Assert.AreEqual(@"D:\sqh\Science\Project/4NLFOR.raw", item.RawFilename);
       Assert.AreEqual("AFATDITDAEEDK", item.PeptideSequence);
       Assert.AreEqual("C60H92N14O26", item.PeptideAtomComposition);
@@ -143,10 +143,10 @@ namespace RCPA.Proteomics.Quantification.O18
       item.SpeciesAbundance.RegressionItems.Add(new SpeciesRegressionItem(715.3243, 7087781.0, 6823450.3));
       item.SpeciesAbundance.RegressionItems.Add(new SpeciesRegressionItem(715.8316, 1799203.9, 2164120.0));
 
-      new O18QuantificationSummaryItemXmlFormat().WriteToFile(@"../../../data/O18QuantificationInformation.xml.tmp", item);
-      AssertUtils.AssertFileEqual(@"../../../data/O18QuantificationInformation.xml.tmp",
-                                  @"../../../data/O18QuantificationInformation.xml");
-      new FileInfo(@"../../../data/O18QuantificationInformation.xml.tmp").Delete();
+      new O18QuantificationSummaryItemXmlFormat().WriteToFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//O18QuantificationInformation.xml.tmp", item);
+      AssertUtils.AssertFileEqual(@TestContext.CurrentContext.TestDirectory + "/../../../data//O18QuantificationInformation.xml.tmp",
+                                  @TestContext.CurrentContext.TestDirectory + "/../../../data//O18QuantificationInformation.xml");
+      new FileInfo(@TestContext.CurrentContext.TestDirectory + "/../../../data//O18QuantificationInformation.xml.tmp").Delete();
     }
   }
 }

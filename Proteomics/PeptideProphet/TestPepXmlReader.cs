@@ -9,7 +9,7 @@ namespace RCPA.Proteomics.PeptideProphet
     [Test]
     public void TestRead()
     {
-      SequestPepXmlInfo info = new SequestPepXmlReader().Read(@"../../../data/pepxml.xml");
+      SequestPepXmlInfo info = new SequestPepXmlReader().Read(@TestContext.CurrentContext.TestDirectory + "/../../../data//pepxml.xml");
       Assert.AreEqual(@"D:\database\FDR\Standard19_ipi.ARATH.v3.17.nr.0.7_Original_Reversed.fasta", info.SearchDatabase);
 
       List<SequestPeptideProphetItem> items = info.PeptideProphetItems;

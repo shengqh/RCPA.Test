@@ -11,17 +11,17 @@ namespace RCPA.Parser
   [TestFixture]
   public class TestParserFormatList
   {
-    string optionFile = @"../../../data/MiscOptions.xml";
+    string optionFile = @TestContext.CurrentContext.TestDirectory + "/../../../data//MiscOptions.xml";
 
     [Test]
-    [ExpectedException("System.IO.FileNotFoundException")]
+    [ExpectedException(typeof(System.IO.FileNotFoundException))]
     public void TestReadFromFile_FileNotFoundException()
     {
       new ParserFormatList().ReadFromFile(null, null);
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestReadFromFile_ArgumentException()
     {
       new ParserFormatList().ReadFromFile(optionFile, null);

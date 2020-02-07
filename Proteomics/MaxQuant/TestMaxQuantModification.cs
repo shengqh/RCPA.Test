@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.MaxQuant
     [Test]
     public void TestRead()
     {
-      var mods = MaxQuantModificationList.ReadFromFile("../../../data/maxquant_modifications.xml");
+      var mods = MaxQuantModificationList.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/maxquant_modifications.xml");
       Assert.AreEqual(550, mods.Count);
       Assert.AreEqual("Acetyl (K)", mods[0].FullName);
       Assert.AreEqual("(ac)", mods[0].ShortName);

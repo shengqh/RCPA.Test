@@ -12,11 +12,11 @@ namespace RCPA.Utils
     private XmlDocument doc;
     private XmlHelper helper;
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void SetUp()
     {
       doc = new XmlDocument();
-      doc.Load(@"../../../data/pepxml.xml");
+      doc.Load(@TestContext.CurrentContext.TestDirectory + "/../../../data//pepxml.xml");
 
       helper = new XmlHelper(doc);
     }
@@ -89,7 +89,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestGetChildValue1Exception()
     {
       helper.GetChildValue(doc.DocumentElement, "FakeChild");
@@ -110,7 +110,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestGetValidChildException()
     {
       helper.GetValidChild(doc.DocumentElement, "FakeChild");

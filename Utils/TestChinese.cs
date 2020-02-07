@@ -9,7 +9,7 @@ namespace RCPA.Utils
   public class TestChinese
   {
     [Test]
-    [ExpectedException("System.ArgumentNullException")]
+    [ExpectedException(typeof(System.ArgumentNullException))]
     public void TestGetSpellsException()
     {
       Chinese.GetSpells(null);

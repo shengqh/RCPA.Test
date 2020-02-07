@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Detectability
     //[Test]
     //public void TestProcess()
     //{
-    //  IEnumerable<string> resultFiles = new DetectabilityPredictor("../../../ProteomicsLib/extends/PeptideDetectabilityPredictor.exe").Process("../../../data/detectability/fasta/IPI00206171.fasta");
+    //  IEnumerable<string> resultFiles = new DetectabilityPredictor("../../../ProteomicsLib/extends/PeptideDetectabilityPredictor.exe").Process(TestContext.CurrentContext.TestDirectory + "/../../../data//detectability/fasta/IPI00206171.fasta");
 
     //  try
     //  {

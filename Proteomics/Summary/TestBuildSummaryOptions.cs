@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.Summary
     public void Test()
     {
       var option = new BuildSummaryOptions();
-      option.LoadFromFile("../../../data/BuildSummary.param");
+      option.LoadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data//BuildSummary.param");
     }
   }
 }

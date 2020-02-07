@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Database
     public void TestRead()
     {
       var reader = new UniprotXmlFormatRandomReader();
-      reader.Open(@"../../../data/P04114.xml");
+      reader.Open(@TestContext.CurrentContext.TestDirectory + "/../../../data//P04114.xml");
       var entry = reader.Read("APOB_HUMAN");
       Assert.IsNotNull(entry);
 

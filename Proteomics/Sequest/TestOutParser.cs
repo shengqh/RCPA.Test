@@ -9,7 +9,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParseFrom_V27_Rev11()
     {
-      IIdentifiedSpectrum spectrum = ParseFromFile(@"../../../data/sequest_v27_rev11.out");
+      IIdentifiedSpectrum spectrum = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//sequest_v27_rev11.out");
       Assert.IsNotNull(spectrum);
       Assert.AreEqual("HLPP2004112411CLC-412414.743.745.2.out", spectrum.Query.FileScan.LongFileName);
       Assert.AreEqual(1701.0000, spectrum.ExperimentalMH, 0.0001);
@@ -30,7 +30,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParseFrom_V27_Rev12()
     {
-      IIdentifiedSpectrum spectrum = ParseFromFile(@"../../../data/sequest_v27_rev12.out");
+      IIdentifiedSpectrum spectrum = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//sequest_v27_rev12.out");
       Assert.IsNotNull(spectrum);
       Assert.AreEqual("Standard_Protein_FIT_060222.5079.5079.1.out", spectrum.Query.FileScan.LongFileName);
       Assert.AreEqual(627.38200, spectrum.ExperimentalMH, 0.0001);
@@ -53,7 +53,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParseFrom_V28_Rev12()
     {
-      IIdentifiedSpectrum spectrum = ParseFromFile(@"../../../data/sequest_v28_rev12.out");
+      IIdentifiedSpectrum spectrum = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//sequest_v28_rev12.out");
       Assert.IsNotNull(spectrum);
       Assert.AreEqual("20110509z.3768.3768.1.out", spectrum.Query.FileScan.LongFileName);
       Assert.AreEqual(905.86700, spectrum.ExperimentalMH, 0.00001);
@@ -75,7 +75,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParseFrom_V28_rev13()
     {
-      IIdentifiedSpectrum spectrum = ParseFromFile(@"../../../data/sequest_v28_rev13.out");
+      IIdentifiedSpectrum spectrum = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//sequest_v28_rev13.out");
       Assert.IsNotNull(spectrum);
       Assert.AreEqual("TUCJ_022009_1D_RKO_1.3052.3052.2.out", spectrum.Query.FileScan.LongFileName);
       Assert.AreEqual(1345.07800, spectrum.ExperimentalMH, 0.00001);
@@ -109,11 +109,11 @@ namespace RCPA.Proteomics.Sequest
     {
       var parser = new ModificationOutParser(0.1);
 
-      IIdentifiedSpectrum peptide = parser.ParseFromFile(@"../../../data/JWH_SAX_35_050906.19303.19303.2.out");
+      IIdentifiedSpectrum peptide = parser.ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//JWH_SAX_35_050906.19303.19303.2.out");
       Assert.IsNotNull(peptide);
       Assert.AreEqual(0, peptide.DiffModificationSiteCandidates.Count);
 
-      peptide = parser.ParseFromFile(@"../../../data/P_kit_elution.5407.5407.3.out");
+      peptide = parser.ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//P_kit_elution.5407.5407.3.out");
       Assert.IsNotNull(peptide);
       Assert.AreEqual(2, peptide.DiffModificationSiteCandidates.Count);
     }
@@ -121,38 +121,38 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParse2()
     {
-      Assert.IsNotNull(ParseFromFile(@"../../../data/Standard_Protein_FIT_060222.5079.5079.1.out"));
+      Assert.IsNotNull(ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//Standard_Protein_FIT_060222.5079.5079.1.out"));
     }
 
     [Test]
     public void TestParseEmpty()
     {
-      Assert.AreEqual(null, ParseFromFile(@"../../../data/RP62A_15N_1_03.10801.10801.3.out"));
-      Assert.AreEqual(null, ParseFromFile(@"../../../data/Standard_Protein_FIT_060222.8034.8034.1.out"));
+      Assert.AreEqual(null, ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//RP62A_15N_1_03.10801.10801.3.out"));
+      Assert.AreEqual(null, ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//Standard_Protein_FIT_060222.8034.8034.1.out"));
     }
 
     [Test]
-    [ExpectedException("System.IO.FileNotFoundException")]
+    [ExpectedException(typeof(System.IO.FileNotFoundException))]
     public void TestParseFromFileException()
     {
-      ParseFromFile(@"../../../data/unexistsfile.1.1.2.out");
+      ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//unexistsfile.1.1.2.out");
     }
 
     [Test]
     public void TestParseFromMultipleCandidate()
     {
-      IIdentifiedSpectrum peptide = ParseFromFile(@"../../../data/ZhouH_ML_050720_Nano_pH_02.29478.29478.2.out");
+      IIdentifiedSpectrum peptide = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//ZhouH_ML_050720_Nano_pH_02.29478.29478.2.out");
       Assert.IsNotNull(peptide);
       Assert.AreEqual("ZhouH_ML_050720_Nano_pH_02,29478", peptide.Query.FileScan.ShortFileName);
       Assert.AreEqual(2, peptide.Peptides.Count);
     }
 
     [Test]
-    [ExpectedException("RCPA.Proteomics.Sequest.DuplicatedReferenceAbsentException")]
+    [ExpectedException(typeof(RCPA.Proteomics.Sequest.DuplicatedReferenceAbsentException))]
     public void TestParseFromVersion_27_12_WithDuplicatedReferencesCheck()
     {
       var parser = new OutParser(true);
-      parser.ParseFromFile(@"../../../data/mouseliver.4587.4587.2.out");
+      parser.ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//mouseliver.4587.4587.2.out");
     }
 
     [Test]
@@ -160,7 +160,7 @@ namespace RCPA.Proteomics.Sequest
     {
       var parser = new OutParser(false);
 
-      IIdentifiedSpectrum peptide = parser.ParseFromFile(@"../../../data/mouseliver.4587.4587.2.out");
+      IIdentifiedSpectrum peptide = parser.ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//mouseliver.4587.4587.2.out");
       Assert.IsNotNull(peptide);
       Assert.AreEqual("20030714_MouseLiver_2,4587", peptide.Query.FileScan.ShortFileName);
       Assert.AreEqual("-.S*AILS*NTPS*LLALR.-", peptide.Peptides[0].Sequence);
@@ -201,14 +201,14 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestParseWithDuplicatedReferencesCheckIgnoreSEQUESTMistake()
     {
-      IIdentifiedSpectrum peptide = ParseFromFile(@"../../../data/HLPP20050041811CLC-17.2074.2074.2.out");
+      IIdentifiedSpectrum peptide = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//HLPP20050041811CLC-17.2074.2074.2.out");
       Assert.IsNotNull(peptide);
     }
 
     [Test]
     public void TestReadFromFileMissingTerminalAminoacid()
     {
-      IIdentifiedSpectrum peptide = ParseFromFile(@"../../../data/12228_15N_1_01.6027.6027.2.out");
+      IIdentifiedSpectrum peptide = ParseFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//12228_15N_1_01.6027.6027.2.out");
       Assert.IsNotNull(peptide);
       Assert.AreEqual("12228_15N_1_01,6027", peptide.Query.FileScan.ShortFileName);
       Assert.AreEqual("K.EINEVDLQLK.X", peptide.Peptides[0].Sequence);

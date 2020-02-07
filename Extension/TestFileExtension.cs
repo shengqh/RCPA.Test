@@ -13,7 +13,7 @@ namespace RCPA.Extension
     [Test]
     public void TestReadLine()
     {
-      var datafile = "../../../data/TestReadLine.txt";
+      var datafile = TestContext.CurrentContext.TestDirectory + "/../../../data//TestReadLine.txt";
 
       using (FileStream fs = new FileStream(datafile, FileMode.Open))
       {

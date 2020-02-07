@@ -13,7 +13,7 @@ namespace RCPA.Emass
     [Test]
     public void TestInitializeData()
     {
-      var calc = new EmassCalculator(@"../../../data/ISOTOPE.DAT");
+      var calc = new EmassCalculator(@TestContext.CurrentContext.TestDirectory + "/../../../data//ISOTOPE.DAT");
 
       var fm = "C6H10";
 

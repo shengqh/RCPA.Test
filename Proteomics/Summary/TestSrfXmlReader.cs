@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Summary
     public void TestRead()
     {
       SrfXmlReader reader = new SrfXmlReader();
-      List<IIdentifiedProtein> proteins = reader.ReadFromFile(@"../../../data/searchresult.xml");
+      List<IIdentifiedProtein> proteins = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/searchresult.xml");
       Assert.AreEqual(2, proteins.Count);
       Assert.AreEqual("rat_mine", proteins[0].Reference);
       Assert.AreEqual(1.00E-30, proteins[0].Score);

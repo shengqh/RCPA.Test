@@ -12,7 +12,7 @@ namespace RCPA.Proteomics
     [Test]
     public void TestLoadFromFile()
     {
-      ProteaseManager.LoadFromFile(@"../../../data/proteases.xml");
+      ProteaseManager.LoadFromFile(@TestContext.CurrentContext.TestDirectory + "/../../../data//proteases.xml");
       Assert.IsTrue(ProteaseManager.Registered("Trypsin"));
       Assert.IsTrue(ProteaseManager.Registered("Chymotrypsin"));
       Assert.IsTrue(ProteaseManager.Registered("LysC/P+AspC"));

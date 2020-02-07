@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void Run()
     {
-      var file = @"../../../data/FIT_HPPP_Bound_060622_04.zip";
+      var file = @TestContext.CurrentContext.TestDirectory + "/../../../data//FIT_HPPP_Bound_060622_04.zip";
       SequestOutZipParser parser = new SequestOutZipParser();
       var spectra = parser.ReadFromFile(file);
       Assert.AreEqual(2, spectra.Count);

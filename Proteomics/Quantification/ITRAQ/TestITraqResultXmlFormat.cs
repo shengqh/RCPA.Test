@@ -83,10 +83,10 @@ namespace RCPA.Proteomics.Quantification.ITraq
     {
       Setup();
 
-      var tmpFilename = @"../../../data/temp.xml";
+      var tmpFilename = @TestContext.CurrentContext.TestDirectory + "/../../../data//temp.xml";
       format.WriteToFile(tmpFilename, tr);
 
-      FileAssert.AreEqual(@"../../../data/ITraqResult.xml", tmpFilename);
+      FileAssert.AreEqual(@TestContext.CurrentContext.TestDirectory + "/../../../data//ITraqResult.xml", tmpFilename);
 
       var newtr = format.ReadFromFile(tmpFilename);
 
@@ -131,7 +131,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
       Setup();
 
       var format = new ITraqResultXmlFormatRandomReader();
-      format.Open(@"../../../data/ITraqResult.xml");
+      format.Open(@TestContext.CurrentContext.TestDirectory + "/../../../data//ITraqResult.xml");
       CheckExtension.CheckEquals(t2, format.Read("S2", 355));
       CheckExtension.CheckEquals(t1, format.Read("S1", 255));
 

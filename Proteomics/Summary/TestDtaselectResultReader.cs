@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestRead()
     {
-      DtaselectResult dr = new DtaselectResultReader().ReadFromFile("../../../data/dtaselect.txt");
+      DtaselectResult dr = new DtaselectResultReader().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/dtaselect.txt");
       Assert.AreEqual(9, dr.Proteins.Count);
       Assert.AreEqual(2, dr.Proteins[0].Peptides.Count);
       Assert.AreEqual(2, dr.Proteins[1].Peptides.Count);

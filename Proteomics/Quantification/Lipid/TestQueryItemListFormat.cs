@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Quantification.Lipid
     [Test]
     public void Test()
     {
-      List<QueryItem> items = new QueryItemListFormat().ReadFromFile(@"../../../data/LipidProductIon.txt");
+      List<QueryItem> items = new QueryItemListFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/LipidProductIon.txt");
       Assert.AreEqual(2, items.Count);
       Assert.AreEqual(185.1029, items[0].ProductIonMz, 0.0001);
       Assert.AreEqual(0.3, items[0].MinRelativeIntensity, 0.1);

@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Quantification.Reproducibility
     [Test]
     public void Test()
     {
-      string file = @"../../../data/massprofiler.xls";
+      string file = @TestContext.CurrentContext.TestDirectory + "/../../../data//massprofiler.xls";
       file = new FileInfo(file).FullName;
 
       PrecursorItemListExcelReader reader = new PrecursorItemListExcelReader();

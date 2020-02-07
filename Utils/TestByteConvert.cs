@@ -10,7 +10,7 @@ namespace RCPA.Utils
   public class TestByteConvert
   {
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestConstruction()
     {
       new ByteConvert(true, 14);
@@ -23,7 +23,7 @@ namespace RCPA.Utils
 
     protected abstract void InitializeConvert();
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void Setup()
     {
       InitializeConvert();
@@ -36,14 +36,14 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentNullException")]
+    [ExpectedException(typeof(System.ArgumentNullException))]
     public void TestValidateLengthException()
     {
       convert.ValidateLength(null);
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestValidateLengthException2()
     {
       convert.ValidateLength(new byte[3]);
@@ -56,7 +56,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestValidateLengthException2_2()
     {
       convert.ValidateLength(new byte[16], 3);
@@ -69,7 +69,7 @@ namespace RCPA.Utils
 
     protected abstract void InitializeConvert();
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void Setup()
     {
       InitializeConvert();
@@ -82,14 +82,14 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentNullException")]
+    [ExpectedException(typeof(System.ArgumentNullException))]
     public void TestValidateLengthException()
     {
       convert.ValidateLength(null);
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestValidateLengthException2()
     {
       convert.ValidateLength(new byte[7]);
@@ -102,7 +102,7 @@ namespace RCPA.Utils
     }
 
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestValidateLengthException2_2()
     {
       convert.ValidateLength(new byte[16], 3);

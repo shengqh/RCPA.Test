@@ -11,12 +11,12 @@ namespace RCPA.Proteomics.Quantification
     {
       CensusResult cr;
 
-      cr = new CensusResultFormat(true).ReadFromFile(@"../../../data/census-g1-out.txt");
+      cr = new CensusResultFormat(true).ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/census-g1-out.txt");
       Assert.AreEqual(3, cr.Proteins.Count);
 
       Assert.AreEqual(271, cr.Proteins[0].Peptides.Count);
 
-      cr = new CensusResultFormat(false).ReadFromFile(@"../../../data/census-g1-out.txt");
+      cr = new CensusResultFormat(false).ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/census-g1-out.txt");
       Assert.AreEqual(2, cr.Proteins.Count);
     }
   }

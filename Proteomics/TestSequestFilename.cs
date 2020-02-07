@@ -9,7 +9,7 @@ namespace RCPA.Proteomics
   public class TestSequestFilename
   {
     [Test]
-    [ExpectedException("System.ArgumentException")]
+    [ExpectedException(typeof(System.ArgumentException))]
     public void TestParseThrowException()
     {
       SequestFilename.Parse("ddd.dd.d1.d.dta");

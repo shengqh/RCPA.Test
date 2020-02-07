@@ -17,7 +17,7 @@ namespace RCPA.Proteomics.MSAmanda
       var peptides = new MSAmandaParser()
       {
         TitleParser = new DefaultTitleParser()
-      }.ReadFromFile(@"../../../data/msamanda.tsv");
+      }.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/msamanda.tsv");
 
       Assert.AreEqual(4, peptides.Count);
       Assert.AreEqual(2, peptides[0].Peptides.Count);

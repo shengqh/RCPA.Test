@@ -13,7 +13,7 @@ namespace RCPA
     public void TestReadFromFileConstruction1()
     {
       ItemInfoListOldReader reader = new ItemInfoListOldReader();
-      ItemInfoList lst = reader.ReadFromFile(@"../../../data/ListFileFormatOld.lst");
+      ItemInfoList lst = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/ListFileFormatOld.lst");
       Assert.AreEqual(2, lst.Count);
 
       Assert.AreEqual(@"Z:\Orbitrap\060222\Standard_Protein_FIT_060222", lst[0].SubItems[0]);
@@ -28,7 +28,7 @@ namespace RCPA
     public void TestReadFromFileConstruction2()
     {
       ItemInfoListOldReader reader = new ItemInfoListOldReader("DatFiles");
-      ItemInfoList lst = reader.ReadFromFile(@"../../../data/ListFileFormatOld.lst");
+      ItemInfoList lst = reader.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/ListFileFormatOld.lst");
       Assert.AreEqual(1, lst.Count);
 
       Assert.AreEqual(@"D:\inetpub\mascot\data\20081223\F001237.dat", lst[0].SubItems[0]);

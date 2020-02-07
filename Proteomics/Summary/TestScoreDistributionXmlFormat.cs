@@ -12,7 +12,7 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestRead()
     {
-      ScoreDistribution sd = new ScoreDistributionXmlFormat().ReadFromFile(@"../../../data/test.scoreDistribution");
+      ScoreDistribution sd = new ScoreDistributionXmlFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/test.scoreDistribution");
       Assert.AreEqual(2, sd.Count);
       Assert.AreEqual(2, sd.Keys.First().PrecursorCharge);
       Assert.AreEqual(0, sd.Keys.First().MissCleavageSiteCount);

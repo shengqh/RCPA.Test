@@ -11,7 +11,7 @@ namespace RCPA.Proteomics.PeptideProphet
     [Test]
     public void TestRead()
     {
-      var result = new ProteinProphetXmlReader().ReadFromFile(@"../../../data/proteinprophet.xml");
+      var result = new ProteinProphetXmlReader().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/proteinprophet.xml");
 
       var filters = result.GetProteinSummaryDataFilterList();
       Assert.AreEqual(16, filters.Count);

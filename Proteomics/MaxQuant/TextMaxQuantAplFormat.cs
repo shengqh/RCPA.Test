@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.MaxQuant
     {
       var parser = TitleParserUtils.GetTitleParsers().Find(m => m.FormatName == "MaxQuant");
       var format = new MaxQuantAplFormat(parser);
-      var pkls = format.ReadFromFile(@"../../../data/maxquant.peak.apl");
+      var pkls = format.ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/maxquant.peak.apl");
 
       Assert.AreEqual(562, pkls.Count);
       Assert.AreEqual("20110915_iTRAQ_4plex_GK_6ug_Exp_1", pkls[0].Experimental);

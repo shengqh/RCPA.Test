@@ -13,7 +13,7 @@ namespace RCPA.Proteomics.Image
   {
     private BYPhosphoNeutralLossMatcher matcher;
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void SetUp()
     {
       Dictionary<char, double> dic = new Dictionary<char, double>();

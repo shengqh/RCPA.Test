@@ -14,7 +14,7 @@ namespace RCPA.Proteomics.Summary
   {
     private IIdentifiedSpectrum s1, s2, s3, s4, s5, s6, s7;
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void SetUp()
     {
       s1 = new IdentifiedSpectrum();
@@ -91,11 +91,11 @@ namespace RCPA.Proteomics.Summary
       co.ModifiedAminoacids = "STY";
       co.ClassifyByNumProteaseTermini = true;
 
-      var s1 = new MascotPeptideTextFormat().ReadFromFile(@"../../../data/deisotopic.peptides");
+      var s1 = new MascotPeptideTextFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/deisotopic.peptides");
       IdentifiedSpectrumUtils.RemoveSpectrumWithAmbigiousAssignment(s1);
 
       s1.ForEach(m => m.Tag = "deisotopic");
-      var s2 = new MascotPeptideTextFormat().ReadFromFile(@"../../../data/deisotopic-top10.peptides");
+      var s2 = new MascotPeptideTextFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/deisotopic-top10.peptides");
       IdentifiedSpectrumUtils.RemoveSpectrumWithAmbigiousAssignment(s2);
       s2.ForEach(m => m.Tag = "deisotopic-top");
 
@@ -163,17 +163,17 @@ namespace RCPA.Proteomics.Summary
     [Test]
     public void TestFillProteinInformation()
     {
-      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../../data/Test.output.xml.FDR0.01.peptides");
+      var peptides = new MascotPeptideTextFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/Test.output.xml.FDR0.01.peptides");
       Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count == 0));
 
-      IdentifiedSpectrumUtils.FillProteinInformation(peptides, "../../../data/Test.output.xml.FDR0.01.peptides.proteins");
+      IdentifiedSpectrumUtils.FillProteinInformation(peptides, TestContext.CurrentContext.TestDirectory + "/../../../data//Test.output.xml.FDR0.01.peptides.proteins");
       Assert.IsTrue(peptides.All(m => m.Peptide.Proteins.Count > 0));
     }
 
     [Test]
     public void TestCalculateQValue()
     {
-      var peptides = new MascotPeptideTextFormat().ReadFromFile("../../../data/QTOF_Ecoli.LowRes.t.xml.peptides");
+      var peptides = new MascotPeptideTextFormat().ReadFromFile(TestContext.CurrentContext.TestDirectory + "/../../../data/QTOF_Ecoli.LowRes.t.xml.peptides");
       peptides.RemoveAll(m => m.ExpectValue > 0.05 || m.Peptide.PureSequence.Length < 6);
       peptides.ForEach(m => m.FromDecoy = m.Proteins.Any(l => l.Contains("REVERSE_")));
 

@@ -15,7 +15,7 @@ namespace RCPA.Proteomics.PFind
     private List<Sequence> seqs;
     private IdentifiedPeptide identical, singlemutation, misscleavageIdentical, misscleavageSingleMutation, nptIdentical, nptSingleMutation;
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void SetUp()
     {
 

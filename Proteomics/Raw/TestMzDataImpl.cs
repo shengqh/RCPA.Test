@@ -13,13 +13,13 @@ namespace RCPA.Proteomics.Raw
   {
     private IRawFile reader = new MzDataImpl();
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void LoadFile()
     {
-      reader.Open("../../../data/QTof_itraq.mzData");
+      reader.Open(TestContext.CurrentContext.TestDirectory + "/../../../data//QTof_itraq.mzData");
     }
 
-    [TestFixtureTearDown]
+    [OneTimeTearDown]
     public void CloseFile()
     {
       reader.Close();

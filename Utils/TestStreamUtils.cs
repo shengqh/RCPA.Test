@@ -13,7 +13,7 @@ namespace RCPA.Utils
     [Test]
     public void TestGetCharpos()
     {
-      using (StreamReader sr = new StreamReader(@"../../../data/20030428_4_29L_15.outs"))
+      using (StreamReader sr = new StreamReader(@TestContext.CurrentContext.TestDirectory + "/../../../data//20030428_4_29L_15.outs"))
       {
         Assert.AreEqual(0, StreamUtils.GetCharpos(sr));
 

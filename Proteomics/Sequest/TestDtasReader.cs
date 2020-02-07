@@ -8,7 +8,7 @@ namespace RCPA.Proteomics.Sequest
     [Test]
     public void TestAll()
     {
-      using (var reader = new DtasReader(@"../../../data/20030428_4_29L_15.dtas"))
+      using (var reader = new DtasReader(@TestContext.CurrentContext.TestDirectory + "/../../../data//20030428_4_29L_15.dtas"))
       {
         Assert.AreEqual(731, reader.FileCount);
         for (int i = 0; i < 731; i++)
@@ -21,10 +21,10 @@ namespace RCPA.Proteomics.Sequest
     }
 
     [Test]
-    [ExpectedException("System.Exception")]
+    [ExpectedException(typeof(System.Exception))]
     public void TestException()
     {
-      using (var reader = new DtasReader(@"../../../data/20030428_4_29L_15.dtas"))
+      using (var reader = new DtasReader(@TestContext.CurrentContext.TestDirectory + "/../../../data//20030428_4_29L_15.dtas"))
       {
         for (int i = 0; i < 731; i++)
         {
