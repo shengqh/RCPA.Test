@@ -1,7 +1,6 @@
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using NUnit.Framework;
-using RCPA.Utils;
 
 namespace RCPA.Proteomics.Isotopic
 {

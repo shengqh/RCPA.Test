@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Proteomics.Summary;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Summary
 {
@@ -30,7 +26,7 @@ namespace RCPA.Proteomics.Summary
 
       for (int i = 0; i < 84; i++)
       {
-        protein.Peptides.Add(new IdentifiedPeptide( new IdentifiedSpectrum()));
+        protein.Peptides.Add(new IdentifiedPeptide(new IdentifiedSpectrum()));
       }
       Assert.AreEqual(line, converter.GetProperty(protein));
     }
@@ -55,7 +51,7 @@ namespace RCPA.Proteomics.Summary
 
       for (int i = 0; i < 495; i++)
       {
-        protein.Peptides.Add(new IdentifiedPeptide( new IdentifiedSpectrum()));
+        protein.Peptides.Add(new IdentifiedPeptide(new IdentifiedSpectrum()));
       }
       Assert.AreEqual(line, converter.GetProperty(protein));
     }

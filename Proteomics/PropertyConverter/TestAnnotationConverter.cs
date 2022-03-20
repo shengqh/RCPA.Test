@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using RCPA.Proteomics.Summary;
 using RCPA.Converter;
+using RCPA.Proteomics.Summary;
 
 namespace RCPA.Proteomics.PropertyConverter
 {

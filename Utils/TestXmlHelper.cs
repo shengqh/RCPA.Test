@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace RCPA.Utils
@@ -123,7 +121,7 @@ namespace RCPA.Utils
 
       Assert.IsNull(doc.DocumentElement.SelectSingleNode("msms_run_summary"));
 
-      Assert.IsNotNull(doc.DocumentElement.SelectSingleNode(helper.PREFIX + ":msms_run_summary",helper.NamespaceManager));
+      Assert.IsNotNull(doc.DocumentElement.SelectSingleNode(helper.PREFIX + ":msms_run_summary", helper.NamespaceManager));
     }
 
   }

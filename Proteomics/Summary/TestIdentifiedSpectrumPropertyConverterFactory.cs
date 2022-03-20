@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 using RCPA.Proteomics.PropertyConverter;
-using RCPA.Proteomics.Summary;
 
 namespace RCPA.Proteomics.Summary
 {
@@ -14,11 +10,11 @@ namespace RCPA.Proteomics.Summary
     public void TestDtaselectConverter()
     {
       IPropertyConverter<IIdentifiedSpectrum> converter;
-      
+
       converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("Sequence");
       Assert.AreEqual(converter.GetType(), new IdentifiedSpectrumSequenceConverter<IIdentifiedSpectrum>().GetType());
 
-      converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("Sequence","Dtaselect");
+      converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("Sequence", "Dtaselect");
       Assert.AreEqual(converter.GetType(), new IdentifiedSpectrumSequenceConverterDtaselect<IIdentifiedSpectrum>().GetType());
 
       converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("\"File, Scan(s)\"");
@@ -27,7 +23,7 @@ namespace RCPA.Proteomics.Summary
       converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("FileName");
       Assert.AreEqual(converter.GetType(), new IdentifiedSpectrumFileScanConverterDtaselect<IIdentifiedSpectrum>().GetType());
 
-      converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("FileName","Dtaselect");
+      converter = IdentifiedSpectrumPropertyConverterFactory.GetInstance().FindConverter("FileName", "Dtaselect");
       Assert.AreEqual(converter.GetType(), new IdentifiedSpectrumFileScanConverterDtaselect<IIdentifiedSpectrum>().GetType());
     }
 

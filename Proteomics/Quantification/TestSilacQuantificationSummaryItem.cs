@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Proteomics.Quantification.SILAC;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Quantification
 {
@@ -26,6 +21,6 @@ namespace RCPA.Proteomics.Quantification
       item.ObservedEnvelopes.FindAll(m => m.Enabled).ForEach(m => Console.WriteLine(m.Scan));
 
     }
-     */ 
+     */
   }
 }

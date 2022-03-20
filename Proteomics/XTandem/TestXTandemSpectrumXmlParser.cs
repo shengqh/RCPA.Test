@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Summary;
-using RCPA.Proteomics.Mascot;
-using RCPA.Seq;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics.XTandem
 {

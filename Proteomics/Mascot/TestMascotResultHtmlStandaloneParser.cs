@@ -1,7 +1,7 @@
-using System.IO;
 using NUnit.Framework;
 using RCPA.Proteomics.Isotopic;
 using RCPA.Proteomics.Summary;
+using System.IO;
 
 namespace RCPA.Proteomics.Mascot
 {

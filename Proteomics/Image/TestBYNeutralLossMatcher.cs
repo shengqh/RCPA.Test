@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Moq;
 using NUnit.Framework;
-using Moq;
 using RCPA.Proteomics.Spectrum;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics.Image
 {
@@ -21,7 +18,7 @@ namespace RCPA.Proteomics.Image
 
       dic = new Dictionary<IonType, List<MatchedPeak>>();
       dic[IonType.B] = new List<MatchedPeak>();
-      dic[IonType.B].Add(new MatchedPeak(100, 0.0, 1) { PeakIndex = 1,PeakType = IonType.B });
+      dic[IonType.B].Add(new MatchedPeak(100, 0.0, 1) { PeakIndex = 1, PeakType = IonType.B });
       dic[IonType.B].Add(new MatchedPeak(200, 0.0, 1) { PeakIndex = 2, PeakType = IonType.B });
       dic[IonType.Y] = new List<MatchedPeak>();
       dic[IonType.Y].Add(new MatchedPeak(1000, 0.0, 1) { PeakIndex = 1, PeakType = IonType.Y });

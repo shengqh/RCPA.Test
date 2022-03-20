@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using NUnit.Framework;
 
 namespace RCPA.Gui
 {
@@ -19,7 +16,7 @@ namespace RCPA.Gui
     public void SetUp()
     {
       item = new XElement("ROOT", new XElement("KEY1", "2"));
-      
+
       box = new ComboBox();
       box.Items.Add("1");
       box.Items.Add("2");

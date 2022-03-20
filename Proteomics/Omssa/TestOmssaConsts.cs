@@ -1,10 +1,4 @@
 ﻿using NUnit.Framework;
-using RCPA.Seq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace RCPA.Proteomics.Omssa
 {

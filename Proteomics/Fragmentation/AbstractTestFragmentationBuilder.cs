@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Spectrum;
-using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics.Fragmentation
 {
@@ -21,7 +19,7 @@ namespace RCPA.Proteomics.Fragmentation
       Console.WriteLine("Assert.AreEqual({0}, pkl.Count);", pkl.Count);
       for (int i = 0; i < pkl.Count; i++)
       {
-        Console.WriteLine(MyConvert.Format("AssertPeak(pkl[{0}], IonType.{1}, {2}, {3:0.0000});", i, ionType.ToString(), i + 1, pkl[i].Mz));      
+        Console.WriteLine(MyConvert.Format("AssertPeak(pkl[{0}], IonType.{1}, {2}, {3:0.0000});", i, ionType.ToString(), i + 1, pkl[i].Mz));
       }
     }
   }

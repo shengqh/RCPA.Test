@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 using RCPA.Proteomics.Spectrum;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics
 {
@@ -22,7 +20,7 @@ namespace RCPA.Proteomics
       pl.Add(new Peak(474.773, 898568));
       pl.Add(new Peak(475.268, 93755));
       pl.Add(new Peak(475.276, 98450.6));
-      
+
       pl.Add(new Peak(505.303, 784262));
       pl.Add(new Peak(506.306, 169459));
 
@@ -40,12 +38,12 @@ namespace RCPA.Proteomics
       Assert.AreEqual(2, pl[3].Charge);
       Assert.AreEqual(0, pl[4].Charge);
       Assert.AreEqual(2, pl[5].Charge);
-      
+
       Assert.AreEqual(1, pl[6].Charge);
       Assert.AreEqual(1, pl[7].Charge);
 
       Assert.AreEqual(0, pl[8].Charge);
-      
+
       Assert.AreEqual(2, pl[9].Charge);
       Assert.AreEqual(0, pl[10].Charge);
       Assert.AreEqual(2, pl[11].Charge);

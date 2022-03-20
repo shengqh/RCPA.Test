@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-using NUnit.Framework;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace RCPA.Gui
 {
@@ -22,7 +19,7 @@ namespace RCPA.Gui
     [Test]
     public void TestLoadFromXml()
     {
-      TextBox box = new TextBox ();
+      TextBox box = new TextBox();
 
       OptionFileTextBoxAdaptor adaptor = new OptionFileTextBoxAdaptor(box, "KEY1", "111");
       adaptor.LoadFromXml(item);
@@ -52,7 +49,7 @@ namespace RCPA.Gui
     {
       TextBox box = new TextBox();
       box.Text = "AAA";
-      
+
       OptionFileTextBoxAdaptor adaptor2 = new OptionFileTextBoxAdaptor(box, "KEY2", "111");
       adaptor2.SaveToXml(item);
 

@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 using NUnit.Framework;
+using System.Linq;
 
 namespace RCPA.Utils
 {
@@ -58,9 +55,9 @@ namespace RCPA.Utils
     [Test]
     public void TestCosineAngle()
     {
-      double[] a = { 1, 2, 3, 4, 5, 6};
+      double[] a = { 1, 2, 3, 4, 5, 6 };
       double[] b = { 11, 22, 33, 44, 55, 66 };
-      Assert.AreEqual(1, StatisticsUtils.CosineAngle(a,b), 0.0001);
+      Assert.AreEqual(1, StatisticsUtils.CosineAngle(a, b), 0.0001);
     }
 
     [Test]
@@ -74,7 +71,7 @@ namespace RCPA.Utils
     [ExpectedException(typeof(System.ArgumentException))]
     public void TestCorrelException1()
     {
-      double[] b = { 1.04};
+      double[] b = { 1.04 };
       StatisticsUtils.PearsonCorrelation(null, b);
     }
 
@@ -83,7 +80,7 @@ namespace RCPA.Utils
     public void TestCorrelException2()
     {
       double[] b = { 1.04 };
-      StatisticsUtils.PearsonCorrelation(new double[]{}, b);
+      StatisticsUtils.PearsonCorrelation(new double[] { }, b);
     }
 
     [Test]
@@ -100,7 +97,7 @@ namespace RCPA.Utils
     {
       double[] a = { 1.19, 1.34, 1.38, 1.11, 1.01, 0.8, 1.22, 1.55, 1.35, 1.17, 0.98, 2.15, 1.02, 1.64, 0.81, 0.72, 1.5, 1.63, 1.32 };
       double[] b = { 1.04, 0.89, 1.26, 0.82, 0.62, 0.52, 0.73, 2.09, 1.48, 1.41, 0.56, 1.4, 1.3, 0.89, 0.89, 1.11, 1.46, 1.64, 0.85 };
-      Assert.AreEqual(0.5870, StatisticsUtils.SpearmanCorrelation(a.ToList(),b.ToList()), 0.0001);
+      Assert.AreEqual(0.5870, StatisticsUtils.SpearmanCorrelation(a.ToList(), b.ToList()), 0.0001);
     }
   }
 }

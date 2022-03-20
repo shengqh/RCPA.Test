@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Quantification.ITraq;
 
 namespace RCPA.Proteomics.Quantification
@@ -16,7 +12,7 @@ namespace RCPA.Proteomics.Quantification
       ITraqPhosphoRatioCalculator calc = new ITraqPhosphoRatioCalculator(116, 117, 114, 115);
       IsobaricItem item = new IsobaricItem()
       {
-        PlexType =  IsobaricType.PLEX4
+        PlexType = IsobaricType.PLEX4
       };
 
       item[114] = 1;

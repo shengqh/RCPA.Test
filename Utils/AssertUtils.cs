@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.IO;
 
 namespace RCPA.Utils
@@ -10,9 +7,9 @@ namespace RCPA.Utils
   {
     public static void AssertFileEqual(string file1, string file2)
     {
-      Assert.AreEqual(new FileInfo(file1).Length, new FileInfo(file2).Length,"File lengths are not equal");
+      Assert.AreEqual(new FileInfo(file1).Length, new FileInfo(file2).Length, "File lengths are not equal");
 
-      using (StreamReader sr1 = new StreamReader(file1)) 
+      using (StreamReader sr1 = new StreamReader(file1))
       {
         using (StreamReader sr2 = new StreamReader(file2))
         {
@@ -24,7 +21,7 @@ namespace RCPA.Utils
         }
       }
     }
-  
+
     public static void AssertArrayEqual(string[] expect, string[] actual)
     {
       Assert.AreEqual(expect.Length, actual.Length, "Lengths are not equal.");

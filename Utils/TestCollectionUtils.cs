@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace RCPA.Utils
 {
@@ -24,7 +21,7 @@ namespace RCPA.Utils
       l2.Add(1);
       l2.Add(2);
 
-      Assert.IsTrue(CollectionUtils.ValueEquals( l1, l2));
+      Assert.IsTrue(CollectionUtils.ValueEquals(l1, l2));
 
       l2.Add(3);
       Assert.IsFalse(CollectionUtils.ValueEquals(l1, l2));

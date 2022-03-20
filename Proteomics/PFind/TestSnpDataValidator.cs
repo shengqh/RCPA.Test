@@ -1,11 +1,8 @@
-﻿using System;
+﻿using NUnit.Framework;
+using RCPA.Proteomics.Summary;
+using RCPA.Seq;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Seq;
-using RCPA.Proteomics.Snp;
-using RCPA.Proteomics.Summary;
 
 namespace RCPA.Proteomics.PFind
 {

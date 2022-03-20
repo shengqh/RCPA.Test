@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RCPA.Utils
 {
@@ -10,20 +6,20 @@ namespace RCPA.Utils
   public class TestBeanUtils
   {
     class One
-		{
-			public int Value1 { get; set; }
-			public string Value2 { get; set; }
-			public double Value3 { get; set; }
-			public int Value4 { get; set; }
-			public int Value5 { get; set; }
-		}
+    {
+      public int Value1 { get; set; }
+      public string Value2 { get; set; }
+      public double Value3 { get; set; }
+      public int Value4 { get; set; }
+      public int Value5 { get; set; }
+    }
 
     class Another
-		{
-			public int Value1 { get; set; }
-			public string Value2 { get; set; }
-			public double Value3 { get; set; }
-		}
+    {
+      public int Value1 { get; set; }
+      public string Value2 { get; set; }
+      public double Value3 { get; set; }
+    }
 
     [Test]
     public void Test()

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Proteomics.Mascot;
-using RCPA.Utils;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.MaxQuant
 {

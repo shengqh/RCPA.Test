@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Utils;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace RCPA.Proteomics.Quantification.ITraq
 {
@@ -18,7 +17,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
 
       // OutputArray(a);
 
-      double[][] expect = new double[][] { 
+      double[][] expect = new double[][] {
         new double[]{0.9287,0.0689,0.0024,0.0000,0.0000,0.0000,0.0000,0.0000},
         new double[]{0.0094,0.9300,0.0590,0.0016,0.0000,0.0000,0.0000,0.0000},
         new double[]{0.0000,0.0188,0.9312,0.0490,0.0010,0.0000,0.0000,0.0000},
@@ -26,7 +25,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
         new double[]{0.0000,0.0000,0.0006,0.0377,0.9329,0.0288,0.0000,0.0000},
         new double[]{0.0000,0.0000,0.0000,0.0009,0.0471,0.9329,0.0191,0.0000},
         new double[]{0.0000,0.0000,0.0000,0.0000,0.0014,0.0566,0.9333,0.0000},
-        new double[]{0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0027,0.9211} 
+        new double[]{0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0027,0.9211}
       };
 
       for (int i = 0; i < a.Length; i++)
@@ -45,13 +44,13 @@ namespace RCPA.Proteomics.Quantification.ITraq
 
       //OutputArray(a);
 
-      double[][] expect = new double[][] { 
+      double[][] expect = new double[][] {
         new double[]{0.9232,0.0768,0.0000,0.0000,0.0000,0.0000},
         new double[]{0.0000,0.9342,0.0658,0.0000,0.0000,0.0000},
         new double[]{0.0000,0.0000,0.9462,0.0538,0.0000,0.0000},
         new double[]{0.0000,0.0000,0.0140,0.9406,0.0454,0.0000},
         new double[]{0.0000,0.0000,0.0000,0.0000,0.9656,0.0344},
-        new double[]{0.0000,0.0000,0.0000,0.0000,0.0167,0.9454} 
+        new double[]{0.0000,0.0000,0.0000,0.0000,0.0167,0.9454}
       };
 
       for (int i = 0; i < a.Length; i++)
@@ -70,7 +69,7 @@ namespace RCPA.Proteomics.Quantification.ITraq
 
       //OutputArray(a);
 
-      double[][] expect = new double[][] { 
+      double[][] expect = new double[][] {
         new double[]{0.9290,0.0590,0.0020,0.0000},
         new double[]{0.0200,0.9230,0.0560,0.0010},
         new double[]{0.0000,0.0300,0.9240,0.0450},

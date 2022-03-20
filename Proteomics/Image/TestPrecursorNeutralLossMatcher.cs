@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Moq;
 using NUnit.Framework;
 using RCPA.Proteomics.Spectrum;
-using Moq;
 
 namespace RCPA.Proteomics.Image
 {

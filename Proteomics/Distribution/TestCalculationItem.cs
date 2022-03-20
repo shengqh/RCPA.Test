@@ -1,12 +1,8 @@
-﻿using System;
+﻿using NUnit.Framework;
+using RCPA.Proteomics.Sequest;
+using RCPA.Proteomics.Summary;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Proteomics.Summary;
-using Moq;
-using RCPA.Proteomics.Sequest;
-using RCPA.Proteomics.Utils;
 
 namespace RCPA.Proteomics.Distribution
 {

@@ -1,8 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
 using System.Text.RegularExpressions;
 
 namespace RCPA.Utils
@@ -13,12 +10,12 @@ namespace RCPA.Utils
     [Test]
     public void TestMatchToList()
     {
-      Match m = Regex.Match("1A6B8",@"(\d)\S(\d)\S(\d)");
+      Match m = Regex.Match("1A6B8", @"(\d)\S(\d)\S(\d)");
       List<string> s = m.ToList();
       Assert.AreEqual(3, s.Count);
-      Assert.AreEqual("1",s[0]);
-      Assert.AreEqual("6",s[1]);
-      Assert.AreEqual("8",s[2]);
+      Assert.AreEqual("1", s[0]);
+      Assert.AreEqual("6", s[1]);
+      Assert.AreEqual("8", s[2]);
     }
   }
 }

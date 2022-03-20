@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
 using System.Xml.Linq;
-using RCPA.Proteomics.Summary.Uniform;
 
 namespace RCPA.Proteomics.Mascot
 {

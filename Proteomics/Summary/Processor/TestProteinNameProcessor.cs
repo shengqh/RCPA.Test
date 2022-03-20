@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Summary.Processor
 {
@@ -17,9 +13,9 @@ namespace RCPA.Proteomics.Summary.Processor
       group.Add(new IdentifiedProtein("AAABBB"));
 
       IIdentifiedProteinGroup finalGroup;
-      
+
       ///两者都有，两个都保留
-      finalGroup = new ProteinNameProcessor(new string[]{"BBB"}).Process(group);
+      finalGroup = new ProteinNameProcessor(new string[] { "BBB" }).Process(group);
       Assert.AreEqual(2, finalGroup.Count);
 
       ///两者都没有，两个都保留

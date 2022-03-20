@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Xml.Linq;
 
 namespace RCPA.Proteomics.Summary
@@ -15,7 +11,8 @@ namespace RCPA.Proteomics.Summary
     {
       PeptideFilterOptions option = new PeptideFilterOptions()
       {
-         FilterBySequenceLength = true,  MinSequenceLength = 6
+        FilterBySequenceLength = true,
+        MinSequenceLength = 6
       };
 
       XElement root = new XElement("Root");

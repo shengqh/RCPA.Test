@@ -1,6 +1,6 @@
-using System.IO;
 using NUnit.Framework;
 using RCPA.Proteomics.Spectrum;
+using System.IO;
 
 namespace RCPA.Proteomics.IO
 {

@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
 
 namespace RCPA.Proteomics.Snp
 {
@@ -21,7 +16,7 @@ namespace RCPA.Proteomics.Snp
       };
 
       var aas = new Aminoacids();
-      aas['^'].ResetMass(7.017,7.017);
+      aas['^'].ResetMass(7.017, 7.017);
 
       item.InitTerminalLoss(aas, 6, 2);
       Assert.AreEqual(12, item.TerminalLoss.Count);

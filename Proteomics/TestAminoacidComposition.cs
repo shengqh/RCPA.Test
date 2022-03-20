@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 
 namespace RCPA.Proteomics
@@ -35,7 +32,8 @@ namespace RCPA.Proteomics
     }
 
     [Test]
-    public void TestCompositionToString() {
+    public void TestCompositionToString()
+    {
       AtomComposition ac = new AtomComposition("C5H9NO");
       Assert.AreEqual("C5H9NO", ac.ToString());
     }

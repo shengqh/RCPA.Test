@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using NUnit.Framework;
-using RCPA.Proteomics.Summary;
-
 namespace RCPA.Proteomics.Sequest
 {/*
   [TestFixture]
@@ -25,5 +21,5 @@ namespace RCPA.Proteomics.Sequest
       IIdentifiedResult ir = BuildSummaryResultUtils.ReadResultFromFile(filename);
     }
   }
-  */ 
+  */
 }

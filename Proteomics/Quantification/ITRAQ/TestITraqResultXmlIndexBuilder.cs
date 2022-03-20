@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
+using RCPA.Format;
+using System;
+using System.IO;
 using System.Linq;
 using System.Text;
-using NUnit.Framework;
-using System.IO;
-using RCPA.Format;
 
 namespace RCPA.Proteomics.Quantification.ITraq
 {

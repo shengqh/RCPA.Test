@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 
 namespace RCPA.Proteomics
@@ -17,7 +14,7 @@ namespace RCPA.Proteomics
       PeptideAtomCompositionCalculator calc = new PeptideAtomCompositionCalculator(nterm, cterm, aas);
 
       //Terminal only
-      IPeptideInfo terminalInfo = new IdentifiedPeptideInfo("",0.0,0);
+      IPeptideInfo terminalInfo = new IdentifiedPeptideInfo("", 0.0, 0);
       AtomComposition terminalActual = calc.GetAtomComposition(terminalInfo);
       Assert.AreEqual(2, terminalActual[Atom.H]);
       Assert.AreEqual(1, terminalActual[Atom.O]);

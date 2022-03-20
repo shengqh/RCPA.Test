@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Sequest
 {
@@ -35,7 +31,7 @@ namespace RCPA.Proteomics.Sequest
       Assert.IsTrue(new SequestOutHeaderParser().ParseMassType("  (M+H)+ mass = 2387.91135 ~ 1.1940 (+3), fragment tol = 1.0000 , MONO/AVG", out precursorIsMono, out peakIsMono));
       Assert.IsTrue(precursorIsMono);
       Assert.IsFalse(peakIsMono);
-      
+
       Assert.IsTrue(new SequestOutHeaderParser().ParseMassType("  (M+H)+ mass = 2387.91135 ~ 1.1940 (+3), fragment tol = 1.0000 , AVG/MONO", out precursorIsMono, out peakIsMono));
       Assert.IsFalse(precursorIsMono);
       Assert.IsTrue(peakIsMono);

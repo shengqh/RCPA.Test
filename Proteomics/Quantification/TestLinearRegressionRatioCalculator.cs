@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Quantification
 {
@@ -12,9 +8,9 @@ namespace RCPA.Proteomics.Quantification
     public void TestDistance()
     {
       double[][] a = new double[][]
-      { 
+      {
         new double[]{ 1, 2, 3, 4 } ,
-        new double[]{ 2, 4, 6, 8 } 
+        new double[]{ 2, 4, 6, 8 }
       };
 
       var result = LinearRegressionRatioCalculator.CalculateRatioDistance(a);
@@ -22,9 +18,9 @@ namespace RCPA.Proteomics.Quantification
       Assert.AreEqual(0, result.Distance);
 
       double[][] b = new double[][]
-      { 
+      {
         new double[]{ 1, 2, 3, 4 } ,
-        new double[]{ 3, 5, 7, 9 } 
+        new double[]{ 3, 5, 7, 9 }
       };
 
       result = LinearRegressionRatioCalculator.CalculateRatioDistance(b);

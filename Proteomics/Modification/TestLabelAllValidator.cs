@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RCPA.Proteomics.Modification
 {
@@ -16,7 +12,7 @@ namespace RCPA.Proteomics.Modification
 
       Assert.IsFalse(validator.Validate(null));
       Assert.IsFalse(validator.Validate(""));
-      
+
       Assert.IsTrue(validator.Validate("DDDQDKDD"));
       Assert.IsTrue(validator.Validate("DDDDQ#DK*DD"));
 

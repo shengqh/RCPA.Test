@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Proteomics.Mascot;
-using RCPA.Proteomics.Modification;
 
 namespace RCPA.Proteomics.Summary
 {

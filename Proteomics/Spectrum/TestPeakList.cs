@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 using NUnit.Framework;
 using RCPA.Proteomics.Mascot;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RCPA.Proteomics.Spectrum
 {
@@ -171,7 +170,7 @@ namespace RCPA.Proteomics.Spectrum
 
       Assert.AreEqual(296, pkl.Count);
       pkl.KeepTopXInWindow(6, 100);
-      
+
       //pkl.ForEach(m => Console.WriteLine("{0:0.00000}\t{1:0.0}", m.Mz, m.Intensity));
       Assert.AreEqual(47, pkl.Count);
     }

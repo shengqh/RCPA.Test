@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using RCPA.Proteomics.Summary;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics.PeptideProphet
 {

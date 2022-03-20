@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Converter;
 using RCPA.Proteomics.Summary;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RCPA.Proteomics.Quantification.SILAC
 {
@@ -16,7 +14,7 @@ namespace RCPA.Proteomics.Quantification.SILAC
       var ann = new IdentifiedProtein();
 
       var pqr = new ProteinQuantificationResult();
-      
+
       pqr.Items["D1"] = new QuantificationItem()
       {
         Enabled = true,

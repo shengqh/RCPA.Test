@@ -1,9 +1,5 @@
 ﻿using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
 
 namespace RCPA.Proteomics.Summary
 {
@@ -17,11 +13,13 @@ namespace RCPA.Proteomics.Summary
       var spectrum = new IdentifiedSpectrum();
 
       var peptides = new List<IIdentifiedPeptide>();
-      peptides.Add(new IdentifiedPeptide(spectrum){
+      peptides.Add(new IdentifiedPeptide(spectrum)
+      {
         Sequence = "ILLLAR"
       });
 
-      peptides.Add(new IdentifiedPeptide(spectrum){
+      peptides.Add(new IdentifiedPeptide(spectrum)
+      {
         Sequence = "LILIAR"
       });
 

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 using System.Drawing;
-using RCPA.Utils;
-using System.IO;
-using ProtemomicsLib.Time;
 
 namespace RCPA.Proteomics.Image
 {

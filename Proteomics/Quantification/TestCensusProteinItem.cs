@@ -1,6 +1,6 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Quantification.Census;
+using System;
 
 namespace RCPA.Proteomics.Quantification
 {
@@ -8,7 +8,7 @@ namespace RCPA.Proteomics.Quantification
   public class TestCensusProteinItem
   {
     [Test]
-    [ExpectedException(typeof (Exception))]
+    [ExpectedException(typeof(Exception))]
     public void TestException()
     {
       CensusProteinItem.Parse("");

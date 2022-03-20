@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 
 namespace RCPA.Proteomics.Utils
@@ -33,7 +30,7 @@ namespace RCPA.Proteomics.Utils
     public void TestIsModified()
     {
       Assert.IsFalse(PeptideUtils.IsModified("DD*DD", 0));
-      
+
       Assert.IsTrue(PeptideUtils.IsModified("DD*DD", 1));
       Assert.IsTrue(PeptideUtils.IsModified("DTpDD", 1));
 

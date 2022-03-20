@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
 using System.Xml.Linq;
-using RCPA.Proteomics.Summary.Uniform;
 
 namespace RCPA.Proteomics.Sequest
 {
@@ -16,19 +12,19 @@ namespace RCPA.Proteomics.Sequest
     {
       var option = new SequestDatasetOptions()
       {
-         MinDeltaCn = 0.1,
-         FilterByDeltaCn = true,  
-         FilterByPrecursor = true, 
-         FilterBySpRank = true, 
-         FilterByXcorr = true, 
-         PathNames = new string[]{"111","222"}.ToList(), 
-         PrecursorPPMTolerance = 0.5, 
-         MaxSpRank = 4, 
-         MinXcorr1 = 1.9, 
-         MinXcorr2 = 2.2, 
-         MinXcorr3 = 3.75,
-         SkipSamePeptideButDifferentModificationSite = true,
-         MaxModificationDeltaCn = 0.08
+        MinDeltaCn = 0.1,
+        FilterByDeltaCn = true,
+        FilterByPrecursor = true,
+        FilterBySpRank = true,
+        FilterByXcorr = true,
+        PathNames = new string[] { "111", "222" }.ToList(),
+        PrecursorPPMTolerance = 0.5,
+        MaxSpRank = 4,
+        MinXcorr1 = 1.9,
+        MinXcorr2 = 2.2,
+        MinXcorr3 = 3.75,
+        SkipSamePeptideButDifferentModificationSite = true,
+        MaxModificationDeltaCn = 0.08
       };
 
       XElement root = new XElement("Root");

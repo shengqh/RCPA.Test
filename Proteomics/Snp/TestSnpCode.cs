@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 
 namespace RCPA.Proteomics.Snp
 {
@@ -18,7 +15,7 @@ namespace RCPA.Proteomics.Snp
       {
         for (int j = 0; j < aasstr.Length; j++)
         {
-          if(i == j)
+          if (i == j)
           {
             continue;
           }

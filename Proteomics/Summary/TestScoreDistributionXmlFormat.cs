@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Linq;
-using System.Text;
-using NUnit.Framework;
 
 namespace RCPA.Proteomics.Summary
 {

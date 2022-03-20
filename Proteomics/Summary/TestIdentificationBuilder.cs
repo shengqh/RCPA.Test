@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Sequest;
 using RCPA.Seq;
-using RCPA.Proteomics.Mascot;
+using System.Collections.Generic;
 
 namespace RCPA.Proteomics.Summary
 {
@@ -32,7 +29,7 @@ namespace RCPA.Proteomics.Summary
       Assert.AreEqual("REVERSED_00000001", groups[1][0].Name);
       Assert.AreEqual("REVERSED_00000002", groups[1][1].Name);
 
-      IIdentifiedResult result = new IdentifiedResultBuilder(parser,"").Build(groups);
+      IIdentifiedResult result = new IdentifiedResultBuilder(parser, "").Build(groups);
     }
   }
 }

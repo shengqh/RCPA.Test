@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using RCPA.Proteomics.Raw;
 using RCPA.Proteomics.Spectrum;
 using System.IO;
-using RCPA.Proteomics.Raw;
+using System.Linq;
 
 namespace RCPA.Proteomics.Quantification.ITraq
 {

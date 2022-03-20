@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using System.Xml.Linq;
-using System.Xml;
+﻿using NUnit.Framework;
 using System.IO;
+using System.Text;
+using System.Xml;
 
 namespace RCPA
 {
@@ -15,7 +11,7 @@ namespace RCPA
     [Test]
     public void TestWrite()
     {
-      var  ms = new MemoryStream();
+      var ms = new MemoryStream();
       XmlWriterSettings setting = new XmlWriterSettings()
       {
         Encoding = Encoding.ASCII,

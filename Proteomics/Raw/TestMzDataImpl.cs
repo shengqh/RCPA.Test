@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using RCPA.Utils;
-using System.Runtime.InteropServices;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Spectrum;
 
 namespace RCPA.Proteomics.Raw

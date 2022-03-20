@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Summary;
+using System.Linq;
 
 namespace RCPA.Proteomics.MaxQuant
 {
@@ -25,7 +22,7 @@ namespace RCPA.Proteomics.MaxQuant
       Assert.AreEqual(2, pkls[0].PrecursorCharge);
 
       Assert.AreEqual(37, pkls[0].Count);
-      Assert.AreEqual(110.07127,pkls[0].First().Mz, 0.00001);
+      Assert.AreEqual(110.07127, pkls[0].First().Mz, 0.00001);
       Assert.AreEqual(2116.9580, pkls[0].First().Intensity, 0.0001);
       Assert.AreEqual(590.83301, pkls[0].Last().Mz, 0.00001);
       Assert.AreEqual(248.6751, pkls[0].Last().Intensity, 0.0001);

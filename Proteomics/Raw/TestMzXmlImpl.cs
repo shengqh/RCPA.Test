@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using RCPA.Utils;
-using System;
 using RCPA.Proteomics.Spectrum;
+using RCPA.Utils;
 
 namespace RCPA.Proteomics.Raw
 {

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RCPA.Proteomics.Summary;
-using RCPA.Proteomics;
+using System.Collections.Generic;
 
 namespace RCPA.Tools.Distiller
 {
@@ -17,7 +13,7 @@ namespace RCPA.Tools.Distiller
       List<IIdentifiedSpectrum> spectra = new List<IIdentifiedSpectrum>();
       spectra.Add(new IdentifiedSpectrum() { Score = 3.0 });
       spectra.Add(new IdentifiedSpectrum() { Score = 2.0 });
-      
+
       spectra.ForEach(m =>
       {
         m.AddPeptide(new IdentifiedPeptide(m) { Sequence = "A1" });

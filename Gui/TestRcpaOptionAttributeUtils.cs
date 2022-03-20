@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Xml.Linq;
 
 namespace RCPA.Gui
@@ -26,7 +21,7 @@ namespace RCPA.Gui
     [Test]
     public void Test()
     {
-      var strs = new string[] {"Test1","Test2" };
+      var strs = new string[] { "Test1", "Test2" };
       this.StrValue = "TestValue";
       this.IntValue = 5;
       this.DoubleValue = 10.4;
